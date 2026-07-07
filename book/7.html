@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>美国将启动国家级 AGI 项目 - 情境意识：AGI 与超级智能（中文译文）</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-0392ca55.css">
+        <link rel="stylesheet" href="css/chrome-fc474251.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-e6ebfb74.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-76315ebc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">情境意识：AGI 与超级智能（中文译文）</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <p><strong>随着通往 AGI 的竞赛加剧，国家安全机器将会介入。美国政府（USG）会从沉睡中醒来，到 27/28 年，我们会看到某种形式的政府 AGI 项目。没有任何初创公司能处理超级智能。终局将在某个 SCIF（敏感隔离信息设施）里展开。</strong></p>
+<p>“我们必须好奇地去理解，这样一组东西——数百座发电厂、数千枚炸弹、数以万计汇聚在国家机构中的人——如何能追溯到少数几个人坐在实验台前，讨论某一种原子的奇特行为。”</p>
+<p>Spencer R. Weart</p>
+<p>如今，有很多“AI 治理”计划被提出来，从给前沿 AI 系统发放许可，到安全标准，再到为学术界提供几亿美元算力的公共云。这些计划看起来用意良好——但在我看来，它们似乎犯了类别错误。</p>
+<p>*我认为，美国政府会允许一个随机的旧金山初创公司开发超级智能，这个命题是<strong>荒谬</strong>的。*想象一下，如果我们当年是让 Uber 自己临场发挥来开发原子弹，会是什么样。</p>
+<p>超级智能——比人类聪明<em>很多</em>的 AI 系统——将拥有巨大的力量，从开发新型武器，到推动经济增长爆炸。超级智能将成为国际竞争的中心；几个月的领先优势，在军事冲突中就可能具有决定性。</p>
+<p>那些无意识地把我们短暂的历史喘息期内化为常态的人，才会以为这不会召唤出更原始的力量。像我们之前的许多科学家一样，旧金山最杰出的头脑希望他们能够控制自己正在孕育的恶魔的命运。此刻，他们仍然可以；因为他们是少数拥有态势感知、理解自己正在建造什么的人。但在未来几年，世界会醒来。国家安全机器也会醒来。历史会凯旋归来。</p>
+<p>就像过去很多次一样——新冠、二战——美国一开始看起来似乎在方向盘前睡着了；然后突然之间，政府会以最非凡的方式切入高速档。几年之内，只要模型能力和 AI 讨论再经历几次“2023 级别”的跃迁，就会出现一个时刻，人们会清楚地看到：我们正站在 AGI 的门槛上，随后不久就是超级智能。具体机制上会有很多变化，但无论以何种方式，美国政府都会站到舵位上；领先实验室将会“自愿”合并；国会会为芯片和电力拨出数万亿美元；一个民主国家联盟会形成。</p>
+<p>初创公司在很多事情上很出色——但单靠一家初创公司，根本没有能力负责美国最重要的国防项目。我们将需要政府介入，才有哪怕一点希望抵御即将面对的全面间谍威胁；私人 AI 努力几乎等同于把超级智能直接交到中共手里。我们需要政府来确保至少有一个像样的指挥链；不能让随机 CEO（或随机非营利董事会）掌握核按钮。我们需要政府管理超级智能带来的严峻安全挑战，管理智能爆炸的战争迷雾。我们需要政府部署超级智能来防御任何可能出现的极端威胁，穿过随后极其动荡、破坏稳定的国际局势。我们需要政府动员一个民主国家联盟，在与威权国家的竞赛中获胜，并为世界其他地区建立（并执行）防扩散制度。我希望事情不是这样——但我们会需要政府。（是的，无论是哪一届政府。）</p>
+<p>无论如何，我的主要主张不是规范性的，而是描述性的。几年之内，「项目」（The Project）就会启动。</p>
+<p><strong>通往「项目」的道路</strong></p>
+<p>有一段事态发展深深烙在我的记忆里：2020 年 2 月底到 3 月中旬。在 2 月最后几周和 3 月最初几天，我极其绝望：当时已经很清楚，我们处在新冠指数增长曲线上；一场瘟疫即将席卷全国，医院崩溃迫在眉睫——然而几乎没有人认真对待。纽约市长仍在把对新冠的担忧斥为种族主义，并鼓励人们去看百老汇演出。我能做的只有买口罩和做空市场。</p>
+<p>然而仅仅几周之内，整个国家关闭，国会拨出数万亿美元（字面意义上超过 GDP 的 10%）。提前看清指数曲线会走向何处太难了，但当威胁足够接近、足够存亡攸关时，非凡的力量就会被释放出来。反应来得晚，粗糙而生硬——但它来了，而且规模惊人。</p>
+<p>未来几年 AI 的感觉会很像。我们现在正处在中局。2023 年已经是一次剧烈转变。AGI 从一个你可能都不愿与之关联的边缘话题，变成了重大参议院听证会和世界领导人峰会的主题。考虑到我们仍然还在很早期，美国政府的参与程度已经让我印象深刻。再来几次“2023”，奥弗顿窗口就会被彻底打开。</p>
+<p>随着我们<a href="https://situational-awareness.ai/from-gpt-4-to-agi/">冲过一个又一个数量级</a>，跃迁会继续。到 2025/2026 年左右，我预计会出现下一次真正令人震惊的阶跃变化；AI 将为大型科技公司带来<a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">每年 1000 亿美元以上收入</a>，并在原始问题解决能力上胜过博士。就像新冠导致的股市崩盘让许多人开始认真对待新冠一样，我们会看到 10 万亿美元公司，AI 狂热会无处不在。如果这还不够，到 2027/28 年，我们会有在 1000 亿美元以上集群上训练出来的模型；完整形态的 AI 智能体/即插即用远程员工将开始广泛自动化软件工程和其他认知工作。每一年，加速都会让人头晕目眩。</p>
+<p>虽然很多人现在还看不到 AGI 的可能性，但最终会形成共识。有些人，比如 Szilard，比其他人早得多看到了原子弹的可能性。他们的警报起初并不受欢迎；炸弹的可能性被认为很遥远（或者至少，人们觉得保守且恰当的做法是淡化这种可能性）。Szilard 对保密的热切呼吁遭到嘲笑和忽视。但随着越来越多经验结果出现，许多最初持怀疑态度的科学家开始意识到，炸弹是可能的。一旦大多数科学家相信我们正站在炸弹门槛上，政府也就认为国家安全上的紧迫性太大——于是曼哈顿计划启动。</p>
+<p>随着<a href="https://situational-awareness.ai/from-gpt-4-to-agi/">数量级</a>从理论外推变成（非凡的）经验现实，在领先科学家、企业高管和政府官员之间，也会逐渐形成共识：我们正站在门槛上，站在 AGI 的门槛上，站在智能爆炸的门槛上，站在超级智能的门槛上。在这个过程中，我们会看到第一批真正令人恐惧的 AI 演示：也许是常被讨论的“帮助新手制造生物武器”，或自主入侵关键系统，或完全不同的东西。届时会变得清楚：无论你喜欢与否，这项技术都将是<a href="https://situational-awareness.ai/the-free-world-must-prevail/#Whoever_leads_on_superintelligence_will_have_a_decisive_military_advantage">具有完全决定性的军事技术</a>。即使我们足够幸运，没有处在一场大战之中，中共也很可能已经注意到这一点，并启动一项强大的 AGI 努力。也许最终（不可避免地）发现中共渗透美国领先 AI 实验室，会引发巨大震动。</p>
+<p>大约在 26/27 年前后，华盛顿的气氛会变得凝重。人们会开始从直觉上感受到正在发生的事；他们会<em>害怕</em>。从五角大楼的走廊到国会闭门简报室，都会回响一个显而易见的问题，一个萦绕在每个人心头的问题：我们需要一个 AGI 曼哈顿计划吗？一开始慢慢地，然后突然之间，事情会变得清楚：这正在发生，事态会变得极其剧烈，这是自原子弹发明以来，美国国家安全面临的最重要挑战。国家安全机器将以某种形式非常深度地介入。「项目」将成为必要的、事实上也是唯一可信的回应。</p>
+<p>当然，这是一种极度简化的叙述——很多事情取决于共识何时以及如何形成、关键的警示事件等等。华盛顿以运作失灵闻名。就像新冠，甚至就像曼哈顿计划一样，政府会来得极晚，而且手法笨拙。<a href="https://www.amazon.com/Making-Atomic-Bomb-Richard-Rhodes/dp/1451677618">在</a> Einstein 于 1939 年写给总统的信（由 Szilard 起草）之后，铀顾问委员会成立了。但官员们很无能，起初几乎没有发生什么。例如，Fermi 只拿到 6000 美元（约合今天 13.5 万美元）来支持他的研究，而且这笔钱也不是轻易给出的，而是在等待数月后才收到。Szilard 认为，由于当局短视而迟缓，项目<a href="https://en.wikipedia.org/wiki/Lyman_James_Briggs#:~:text=Le%C3%B3%20Szil%C3%A1rd%20believed%20that%20the,action%20that%20was%20often%20needed.">至少延误了一年</a>。1941 年 3 月，英国政府最终认定原子弹不可避免。美国委员会最初完全无视这份英国报告数月——直到 1941 年 12 月，全面的原子弹努力才终于启动。</p>
+<p>实际操作上，这可以有很多种形式。说清楚，这不一定要看起来像字面意义上的国有化，让 AI 实验室研究员现在都受雇于军方之类（虽然也可能如此！）。<a href="#footnote-1-73">1</a> 相反，我预计会是一种更圆滑的协调安排。与国防部（DoD）的关系，可能类似于国防部与 Boeing 或 Lockheed Martin 的关系。也许通过国防合同或类似机制，主要云计算提供商、AI 实验室和政府之间会成立一家合资实体，使其在功能上成为国家安全机器的一个项目。就像 AI 实验室在 2023 年“自愿”向白宫作出承诺一样，西方实验室可能或多或少会“自愿”同意并入国家级努力。鉴于涉及数万亿美元投资，也出于制衡需要，国会很可能必须参与其中。<a href="#footnote-2-73">2</a> 所有这些细节最终如何展开，是另一天的故事。</p>
+<p>但到 26 年底/27 年/28 年，它会启动。核心 AGI 研究团队（数百名研究人员）会迁往一个安全地点；万亿美元集群会以创纪录速度建成；「项目」会启动。</p>
+<p>**为什么「项目」是唯一道路 **</p>
+<p>我对政府没有任何幻想。政府面对各种限制和糟糕激励。我非常相信美国私营部门，并且几乎从不会主张政府重度介入技术或产业。</p>
+<p>我曾经也用同样框架看待 AGI——直到我加入一家 AI 实验室。AI 实验室在一些事情上很擅长：它们能把 AI 从学术科学项目带到商业大舞台，这是只有初创公司才能做到的。但归根结底，AI 实验室仍然是初创公司。我们根本不应该指望初创公司有能力处理超级智能。</p>
+<p>这里没有好选项——但我看不到另一条路。当一项技术对国家安全变得如此重要时，我们会需要美国政府。</p>
+<p><strong>超级智能将成为美国最重要的国防项目</strong></p>
+<p>我在前面的文章里讨论过<a href="https://situational-awareness.ai/from-agi-to-superintelligence/#The_power_of_superintelligence">超级智能的力量</a>。几年之内，超级智能会彻底<a href="https://situational-awareness.ai/the-free-world-must-prevail/">改写军事力量平衡</a>。* *到 2030 年代初，美国的整个武库（无论你喜不喜欢，它都是全球和平与安全的基石）很可能会过时。这不只是现代化问题，而是全面替换问题。</p>
+<p>简言之，人们会清楚看到，AGI 的开发更像核武器，而不是互联网。是的，它当然会是军民两用——但核技术也曾是军民两用。民用应用会有它的时代。但在 AGI 终局的迷雾中，无论好坏，国家安全都会成为主要背景。</p>
+<p>面对快速技术变化，我们需要在几年之内彻底重塑美军——否则就有被这样做的对手完全压倒的风险。也许最重要的是，最初的优先事项将是把超级智能部署到防御应用中，开发对策，以便在无法计数的新威胁中生存下来：拥有超人黑客能力的对手、可能对我们的核威慑力量发动先发制人打击的新型隐身无人机蜂群、可被武器化的合成生物学进展扩散、动荡的国际（以及国内）权力斗争，以及失控的超级智能项目。</p>
+<p>无论名义上是否私人化，AGI 项目都需要、也<em>将会</em>内在地成为一个国防项目，并且需要与国家安全机器进行极其紧密的合作。</p>
+<p><strong>面向超级智能的合理指挥链</strong></p>
+<p>超级智能的力量——以及挑战——将属于一个与我们习惯从科技公司那里看到的任何东西都截然不同的参考类别。事情似乎很清楚：它不应该处在一个随机 CEO 的单边指挥之下。事实上，在私人实验室开发超级智能的世界里，个别 CEO 很可能<a href="https://situational-awareness.ai/from-agi-to-superintelligence/#The_power_of_superintelligence">拥有能力</a><em>真的发动对美国政府的政变</em>。<a href="#footnote-3-73">3</a> 想象一下，如果 Elon Musk 对核武库拥有最终指挥权会怎样。<a href="#footnote-4-73">4</a>（或者如果一个随机非营利董事会可以决定夺取核武库控制权。）</p>
+<p>这也许显而易见，但：作为一个社会，我们已经决定，军队应该由民主政府控制；<a href="#footnote-5-73">5</a> 超级智能至少在最初会是最强大的军事武器。激进的提议不是「项目」；激进的提议是赌私人 AI CEO 可以掌握军事力量并成为仁慈的独裁者。</p>
+<p>（事实上，在私人 AI 实验室世界里，情况很可能比随机 CEO 掌握核按钮还要糟——AI 实验室糟糕安全的一部分，是它们完全缺乏内部控制。也就是说，随机 AI 实验室员工（没有任何审查）可能在无人察觉的情况下叛变。）</p>
+<p>我们需要一个合理的指挥链——以及所有其他必然伴随负责任运用类似大规模杀伤性武器能力的流程与保障措施——而这需要政府来做到。从某种意义上说，这只是一个 Burkean（伯克式）论证：限制政府权力的那些机构、宪法、法律、法院、制衡、规范，以及对自由民主秩序的共同承诺（例如将军拒绝执行非法命令），已经经受了数百年的考验。与此同时，特殊的 AI 实验室治理结构第一次受到考验就崩塌了。如果美国军队愿意，它本来就几乎可以杀死美国境内每一个平民，或夺取政权——而我们制衡政府对核武器权力的方式，并不是让大量私营公司拥有自己的核武库。只有一套指挥链和一组制度已经证明自己能够承担这项任务。</p>
+<p>再说一次，也许你是真正的自由意志主义者，并且在规范性上不同意（让 Elon Musk 和 Sam Altman 指挥他们自己的核武库吧！）<a href="#footnote-6-73">6</a> 但一旦超级智能显然成为一个首要国家安全问题，我确信华盛顿的男男女女会这样看待它。</p>
+<h4 id="超级智能的民用用途"><a class="header" href="#超级智能的民用用途">超级智能的民用用途</a></h4>
+<p>当然，这并不意味着超级智能的民用应用会被政府保留。</p>
+<ul>
+<li>核链式反应最初是作为政府项目被掌握的——核武器也永久由政府保留——但民用核能作为私人项目曾经繁荣发展（在 60 和 70 年代，直到环保主义者把它关闭）。</li>
+<li>Boeing 与军方合作制造了 B-29（二战期间最昂贵的国防研发项目，比曼哈顿计划更贵）、B-47 和 B-52 远程轰炸机——之后又用这些技术制造了 Boeing 707，这种商用飞机开启了喷气时代。今天，虽然 Boeing 只能把隐形战斗机卖给政府，但它可以自由地私下开发和销售民用喷气飞机。</li>
+<li>雷达、卫星、火箭、基因技术、二战工厂等等，也都是类似。</li>
+</ul>
+<p>超级智能的初始开发将由国家安全紧迫性主导，目标是在一个极端动荡时期中生存并稳定局势。超级智能的军事用途仍将由政府保留，安全规范也会被执行。但一旦最初的危险过去，世界稳定下来，自然路径就是参与国家联盟体的公司（以及其他公司）私人化地追求民用应用。</p>
+<p>即使在存在「项目」的世界里，一个私人、多元、基于市场、繁荣发展的超级智能民用应用生态也会迎来自己的时代。</p>
+<p><strong>安全</strong></p>
+<p>我在本系列<a href="https://situational-awareness.ai/lock-down-the-labs/">上一篇文章</a>中已经详细谈过这个问题。按当前路线，我们不如放弃任何美国 AGI 努力；中国可以很快直接窃取所有算法突破和模型权重（字面意义上的超级智能副本）。按当前路线，我们甚至不清楚能否达到对超级智能的“朝鲜防护级”安全。在私人初创公司开发 AGI 的世界里，超级智能会扩散到几十个流氓国家。这完全不可承受。</p>
+<p>如果我们要对此稍微认真一点，显然就需要把这些东西封锁起来。大多数私营公司都没有认真对待这一点。但无论如何，如果我们最终要面对中国间谍活动的全部力量（例如窃取权重成为国家安全部的头号优先事项），一家私营公司大概不可能拥有足够好的安全。到那时，要充分保护 AGI，就需要美国情报共同体的广泛合作。这将涉及对 AI 实验室和 AGI 核心研究团队的侵入性限制，从极端审查到持续监控，到在 SCIF 中工作，到减少离开的自由；并且需要只有政府才能提供的基础设施，最终包括 AGI 数据中心本身的物理安全。</p>
+<p>从某种意义上说，单是安全问题就足以使政府项目成为必要——如果我们不能把这些东西封锁起来，自由世界的领先地位和 AI 安全都会失败。（事实上，我认为这很可能成为最终触发因素之一：一旦中国对 AGI 实验室的渗透变得清楚，每一位参议员、众议员和国家安全官员都会……对此有强烈看法。）</p>
+<p><strong>安全性</strong></p>
+<p>简言之：我们有很多方式把这件事搞砸——从确保我们能够可靠控制并信任很快将负责我们经济和军事的数十亿个超级智能智能体（<a href="https://situational-awareness.ai/superalignment/">超级对齐问题</a>），到控制<a href="https://situational-awareness.ai/the-free-world-must-prevail/#Maintaining_a_healthy_lead_will_be_decisive_for_safety">新型大规模毁灭手段</a>被滥用的风险。</p>
+<p>有些 AI 实验室声称自己致力于安全：它们承认自己正在建造的东西一旦走偏，就可能造成灾难，并承诺到时候会做必要的事。我不知道我们能否足够信任它们的承诺，把每一个美国人的生命押在上面。更重要的是，到目前为止，它们还没有展示出与它们自己承认正在建造的东西相称的能力、可信度或严肃性。</p>
+<p>核心上，它们是初创公司，拥有所有常见的商业激励。竞争可能推动所有实验室直接冲过智能爆炸，而且至少会有一些行动者愿意把安全抛在一边。尤其是，我们也许希望“花掉一部分领先优势”来争取时间解决安全挑战，但西方实验室需要协调才能做到。（当然，私人实验室的 AGI 权重届时已经被偷走，因此它们的安全预防措施甚至也不重要；我们会任由中共和朝鲜的安全预防措施摆布。）</p>
+<p>一种答案是监管。在 AI 发展更慢的世界里，这也许是合适的，但我担心监管根本无法应对智能爆炸这一挑战的性质。所需要的东西不像是花几年时间做仔细评估，然后让一些安全标准通过官僚机构。<em>它会更像打一场战争。</em></p>
+<p>我们将面对一个极端紧张的一年：局势每周都在高速变化；基于含混数据作出的艰难判断会关乎生死；解决方案——甚至问题本身——都无法提前完全清楚，而要取决于在“战争迷雾”中的能力；这会涉及极端取舍，比如：“我们的一些对齐测量看起来含混不清，我们已经不太理解正在发生什么了，也许没事，但有一些警示信号表明下一代超级智能可能会走偏。我们是否应该把下一次训练运行推迟 3 个月，以便在安全上获得更多信心——但糟糕的是，最新情报报告显示中国已经偷走了我们的权重，正在自己冲刺智能爆炸，我们该怎么办？”</p>
+<p>我并不确信一个政府项目能够胜任处理这个问题——但“由初创公司开发超级智能”这个替代方案，比通常认识到的更接近“祈祷一切顺利”。我们需要一个指挥链，能够把做这些艰难取舍所需要的严肃性带到桌面上。</p>
+<p><strong>稳定国际局势</strong></p>
+<p>智能爆炸及其直接后果，将带来人类有史以来最动荡、最紧张的局势之一。我们这一代人并不习惯这个。但在最初阶段，手头任务不是打造很酷的产品，而是以某种方式拼命穿过这段时期。</p>
+<p>我们需要政府项目来赢得与威权国家的竞赛——并给我们必要的清晰领先和喘息空间，以驾驭这一局势的危险。如果我们无法防止超级智能模型权重被立刻窃取，那不如直接放弃。我们会想要捆绑西方努力：把最优秀的科学家聚集起来，使用我们能找到的每一块 GPU，并确保数万亿美元的集群建设发生在美国境内。我们需要保护数据中心，防止对手破坏，甚至直接攻击。</p>
+<p>也许最重要的是，要建立——并在必要时执行——一个防扩散制度，这将需要美国领导力。我们需要阻止俄罗斯、朝鲜、伊朗和恐怖组织使用它们自己的超级智能来开发能让它们挟持世界的技术和武器。我们需要用超级智能强化关键基础设施、军事和政府的安全，以防御极端新型黑客能力。我们需要用超级智能稳定生物学或类似领域进展中的攻防平衡。我们需要开发工具来安全控制超级智能，并关闭其他人不谨慎项目中产生的失控超级智能。AI 系统和机器人将以人类 10 到 100 倍以上的速度行动；一切都会开始极快发生。我们需要准备好处理把一个世纪的技术进步压缩进几年所产生的任何其他六西格玛级剧变——以及随之而来的威胁。</p>
+<p>至少在这个初始时期，我们将面对最非凡的国家安全紧迫性。也许没有人能够胜任这项任务。但在我们拥有的选项中，「项目」是唯一合理的。</p>
+<p><strong>「项目」不可避免；它是否会好并不必然</strong></p>
+<p>归根结底，我这里的主要主张是描述性的：无论我们喜欢与否，超级智能不会像一家旧金山初创公司；它会以某种方式主要属于国家安全领域。过去一年里，我经常向旧金山的朋友提起「项目」。也许最让我惊讶的是，大多数人对这个想法如此惊讶。他们只是没有考虑过这种可能性。但一旦他们考虑了，多数人会同意这似乎显而易见。如果我们对自己认为正在建造的东西哪怕稍微判断正确，<em>那么当然</em>，到最后它会（以某种形式）成为一个政府项目。如果某个实验室明天开发出了字面意义上的超级智能，<em>那么当然</em>，联邦政府会介入。</p>
+<p>一个重要的自由变量不是<em>是否</em>，而是<em>何时</em>。政府会直到我们已经身处智能爆炸中才意识到正在发生什么——还是会提前几年意识到？如果政府项目不可避免，那么更早似乎更好。我们会非常需要那几年时间来进行安全紧急计划，让关键官员跟上并做好准备，建立一个运作正常的合并实验室，等等。如果政府只在最后一刻介入，情况会混乱得多（而秘密和权重也已经被偷走）。</p>
+<p>另一个重要的自由变量是我们能够动员起来的国际联盟：既包括一个更紧密、用于开发超级智能的民主国家联盟，也包括向世界其他国家提出更广泛的收益共享方案。</p>
+<ul>
+<li>前者可能类似于
+<a href="https://en.wikipedia.org/wiki/Quebec_Agreement">《魁北克协定》</a>：Churchill 和 Roosevelt 之间的一项秘密协议，用于汇集双方资源开发核武器，同时承诺不相互使用，也不在未经共同同意的情况下对他国使用。我们会希望纳入英国（DeepMind）、日本和韩国等东亚盟友（芯片供应链），以及 NATO/其他核心民主盟友（更广泛的工业基础）。统一努力会拥有更多资源、人才，并控制完整供应链；能在安全、国家安全和军事挑战上实现密切协调；也能为运用超级智能力量提供有益的制衡。- 后者可能类似于
+<a href="https://en.wikipedia.org/wiki/Atoms_for_Peace">“和平利用原子能”</a>、<a href="https://en.wikipedia.org/wiki/International_Atomic_Energy_Agency">IAEA</a> 和 <a href="https://en.wikipedia.org/wiki/Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons">NPT</a>。我们应该提出与更广泛的国家群体（包括非民主国家）分享超级智能和平收益，并承诺不对它们进攻性使用超级智能。作为交换，它们不追求自己的超级智能项目，在 AI 系统部署上作出安全承诺，并接受对军民两用应用的限制。希望是，这个方案能减少军备竞赛和扩散的激励，并把一个广泛联盟纳入美国主导的后超级智能世界秩序之下。</li>
+</ul>
+<p>也许最重要的自由变量只是：这个不可避免的政府项目是否会有能力。它会如何组织？我们如何把它做成？制衡机制如何运作，合理的指挥链是什么样？几乎没有人把注意力投入到弄清楚这些问题上。<a href="#footnote-7-73">7</a> 几乎所有其他 AI 实验室和 AI 治理政治操作都是次要事件。这才是决定性问题。</p>
+<p><strong>终局</strong></p>
+<p>所以到 27/28 年，终局将会开始。到 28/29 年，智能爆炸将会展开；到 2030 年，我们会召唤出超级智能，连同其全部力量与威能。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/oppenheimer_groves.jpeg" alt=""></p>
+<p><em>Oppenheimer 和 Groves。</em></p>
+<p>无论他们让谁来负责「项目」，那个人都会面对一项艰巨到极点的任务：建造 AGI，而且要快速建造；让美国经济进入战时状态，制造数亿块 GPU；把一切封锁起来，清除间谍，并抵御中共的全面攻击；以某种方式管理一亿个 AGI 疯狂自动化 AI 研究，在一年里完成十年的跃迁，并很快产出比最聪明的人类<em>远远</em>更聪明的 AI 系统；以某种方式让局面维持住，不至于偏离轨道并产生试图从人类监督者手中夺取控制权的失控超级智能；使用这些超级智能开发稳定局势、领先对手所需的任何新技术，并迅速重塑美国军力以整合这些技术；与此同时，还要应对很可能是有史以来最紧张的国际局势。我只能说，他们最好非常出色。</p>
+<p>对于我们这些被召唤加入这趟旅程的人来说，这会……很有压力。但服务于自由世界——以及全人类——将是我们的职责。如果我们穿过去，并能回望那些年，那会是我们做过的最重要的事。而且，无论他们找到哪个安全设施，那里大概不会有今天荒唐高薪 AI 研究员生活方式中的舒适条件，但也不会太糟。旧金山已经像一个奇特的 AI 研究员大学城；这大概也不会有太大不同。还是同一个古怪而很小的圈子，白天紧盯 scaling curves，周末一起闲逛，围绕 AGI 和当天的实验室政治聊个不停。</p>
+<p>只不过，嗯——利害关系会真实得多。</p>
+<p>沙漠见，朋友们。</p>
+<p>系列下一篇：<strong>V. 结语</strong></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/atomic_scientists.jpg" alt=""></p>
+<p><em>在芝加哥大学首次受控核裂变链式反应四周年时，原子科学家们的重聚。</em></p>
+<p>请注意，虽然私营公司帮助开发核武器组件，但它们从未被允许拥有一枚完整并组装好的核武器。相比之下，我在这里提出的“AGI 政府项目”主线版本，就大规模杀伤性武器这一参考类别而言，是前所未有地私人化的。</p>
+<p><a href="#note-1-73">↩</a>国会——甚至副总统！——都不知道曼哈顿计划。我们大概不应该在这里重复这一点；我甚至建议，「项目」的关键官员应当需要参议院确认。</p>
+<p><a href="#note-2-73">↩</a>到那时甚至不需要 AI 实验室员工合作，因为他们大多已经被自动化了。</p>
+<p><a href="#note-3-73">↩</a>正如 Sam Altman 曾经说过的，我们每接近 AGI 一年，每个人都会增加 +10 点疯狂值。</p>
+<p><a href="#note-4-73">↩</a>事实上，政府拥有最大的枪，本身就是一项巨大的</p>
+<p><a href="https://en.wikipedia.org/wiki/Landfrieden">文明成就</a>！我们不是以类似中世纪的所有人反对所有人的斗争来解决问题，而是通过法院、多元制度等等来处理分歧。<a href="#note-5-73">↩</a>或者你也许会说，那就把一切都开源。简单地把一切都开源的问题在于，这不会是一个美国内部百花齐放的美好世界，而会是一个中共可以自由访问美国开发的超级智能，并通过建设更多基础设施（以及采取更少谨慎/监管）来接管世界的世界。当然，另一个问题是，超级大规模杀伤性武器会扩散到世界上每一个流氓国家和恐怖组织手里。我不认为这会有好结果。这有点像完全没有政府更可能导致暴政（或毁灭），而不是自由。</p>
+<p>无论如何，随着我们接近 AGI，人们高估了开源的重要性。考虑到集群成本正上升到数千亿美元，而且关键算法秘密现在变成了专有秘密，而不是像几年前那样被发表出来，领先玩家会是大约 2 到 3 个，而不是某个由去中心化程序员共同构建 AGI 的幸福社区。</p>
+<p>我确实认为，另一种开源变体会继续发挥重要作用：落后几年的模型被开源，帮助这项技术的收益广泛扩散。</p>
+<p><a href="#note-6-73">↩</a>致我在 Progress Studies 的兄弟们：你们应该想想这个问题，这将是你们思想项目的顶点！你们花了这么多时间研究美国政府研究机构、它们在过去半个世纪的衰落，以及要怎样才能让它们重新有效。告诉我：我们要如何让「项目」有效？</p>
+<p><a href="#note-7-73">↩</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="6.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="8.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="6.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="8.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-c22b7243.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

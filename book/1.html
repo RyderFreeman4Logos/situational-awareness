@@ -1,0 +1,490 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2027年 AGI 预测：算力趋势与智能体进化 - 情境意识：AGI 与超级智能（中文译文）</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-0392ca55.css">
+        <link rel="stylesheet" href="css/chrome-fc474251.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-e6ebfb74.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-76315ebc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">情境意识：AGI 与超级智能（中文译文）</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <p><strong>到 2027 年出现 AGI 极其可信。GPT-2 到 GPT-4 用 4 年时间，把我们从约等于学龄前儿童的能力带到了约等于聪明高中生的能力。沿着算力趋势线（约每年 0.5 个数量级，OOM）、算法效率（约每年 0.5 个数量级）以及“解除束缚”收益（从聊天机器人到智能体）外推，我们应该预期到 2027 年还会再出现一次从学龄前儿童到高中生规模的质变。</strong></p>
+<p>听着。模型，它们就是想学习。你必须理解这一点。模型，它们就是想学习。</p>
+<p>Ilya Sutskever（约 2015 年，经由[Dario Amodei]）</p>
+<p>GPT-4 的能力让许多人震惊：一个能写代码和文章、能推理困难数学题、能在大学考试中拿高分的 AI 系统。几年前，大多数人还认为这些都是不可逾越的高墙。</p>
+<p>但 GPT-4 只是深度学习十年来高速进步的延续。十年前，模型几乎连简单的猫狗图片都认不出来；四年前，GPT-2 也只能勉强串出几句半像样的话。现在，我们能想出来的各种基准测试正被迅速刷满。可是，这种戏剧性进展其实只是深度学习持续扩展趋势的结果。</p>
+<p>很早以前就有人看到了这一点。他们被嘲笑过，但他们做的只是相信趋势线。趋势线非常强，而他们是对的。模型就是想学习；你把它们扩展起来，它们就学得更多。</p>
+<p>我提出如下主张：**到 2027 年，模型能够完成 AI 研究员/工程师的工作，这一点极其可信。**这不需要相信科幻；只需要相信图上的直线。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/base_scaleup.png" alt=""></p>
+<p><em>基于本文讨论的公开估计，对过去和未来有效算力扩展（物理算力与算法效率）的粗略估算。随着我们扩展模型，模型会持续变得更聪明；通过“数数量级”，我们能大致感知在（近）未来应当预期怎样的模型智能。（这张图只展示基础模型的扩展；“解除束缚”未展示。）</em></p>
+<p>在本文中，我会简单地“数数量级”（OOM = order of magnitude，10x = 1 个数量级）：观察 1）<em>算力</em>，2）<em>算法效率</em>（我们可以把算法进展理解为“有效算力”的增长），以及 3）<em>“解除束缚”收益</em>（修正模型默认状态下显然受限的方式，释放潜在能力并给予工具，从而带来有用性的阶跃式变化）。我们会追踪 GPT-4 之前四年里每一项的增长，以及 GPT-4 之后到 2027 年底这四年里我们应该预期什么。考虑到深度学习在每个有效算力数量级上都持续改进，我们可以用它来预测未来进展。</p>
+<p>公开层面，自 GPT-4 发布以来，<a href="https://x.com/leopoldasch/status/1768868127138549841">局面已经沉寂</a>了一年，因为下一代模型还在烤箱里——这让一些人宣称已经停滞，深度学习正在撞墙。<a href="#footnote-1-70">1</a>但通过数数量级，我们能先窥见实际上应该预期什么。</p>
+<p>结论相当简单。GPT-2 到 GPT-4——从那种偶尔能串出几句连贯话就令人印象深刻的模型，到能在高中考试中拿高分的模型——不是一次性收益。我们正在极快穿越数量级，而数字表明，四年内我们应该预期又一次约 100,000x 的有效算力扩展，由此带来又一次 GPT-2 到 GPT-4 规模的质变。而且，关键的是，这不只是意味着更好的聊天机器人；在“解除束缚”上摘取许多显而易见的低垂果实，应该会把我们从聊天机器人带到智能体，从一个工具带到更像即插即用远程员工替代品的东西。</p>
+<p>推理很简单，但含义非常惊人。再来一次这样的跃迁，很可能会把我们带到 AGI，带到像博士或专家一样聪明、能够作为同事与我们并肩工作的模型。也许最重要的是，如果这些 AI 系统能够自动化 AI 研究本身，那就会启动强烈的反馈循环——这是<a href="https://situational-awareness.ai/from-agi-to-superintelligence/">本系列下一篇</a>的主题。</p>
+<p>即使现在，也几乎没有人把这一切计入价格。但一旦你退一步看趋势，AI 的态势感知其实并不难。如果你总是被 AI 能力吓一跳，那就开始数数量级吧。</p>
+<p><strong>过去四年</strong></p>
+<p>现在，我们已经有了基本可以<a href="https://openai.com/index/hello-gpt-4o/">像人一样交谈</a>的机器。人类适应能力之强令人惊叹：这件事竟然显得正常，我们已经对进步速度麻木了。但值得退一步，看看仅仅过去几年发生了什么。</p>
+<h3 id="gpt-2-到-gpt-4"><a class="header" href="#gpt-2-到-gpt-4">GPT-2 到 GPT-4</a></h3>
+<p>让我提醒你，在通往 GPT-4 之前的约 4（！）年里，我们走了多远。</p>
+<p><strong>GPT-2</strong>（2019）~ <em>学龄前儿童</em>：“哇，它能串出几句有点像样的话。”它<a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">生成</a>的一篇关于安第斯山独角兽的半连贯故事，是经过精挑细选的样例，但在当时令人印象极深。可是 GPT-2 连数到 5 都会卡住；<a href="#footnote-2-70">2</a>在总结文章时，它只比从原文中随机选 3 句话略好一点。<a href="#footnote-3-70">3</a></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gpt2_examples.png" alt=""></p>
+<p><em>一些</em></p>
+<p><em>当时人们觉得 GPT-2 令人印象深刻的**例子。左：GPT-2 在极其基础的阅读理解问题上表现还可以。右：在一个精挑细选的样本中（10 次尝试中最好的一次），GPT-2 能写出一个半连贯段落，提到一些与美国内战半相关的内容。</em></p>
+<p>比较 AI 能力与人类智能是困难且有缺陷的，但我认为这里的类比仍然有信息量，尽管非常不完美。GPT-2 令人震惊的是它对语言的掌握，以及偶尔生成半连贯段落、偶尔正确回答简单事实问题的能力。这大概相当于学龄前儿童会让人觉得厉害的东西。</p>
+<p><strong>GPT-3</strong>（2020）<a href="#footnote-4-70">4</a> ~ <em>小学生</em>：“哇，只给几个 few-shot 示例，它就能做一些简单有用的任务。”它在多段文字中保持连贯的能力稳定得多，也能纠正语法并做一些非常基础的算术。它也第一次在少数狭窄方向上具有商业用途：例如，GPT-3 可以为 SEO 和营销生成<a href="https://ai-copysmith.com/">简单文案</a>。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gpt3_examples-1.png" alt=""></p>
+<p><em>一些</em></p>
+<p>当时人们觉得 GPT-3 令人印象深刻的<a href="https://gwern.net/gpt-3">例子</a>。上：经过简单指令后，GPT-3 <a href="https://arxiv.org/abs/2005.14165">可以</a>在新句子中使用一个虚构单词。左下：GPT-3 <a href="https://x.com/nickwalton00/status/1280972636638437382/photo/1">可以</a>参与丰富的来回讲故事。右下：GPT-3 <a href="https://x.com/sharifshameem/status/1282676454690451457">可以</a>生成一些非常简单的代码。再次说明，这个比较并不完美，但 GPT-3 让人印象深刻的东西，大概相当于一个小学生让人印象深刻的东西：它写了一些基础诗歌，能讲更丰富、更连贯的故事，开始能做初级编程，能够相当可靠地从简单指令和演示中学习，等等。</p>
+<p><strong>GPT-4</strong>（2023）~ <em>聪明高中生</em>：“哇，它能写相当复杂的代码并反复调试，能就复杂主题写出聪明而成熟的文字，能推理困难的高中竞赛数学题，在我们能给出的各种测试上击败绝大多数高中生，等等。”从代码到数学再到费米估算，它能思考和推理。GPT-4 现在已经能帮我做日常任务，从协助写代码到修改草稿。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gpt4_examples-3.png" alt=""></p>
+<p><a href="https://arxiv.org/abs/2303.12712">《Sparks of AGI》</a>论文。上：它在写非常复杂的代码（生成中间展示的图），并能推理非平凡数学问题。左下：解一道 AP 数学题。右下：解决一道相当复杂的编程题。关于 GPT-4 能力探索的更多有趣摘录见</p>
+<p><a href="https://x.com/leopoldasch/status/1638848850516672513?s=20">这里</a>。</p>
+<p>从 AP 考试到 SAT，GPT-4 的分数都优于绝大多数高中生。</p>
+<p>当然，即使 GPT-4 仍然有些不均衡；在某些任务上它比聪明高中生强得多，在另一些任务上它还做不到。话虽如此，我倾向于认为，大多数限制都来自模型仍然以显而易见的方式被束缚住了，我会在<a href="#Unhobbling">后文深入讨论</a>。原始智能（大体上）已经在那里，即使模型仍被人为限制；要让模型能在各种应用中充分使用这种原始智能，还需要额外工作。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/timeline.png" alt=""></p>
+<p><em>仅四年里的进展。你</em></p>
+<p><em>在这条线上**处于哪里？</em></p>
+<h3 id="深度学习的趋势"><a class="header" href="#深度学习的趋势">深度学习的趋势</a></h3>
+<p>过去十年深度学习进步的速度简直非同寻常。仅仅十年前，一个深度学习系统能识别简单图片就已经是革命性的。今天，我们不断试图设计新颖、更困难的测试，但每一个新基准很快就被攻破。过去，攻破广泛使用的基准通常需要几十年；现在感觉只是几个月。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/owid-test-scores-1024x723.png" alt=""></p>
+<p><em>深度学习系统正在许多领域快速达到或超过人类水平。图源：</em></p>
+<p><em>Our World in Data</em>我们实际上快没有基准可用了。举个轶事：我的朋友 Dan 和 Collin 几年前，也就是 2020 年，做了一个叫 <a href="https://arxiv.org/abs/2009.03300">MMLU</a> 的基准。他们希望终于做出一个经得起时间考验的基准，相当于我们给高中生和大学生的所有最难考试。仅仅三年后，它基本被解决了：GPT-4 和 Gemini 这类模型能拿到约 90%。</p>
+<p>更广泛地说，GPT-4 基本攻克了所有标准的高中和大学能力测试。<a href="#footnote-5-70">5</a>（而且仅仅从 GPT-3.5 到 GPT-4 的一年，常常就把我们从远低于人类中位数带到了人类范围的顶端。）</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gpt4_exams_updated.png" alt=""></p>
+<p><em>GPT-4</em></p>
+<p>在标准化测试上的<a href="https://arxiv.org/pdf/2303.08774">得分</a>。也请注意，在这些测试的人类百分位上，GPT-3.5 到 GPT-4 出现了巨大跃迁，往往从远低于人类中位数跳到人类范围的最顶端。（而且这是 GPT-3.5，一个在 GPT-4 前不到一年发布的相当新的模型，不是前面说的那个笨拙的、小学生水平的老 GPT-3！）<img src="https://situational-awareness.ai/wp-content/uploads/2024/06/math2022.png" alt=""></p>
+<p><em>灰色：专业人士</em></p>
+<p>在 2021 年 8 月对 2022 年 6 月 MATH 基准（高中数学竞赛难题）表现做出的<a href="https://bounded-regret.ghost.io/ai-forecasting-one-year-in/">预测</a>。红星：到 2022 年 6 月时实际最先进水平，远远超过预测者给出的上界。机器学习研究者的中位数预测</p>
+<p><em>甚至更加悲观</em>*。*</p>
+<p>再看 <a href="https://arxiv.org/pdf/2103.03874">MATH 基准</a>，它是一组来自高中数学竞赛的困难数学题。<a href="#footnote-6-70">6</a>该基准在 2021 年发布时，最好的模型只能做对约 5%。原论文还指出：“此外，我们发现，如果缩放趋势继续，仅仅增加预算和模型参数量将难以实现强数学推理……要在数学问题求解上取得更多进展，我们很可能需要更广泛研究社区的新算法进展”——他们认为，要解决 MATH 需要根本性新突破。对<a href="https://bounded-regret.ghost.io/ai-forecasting-one-year-in/">机器学习研究者的调查预测</a>未来几年进展很小；<a href="#footnote-7-70">7</a>然而仅仅一年内（到 2022 年中），最好的模型就从约 5% 达到 <a href="https://research.google/blog/minerva-solving-quantitative-reasoning-problems-with-language-models/">50% 准确率</a>；现在，<a href="https://x.com/bneyshabur/status/1792304689335480511">MATH 基本被解决</a>，近期表现超过 90%。</p>
+<p>一年又一年，怀疑者反复声称“深度学习做不到 X”，然后很快被证明错误。<a href="#footnote-8-70">8</a><em>如果过去十年 AI 给我们留下了一条教训，那就是永远不要押注反对深度学习。</em></p>
+<p>现在最难的未解决基准，是 <a href="https://arxiv.org/abs/2311.12022">GPQA</a> 这类测试：一组博士级别的生物、化学和物理问题。许多题目在我看来像乱码；即便其他科学领域的博士花 30 多分钟用 Google，也只能略高于随机猜测。Claude 3 Opus 目前能拿到约 60%，<a href="#footnote-9-70">9</a>相比之下，本领域博士能拿到约 80%——我预计这个基准在下一代或两代模型中也会倒下。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gpqa_examples.png" alt=""></p>
+<p><em>GPQA 题目示例。模型在这方面已经比我强，我们大概很快就会攻破专家博士水平……</em></p>
+<p><strong>数数量级</strong></p>
+<p>这是怎么发生的？深度学习的魔力在于它<em>就是有效</em>——尽管每一步都有反对者，趋势线却惊人地稳定。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/sora_scaling.png" alt=""></p>
+<p><em>以 OpenAI Sora 为例，扩展算力带来的效果。</em></p>
+<p><em>每增加一个有效算力数量级，模型就会可预测、可靠地变好。</em><a href="#footnote-10-70">10</a>如果我们能数数量级，就能（粗略地、定性地）外推能力提升。<a href="#footnote-11-70">11</a>这就是少数有先见之明的人预见 GPT-4 的方式。</p>
+<p>我们可以把 GPT-2 到 GPT-4 这四年的进展分解为三类扩展：</p>
+<p><em>算力</em>：我们用大得多的计算机训练这些模型。<em>算法效率</em>：算法进展有一条持续趋势。许多算法进展像“算力乘数”，我们可以把它们放在不断增长的<em>有效算力</em>这一统一尺度上。<em>“解除束缚”收益</em>：默认情况下，模型学到了很多惊人的原始能力，但它们以各种愚蠢方式被束缚，限制了实际价值。通过从人类反馈中强化学习（RLHF）、思维链（CoT）、工具和脚手架等简单算法改进，我们可以释放重要的潜在能力。</p>
+<p>我们可以沿这些轴“数数量级”的改进：也就是用有效算力单位追踪每一项扩展。3x 是 0.5 个数量级；10x 是 1 个数量级；30x 是 1.5 个数量级；100x 是 2 个数量级；以此类推。我们也可以看 2023 到 2027 年，在 GPT-4 基础之上应该预期什么。</p>
+<p>我会逐项说明，但结论很清楚：我们正在快速穿越数量级。数据墙可能带来逆风，我会讨论——但总体来看，到 2027 年，在 GPT-4 之上再出现一次 GPT-2 到 GPT-4 规模的跃迁，似乎很可能。</p>
+<p><strong>算力</strong></p>
+<p>我先从最近进步中最常被讨论的驱动因素说起：向模型投入（大量）更多算力。</p>
+<p>许多人以为这只是因为摩尔定律。但即使在摩尔定律的鼎盛时代，它的速度也相对<em>冰川般缓慢</em>——也许每十年 1 到 1.5 个数量级。我们现在看到的算力扩展快得多——接近摩尔定律速度的 5 倍——原因是巨额投资。（过去，在单个模型上花一百万美元都是没人会认真考虑的离谱想法；现在那只是零钱！）</p>
+<p>模型 | 估计算力 | 增长 |
+| GPT-2（2019） | ~4e21 FLOP | |
+| GPT-3（2020） | ~3e23 FLOP | + ~2 个数量级 |
+| GPT-4（2023） | 8e24 到 4e25 FLOP | + ~1.5–2 个数量级 |</p>
+<p>*Epoch AI 对 GPT-2 到 GPT-4 算力的估计。*我们可以使用 Epoch AI（因其出色的 AI 趋势分析而广受尊重）公开估计，追踪 2019 到 2023 年的算力扩展。GPT-2 到 GPT-3 是一次快速扩展；当时存在很大的算力积压，从一个较小实验扩展到使用整座数据中心训练大型语言模型。GPT-3 到 GPT-4 的扩展则让我们进入现代模式：必须为下一个模型建设一个全新的（大得多的）集群。然而戏剧性增长仍在继续。总体而言，Epoch AI 的估计表明，GPT-4 训练使用的原始算力约为 GPT-2 的 3,000 到 10,000 倍。</p>
+<p>大体上，这只是更长期趋势的延续。在过去十五年左右，主要由于投资的广泛扩大（以及以 GPU 和 TPU 形式为 AI 工作负载专门化芯片），前沿 AI 系统使用的训练算力大约以每年 0.5 个数量级增长。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/compute_long_run_trend_updated.png" alt=""></p>
+<p><em>著名深度学习模型随时间使用的训练算力。来源：</em></p>
+<p><em>Epoch AI</em>GPT-2 到 GPT-3 一年内的算力扩展是一次不寻常的积压释放，但所有迹象都表明更长期趋势会继续。旧金山传闻圈里到处都是巨大 GPU 订单的夸张故事。相关投资会非常惊人——但它们已经在进行。我会在本系列后文 <a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">IIIa. 冲向万亿美元集群</a> 中更详细讨论；基于那里的分析，到 2027 年底再增加 2 个数量级的算力（数百亿美元级集群）似乎非常可能；甚至更接近 +3 个数量级的算力集群（1000 亿美元以上）也似乎可信（而且据传 Microsoft/OpenAI <a href="https://www.theinformation.com/articles/microsoft-and-openai-plot-100-billion-stargate-ai-supercomputer">正在推进</a>）。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/stacked_compute.png" alt=""></p>
+<p><strong>算法效率</strong></p>
+<p>巨额算力投资吸引了所有注意力，但算法进展可能是同样重要的进步驱动力（而且一直被严重低估）。</p>
+<p>要理解算法进展能有多重要，看看下面这张图：它展示了仅仅<em>两年</em>里，在 MATH 基准（高中竞赛数学）上达到约 50% 准确率所需价格的下降。（作为比较，一个不太喜欢数学的计算机科学博士生得分 40%，所以这已经相当不错。）* *推理效率在不到两年里提高了将近 3 个数量级——1000 倍。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/math_inference_cost.png" alt=""></p>
+<p><em>达到约 50% MATH 表现所需相对推理成本的粗略估计。</em></p>
+<p><a href="#footnote-12-70">12</a></p>
+<p>虽然这些只是推理效率数字（不一定对应训练效率改进，而训练效率更难从公开数据中推断），但它们清楚表明，算法进展的空间<em>巨大</em>，而且正在发生。</p>
+<p>在本文中，我会把算法进展分成两类。这里先讨论“范式内”算法改进——它们只是产生更好的基础模型，并且很直接地充当<em>算力效率</em>或<em>算力乘数</em>。例如，更好的算法可能让我们用少 10 倍的训练算力达到同样表现。相应地，它就等价于<em>有效算力</em>增加 10 倍（1 个数量级）。（后文我会讨论“解除束缚”，你可以把它理解为“扩展范式/扩展应用”的算法进展，它释放基础模型能力。）</p>
+<p>如果退一步看长期趋势，我们似乎以相当稳定的速度发现新的算法改进。单个发现看起来是随机的，每一步也似乎都有不可逾越的障碍——但长期趋势线是可预测的，是图上的一条直线。相信趋势线。</p>
+<p>ImageNet 的数据最好（那里的算法研究大多公开，而且有十年数据）。在 2012 到 2021 年这 9 年期间，我们持续把计算效率提升了大约每年 0.5 个数量级。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/pareto_frontiers_imagenet_epoch.png" alt=""></p>
+<p><em>我们可以衡量算法进展：与 2012 年相比，在 2021 年训练出相同表现的模型需要少多少算力？我们看到算法效率约每年 0.5 个数量级的趋势。来源：</em></p>
+<p><em>Erdil 和 Besiroglu 2022</em>*。*</p>
+<p>这是大事：这意味着 4 年后，我们可以用少约 100 倍的算力达到同样表现（同时，同样算力能带来高得多的表现！）。</p>
+<p>不幸的是，由于实验室不发布内部数据，更难衡量过去四年前沿 LLM 的算法进展。<a href="https://arxiv.org/pdf/2403.05812">EpochAI 的新工作</a>把他们在 ImageNet 上的结果复制到语言建模，并估计 2012 到 2023 年间 LLM 中也有类似的约每年 0.5 个数量级的算法效率趋势。（不过误差范围更大，而且没有捕捉到一些更近期的收益，因为领先实验室已经不再公开算法效率。）</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/llm_efficiency_epoch-1.png" alt=""></p>
+<p><a href="https://arxiv.org/pdf/2403.05812">Epoch AI 对语言建模中算法效率的估计</a>。他们的估计表明，我们在 8 年里取得了约 4 个数量级的效率收益。更直接地看最近 4 年，GPT-2 到 GPT-3 基本是简单扩展（根据<a href="https://arxiv.org/abs/2005.14165">论文</a>），但 GPT-3 之后有许多公开已知和可公开推断的收益：</p>
+<ul>
+<li>我们可以从 API 成本推断收益：
+<a href="#footnote-13-70">13</a>- GPT-4 发布时，成本与 GPT-3 发布时大致相同，尽管性能提升极其巨大。
+<a href="#footnote-14-70">14</a>（如果基于缩放律做一个天真且过度简化的粗略估算，这表明 GPT-3 到 GPT-4 的有效算力增长中，或许大约一半来自算法改进。<a href="#footnote-15-70">15</a>）- 自 GPT-4 发布一年以来，随着 GPT-4o 发布，OpenAI 的 GPT-4 级模型价格又下降了 6x/4x（输入/输出）。</li>
+<li>最近发布的 Gemini 1.5 Flash 提供介于“GPT-3.75 级”和 GPT-4 级之间的表现，</li>
+</ul>
+<p><a href="#footnote-16-70">16</a>同时<a href="https://ai.google.dev/pricing">成本</a>比原版 GPT-4 低 85x/57x（输入/输出）（惊人的收益！）。</p>
+<ul>
+<li>GPT-4 发布时，成本与 GPT-3 发布时大致相同，尽管性能提升极其巨大。</li>
+</ul>
+<p><a href="https://arxiv.org/abs/2203.15556">Chinchilla 缩放律</a>带来 3x+（0.5 个数量级以上）的效率收益。<a href="#footnote-17-70">17</a>- Gemini 1.5 Pro 声称有<a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf">重大算力效率收益</a>（超过 Gemini 1.0 Ultra，同时使用“显著更少”的算力），并把专家混合（MoE）作为突出的架构变化。<a href="https://x.com/deepseek_ai/status/1745304852211839163?s=20">其他</a><a href="https://arxiv.org/pdf/2101.03961">论文</a><a href="https://arxiv.org/pdf/2202.08906">也</a><a href="https://arxiv.org/pdf/2112.06905">声称</a> MoE 能带来显著的算力倍数收益。- 在<a href="https://arxiv.org/pdf/2307.08691">架构</a>、<a href="https://arxiv.org/pdf/2306.01116">数据</a>、<a href="https://arxiv.org/pdf/1909.08053">训练栈</a>、<a href="https://twitter.com/__nmca__/status/1781189294360846372?s=12">等等</a>方面，一直都有许多调整和收益。<a href="#footnote-18-70">18</a></p>
+<p>综合来看，公开信息表明，GPT-2 到 GPT-4 的跃迁包含 1 到 2 个数量级的算法效率收益。<a href="#footnote-19-70">19</a></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/stacked_compute_algos.png" alt=""></p>
+<p>GPT-4 之后的 4 年里，我们应该预期这一趋势继续：<a href="#footnote-20-70">20</a>平均每年 0.5 个数量级的算力效率，也就是到 2027 年相对 GPT-4 获得约 2 个数量级收益。随着低垂果实被摘完，算力效率会越来越难找，但 AI 实验室投入金钱和人才寻找新算法改进的规模也在快速增长。<a href="#footnote-21-70">21</a>（至少从公开可推断的推理成本效率看，完全没有放缓。）高端情况下，我们甚至可能看到更根本的、类似 Transformer 的突破，<a href="#footnote-22-70">22</a>带来更大收益。</p>
+<p>综合来看，这表明到 2027 年底，我们应该预期相对 GPT-4 有大约 1 到 3 个数量级的算法效率收益，最佳猜测也许约为 2 个数量级。</p>
+<p><strong>数据墙</strong></p>
+<p>所有这些里有一个潜在的重要不确定来源：我们正在耗尽互联网数据。这可能意味着，非常快，简单地用更多抓取数据预训练更大的语言模型，会开始遇到严重瓶颈。</p>
+<p>前沿模型已经在互联网上很大一部分数据上训练过。例如，Llama 3 在<a href="https://ai.meta.com/blog/meta-llama-3/">超过 15T token</a> 上训练。Common Crawl 是大部分互联网的转储，<a href="https://foundation.mozilla.org/en/blog/Mozilla-Report-How-Common-Crawl-Data-Infrastructure-Shaped-the-Battle-Royale-over-Generative-AI/">用于 LLM 训练</a>，原始规模超过 100T token，但其中很多是垃圾和重复（例如，相对简单的<a href="https://www.together.ai/blog/redpajama-data-v2">去重</a>后得到 30T token，这意味着 Llama 3 基本已经在使用全部数据）。此外，对于代码等更具体领域，可用 token 要少得多，例如<a href="https://arxiv.org/pdf/2211.04325">公开 GitHub 仓库</a>估计只有低个位数万亿 token。</p>
+<p>你可以通过重复数据再走远一点，但这方面的<a href="https://arxiv.org/abs/2305.16264">学术工作</a>表明，重复数据的帮助有限；研究发现 16 个 epoch（重复 16 次）之后，收益会极快下降到接近零。到某个点，即便有更多（有效）算力，因为数据约束，让模型更好也会变得困难得多。不能低估这一点：我们一直在乘着缩放曲线，乘着语言建模预训练范式的浪潮；如果这里没有新的东西，这个范式（至少天真地看）会耗尽。即使有巨额投资，我们也会到达平台期。据传所有实验室都在对新的算法改进或绕过数据墙的新方法下重注。研究人员据说正在尝试许多策略，从<a href="https://www.dwarkeshpatel.com/p/will-scaling-work">合成数据到自我博弈和 RL 方法</a>都有。行业内部人士似乎非常乐观：Anthropic CEO Dario Amodei <a href="https://www.dwarkeshpatel.com/p/dario-amodei">最近在播客上说</a>：“如果非常天真地看，我们离数据耗尽并不远了……我的猜测是，这不会成为阻碍……有很多不同方法可以做。”当然，如今这方面的任何研究结果都是专有的，不会公开发表。</p>
+<p>除了内部人士的乐观，我认为还有很强的直觉理由说明，应该能找到以更好样本效率训练模型的方法（让模型从有限数据中学到更多的算法改进）。想想你我会如何学习一本非常密集的数学教材：</p>
+<ul>
+<li>现代 LLM 在训练中做的，本质上是非常非常快地扫过教材，文字只是<em>飞速掠过</em>，没有花太多脑力。- 相比之下，当你我读那本数学教材时，我们会慢慢读几页；然后在脑子里对材料做内部独白，并和几个学习伙伴讨论；再读一两页；然后尝试练习题，失败，换一种方式再试，对这些题得到反馈，再试，直到做对；如此往复，直到材料最终“通了”。</li>
+<li>如果你我只能像 LLM 那样一掠而过地读密集数学教材，我们也几乎学不到什么。<a href="#footnote-23-70">23</a> - 那么，也许可以把人类消化密集数学教材的某些方面纳入模型训练，让模型从有限数据中学到更多。简化地说，对材料进行内部独白、与学习伙伴讨论、在问题上尝试和失败直到豁然开朗——这类事情正是许多合成数据/自我博弈/RL 方法试图做到的。</li>
+</ul>
+<p><a href="#footnote-24-70">24</a></p>
+<p>旧的模型训练最先进方法很简单也很天真，但它有效，所以没人真正努力攻克这些样本效率方法。现在它可能变成更强约束，我们应该预期所有实验室都会投入数十亿美元和最聪明的人去解决它。深度学习中常见的模式是：要把细节做好需要<em>大量</em>努力（以及许多失败项目），但最终某个版本的显而易见且简单的东西就是有效。考虑到过去十年深度学习已经撞碎了每一堵所谓的墙，我的基准判断是这里也会类似。</p>
+<p>此外，攻克合成数据这类算法赌注之一，实际上似乎可能会大幅<em>改进</em>模型。这里有一个直觉泵。当前像 Llama 3 这样的前沿模型在互联网上训练——而互联网大多是垃圾，比如电商、SEO 或类似内容。许多 LLM 把绝大多数训练算力花在这些垃圾上，而不是花在真正高质量的数据上（例如人们解决困难科学问题的推理链）。想象一下，如果你能把 GPT-4 级算力完全花在极高质量数据上——那可能会得到一个强得多、强得多的模型。</p>
+<p>回看 AlphaGo 也很有帮助——这是第一个击败围棋世界冠军的 AI 系统，比人们原以为可能的时间早了几十年。<a href="#footnote-25-70">25</a></p>
+<ul>
+<li>第一步，AlphaGo 通过模仿学习在人类专家棋局上训练。这给了它基础。</li>
+<li>第二步，AlphaGo 与自己下了数百万盘棋。这让它在围棋上变成超人水平：还记得对李世石那盘棋中著名的第 37 手吗，那是极其反常但 brilliant 的一步，人类永远不会这样下。</li>
+</ul>
+<p>为 LLM 开发等价于第二步的东西，是克服数据墙的关键研究问题（而且，最终也会是超越人类水平智能的关键）。</p>
+<p>所有这些都是说，数据约束似乎会给未来几年 AI 进展预测注入双向的大误差条。确实存在一种非常真实的可能：事情停滞下来（LLM 可能仍然像互联网一样重要，但我们不会到达真正疯狂的 AGI）。但我认为合理猜测是，实验室会攻克它；而且攻克它不仅会让缩放曲线继续，还可能带来模型能力的巨大收益。</p>
+<p>顺带一提，这也意味着与今天相比，我们应该预期未来几年不同实验室之间的差异会更大。直到最近，最先进技术仍是公开发表的，所以大家基本上都在做同样的事情。（新创业公司或开源项目也很容易与前沿竞争，因为配方是公开的。）现在，关键算法思想正变得越来越专有。我预期实验室的方法会更大程度分化，有些会比其他实验室进展更快——甚至现在看似处于前沿的实验室，也可能被数据墙卡住，而另一些实验室取得突破并领先。开源也会更难竞争。这肯定会让事情变得有趣。（而且如果某个实验室一旦搞定了，它的突破将是通往 AGI 的关键，通往超级智能的关键——是美国<a href="https://situational-awareness.ai/lock-down-the-labs/">最珍贵的秘密</a>之一。）</p>
+<p><strong>解除束缚</strong></p>
+<p>最后，是最难量化但同样重要的一类改进：我称之为“解除束缚”。</p>
+<p>想象一下，当别人要求你解一道难数学题时，你必须立刻用脑子里冒出的第一个答案回答。显然，除了最简单的问题外，你会很难做好。但直到最近，我们就是让 LLM 这样解数学题。相反，我们大多数人会在草稿纸上一步步推导，因此能解决困难得多的问题。“思维链”提示为 LLM 解锁了这一点。尽管它们有出色的原始能力，但在数学上比本可以达到的水平差很多，因为它们被一种显而易见的方式束缚住了；只需要一个小算法调整，就释放出大得多的能力。</p>
+<p>过去几年里，我们在“解除束缚”模型方面取得了巨大进展。这些是超越“只是训练更好的基础模型”的算法改进——而且通常只使用预训练算力的一小部分——却能释放模型能力：</p>
+<p><em>从人类反馈中强化学习（RLHF）</em>。基础模型具有惊人的<em>潜在</em>能力，<a href="#footnote-26-70">26</a>但它们很原始，也极难使用。公众常以为 RLHF 只是审查脏话，但 RLHF 是让模型真正有用、真正有商业价值的关键（不是让模型预测随机互联网文本，而是让它们真正应用能力来尝试回答你的问题！）。这就是 ChatGPT 的魔力——做得好的 RLHF 第一次让模型对普通人可用且有用。原始的 <a href="https://openai.com/research/instruction-following">InstructGPT 论文</a>对此有很好的量化：在人类评分偏好上，一个经过 RLHF 的小模型等价于一个未经过 RLHF、规模大 100 倍以上的模型。<em>思维链</em>（CoT）。如前所述。<a href="https://arxiv.org/abs/2201.11903">CoT 在仅 2 年前开始被广泛使用</a>，在数学/推理问题上可以提供相当于 10 倍以上有效算力增加的收益。<em>脚手架</em>。可以把它理解为 CoT++：不是只让模型解一个问题，而是让一个模型制定攻克计划，让另一个提出一堆可能解法，让另一个进行批评，等等。<a href="https://paperswithcode.com/paper/language-agent-tree-search-unifies-reasoning">例如</a>，在 HumanEval（编程问题）上，简单脚手架能让 GPT-3.5 超过没有脚手架的 GPT-4。在 SWE-Bench（解决真实世界软件工程任务的基准）上，GPT-4 只能正确解决约 2%，而使用 <a href="https://x.com/cognition_labs/status/1768716551056728233">Devin 的智能体脚手架</a>后跃升到 14–23%。（不过，解锁能动性仍处在早期，后文会更多讨论。）<em>工具：<em>想象一下，如果人类不允许使用计算器或电脑会怎样。我们才刚开始，但 ChatGPT 现在已经能使用网页浏览器、运行一些代码，等等。<em>上下文长度</em>。模型已经从 2k token 上下文（GPT-3）发展到 32k 上下文（GPT-4 发布时），再到 1M+ 上下文（Gemini 1.5 Pro）。这是</em>巨大的</em>事情。一个小得多的基础模型，如果有 100k token 的相关上下文，可能超过一个大得多但只有 4k 相关上下文的模型——更多上下文本质上是一项巨大的算力效率收益。<a href="#footnote-27-70">27</a>更广泛地说，上下文是解锁许多模型应用的关键：例如，许多编程应用需要理解代码库的大部分内容，才能有用地贡献新代码；又比如，如果你用模型协助你写工作文档，它真的需要大量相关内部文档和对话的上下文。Gemini 1.5 Pro 以其 1M+ token 上下文，<a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf">甚至能够</a>仅通过把词典和语法参考材料放进上下文，就从零学习一门新语言（一种不在互联网上的低资源语言）！*后训练改进。*根据 <a href="https://www.dwarkeshpatel.com/p/john-schulman">John Schulman</a> 的说法，当前 GPT-4 相比发布时的原始 GPT-4 已有显著改进，原因是后训练改进释放了潜在模型能力：在<a href="https://x.com/polynoamial/status/1778584064343388179">推理评测</a>上，它取得了显著收益（例如 MATH 上约 50% -&gt; 72%，GPQA 上约 40% -&gt; 50%），在 <a href="https://chat.lmsys.org/?leaderboard">LMSys 排行榜</a>上，它的 elo 跳升了近 100 分（可比 Claude 3 Haiku 与大得多的 Claude 3 Opus 之间的 elo 差距，而这两个模型有约 50 倍<a href="https://www.anthropic.com/api">价格差</a>）。</p>
+<p><a href="https://epochai.org/blog/ai-capabilities-can-be-significantly-improved-without-expensive-retraining">Epoch AI 对其中一些技术的调查</a>，例如脚手架、工具使用等，发现这类技术通常能在许多基准上带来 5 到 30 倍的有效算力收益。METR（一个评估模型的组织）也在他们的一组智能体任务上发现，通过对同一个 GPT-4 基础模型解除束缚，可以带来非常大的性能提升：从只使用基础模型的 5%，到发布时后训练后的 GPT-4 的 20%，再到今天通过更好后训练、工具和智能体脚手架接近 40%。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/metr_gains_over_time.png" alt=""></p>
+<p><em>通过更好的解除束缚，METR 智能体任务表现随时间提升。来源：</em></p>
+<p><em>Model Evaluation and Threat Research</em>虽然很难把这些收益与算力和算法效率放在统一有效算力尺度上，但很清楚，它们是<em>巨大</em>收益，至少与算力扩展和算法效率处于大致相同量级。（这也凸显了算法进展的核心作用：每年 0.5 个数量级的算力效率已经很重要，但它只是故事的一部分；如果与解除束缚的算法进展合在一起，算法进展整体或许甚至占当前趋势收益的大多数。）</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/stacked_compute_algos_unhobbling.png" alt=""></p>
+<p>“解除束缚”实际上让这些模型变得有用——我认为，今天阻碍许多商业应用的，很大一部分就是需要继续进行这种“解除束缚”。事实上，<em>今天的模型仍然被严重束缚</em>！例如：</p>
+<ul>
+<li>它们没有长期记忆。</li>
+<li>它们不能使用电脑（仍然只有非常有限的工具）。</li>
+<li>它们仍然大多不会先思考再说话。当你让 ChatGPT 写一篇文章时，这就像期待一个人用最初的意识流来写文章。</li>
+</ul>
+<p><a href="#footnote-28-70">28</a> - 它们（大多）只能进行简短来回对话，而不能离开一天或一周，思考一个问题，研究不同方法，咨询其他人，然后给你写一份更长报告或 pull request。</p>
+<ul>
+<li>它们大多没有针对你或你的应用个性化（只是一个带有短提示词的通用聊天机器人，而不是拥有与你公司和工作相关的全部背景）。</li>
+</ul>
+<p>这里的可能性巨大，我们正在迅速摘取低垂果实。这一点至关重要：*仅仅想象“GPT-6 ChatGPT”是完全错误的。*随着解除束缚继续进展，改进相对于 GPT-6 + RLHF 会是阶跃式的。到 2027 年，你拥有的将不再是聊天机器人，而更像智能体，更像同事。</p>
+<p><strong>从聊天机器人到智能体同事</strong></p>
+<p>未来几年雄心勃勃的解除束缚可能是什么样？在我看来，有三个关键要素：</p>
+<p><strong>1. 解决“入职问题”</strong></p>
+<p>GPT-4 具有原始聪明程度，能做许多人工作中相当一部分内容，但它有点像一个刚到 5 分钟的聪明新员工：它没有任何相关上下文，没读过公司文档或 Slack 历史，也没和团队成员对话，没花时间理解公司内部代码库。一个聪明新员工刚到 5 分钟时并不太有用——但一个月后就相当有用了！例如，通过超长上下文，像给人类新同事入职一样给模型“入职”，似乎应该是可能的。仅这一点就是巨大解锁。</p>
+<p><strong>2.</strong> <strong>测试时算力积压（面向长周期问题的推理/纠错/System II）</strong></p>
+<p>现在，模型基本只能做短任务：你问它一个问题，它给你一个答案。但这极其受限。人类做的大多数有用认知工作都是长周期的——不是 5 分钟，而是数小时、数天、数周或数月。</p>
+<p>一个只能思考困难问题 5 分钟的科学家不可能做出任何科学突破。一个被要求时只能为单个函数写骨架代码的软件工程师也不会太有用——软件工程师会被交给一个更大的任务，然后制定计划，理解代码库或技术工具的相关部分，编写不同模块并逐步测试，调试错误，在可能解法空间中搜索，最终提交一个大型 pull request，这是数周工作的结果。等等。</p>
+<p>本质上，存在巨大的*测试时算力积压。*把每个 GPT-4 token 想象成你思考问题时内部独白中的一个词。每个 GPT-4 token 都相当聪明，但目前它实际上只能连贯地使用约数百个 token 量级的思维链（等效于你只能在一个问题或项目上花几分钟内部独白/思考）。</p>
+<p>如果它能用数百万 token 去思考并处理真正困难的问题或更大的项目，会怎样？</p>
+<p>| token 数量 | 等效于我在某件事上工作…… | |
+| 数百 | 几分钟 | ChatGPT（我们在这里） |
+| 数千 | 半小时 | +1 个数量级测试时算力 |
+| 数万 | 半个工作日 | +2 个数量级 |
+| 数十万 | 一个工作周 | +3 个数量级 |
+| 数百万 | 多个月 | +4 个数量级 |</p>
+<p><em>假设人类以约 100 token/分钟思考、每周工作 40 小时，把“模型思考多久”的 token 数转换为某个问题/项目上的人类时间。</em></p>
+<p>即便“每个 token”的智能相同，一个聪明人花<em>几分钟</em>和花<em>几个月</em>处理问题，差别也会巨大。我不知道你怎样，但我几个月内能做到的东西，远远、远远多于几分钟内能做到的。如果我们能为模型解锁“能够在某件事上思考并工作相当于数月，而不是相当于几分钟”的能力，就会释放出<em>疯狂</em>的能力跃迁。这里存在巨大积压，价值好几个数量级。</p>
+<p>现在，模型还做不到这一点。即使有最近长上下文进展，这种更长上下文主要只适用于 token 的消费，而不是 token 的生产——过一段时间，模型就会脱轨或卡住。它还不能自己离开一段时间去处理一个问题或项目。<a href="#footnote-29-70">29</a></p>
+<p>但解锁测试时算力，可能只需要相对较小的“解除束缚”算法收益。也许少量 RL 就能帮助模型学会纠错（“嗯，这看起来不对，让我再检查一下”）、制定计划、搜索可能解法等等。从某种意义上，模型已经拥有大多数原始能力，只需要在其上再学习少数额外技能，把一切组织起来。</p>
+<p>本质上，我们只需要教会模型一种 System II 外循环<a href="#footnote-30-70">30</a>，让它能推理困难、长周期项目。</p>
+<p>如果我们成功教会这个外循环，那么取代聊天机器人几段话的简短回答的，将是一条数百万字的流（比你阅读速度更快地涌来）：模型会思考问题，使用工具，尝试不同方法，做研究，修改自己的工作，与其他人协调，并独立完成大型项目。</p>
+<h4 id=""><a class="header" href="#"></a></h4>
+<p><a href="javascript:void(0)">
+在其他机器学习领域中权衡测试时算力与训练时算力 </a></p>
+<p>在棋类 AI 系统等其他领域，已经<a href="https://arxiv.org/abs/2104.03113">证明</a>可以使用更多测试时算力（也称推理时算力）来替代训练算力。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/test_time_tradeoff_go_jones2021-1024x811.png" alt=""></p>
+<p>如果类似关系在我们的场景也成立，若能解锁 +4 个数量级的测试时算力，就可能等效于 +3 个数量级的预训练算力，即非常粗略地说，相当于 GPT-3 到 GPT-4 的跃迁。（也就是说，解决这个“解除束缚”会等价于一次巨大的数量级扩展。）</p>
+<p><strong>3. 使用电脑</strong></p>
+<p>这也许是三者中最直接的一项。现在的 ChatGPT 基本像一个坐在隔离盒子里、你可以给它发短信的人。早期解除束缚改进教模型使用单个孤立工具，但我预计，随着多模态模型到来，我们很快就能一步到位：我们会直接让模型像人一样使用电脑。</p>
+<p>这意味着加入你的 Zoom 会议，在线研究东西，给人发消息和邮件，阅读共享文档，使用你的应用和开发工具，等等。（当然，要让模型在长周期循环中最大限度利用这一点，它会与解锁测试时算力同步发生。）</p>
+<p>到最后，我预期我们会得到一个很像<em>即插即用远程员工</em>的东西。一个智能体加入你的公司，像人类新员工一样入职，在 Slack 上给你和同事发消息并使用你的软件，提交 pull request；面对大型项目时，它能做出相当于人类离开几周并独立完成项目的模型版本。你可能需要比 GPT-4 略好的基础模型才能解锁这一点，但可能甚至不需要<em>好那么多</em>——许多潜力来自修复模型仍然被束缚的那些清楚且基础的方式。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/devin.gif" alt=""></p>
+<p><em>这种未来的一个非常早期预览是</em></p>
+<p><em>Devin</em>*，它是一个早期原型：在通向完全自动化软件工程师的道路上，解锁模型的“能动性积压”/“测试时算力积压”。我不知道 Devin 在实践中效果如何，而且与真正的聊天机器人 → 智能体解除束缚会产生的东西相比，这个演示仍然非常有限，但它是即将到来的那类东西的有用预告。*</p>
+<p>顺便说一句，我预计解除束缚的中心地位，会在商业应用上带来某种有趣的“音爆”效应。从现在到即插即用远程员工之间的中间模型，需要大量苦活来改变工作流、建设基础设施以整合并获得经济价值。即插即用远程员工会极大降低整合难度——只要，嗯，把它们放进去，自动化所有可以远程完成的工作。看起来很可能，苦活会比解除束缚花更久，也就是说，到即插即用远程员工能够自动化大量工作时，中间模型还没被充分利用和整合——因此，产生的经济价值跃迁可能会有些不连续。</p>
+<p><strong>未来四年</strong></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/overview_ooms_gpt2togpt4.png" alt=""></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/overview_ooms_2023to2027.png" alt=""></p>
+<p><em>对 GPT-4 之前四年进步驱动因素的估计，以及我们应当预期 GPT-4 之后四年发生什么的总结。</em></p>
+<p>把数字合在一起，我们应该（大致）预期，到 2027 年底，在 GPT-4 之后的 4 年里再出现一次 GPT-2 到 GPT-4 规模的跃迁。</p>
+<ul>
+<li>GPT-2 到 GPT-4 大致是 4.5–6 个数量级的基础有效算力扩展（物理算力与算法效率），外加重大“解除束缚”收益（从基础模型到聊天机器人）。</li>
+<li>随后 4 年里，我们应该预期 3–6 个数量级的基础有效算力扩展（物理算力与算法效率）——最佳猜测也许约为 5 个数量级——外加由“解除束缚”释放的效用和应用阶跃变化（从聊天机器人到智能体/即插即用远程员工）。</li>
+</ul>
+<p>换个角度看，假设 GPT-4 训练耗时 3 个月。<em>到 2027 年，一家领先 AI 实验室将能在一分钟内训练出 GPT-4 级模型。</em><a href="#footnote-31-70">31</a>** **有效算力数量级扩展会非常剧烈。</p>
+<p>这会把我们带到哪里？</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/overview_counting_the_ooms.png" alt=""></p>
+<p><em>数数量级总结。</em></p>
+<p>GPT-2 到 GPT-4 把我们从约等于学龄前儿童带到约等于聪明高中生；从几乎只能输出几句连贯话，带到在高中考试中拿高分并成为有用的编程助手。这是一次疯狂跃迁。如果<em>这</em>就是我们将再次跨越的智能差距，它会把我们带到哪里？<a href="#footnote-32-70">32</a>如果它带我们走得非常、非常远，我们不该惊讶。很可能，它会带来能超过博士和某领域顶尖专家的模型。</p>
+<p>（一个有趣的思考方式是：当前 AI 进步趋势大约以儿童发展速度的 3 倍推进。你的 3 倍速孩子刚从高中毕业；用不了多久它就会接你的工作！）</p>
+<p>再次强调，关键是不要只想象一个极其聪明的 ChatGPT：解除束缚收益意味着，它更像一个即插即用远程员工，一个极其聪明的智能体，能推理、计划、纠错，知道关于你和你公司的所有事情，并能独立处理一个问题数周。</p>
+<p>我们正在走向 2027 年的 AGI。这些 AI 系统基本上将能够自动化基本所有认知工作（想想：所有可以远程完成的工作）。</p>
+<p>说清楚一点——误差条很大。如果撞破数据墙所必需的算法突破比预期更难，随着数据耗尽，进展可能会停滞。也许解除束缚走不了那么远，我们只能停留在专家聊天机器人，而不是专家同事。也许十年趋势线断裂，或者这一次扩展深度学习真的撞墙了。（或者，一个算法突破，甚至只是释放测试时算力积压的简单解除束缚，可能成为范式转变，让事情进一步加速并更早带来 AGI。）</p>
+<p>无论如何，我们正在穿越数量级；要极其认真地看待到 2027 年出现 AGI——真正的 AGI——这种可能性，并不需要任何玄奥信念，只需要外推图上的直线趋势。</p>
+<p>如今很多人似乎在玩“把 AGI 定义下调”的游戏，把它说成只是非常好的聊天机器人之类。我指的是一种 AI 系统，它能完全自动化我或我朋友的工作，能完全完成 AI 研究员或工程师的工作。某些领域，例如机器人，默认情况下也许需要更久才能搞定。社会部署，例如医疗或法律职业，也很容易被社会选择或监管放慢。但一旦模型能自动化 AI 研究本身，就足够了——足以启动强烈反馈循环——我们可以非常迅速地取得进一步进展，自动化 AI 工程师自己会解决完全自动化一切的剩余瓶颈。尤其是，数百万自动化研究员很可能把十年进一步算法进展压缩到一年或更短。AGI 只会是随后很快到来的超级智能的一小口预尝。（更多见<a href="https://situational-awareness.ai/from-agi-to-superintelligence/">下一篇</a>。）</p>
+<p>无论如何，不要指望令人眩晕的进步速度会放缓。趋势线看起来无害，但含义非常强烈。就像此前每一代模型一样，每一代新模型都会让大多数旁观者瞠目结舌；很快，当模型解决需要博士花好几天的极难科学问题，当它们在你的电脑上飞来飞去做你的工作，当它们从零编写数百万行代码库，当这些模型每一两年产生的经济价值增加 10 倍时，人们会难以置信。忘掉科幻，数数量级：这是我们应该预期的。AGI 不再是遥远幻想。扩展简单深度学习技术就是有效；模型就是想学习；到 2027 年底，我们将再做 100,000 倍以上的扩展。用不了多久，它们就会比我们聪明。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gan_progress-1.jpeg" alt=""></p>
+<p><em>GPT-4 只是开始——四年后我们会在哪里？不要犯低估深度学习快速进步的错误（如</em></p>
+<p><em>GAN 进展**所示）。</em></p>
+<p>系列下一篇：<em>II. 从 AGI 到超级智能：智能爆炸</em>* *</p>
+<h3 id="附录穿越数量级要么这个十年要么很久以后"><a class="header" href="#附录穿越数量级要么这个十年要么很久以后">附录：<strong>穿越数量级：要么这个十年，要么很久以后</strong></a></h3>
+<p>我过去对 AGI 短时间线更怀疑。一个原因是，特别看重这个十年、把如此多 AGI 概率质量集中在这个十年，似乎不合理（这看起来像一种经典谬误：“哦，我们太特殊了”）。我认为，我们应当对实现 AGI 需要什么保持不确定，这应导向一个关于我们何时得到 AGI 的更“摊开”的概率分布。</p>
+<p>但我改变了想法：关键在于，我们对实现 AGI 所需条件的不确定性，应当落在<em>数量级</em>（有效算力）上，而不是年份上。</p>
+<p>这个十年，我们正在穿越数量级。即使在摩尔定律逝去的鼎盛时期，也只有每十年 1–1.5 个数量级。我估计，我们会在 4 年内完成约 5 个数量级，而整个十年总体约 10 个数量级。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/this_decade_or_bust-1024x790.png" alt=""></p>
+<p><em>这个十年我们一直在快速穿越数量级；2030 年代初之后，我们将面对缓慢跋涉。</em></p>
+<p>本质上，我们正处在一次巨大扩展中，收获这个十年的一次性收益；此后穿越数量级的进展会慢好几倍。如果这次扩展不能在未来 5–10 年内把我们带到 AGI，那 AGI 可能还要很久。</p>
+<p><em>支出扩展</em>：过去，在一个模型上花一百万美元都是离谱的；到这个十年末，我们很可能会拥有 <a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">1000 亿美元或 1 万亿美元集群</a>。再远高于此会很难；那基本已经是可行极限（无论从大企业负担能力看，还是从 GDP 占比看）。之后，我们能依靠的只是冰川般的每年 2% 真实 GDP 趋势增长。<em>硬件收益</em>：AI 硬件改进速度远快于摩尔定律。这是因为我们一直在为 AI 工作负载专门化芯片。例如，我们从 CPU 走到 GPU；为 Transformer 调整芯片；并把数字格式降到低得多的精度，从传统超算的 fp64/fp32 降到 H100 上的 fp8。这些是巨大收益，但到这个十年末，我们很可能已经拥有完全专门化的 AI 专用芯片，之后不太可能再有太多超越摩尔定律的收益。<em>算法进展</em>：未来十年，AI 实验室会在算法 R&amp;D 上投入数百亿美元，全世界最聪明的人都会做这件事；从微小效率提升到新范式，我们会摘取许多低垂果实。我们可能不会达到某种硬极限（尽管“解除束缚”很可能是有限的），但至少改进速度应该会放缓，因为投资（美元和人力资本）的快速增长必然放缓（例如，大多数聪明的 STEM 人才已经在做 AI）。 （话虽如此，这一点最难预测，也是上图中 2030 年代数量级不确定性的最大来源。）</p>
+<p>合在一起，这意味着未来十年我们将穿越的数量级，会远多于其后多个十年里可能穿越的数量级。也许这足够——我们很快得到 AGI；也许我们将进入漫长而缓慢的跋涉。你和我可以根据自己认为实现 AGI 有多难，合理地在 AGI 的<em>中位数</em>时间上有分歧——但鉴于我们现在正在快速穿越数量级，你的 AGI <em>众数</em>年份当然应该是这个十年稍后某个时间左右。</p>
+<p>这里有一张考虑算力和生物学界限的<a href="https://x.com/MatthewJBar/status/1772819342511820995">不错相关可视化</a>。</p>
+<p>他们过去十年里每年都做出的预测，而且一直错得很稳定……</p>
+<p><a href="#note-1-70">↩</a>来自</p>
+<p><a href="https://slatestarcodex.com/2019/02/19/gpt-2-as-step-toward-general-intelligence/">SSC</a>：Janelle Shane 问 GPT-2 它最喜欢的十种动物：</p>
+<p>提示：我最喜欢的 10 种动物是：1.</p>
+<p>我最喜欢的十种动物是：</p>
+<p>背上有白色疤痕的斑马</p>
+<p>阴险的蜘蛛和章鱼</p>
+<p>长着大叶子的青蛙，最好是黑色的</p>
+<p>长着鳞片的鸡尾鹦鹉</p>
+<p>翅膀悬在某人脸前约 4 英寸处、并且青蛙身上有心形纹身的刀嘴海雀</p>
+<p>可以失明、切开并生吃的互锁四足鸡蛇：</p>
+<p>生活在阳光下的黑白沙漠鳄鱼</p>
+<p>斑马和许多其他豌豆虫<a href="#note-2-70">↩</a>来自</p>
+<p><a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">GPT-2 论文</a>，第 3.6 节。<a href="#note-3-70">↩</a>这里我指的是笨拙的老 GPT-3，而不是你可能通过 ChatGPT 熟悉的、显著改进后的 GPT-3.5。</p>
+<p><a href="#note-4-70">↩</a>不，这些测试不在训练集中。AI 实验室会真正努力确保这些评测未受污染，因为他们需要良好测量才能做良好科学。ScaleAI 对此的<a href="https://x.com/alexandr_wang/status/1785888203943161970">近期分析</a>证实，领先实验室没有过拟合这些基准（尽管一些较小的 LLM 开发者可能在刷高自己的数字）。<a href="#note-5-70">↩</a>原论文指出：“我们也让人类在 MATH 上接受评估，发现一个并不特别喜欢数学的计算机科学博士生在 MATH 上约达到 40%，而一位三届 IMO 金牌得主达到 90%，这表明 MATH 对人类也可能有挑战。”</p>
+<p><a href="#note-6-70">↩</a>一位合作者<a href="https://bounded-regret.ghost.io/ai-forecasting-one-year-in/">指出</a>：“当我们的团队最初发布 MATH 数据集时，至少有一位[机器学习研究员同事]告诉我们，这是一个没有意义的数据集，因为它远远超出机器学习模型能够完成的范围（事实上，我自己也有些担心这一点）。”<a href="#note-7-70">↩</a>这里是 Yann LeCun 在 2022 年<a href="https://x.com/YaBoyFathoM/status/1659516423540965378">预测</a>，即使 GPT-5000 也无法推理现实世界中的物理互动；一年后 GPT-4 显然轻松做到了。</p>
+<p>这里是 Gary Marcus 在 GPT-2 之后预测的那些墙，被 GPT-3 <a href="https://www.astralcodexten.com/p/my-bet-ai-size-solves-flubs">解决</a>；以及他在 GPT-3 之后预测的那些墙，被 GPT-4 <a href="https://www.lesswrong.com/posts/cGbEtNbxACJpqoP4x/gpt-4-solves-gary-marcus-induced-flubs">解决</a>。</p>
+<p>这里是 Bryan Caplan 教授<a href="https://twitter.com/finmoorhouse/status/1638221410328797186?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1638221410328797186%7Ctwgr%5E30fcf9cb4b7ac2403b9fbf482b142b6598405006%7Ctwcon%5Es1_&amp;ref_url=https%3A%2F%2Fwww.redditmedia.com%2Fmediaembed%2F11xp2dz%2F%3Fresponsive%3Dtrueis_nightmode%3Dfalse">输掉</a>他的第一次公开打赌（此前他曾以完美公开打赌记录著称）。2023 年 1 月，GPT-3.5 在他的经济学期中考试中得了 D；随后 Caplan 教授与 Matthew Barnett <a href="https://www.betonit.ai/p/gpt-retakes-my-midterm-and-gets-an">打赌</a>，到 <em>2029 年</em>不会有 AI 在他的经济学期中考试中得 A。仅仅两个月后，GPT-4 发布，马上在他的期中考试中拿了 A（而且会是班里最高分之一）。<a href="#note-8-70">↩</a>在</p>
+<p><a href="https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf">diamond set, majority voting</a>上，模型用思维链尝试 32 次并多数投票。<a href="#note-9-70">↩</a>值得注意这些趋势线有多稳定。把原始<a href="https://arxiv.org/pdf/2001.08361">缩放律论文</a>与之后一些关于算力和算力效率扩展的估计结合起来，意味着一条跨越超过 15 个数量级（有效算力超过 1,000,000,000,000,000 倍）的稳定缩放趋势！<a href="#note-10-70">↩</a>一个常见误解是，缩放只适用于困惑度损失，但我们在下游基准表现上同样看到非常清楚且稳定的缩放行为。通常只是需要找到正确的 log-log 图。例如，在 GPT-4 博客文章中，他们用 MLPR（mean log pass rate）展示了在编程问题表现上跨越 6 个数量级（1,000,000 倍）算力的稳定缩放行为。《Are Emergent Abilities a Mirage?》</p>
+<p>这篇<a href="https://arxiv.org/pdf/2304.15004">论文</a>提出了类似观点；选择正确指标后，下游任务表现几乎总有稳定趋势。更一般地说，“缩放假说”的定性观察——模型能力随规模出现非常清楚的趋势——早于损失缩放曲线；“缩放律”工作只是对这一点的正式测量。</p>
+<p><a href="#note-11-70">↩</a>1. Gemini 1.5 Flash 在 MATH 上得分 54.9%，每百万 token 成本为 $0.35/$1.05（输入/输出）。GPT-4 发布前在 MATH 上得分 42.5%，2023 年初在 MATH 上得分 52.9%，每百万 token 成本为 $30/$60（输入/输出）；这比 Gemini 1.5 Flash 每 token 贵 85x/57x（输入/输出）。为保守起见，上文使用 30x 成本下降估计（考虑 Gemini 1.5 Flash 可能用更多 token 推理问题）。</p>
+<ol start="2">
+<li>Minerva540B 在 MATH 上得分 50.3%，使用 64 个样本多数投票。一位了解情况的朋友估计，这里的基础模型推理成本大概比 GPT-4 贵 2–3 倍。不过快速抽查来看，Minerva 每个答案似乎使用略少 token。更重要的是，Minerva 需要 64 个样本才能达到该表现；如果你天真地通过推理 API 运行，这意味着成本乘以 64。实践中，运行评测时提示 token 可以缓存；给定 few-shot 提示，提示 token 可能占成本的大多数，即便考虑输出 token。假设输出 token 占获取单个样本成本的三分之一，那么带缓存的 maj@64 只意味着成本约增加 20 倍。为保守起见，上文使用粗略的 20x 成本下降数字（即使通过 API 运行时天真的推理成本下降会更大）。<a href="#note-12-70">↩</a>虽然这些是推理效率（而不一定是训练效率），并且某种程度上会反映推理专用优化，但 a）它们表明总体上存在并正在发生巨大算法进展，b）算法改进往往既带来训练效率收益也带来推理效率，例如通过减少所需参数数量。</li>
+</ol>
+<p><a href="#note-13-70">↩</a><a href="https://the-decoder.com/openai-cuts-prices-for-gpt-3-by-two-thirds/">GPT-3</a>：$60/1M token，<a href="https://openai.com/pricing">GPT-4</a>：$30/1M 输入 token 和 $60/1M 输出 token。<a href="#note-14-70">↩</a>Chinchilla 缩放律说，应当等比例扩展参数量和数据量。也就是说，参数量增长的数量级是有效训练算力增长数量级的“一半”。与此同时，直觉上参数量与推理成本大致成比例。在其他条件相同下，推理成本保持不变意味着有效算力增长的一半数量级被算法收益“抵消”了。</p>
+<p>不过，为了说清楚，这是一个非常天真的计算（只是用于粗略说明），在很多方面都是错的。可能存在推理专用优化（不能转化为训练效率）；可能存在不减少参数量的训练效率（因此不能转化为推理效率）；等等。<a href="#note-15-70">↩</a>Gemini 1.5 Flash 在 <a href="https://chat.lmsys.org/?leaderboard">LMSys，一个聊天机器人排行榜</a>上的排名与 GPT-4 类似（高于原始 GPT-4，低于更新版 GPT-4），并且在 MATH 和 GPQA（衡量推理的评测）上与原始 GPT-4 有<a href="https://deepmind.google/technologies/gemini/flash/">类似表现</a>，而在 MMLU（更偏重衡量知识的评测）上大致落在 GPT-3.5 和 GPT-4 中间。<a href="#note-16-70">↩</a>例如，这篇</p>
+<p><a href="https://arxiv.org/pdf/2312.00752">论文</a>比较了 GPT-3 风格的原版 Transformer 与多年来发布的各种简单架构和训练配方改动（用 RMSnorm 替代 layernorm，不同的位置编码，SwiGlu 激活，用 AdamW 优化器替代 Adam，等等），他们称之为“Transformer++”，至少在小规模上意味着 6 倍收益。<a href="#note-18-70">↩</a>如果取每年 0.5 个数量级的趋势，GPT-2 与 GPT-4 发布间隔 4 年，那就是 2 个数量级。然而，GPT-2 到 GPT-3 是简单扩展（在例如 Transformer 的巨大收益之后），而 OpenAI 声称 <a href="https://cdn.openai.com/papers/gpt-4.pdf">GPT-4 预训练在 2022 年完成</a>，这可能意味着我们应该在这里计算的算法进展更接近 2 年。1 个数量级的算法效率似乎是保守下界。<a href="#note-19-70">↩</a>至少，考虑到十多年持续算法改进，任何声称这一切会突然停止的人，都应承担举证责任！</p>
+<p><a href="#note-20-70">↩</a>考虑到集群成本，3 倍算力效率带来的经济回报将以数百亿美元甚至更多计。</p>
+<p><a href="#note-21-70">↩</a>而且，只是一遍又一遍重读同一本教材，可能带来记忆而非理解。我理解很多 wordcels 就是这么通过数学课的！</p>
+<p><a href="#note-23-70">↩</a>另一个我觉得有趣的思考方式是：预训练和上下文学习之间存在一个“缺失的中间地带”。上下文学习</p>
+<p><em>令人难以置信</em>（并且在人类样本效率上有竞争力）。例如，<a href="https://arxiv.org/pdf/2403.05530">Gemini 1.5 Pro 论文</a>讨论了把 Kalamang 语言（使用者不到 200 人，基本不存在于互联网上）的教学材料（一本教材、一本词典）放进上下文——模型就能学会以人类水平从英语翻译到 Kalamang！在上下文中，模型能像人一样从教材学习（而且比把这一本教材直接扔进预训练里学得好得多）。</p>
+<p>当人类从教材学习时，能通过练习把短期记忆/学习浓缩成长期记忆/长期技能；然而，我们还没有等价方法把上下文学习“蒸馏回权重”。合成数据/自我博弈/RL 等等正在试图修复这一点：让模型自己学习，然后思考和练习所学内容，并把这种学习蒸馏回权重。<a href="#note-24-70">↩</a>从某种意义上说，这就是无监督学习的魔力：为了更好预测下一个 token、降低困惑度，模型学到极其丰富的内部表征，从（<a href="https://openai.com/research/unsupervised-sentiment-neuron">著名的</a>）情感到复杂世界模型应有尽有。但开箱即用时，它们被束缚住了：它们使用自己惊人的内部表征，仅仅是在随机互联网文本中预测下一个 token，而不是以最佳方式应用这些表征来真正尝试解决你的问题。<a href="#note-26-70">↩</a>见</p>
+<p><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf">更新版 Gemini 1.5 白皮书</a>中的图 7，对比 Gemini 1.5 Pro 和 Gemini 1.5 Flash（一种便宜得多、推测也更小的模型）中困惑度与上下文长度。<a href="#note-27-70">↩</a>不过人们正在研究这个！</p>
+<p><a href="#note-28-70">↩</a>这说得通——它为什么会学会长周期推理和纠错技能呢？互联网上很少有这样的数据：“我完整的内部独白、推理、以及我在一个月里做项目时所有相关步骤。”解锁这种能力需要一种新训练，让它学会这些额外技能。</p>
+<p>或者像 Gwern 所说（私人通信）：“‘脑子有银河系那么大，他们却让我做什么？预测基准测试中拼错的答案！’抑郁的神经网络 Marvin 哀叹道。”<a href="#note-29-70">↩</a>System I 与 System II 是思考当前 LLM 能力——包括它们的限制和愚蠢错误——以及 RL 和解除束缚可能带来什么的有用方式。可以这样想：当你开车时，大多数时间你处于自动驾驶状态（System I，也就是模型现在大多数时候做的事）。但当你遇到复杂施工区或陌生路口时，你可能会让副驾驶同伴暂停谈话片刻，让你弄清楚——真正思考——发生了什么以及该怎么做。如果你被迫只用 System I 过日子（更接近今天的模型），你会遇到很多麻烦。创造 System II 推理循环能力，是一个核心解锁。</p>
+<p><a href="#note-30-70">↩</a>基于上文对物理算力和算法效率扩展的最佳猜测假设，并简化并行性考虑（现实中它可能更像“在一天内运行 1440（60*24）个 GPT-4 级模型”或类似情况）。</p>
+<p><a href="#note-31-70">↩</a>当然，今天我们拥有的任何基准都会被刷满。但这说明不了太多；它主要反映出制作足够困难基准有多难。</p>
+<p><a href="#note-32-70">↩</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="0.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="0.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-c22b7243.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

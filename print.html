@@ -1,0 +1,1375 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>情境意识：AGI 与超级智能（中文译文）</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-0392ca55.css">
+        <link rel="stylesheet" href="css/chrome-fc474251.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-e6ebfb74.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-76315ebc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">情境意识：AGI 与超级智能（中文译文）</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="agi-竞赛与超级智能前景"><a href="#agi-竞赛与超级智能前景" class="header">AGI 竞赛与超级智能前景</a></h1>
+<p>Leopold Aschenbrenner，2024 年 6 月</p>
+<p>你最早能在旧金山看到未来。</p>
+<p>过去一年里，城里的谈资已经从 100 亿美元算力集群，变成 1000 亿美元集群，再变成万亿美元集群。每隔六个月，董事会计划书上的数字就会多一个零。幕后，各方正在激烈争抢这个十年剩余时间里仍可获得的每一份电力合同、每一台可能买到的变压器。美国大企业正准备投入数万亿美元，发动一场久违的美国工业力量总动员。到这个十年末，美国发电量将增长数十个百分点；从宾夕法尼亚的页岩气田到内华达的太阳能农场，数亿张 GPU 将一起嗡鸣。</p>
+<p>AGI 竞赛已经开始。我们正在建造能够思考和推理的机器。到 2025/26 年，这些机器将超过许多大学毕业生。到这个十年末，它们会比你我更聪明；我们将拥有真正意义上的超级智能。在这个过程中，半个世纪未见的国家安全力量将被释放出来；不久之后，「项目」（The Project）就会启动。运气好的话，我们会与中共展开全面竞赛；运气不好的话，则会陷入全面战争。</p>
+<p>现在人人都在谈 AI，但很少有人对即将冲击他们的东西有一丝预感。Nvidia 分析师仍认为 2024 年或许接近峰值。主流评论者还停留在「它只是预测下一个词」这种有意的视而不见里。他们只看到炒作和一切照旧的商业叙事；最多也只是把它想象成另一场互联网级别的技术变革。</p>
+<p>不久之后，世界会醒来。但此刻，大概只有几百人拥有 <em>situational awareness</em>（态势感知），其中大多数在旧金山和 AI 实验室。出于某种奇特的命运力量，我发现自己也在他们中间。几年前，这些人曾被嘲笑为疯子，但他们相信趋势线，而这让他们正确预测了过去几年的 AI 进展。这些人对接下来几年是否同样正确，仍有待观察。但他们非常聪明——是我见过最聪明的一批人——而且正是他们在建造这项技术。也许他们最终会成为历史中一个古怪的脚注；也许他们会像西拉德、奥本海默和泰勒那样被载入史册。如果他们对未来的看法哪怕只是接近正确，我们都会经历一段狂野的旅程。</p>
+<p>让我告诉你，我们看到了什么。</p>
+<p><strong>目录</strong></p>
+<p><em>每篇文章都可以独立阅读，不过我强烈建议把整个系列读完。完整系列的 PDF 版本见这里。</em></p>
+<p><strong>引言 [本页]</strong></p>
+<p>历史正在旧金山发生。</p>
+<p><strong>I. 从 GPT-4 到 AGI：数数量级</strong>到 2027 年出现 AGI 极其可信。GPT-2 到 GPT-4 用 4 年时间，把我们从约等于学龄前儿童的能力带到了约等于聪明高中生的能力。沿着算力趋势线（约每年 0.5 个数量级，OOM）、算法效率（约每年 0.5 个数量级）以及「解除束缚」收益（从聊天机器人到智能体）外推，我们应该预期到 2027 年还会再出现一次从学龄前儿童到高中生规模的质变。</p>
+<p><strong>II. 从 AGI 到超级智能：智能爆炸</strong></p>
+<p>AI 进步不会停在人类水平。数亿个 AGI 可以自动化 AI 研究，把十年的算法进展（5 个以上数量级）压缩到 ≤1 年。我们将迅速从人类水平走向</p>
+<p><em>远远</em>超越人类的 AI 系统。超级智能的力量——以及危险——都会极其剧烈。</p>
+<p><strong>III. 挑战</strong></p>
+<p><strong>IIIa. 冲向万亿美元集群</strong>最非凡的技术资本加速已经启动。随着 AI 收入快速增长，到这个十年末之前，数万亿美元将投入 GPU、数据中心和电力建设。工业动员会非常猛烈，其中包括让美国发电量增长数十个百分点。</p>
+<p><strong>IIIb. 封锁实验室：AGI 安全</strong>美国领先的 AI 实验室把安全当作事后才考虑的问题。当前，它们基本是在把 AGI 的关键秘密拱手送给中共。要保护 AGI 秘密和权重不受国家级行为者威胁，将是一项庞大工程，而我们并没有走在正轨上。</p>
+<p><strong>IIIc. 超级对齐</strong></p>
+<p>可靠控制比我们聪明得多的 AI 系统，是一个尚未解决的技术问题。虽然这是一个可以解决的问题，但在快速智能爆炸期间，事情很容易脱轨。管理这一点会极其紧张；失败很容易带来灾难性后果。</p>
+<p>**IIId. **<a href="https://situational-awareness.ai/the-free-world-must-prevail/"> 自由世界必须获胜</a>超级智能会带来决定性的经济和军事优势。中国绝没有退出这场竞赛。在通往 AGI 的竞赛中，自由世界的生死存亡将处于危险之中。我们能否维持相对于威权力量的领先地位？我们又能否在这个过程中避免自我毁灭？</p>
+<p><strong>IV. 项目</strong>随着通往 AGI 的竞赛加剧，国家安全机器将介入。美国政府会从沉睡中醒来，到 27/28 年，我们会看到某种形式的政府 AGI 项目。没有任何初创公司能处理超级智能。终局将在某个 SCIF（敏感隔离信息设施）里展开。</p>
+<p><strong>V. 结语</strong></p>
+<p>如果我们是对的呢？</p>
+<p>系列下一篇：** I. 从 GPT-4 到 AGI：数数量级**</p>
+<p><em>虽然我曾在 OpenAI 工作，但本文所有内容都基于公开信息、我自己的想法、领域内的一般知识，或旧金山圈内传闻。</em></p>
+<p><em>感谢 Collin Burns、Avital Balwit、Carl Shulman、Jan Leike、Ilya Sutskever、Holden Karnofsky、Sholto Douglas、James Bradbury、Dwarkesh Patel 以及许多其他人带来的形成性讨论。感谢许多朋友对早期草稿的反馈。感谢 Joe Ronan 在图形方面的帮助，以及 Nick Whitaker 在发布方面的帮助。</em></p>
+<p><em>献给 Ilya Sutskever。</em></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="2027年-agi-预测算力趋势与智能体进化"><a href="#2027年-agi-预测算力趋势与智能体进化" class="header">2027年 AGI 预测：算力趋势与智能体进化</a></h1>
+<p><strong>到 2027 年出现 AGI 极其可信。GPT-2 到 GPT-4 用 4 年时间，把我们从约等于学龄前儿童的能力带到了约等于聪明高中生的能力。沿着算力趋势线（约每年 0.5 个数量级，OOM）、算法效率（约每年 0.5 个数量级）以及“解除束缚”收益（从聊天机器人到智能体）外推，我们应该预期到 2027 年还会再出现一次从学龄前儿童到高中生规模的质变。</strong></p>
+<p>听着。模型，它们就是想学习。你必须理解这一点。模型，它们就是想学习。</p>
+<p>Ilya Sutskever（约 2015 年，经由[Dario Amodei]）</p>
+<p>GPT-4 的能力让许多人震惊：一个能写代码和文章、能推理困难数学题、能在大学考试中拿高分的 AI 系统。几年前，大多数人还认为这些都是不可逾越的高墙。</p>
+<p>但 GPT-4 只是深度学习十年来高速进步的延续。十年前，模型几乎连简单的猫狗图片都认不出来；四年前，GPT-2 也只能勉强串出几句半像样的话。现在，我们能想出来的各种基准测试正被迅速刷满。可是，这种戏剧性进展其实只是深度学习持续扩展趋势的结果。</p>
+<p>很早以前就有人看到了这一点。他们被嘲笑过，但他们做的只是相信趋势线。趋势线非常强，而他们是对的。模型就是想学习；你把它们扩展起来，它们就学得更多。</p>
+<p>我提出如下主张：**到 2027 年，模型能够完成 AI 研究员/工程师的工作，这一点极其可信。**这不需要相信科幻；只需要相信图上的直线。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/base_scaleup.png" alt=""></p>
+<p><em>基于本文讨论的公开估计，对过去和未来有效算力扩展（物理算力与算法效率）的粗略估算。随着我们扩展模型，模型会持续变得更聪明；通过“数数量级”，我们能大致感知在（近）未来应当预期怎样的模型智能。（这张图只展示基础模型的扩展；“解除束缚”未展示。）</em></p>
+<p>在本文中，我会简单地“数数量级”（OOM = order of magnitude，10x = 1 个数量级）：观察 1）<em>算力</em>，2）<em>算法效率</em>（我们可以把算法进展理解为“有效算力”的增长），以及 3）<em>“解除束缚”收益</em>（修正模型默认状态下显然受限的方式，释放潜在能力并给予工具，从而带来有用性的阶跃式变化）。我们会追踪 GPT-4 之前四年里每一项的增长，以及 GPT-4 之后到 2027 年底这四年里我们应该预期什么。考虑到深度学习在每个有效算力数量级上都持续改进，我们可以用它来预测未来进展。</p>
+<p>公开层面，自 GPT-4 发布以来，<a href="https://x.com/leopoldasch/status/1768868127138549841">局面已经沉寂</a>了一年，因为下一代模型还在烤箱里——这让一些人宣称已经停滞，深度学习正在撞墙。<a href="#footnote-1-70">1</a>但通过数数量级，我们能先窥见实际上应该预期什么。</p>
+<p>结论相当简单。GPT-2 到 GPT-4——从那种偶尔能串出几句连贯话就令人印象深刻的模型，到能在高中考试中拿高分的模型——不是一次性收益。我们正在极快穿越数量级，而数字表明，四年内我们应该预期又一次约 100,000x 的有效算力扩展，由此带来又一次 GPT-2 到 GPT-4 规模的质变。而且，关键的是，这不只是意味着更好的聊天机器人；在“解除束缚”上摘取许多显而易见的低垂果实，应该会把我们从聊天机器人带到智能体，从一个工具带到更像即插即用远程员工替代品的东西。</p>
+<p>推理很简单，但含义非常惊人。再来一次这样的跃迁，很可能会把我们带到 AGI，带到像博士或专家一样聪明、能够作为同事与我们并肩工作的模型。也许最重要的是，如果这些 AI 系统能够自动化 AI 研究本身，那就会启动强烈的反馈循环——这是<a href="https://situational-awareness.ai/from-agi-to-superintelligence/">本系列下一篇</a>的主题。</p>
+<p>即使现在，也几乎没有人把这一切计入价格。但一旦你退一步看趋势，AI 的态势感知其实并不难。如果你总是被 AI 能力吓一跳，那就开始数数量级吧。</p>
+<p><strong>过去四年</strong></p>
+<p>现在，我们已经有了基本可以<a href="https://openai.com/index/hello-gpt-4o/">像人一样交谈</a>的机器。人类适应能力之强令人惊叹：这件事竟然显得正常，我们已经对进步速度麻木了。但值得退一步，看看仅仅过去几年发生了什么。</p>
+<h3 id="gpt-2-到-gpt-4"><a class="header" href="#gpt-2-到-gpt-4">GPT-2 到 GPT-4</a></h3>
+<p>让我提醒你，在通往 GPT-4 之前的约 4（！）年里，我们走了多远。</p>
+<p><strong>GPT-2</strong>（2019）~ <em>学龄前儿童</em>：“哇，它能串出几句有点像样的话。”它<a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">生成</a>的一篇关于安第斯山独角兽的半连贯故事，是经过精挑细选的样例，但在当时令人印象极深。可是 GPT-2 连数到 5 都会卡住；<a href="#footnote-2-70">2</a>在总结文章时，它只比从原文中随机选 3 句话略好一点。<a href="#footnote-3-70">3</a></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gpt2_examples.png" alt=""></p>
+<p><em>一些</em></p>
+<p><em>当时人们觉得 GPT-2 令人印象深刻的**例子。左：GPT-2 在极其基础的阅读理解问题上表现还可以。右：在一个精挑细选的样本中（10 次尝试中最好的一次），GPT-2 能写出一个半连贯段落，提到一些与美国内战半相关的内容。</em></p>
+<p>比较 AI 能力与人类智能是困难且有缺陷的，但我认为这里的类比仍然有信息量，尽管非常不完美。GPT-2 令人震惊的是它对语言的掌握，以及偶尔生成半连贯段落、偶尔正确回答简单事实问题的能力。这大概相当于学龄前儿童会让人觉得厉害的东西。</p>
+<p><strong>GPT-3</strong>（2020）<a href="#footnote-4-70">4</a> ~ <em>小学生</em>：“哇，只给几个 few-shot 示例，它就能做一些简单有用的任务。”它在多段文字中保持连贯的能力稳定得多，也能纠正语法并做一些非常基础的算术。它也第一次在少数狭窄方向上具有商业用途：例如，GPT-3 可以为 SEO 和营销生成<a href="https://ai-copysmith.com/">简单文案</a>。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gpt3_examples-1.png" alt=""></p>
+<p><em>一些</em></p>
+<p>当时人们觉得 GPT-3 令人印象深刻的<a href="https://gwern.net/gpt-3">例子</a>。上：经过简单指令后，GPT-3 <a href="https://arxiv.org/abs/2005.14165">可以</a>在新句子中使用一个虚构单词。左下：GPT-3 <a href="https://x.com/nickwalton00/status/1280972636638437382/photo/1">可以</a>参与丰富的来回讲故事。右下：GPT-3 <a href="https://x.com/sharifshameem/status/1282676454690451457">可以</a>生成一些非常简单的代码。再次说明，这个比较并不完美，但 GPT-3 让人印象深刻的东西，大概相当于一个小学生让人印象深刻的东西：它写了一些基础诗歌，能讲更丰富、更连贯的故事，开始能做初级编程，能够相当可靠地从简单指令和演示中学习，等等。</p>
+<p><strong>GPT-4</strong>（2023）~ <em>聪明高中生</em>：“哇，它能写相当复杂的代码并反复调试，能就复杂主题写出聪明而成熟的文字，能推理困难的高中竞赛数学题，在我们能给出的各种测试上击败绝大多数高中生，等等。”从代码到数学再到费米估算，它能思考和推理。GPT-4 现在已经能帮我做日常任务，从协助写代码到修改草稿。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gpt4_examples-3.png" alt=""></p>
+<p><a href="https://arxiv.org/abs/2303.12712">《Sparks of AGI》</a>论文。上：它在写非常复杂的代码（生成中间展示的图），并能推理非平凡数学问题。左下：解一道 AP 数学题。右下：解决一道相当复杂的编程题。关于 GPT-4 能力探索的更多有趣摘录见</p>
+<p><a href="https://x.com/leopoldasch/status/1638848850516672513?s=20">这里</a>。</p>
+<p>从 AP 考试到 SAT，GPT-4 的分数都优于绝大多数高中生。</p>
+<p>当然，即使 GPT-4 仍然有些不均衡；在某些任务上它比聪明高中生强得多，在另一些任务上它还做不到。话虽如此，我倾向于认为，大多数限制都来自模型仍然以显而易见的方式被束缚住了，我会在<a href="#Unhobbling">后文深入讨论</a>。原始智能（大体上）已经在那里，即使模型仍被人为限制；要让模型能在各种应用中充分使用这种原始智能，还需要额外工作。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/timeline.png" alt=""></p>
+<p><em>仅四年里的进展。你</em></p>
+<p><em>在这条线上**处于哪里？</em></p>
+<h3 id="深度学习的趋势"><a class="header" href="#深度学习的趋势">深度学习的趋势</a></h3>
+<p>过去十年深度学习进步的速度简直非同寻常。仅仅十年前，一个深度学习系统能识别简单图片就已经是革命性的。今天，我们不断试图设计新颖、更困难的测试，但每一个新基准很快就被攻破。过去，攻破广泛使用的基准通常需要几十年；现在感觉只是几个月。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/owid-test-scores-1024x723.png" alt=""></p>
+<p><em>深度学习系统正在许多领域快速达到或超过人类水平。图源：</em></p>
+<p><em>Our World in Data</em>我们实际上快没有基准可用了。举个轶事：我的朋友 Dan 和 Collin 几年前，也就是 2020 年，做了一个叫 <a href="https://arxiv.org/abs/2009.03300">MMLU</a> 的基准。他们希望终于做出一个经得起时间考验的基准，相当于我们给高中生和大学生的所有最难考试。仅仅三年后，它基本被解决了：GPT-4 和 Gemini 这类模型能拿到约 90%。</p>
+<p>更广泛地说，GPT-4 基本攻克了所有标准的高中和大学能力测试。<a href="#footnote-5-70">5</a>（而且仅仅从 GPT-3.5 到 GPT-4 的一年，常常就把我们从远低于人类中位数带到了人类范围的顶端。）</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gpt4_exams_updated.png" alt=""></p>
+<p><em>GPT-4</em></p>
+<p>在标准化测试上的<a href="https://arxiv.org/pdf/2303.08774">得分</a>。也请注意，在这些测试的人类百分位上，GPT-3.5 到 GPT-4 出现了巨大跃迁，往往从远低于人类中位数跳到人类范围的最顶端。（而且这是 GPT-3.5，一个在 GPT-4 前不到一年发布的相当新的模型，不是前面说的那个笨拙的、小学生水平的老 GPT-3！）<img src="https://situational-awareness.ai/wp-content/uploads/2024/06/math2022.png" alt=""></p>
+<p><em>灰色：专业人士</em></p>
+<p>在 2021 年 8 月对 2022 年 6 月 MATH 基准（高中数学竞赛难题）表现做出的<a href="https://bounded-regret.ghost.io/ai-forecasting-one-year-in/">预测</a>。红星：到 2022 年 6 月时实际最先进水平，远远超过预测者给出的上界。机器学习研究者的中位数预测</p>
+<p><em>甚至更加悲观</em>*。*</p>
+<p>再看 <a href="https://arxiv.org/pdf/2103.03874">MATH 基准</a>，它是一组来自高中数学竞赛的困难数学题。<a href="#footnote-6-70">6</a>该基准在 2021 年发布时，最好的模型只能做对约 5%。原论文还指出：“此外，我们发现，如果缩放趋势继续，仅仅增加预算和模型参数量将难以实现强数学推理……要在数学问题求解上取得更多进展，我们很可能需要更广泛研究社区的新算法进展”——他们认为，要解决 MATH 需要根本性新突破。对<a href="https://bounded-regret.ghost.io/ai-forecasting-one-year-in/">机器学习研究者的调查预测</a>未来几年进展很小；<a href="#footnote-7-70">7</a>然而仅仅一年内（到 2022 年中），最好的模型就从约 5% 达到 <a href="https://research.google/blog/minerva-solving-quantitative-reasoning-problems-with-language-models/">50% 准确率</a>；现在，<a href="https://x.com/bneyshabur/status/1792304689335480511">MATH 基本被解决</a>，近期表现超过 90%。</p>
+<p>一年又一年，怀疑者反复声称“深度学习做不到 X”，然后很快被证明错误。<a href="#footnote-8-70">8</a><em>如果过去十年 AI 给我们留下了一条教训，那就是永远不要押注反对深度学习。</em></p>
+<p>现在最难的未解决基准，是 <a href="https://arxiv.org/abs/2311.12022">GPQA</a> 这类测试：一组博士级别的生物、化学和物理问题。许多题目在我看来像乱码；即便其他科学领域的博士花 30 多分钟用 Google，也只能略高于随机猜测。Claude 3 Opus 目前能拿到约 60%，<a href="#footnote-9-70">9</a>相比之下，本领域博士能拿到约 80%——我预计这个基准在下一代或两代模型中也会倒下。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gpqa_examples.png" alt=""></p>
+<p><em>GPQA 题目示例。模型在这方面已经比我强，我们大概很快就会攻破专家博士水平……</em></p>
+<p><strong>数数量级</strong></p>
+<p>这是怎么发生的？深度学习的魔力在于它<em>就是有效</em>——尽管每一步都有反对者，趋势线却惊人地稳定。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/sora_scaling.png" alt=""></p>
+<p><em>以 OpenAI Sora 为例，扩展算力带来的效果。</em></p>
+<p><em>每增加一个有效算力数量级，模型就会可预测、可靠地变好。</em><a href="#footnote-10-70">10</a>如果我们能数数量级，就能（粗略地、定性地）外推能力提升。<a href="#footnote-11-70">11</a>这就是少数有先见之明的人预见 GPT-4 的方式。</p>
+<p>我们可以把 GPT-2 到 GPT-4 这四年的进展分解为三类扩展：</p>
+<p><em>算力</em>：我们用大得多的计算机训练这些模型。<em>算法效率</em>：算法进展有一条持续趋势。许多算法进展像“算力乘数”，我们可以把它们放在不断增长的<em>有效算力</em>这一统一尺度上。<em>“解除束缚”收益</em>：默认情况下，模型学到了很多惊人的原始能力，但它们以各种愚蠢方式被束缚，限制了实际价值。通过从人类反馈中强化学习（RLHF）、思维链（CoT）、工具和脚手架等简单算法改进，我们可以释放重要的潜在能力。</p>
+<p>我们可以沿这些轴“数数量级”的改进：也就是用有效算力单位追踪每一项扩展。3x 是 0.5 个数量级；10x 是 1 个数量级；30x 是 1.5 个数量级；100x 是 2 个数量级；以此类推。我们也可以看 2023 到 2027 年，在 GPT-4 基础之上应该预期什么。</p>
+<p>我会逐项说明，但结论很清楚：我们正在快速穿越数量级。数据墙可能带来逆风，我会讨论——但总体来看，到 2027 年，在 GPT-4 之上再出现一次 GPT-2 到 GPT-4 规模的跃迁，似乎很可能。</p>
+<p><strong>算力</strong></p>
+<p>我先从最近进步中最常被讨论的驱动因素说起：向模型投入（大量）更多算力。</p>
+<p>许多人以为这只是因为摩尔定律。但即使在摩尔定律的鼎盛时代，它的速度也相对<em>冰川般缓慢</em>——也许每十年 1 到 1.5 个数量级。我们现在看到的算力扩展快得多——接近摩尔定律速度的 5 倍——原因是巨额投资。（过去，在单个模型上花一百万美元都是没人会认真考虑的离谱想法；现在那只是零钱！）</p>
+<p>模型 | 估计算力 | 增长 |
+| GPT-2（2019） | ~4e21 FLOP | |
+| GPT-3（2020） | ~3e23 FLOP | + ~2 个数量级 |
+| GPT-4（2023） | 8e24 到 4e25 FLOP | + ~1.5–2 个数量级 |</p>
+<p>*Epoch AI 对 GPT-2 到 GPT-4 算力的估计。*我们可以使用 Epoch AI（因其出色的 AI 趋势分析而广受尊重）公开估计，追踪 2019 到 2023 年的算力扩展。GPT-2 到 GPT-3 是一次快速扩展；当时存在很大的算力积压，从一个较小实验扩展到使用整座数据中心训练大型语言模型。GPT-3 到 GPT-4 的扩展则让我们进入现代模式：必须为下一个模型建设一个全新的（大得多的）集群。然而戏剧性增长仍在继续。总体而言，Epoch AI 的估计表明，GPT-4 训练使用的原始算力约为 GPT-2 的 3,000 到 10,000 倍。</p>
+<p>大体上，这只是更长期趋势的延续。在过去十五年左右，主要由于投资的广泛扩大（以及以 GPU 和 TPU 形式为 AI 工作负载专门化芯片），前沿 AI 系统使用的训练算力大约以每年 0.5 个数量级增长。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/compute_long_run_trend_updated.png" alt=""></p>
+<p><em>著名深度学习模型随时间使用的训练算力。来源：</em></p>
+<p><em>Epoch AI</em>GPT-2 到 GPT-3 一年内的算力扩展是一次不寻常的积压释放，但所有迹象都表明更长期趋势会继续。旧金山传闻圈里到处都是巨大 GPU 订单的夸张故事。相关投资会非常惊人——但它们已经在进行。我会在本系列后文 <a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">IIIa. 冲向万亿美元集群</a> 中更详细讨论；基于那里的分析，到 2027 年底再增加 2 个数量级的算力（数百亿美元级集群）似乎非常可能；甚至更接近 +3 个数量级的算力集群（1000 亿美元以上）也似乎可信（而且据传 Microsoft/OpenAI <a href="https://www.theinformation.com/articles/microsoft-and-openai-plot-100-billion-stargate-ai-supercomputer">正在推进</a>）。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/stacked_compute.png" alt=""></p>
+<p><strong>算法效率</strong></p>
+<p>巨额算力投资吸引了所有注意力，但算法进展可能是同样重要的进步驱动力（而且一直被严重低估）。</p>
+<p>要理解算法进展能有多重要，看看下面这张图：它展示了仅仅<em>两年</em>里，在 MATH 基准（高中竞赛数学）上达到约 50% 准确率所需价格的下降。（作为比较，一个不太喜欢数学的计算机科学博士生得分 40%，所以这已经相当不错。）* *推理效率在不到两年里提高了将近 3 个数量级——1000 倍。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/math_inference_cost.png" alt=""></p>
+<p><em>达到约 50% MATH 表现所需相对推理成本的粗略估计。</em></p>
+<p><a href="#footnote-12-70">12</a></p>
+<p>虽然这些只是推理效率数字（不一定对应训练效率改进，而训练效率更难从公开数据中推断），但它们清楚表明，算法进展的空间<em>巨大</em>，而且正在发生。</p>
+<p>在本文中，我会把算法进展分成两类。这里先讨论“范式内”算法改进——它们只是产生更好的基础模型，并且很直接地充当<em>算力效率</em>或<em>算力乘数</em>。例如，更好的算法可能让我们用少 10 倍的训练算力达到同样表现。相应地，它就等价于<em>有效算力</em>增加 10 倍（1 个数量级）。（后文我会讨论“解除束缚”，你可以把它理解为“扩展范式/扩展应用”的算法进展，它释放基础模型能力。）</p>
+<p>如果退一步看长期趋势，我们似乎以相当稳定的速度发现新的算法改进。单个发现看起来是随机的，每一步也似乎都有不可逾越的障碍——但长期趋势线是可预测的，是图上的一条直线。相信趋势线。</p>
+<p>ImageNet 的数据最好（那里的算法研究大多公开，而且有十年数据）。在 2012 到 2021 年这 9 年期间，我们持续把计算效率提升了大约每年 0.5 个数量级。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/pareto_frontiers_imagenet_epoch.png" alt=""></p>
+<p><em>我们可以衡量算法进展：与 2012 年相比，在 2021 年训练出相同表现的模型需要少多少算力？我们看到算法效率约每年 0.5 个数量级的趋势。来源：</em></p>
+<p><em>Erdil 和 Besiroglu 2022</em>*。*</p>
+<p>这是大事：这意味着 4 年后，我们可以用少约 100 倍的算力达到同样表现（同时，同样算力能带来高得多的表现！）。</p>
+<p>不幸的是，由于实验室不发布内部数据，更难衡量过去四年前沿 LLM 的算法进展。<a href="https://arxiv.org/pdf/2403.05812">EpochAI 的新工作</a>把他们在 ImageNet 上的结果复制到语言建模，并估计 2012 到 2023 年间 LLM 中也有类似的约每年 0.5 个数量级的算法效率趋势。（不过误差范围更大，而且没有捕捉到一些更近期的收益，因为领先实验室已经不再公开算法效率。）</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/llm_efficiency_epoch-1.png" alt=""></p>
+<p><a href="https://arxiv.org/pdf/2403.05812">Epoch AI 对语言建模中算法效率的估计</a>。他们的估计表明，我们在 8 年里取得了约 4 个数量级的效率收益。更直接地看最近 4 年，GPT-2 到 GPT-3 基本是简单扩展（根据<a href="https://arxiv.org/abs/2005.14165">论文</a>），但 GPT-3 之后有许多公开已知和可公开推断的收益：</p>
+<ul>
+<li>我们可以从 API 成本推断收益：
+<a href="#footnote-13-70">13</a>- GPT-4 发布时，成本与 GPT-3 发布时大致相同，尽管性能提升极其巨大。
+<a href="#footnote-14-70">14</a>（如果基于缩放律做一个天真且过度简化的粗略估算，这表明 GPT-3 到 GPT-4 的有效算力增长中，或许大约一半来自算法改进。<a href="#footnote-15-70">15</a>）- 自 GPT-4 发布一年以来，随着 GPT-4o 发布，OpenAI 的 GPT-4 级模型价格又下降了 6x/4x（输入/输出）。</li>
+<li>最近发布的 Gemini 1.5 Flash 提供介于“GPT-3.75 级”和 GPT-4 级之间的表现，</li>
+</ul>
+<p><a href="#footnote-16-70">16</a>同时<a href="https://ai.google.dev/pricing">成本</a>比原版 GPT-4 低 85x/57x（输入/输出）（惊人的收益！）。</p>
+<ul>
+<li>GPT-4 发布时，成本与 GPT-3 发布时大致相同，尽管性能提升极其巨大。</li>
+</ul>
+<p><a href="https://arxiv.org/abs/2203.15556">Chinchilla 缩放律</a>带来 3x+（0.5 个数量级以上）的效率收益。<a href="#footnote-17-70">17</a>- Gemini 1.5 Pro 声称有<a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf">重大算力效率收益</a>（超过 Gemini 1.0 Ultra，同时使用“显著更少”的算力），并把专家混合（MoE）作为突出的架构变化。<a href="https://x.com/deepseek_ai/status/1745304852211839163?s=20">其他</a><a href="https://arxiv.org/pdf/2101.03961">论文</a><a href="https://arxiv.org/pdf/2202.08906">也</a><a href="https://arxiv.org/pdf/2112.06905">声称</a> MoE 能带来显著的算力倍数收益。- 在<a href="https://arxiv.org/pdf/2307.08691">架构</a>、<a href="https://arxiv.org/pdf/2306.01116">数据</a>、<a href="https://arxiv.org/pdf/1909.08053">训练栈</a>、<a href="https://twitter.com/__nmca__/status/1781189294360846372?s=12">等等</a>方面，一直都有许多调整和收益。<a href="#footnote-18-70">18</a></p>
+<p>综合来看，公开信息表明，GPT-2 到 GPT-4 的跃迁包含 1 到 2 个数量级的算法效率收益。<a href="#footnote-19-70">19</a></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/stacked_compute_algos.png" alt=""></p>
+<p>GPT-4 之后的 4 年里，我们应该预期这一趋势继续：<a href="#footnote-20-70">20</a>平均每年 0.5 个数量级的算力效率，也就是到 2027 年相对 GPT-4 获得约 2 个数量级收益。随着低垂果实被摘完，算力效率会越来越难找，但 AI 实验室投入金钱和人才寻找新算法改进的规模也在快速增长。<a href="#footnote-21-70">21</a>（至少从公开可推断的推理成本效率看，完全没有放缓。）高端情况下，我们甚至可能看到更根本的、类似 Transformer 的突破，<a href="#footnote-22-70">22</a>带来更大收益。</p>
+<p>综合来看，这表明到 2027 年底，我们应该预期相对 GPT-4 有大约 1 到 3 个数量级的算法效率收益，最佳猜测也许约为 2 个数量级。</p>
+<p><strong>数据墙</strong></p>
+<p>所有这些里有一个潜在的重要不确定来源：我们正在耗尽互联网数据。这可能意味着，非常快，简单地用更多抓取数据预训练更大的语言模型，会开始遇到严重瓶颈。</p>
+<p>前沿模型已经在互联网上很大一部分数据上训练过。例如，Llama 3 在<a href="https://ai.meta.com/blog/meta-llama-3/">超过 15T token</a> 上训练。Common Crawl 是大部分互联网的转储，<a href="https://foundation.mozilla.org/en/blog/Mozilla-Report-How-Common-Crawl-Data-Infrastructure-Shaped-the-Battle-Royale-over-Generative-AI/">用于 LLM 训练</a>，原始规模超过 100T token，但其中很多是垃圾和重复（例如，相对简单的<a href="https://www.together.ai/blog/redpajama-data-v2">去重</a>后得到 30T token，这意味着 Llama 3 基本已经在使用全部数据）。此外，对于代码等更具体领域，可用 token 要少得多，例如<a href="https://arxiv.org/pdf/2211.04325">公开 GitHub 仓库</a>估计只有低个位数万亿 token。</p>
+<p>你可以通过重复数据再走远一点，但这方面的<a href="https://arxiv.org/abs/2305.16264">学术工作</a>表明，重复数据的帮助有限；研究发现 16 个 epoch（重复 16 次）之后，收益会极快下降到接近零。到某个点，即便有更多（有效）算力，因为数据约束，让模型更好也会变得困难得多。不能低估这一点：我们一直在乘着缩放曲线，乘着语言建模预训练范式的浪潮；如果这里没有新的东西，这个范式（至少天真地看）会耗尽。即使有巨额投资，我们也会到达平台期。据传所有实验室都在对新的算法改进或绕过数据墙的新方法下重注。研究人员据说正在尝试许多策略，从<a href="https://www.dwarkeshpatel.com/p/will-scaling-work">合成数据到自我博弈和 RL 方法</a>都有。行业内部人士似乎非常乐观：Anthropic CEO Dario Amodei <a href="https://www.dwarkeshpatel.com/p/dario-amodei">最近在播客上说</a>：“如果非常天真地看，我们离数据耗尽并不远了……我的猜测是，这不会成为阻碍……有很多不同方法可以做。”当然，如今这方面的任何研究结果都是专有的，不会公开发表。</p>
+<p>除了内部人士的乐观，我认为还有很强的直觉理由说明，应该能找到以更好样本效率训练模型的方法（让模型从有限数据中学到更多的算法改进）。想想你我会如何学习一本非常密集的数学教材：</p>
+<ul>
+<li>现代 LLM 在训练中做的，本质上是非常非常快地扫过教材，文字只是<em>飞速掠过</em>，没有花太多脑力。- 相比之下，当你我读那本数学教材时，我们会慢慢读几页；然后在脑子里对材料做内部独白，并和几个学习伙伴讨论；再读一两页；然后尝试练习题，失败，换一种方式再试，对这些题得到反馈，再试，直到做对；如此往复，直到材料最终“通了”。</li>
+<li>如果你我只能像 LLM 那样一掠而过地读密集数学教材，我们也几乎学不到什么。<a href="#footnote-23-70">23</a> - 那么，也许可以把人类消化密集数学教材的某些方面纳入模型训练，让模型从有限数据中学到更多。简化地说，对材料进行内部独白、与学习伙伴讨论、在问题上尝试和失败直到豁然开朗——这类事情正是许多合成数据/自我博弈/RL 方法试图做到的。</li>
+</ul>
+<p><a href="#footnote-24-70">24</a></p>
+<p>旧的模型训练最先进方法很简单也很天真，但它有效，所以没人真正努力攻克这些样本效率方法。现在它可能变成更强约束，我们应该预期所有实验室都会投入数十亿美元和最聪明的人去解决它。深度学习中常见的模式是：要把细节做好需要<em>大量</em>努力（以及许多失败项目），但最终某个版本的显而易见且简单的东西就是有效。考虑到过去十年深度学习已经撞碎了每一堵所谓的墙，我的基准判断是这里也会类似。</p>
+<p>此外，攻克合成数据这类算法赌注之一，实际上似乎可能会大幅<em>改进</em>模型。这里有一个直觉泵。当前像 Llama 3 这样的前沿模型在互联网上训练——而互联网大多是垃圾，比如电商、SEO 或类似内容。许多 LLM 把绝大多数训练算力花在这些垃圾上，而不是花在真正高质量的数据上（例如人们解决困难科学问题的推理链）。想象一下，如果你能把 GPT-4 级算力完全花在极高质量数据上——那可能会得到一个强得多、强得多的模型。</p>
+<p>回看 AlphaGo 也很有帮助——这是第一个击败围棋世界冠军的 AI 系统，比人们原以为可能的时间早了几十年。<a href="#footnote-25-70">25</a></p>
+<ul>
+<li>第一步，AlphaGo 通过模仿学习在人类专家棋局上训练。这给了它基础。</li>
+<li>第二步，AlphaGo 与自己下了数百万盘棋。这让它在围棋上变成超人水平：还记得对李世石那盘棋中著名的第 37 手吗，那是极其反常但 brilliant 的一步，人类永远不会这样下。</li>
+</ul>
+<p>为 LLM 开发等价于第二步的东西，是克服数据墙的关键研究问题（而且，最终也会是超越人类水平智能的关键）。</p>
+<p>所有这些都是说，数据约束似乎会给未来几年 AI 进展预测注入双向的大误差条。确实存在一种非常真实的可能：事情停滞下来（LLM 可能仍然像互联网一样重要，但我们不会到达真正疯狂的 AGI）。但我认为合理猜测是，实验室会攻克它；而且攻克它不仅会让缩放曲线继续，还可能带来模型能力的巨大收益。</p>
+<p>顺带一提，这也意味着与今天相比，我们应该预期未来几年不同实验室之间的差异会更大。直到最近，最先进技术仍是公开发表的，所以大家基本上都在做同样的事情。（新创业公司或开源项目也很容易与前沿竞争，因为配方是公开的。）现在，关键算法思想正变得越来越专有。我预期实验室的方法会更大程度分化，有些会比其他实验室进展更快——甚至现在看似处于前沿的实验室，也可能被数据墙卡住，而另一些实验室取得突破并领先。开源也会更难竞争。这肯定会让事情变得有趣。（而且如果某个实验室一旦搞定了，它的突破将是通往 AGI 的关键，通往超级智能的关键——是美国<a href="https://situational-awareness.ai/lock-down-the-labs/">最珍贵的秘密</a>之一。）</p>
+<p><strong>解除束缚</strong></p>
+<p>最后，是最难量化但同样重要的一类改进：我称之为“解除束缚”。</p>
+<p>想象一下，当别人要求你解一道难数学题时，你必须立刻用脑子里冒出的第一个答案回答。显然，除了最简单的问题外，你会很难做好。但直到最近，我们就是让 LLM 这样解数学题。相反，我们大多数人会在草稿纸上一步步推导，因此能解决困难得多的问题。“思维链”提示为 LLM 解锁了这一点。尽管它们有出色的原始能力，但在数学上比本可以达到的水平差很多，因为它们被一种显而易见的方式束缚住了；只需要一个小算法调整，就释放出大得多的能力。</p>
+<p>过去几年里，我们在“解除束缚”模型方面取得了巨大进展。这些是超越“只是训练更好的基础模型”的算法改进——而且通常只使用预训练算力的一小部分——却能释放模型能力：</p>
+<p><em>从人类反馈中强化学习（RLHF）</em>。基础模型具有惊人的<em>潜在</em>能力，<a href="#footnote-26-70">26</a>但它们很原始，也极难使用。公众常以为 RLHF 只是审查脏话，但 RLHF 是让模型真正有用、真正有商业价值的关键（不是让模型预测随机互联网文本，而是让它们真正应用能力来尝试回答你的问题！）。这就是 ChatGPT 的魔力——做得好的 RLHF 第一次让模型对普通人可用且有用。原始的 <a href="https://openai.com/research/instruction-following">InstructGPT 论文</a>对此有很好的量化：在人类评分偏好上，一个经过 RLHF 的小模型等价于一个未经过 RLHF、规模大 100 倍以上的模型。<em>思维链</em>（CoT）。如前所述。<a href="https://arxiv.org/abs/2201.11903">CoT 在仅 2 年前开始被广泛使用</a>，在数学/推理问题上可以提供相当于 10 倍以上有效算力增加的收益。<em>脚手架</em>。可以把它理解为 CoT++：不是只让模型解一个问题，而是让一个模型制定攻克计划，让另一个提出一堆可能解法，让另一个进行批评，等等。<a href="https://paperswithcode.com/paper/language-agent-tree-search-unifies-reasoning">例如</a>，在 HumanEval（编程问题）上，简单脚手架能让 GPT-3.5 超过没有脚手架的 GPT-4。在 SWE-Bench（解决真实世界软件工程任务的基准）上，GPT-4 只能正确解决约 2%，而使用 <a href="https://x.com/cognition_labs/status/1768716551056728233">Devin 的智能体脚手架</a>后跃升到 14–23%。（不过，解锁能动性仍处在早期，后文会更多讨论。）<em>工具：<em>想象一下，如果人类不允许使用计算器或电脑会怎样。我们才刚开始，但 ChatGPT 现在已经能使用网页浏览器、运行一些代码，等等。<em>上下文长度</em>。模型已经从 2k token 上下文（GPT-3）发展到 32k 上下文（GPT-4 发布时），再到 1M+ 上下文（Gemini 1.5 Pro）。这是</em>巨大的</em>事情。一个小得多的基础模型，如果有 100k token 的相关上下文，可能超过一个大得多但只有 4k 相关上下文的模型——更多上下文本质上是一项巨大的算力效率收益。<a href="#footnote-27-70">27</a>更广泛地说，上下文是解锁许多模型应用的关键：例如，许多编程应用需要理解代码库的大部分内容，才能有用地贡献新代码；又比如，如果你用模型协助你写工作文档，它真的需要大量相关内部文档和对话的上下文。Gemini 1.5 Pro 以其 1M+ token 上下文，<a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf">甚至能够</a>仅通过把词典和语法参考材料放进上下文，就从零学习一门新语言（一种不在互联网上的低资源语言）！*后训练改进。*根据 <a href="https://www.dwarkeshpatel.com/p/john-schulman">John Schulman</a> 的说法，当前 GPT-4 相比发布时的原始 GPT-4 已有显著改进，原因是后训练改进释放了潜在模型能力：在<a href="https://x.com/polynoamial/status/1778584064343388179">推理评测</a>上，它取得了显著收益（例如 MATH 上约 50% -&gt; 72%，GPQA 上约 40% -&gt; 50%），在 <a href="https://chat.lmsys.org/?leaderboard">LMSys 排行榜</a>上，它的 elo 跳升了近 100 分（可比 Claude 3 Haiku 与大得多的 Claude 3 Opus 之间的 elo 差距，而这两个模型有约 50 倍<a href="https://www.anthropic.com/api">价格差</a>）。</p>
+<p><a href="https://epochai.org/blog/ai-capabilities-can-be-significantly-improved-without-expensive-retraining">Epoch AI 对其中一些技术的调查</a>，例如脚手架、工具使用等，发现这类技术通常能在许多基准上带来 5 到 30 倍的有效算力收益。METR（一个评估模型的组织）也在他们的一组智能体任务上发现，通过对同一个 GPT-4 基础模型解除束缚，可以带来非常大的性能提升：从只使用基础模型的 5%，到发布时后训练后的 GPT-4 的 20%，再到今天通过更好后训练、工具和智能体脚手架接近 40%。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/metr_gains_over_time.png" alt=""></p>
+<p><em>通过更好的解除束缚，METR 智能体任务表现随时间提升。来源：</em></p>
+<p><em>Model Evaluation and Threat Research</em>虽然很难把这些收益与算力和算法效率放在统一有效算力尺度上，但很清楚，它们是<em>巨大</em>收益，至少与算力扩展和算法效率处于大致相同量级。（这也凸显了算法进展的核心作用：每年 0.5 个数量级的算力效率已经很重要，但它只是故事的一部分；如果与解除束缚的算法进展合在一起，算法进展整体或许甚至占当前趋势收益的大多数。）</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/stacked_compute_algos_unhobbling.png" alt=""></p>
+<p>“解除束缚”实际上让这些模型变得有用——我认为，今天阻碍许多商业应用的，很大一部分就是需要继续进行这种“解除束缚”。事实上，<em>今天的模型仍然被严重束缚</em>！例如：</p>
+<ul>
+<li>它们没有长期记忆。</li>
+<li>它们不能使用电脑（仍然只有非常有限的工具）。</li>
+<li>它们仍然大多不会先思考再说话。当你让 ChatGPT 写一篇文章时，这就像期待一个人用最初的意识流来写文章。</li>
+</ul>
+<p><a href="#footnote-28-70">28</a> - 它们（大多）只能进行简短来回对话，而不能离开一天或一周，思考一个问题，研究不同方法，咨询其他人，然后给你写一份更长报告或 pull request。</p>
+<ul>
+<li>它们大多没有针对你或你的应用个性化（只是一个带有短提示词的通用聊天机器人，而不是拥有与你公司和工作相关的全部背景）。</li>
+</ul>
+<p>这里的可能性巨大，我们正在迅速摘取低垂果实。这一点至关重要：*仅仅想象“GPT-6 ChatGPT”是完全错误的。*随着解除束缚继续进展，改进相对于 GPT-6 + RLHF 会是阶跃式的。到 2027 年，你拥有的将不再是聊天机器人，而更像智能体，更像同事。</p>
+<p><strong>从聊天机器人到智能体同事</strong></p>
+<p>未来几年雄心勃勃的解除束缚可能是什么样？在我看来，有三个关键要素：</p>
+<p><strong>1. 解决“入职问题”</strong></p>
+<p>GPT-4 具有原始聪明程度，能做许多人工作中相当一部分内容，但它有点像一个刚到 5 分钟的聪明新员工：它没有任何相关上下文，没读过公司文档或 Slack 历史，也没和团队成员对话，没花时间理解公司内部代码库。一个聪明新员工刚到 5 分钟时并不太有用——但一个月后就相当有用了！例如，通过超长上下文，像给人类新同事入职一样给模型“入职”，似乎应该是可能的。仅这一点就是巨大解锁。</p>
+<p><strong>2.</strong> <strong>测试时算力积压（面向长周期问题的推理/纠错/System II）</strong></p>
+<p>现在，模型基本只能做短任务：你问它一个问题，它给你一个答案。但这极其受限。人类做的大多数有用认知工作都是长周期的——不是 5 分钟，而是数小时、数天、数周或数月。</p>
+<p>一个只能思考困难问题 5 分钟的科学家不可能做出任何科学突破。一个被要求时只能为单个函数写骨架代码的软件工程师也不会太有用——软件工程师会被交给一个更大的任务，然后制定计划，理解代码库或技术工具的相关部分，编写不同模块并逐步测试，调试错误，在可能解法空间中搜索，最终提交一个大型 pull request，这是数周工作的结果。等等。</p>
+<p>本质上，存在巨大的*测试时算力积压。*把每个 GPT-4 token 想象成你思考问题时内部独白中的一个词。每个 GPT-4 token 都相当聪明，但目前它实际上只能连贯地使用约数百个 token 量级的思维链（等效于你只能在一个问题或项目上花几分钟内部独白/思考）。</p>
+<p>如果它能用数百万 token 去思考并处理真正困难的问题或更大的项目，会怎样？</p>
+<p>| token 数量 | 等效于我在某件事上工作…… | |
+| 数百 | 几分钟 | ChatGPT（我们在这里） |
+| 数千 | 半小时 | +1 个数量级测试时算力 |
+| 数万 | 半个工作日 | +2 个数量级 |
+| 数十万 | 一个工作周 | +3 个数量级 |
+| 数百万 | 多个月 | +4 个数量级 |</p>
+<p><em>假设人类以约 100 token/分钟思考、每周工作 40 小时，把“模型思考多久”的 token 数转换为某个问题/项目上的人类时间。</em></p>
+<p>即便“每个 token”的智能相同，一个聪明人花<em>几分钟</em>和花<em>几个月</em>处理问题，差别也会巨大。我不知道你怎样，但我几个月内能做到的东西，远远、远远多于几分钟内能做到的。如果我们能为模型解锁“能够在某件事上思考并工作相当于数月，而不是相当于几分钟”的能力，就会释放出<em>疯狂</em>的能力跃迁。这里存在巨大积压，价值好几个数量级。</p>
+<p>现在，模型还做不到这一点。即使有最近长上下文进展，这种更长上下文主要只适用于 token 的消费，而不是 token 的生产——过一段时间，模型就会脱轨或卡住。它还不能自己离开一段时间去处理一个问题或项目。<a href="#footnote-29-70">29</a></p>
+<p>但解锁测试时算力，可能只需要相对较小的“解除束缚”算法收益。也许少量 RL 就能帮助模型学会纠错（“嗯，这看起来不对，让我再检查一下”）、制定计划、搜索可能解法等等。从某种意义上，模型已经拥有大多数原始能力，只需要在其上再学习少数额外技能，把一切组织起来。</p>
+<p>本质上，我们只需要教会模型一种 System II 外循环<a href="#footnote-30-70">30</a>，让它能推理困难、长周期项目。</p>
+<p>如果我们成功教会这个外循环，那么取代聊天机器人几段话的简短回答的，将是一条数百万字的流（比你阅读速度更快地涌来）：模型会思考问题，使用工具，尝试不同方法，做研究，修改自己的工作，与其他人协调，并独立完成大型项目。</p>
+<h4 id=""><a class="header" href="#"></a></h4>
+<p><a href="javascript:void(0)">
+在其他机器学习领域中权衡测试时算力与训练时算力 </a></p>
+<p>在棋类 AI 系统等其他领域，已经<a href="https://arxiv.org/abs/2104.03113">证明</a>可以使用更多测试时算力（也称推理时算力）来替代训练算力。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/test_time_tradeoff_go_jones2021-1024x811.png" alt=""></p>
+<p>如果类似关系在我们的场景也成立，若能解锁 +4 个数量级的测试时算力，就可能等效于 +3 个数量级的预训练算力，即非常粗略地说，相当于 GPT-3 到 GPT-4 的跃迁。（也就是说，解决这个“解除束缚”会等价于一次巨大的数量级扩展。）</p>
+<p><strong>3. 使用电脑</strong></p>
+<p>这也许是三者中最直接的一项。现在的 ChatGPT 基本像一个坐在隔离盒子里、你可以给它发短信的人。早期解除束缚改进教模型使用单个孤立工具，但我预计，随着多模态模型到来，我们很快就能一步到位：我们会直接让模型像人一样使用电脑。</p>
+<p>这意味着加入你的 Zoom 会议，在线研究东西，给人发消息和邮件，阅读共享文档，使用你的应用和开发工具，等等。（当然，要让模型在长周期循环中最大限度利用这一点，它会与解锁测试时算力同步发生。）</p>
+<p>到最后，我预期我们会得到一个很像<em>即插即用远程员工</em>的东西。一个智能体加入你的公司，像人类新员工一样入职，在 Slack 上给你和同事发消息并使用你的软件，提交 pull request；面对大型项目时，它能做出相当于人类离开几周并独立完成项目的模型版本。你可能需要比 GPT-4 略好的基础模型才能解锁这一点，但可能甚至不需要<em>好那么多</em>——许多潜力来自修复模型仍然被束缚的那些清楚且基础的方式。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/devin.gif" alt=""></p>
+<p><em>这种未来的一个非常早期预览是</em></p>
+<p><em>Devin</em>*，它是一个早期原型：在通向完全自动化软件工程师的道路上，解锁模型的“能动性积压”/“测试时算力积压”。我不知道 Devin 在实践中效果如何，而且与真正的聊天机器人 → 智能体解除束缚会产生的东西相比，这个演示仍然非常有限，但它是即将到来的那类东西的有用预告。*</p>
+<p>顺便说一句，我预计解除束缚的中心地位，会在商业应用上带来某种有趣的“音爆”效应。从现在到即插即用远程员工之间的中间模型，需要大量苦活来改变工作流、建设基础设施以整合并获得经济价值。即插即用远程员工会极大降低整合难度——只要，嗯，把它们放进去，自动化所有可以远程完成的工作。看起来很可能，苦活会比解除束缚花更久，也就是说，到即插即用远程员工能够自动化大量工作时，中间模型还没被充分利用和整合——因此，产生的经济价值跃迁可能会有些不连续。</p>
+<p><strong>未来四年</strong></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/overview_ooms_gpt2togpt4.png" alt=""></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/overview_ooms_2023to2027.png" alt=""></p>
+<p><em>对 GPT-4 之前四年进步驱动因素的估计，以及我们应当预期 GPT-4 之后四年发生什么的总结。</em></p>
+<p>把数字合在一起，我们应该（大致）预期，到 2027 年底，在 GPT-4 之后的 4 年里再出现一次 GPT-2 到 GPT-4 规模的跃迁。</p>
+<ul>
+<li>GPT-2 到 GPT-4 大致是 4.5–6 个数量级的基础有效算力扩展（物理算力与算法效率），外加重大“解除束缚”收益（从基础模型到聊天机器人）。</li>
+<li>随后 4 年里，我们应该预期 3–6 个数量级的基础有效算力扩展（物理算力与算法效率）——最佳猜测也许约为 5 个数量级——外加由“解除束缚”释放的效用和应用阶跃变化（从聊天机器人到智能体/即插即用远程员工）。</li>
+</ul>
+<p>换个角度看，假设 GPT-4 训练耗时 3 个月。<em>到 2027 年，一家领先 AI 实验室将能在一分钟内训练出 GPT-4 级模型。</em><a href="#footnote-31-70">31</a>** **有效算力数量级扩展会非常剧烈。</p>
+<p>这会把我们带到哪里？</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/overview_counting_the_ooms.png" alt=""></p>
+<p><em>数数量级总结。</em></p>
+<p>GPT-2 到 GPT-4 把我们从约等于学龄前儿童带到约等于聪明高中生；从几乎只能输出几句连贯话，带到在高中考试中拿高分并成为有用的编程助手。这是一次疯狂跃迁。如果<em>这</em>就是我们将再次跨越的智能差距，它会把我们带到哪里？<a href="#footnote-32-70">32</a>如果它带我们走得非常、非常远，我们不该惊讶。很可能，它会带来能超过博士和某领域顶尖专家的模型。</p>
+<p>（一个有趣的思考方式是：当前 AI 进步趋势大约以儿童发展速度的 3 倍推进。你的 3 倍速孩子刚从高中毕业；用不了多久它就会接你的工作！）</p>
+<p>再次强调，关键是不要只想象一个极其聪明的 ChatGPT：解除束缚收益意味着，它更像一个即插即用远程员工，一个极其聪明的智能体，能推理、计划、纠错，知道关于你和你公司的所有事情，并能独立处理一个问题数周。</p>
+<p>我们正在走向 2027 年的 AGI。这些 AI 系统基本上将能够自动化基本所有认知工作（想想：所有可以远程完成的工作）。</p>
+<p>说清楚一点——误差条很大。如果撞破数据墙所必需的算法突破比预期更难，随着数据耗尽，进展可能会停滞。也许解除束缚走不了那么远，我们只能停留在专家聊天机器人，而不是专家同事。也许十年趋势线断裂，或者这一次扩展深度学习真的撞墙了。（或者，一个算法突破，甚至只是释放测试时算力积压的简单解除束缚，可能成为范式转变，让事情进一步加速并更早带来 AGI。）</p>
+<p>无论如何，我们正在穿越数量级；要极其认真地看待到 2027 年出现 AGI——真正的 AGI——这种可能性，并不需要任何玄奥信念，只需要外推图上的直线趋势。</p>
+<p>如今很多人似乎在玩“把 AGI 定义下调”的游戏，把它说成只是非常好的聊天机器人之类。我指的是一种 AI 系统，它能完全自动化我或我朋友的工作，能完全完成 AI 研究员或工程师的工作。某些领域，例如机器人，默认情况下也许需要更久才能搞定。社会部署，例如医疗或法律职业，也很容易被社会选择或监管放慢。但一旦模型能自动化 AI 研究本身，就足够了——足以启动强烈反馈循环——我们可以非常迅速地取得进一步进展，自动化 AI 工程师自己会解决完全自动化一切的剩余瓶颈。尤其是，数百万自动化研究员很可能把十年进一步算法进展压缩到一年或更短。AGI 只会是随后很快到来的超级智能的一小口预尝。（更多见<a href="https://situational-awareness.ai/from-agi-to-superintelligence/">下一篇</a>。）</p>
+<p>无论如何，不要指望令人眩晕的进步速度会放缓。趋势线看起来无害，但含义非常强烈。就像此前每一代模型一样，每一代新模型都会让大多数旁观者瞠目结舌；很快，当模型解决需要博士花好几天的极难科学问题，当它们在你的电脑上飞来飞去做你的工作，当它们从零编写数百万行代码库，当这些模型每一两年产生的经济价值增加 10 倍时，人们会难以置信。忘掉科幻，数数量级：这是我们应该预期的。AGI 不再是遥远幻想。扩展简单深度学习技术就是有效；模型就是想学习；到 2027 年底，我们将再做 100,000 倍以上的扩展。用不了多久，它们就会比我们聪明。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gan_progress-1.jpeg" alt=""></p>
+<p><em>GPT-4 只是开始——四年后我们会在哪里？不要犯低估深度学习快速进步的错误（如</em></p>
+<p><em>GAN 进展**所示）。</em></p>
+<p>系列下一篇：<em>II. 从 AGI 到超级智能：智能爆炸</em>* *</p>
+<h3 id="附录穿越数量级要么这个十年要么很久以后"><a class="header" href="#附录穿越数量级要么这个十年要么很久以后">附录：<strong>穿越数量级：要么这个十年，要么很久以后</strong></a></h3>
+<p>我过去对 AGI 短时间线更怀疑。一个原因是，特别看重这个十年、把如此多 AGI 概率质量集中在这个十年，似乎不合理（这看起来像一种经典谬误：“哦，我们太特殊了”）。我认为，我们应当对实现 AGI 需要什么保持不确定，这应导向一个关于我们何时得到 AGI 的更“摊开”的概率分布。</p>
+<p>但我改变了想法：关键在于，我们对实现 AGI 所需条件的不确定性，应当落在<em>数量级</em>（有效算力）上，而不是年份上。</p>
+<p>这个十年，我们正在穿越数量级。即使在摩尔定律逝去的鼎盛时期，也只有每十年 1–1.5 个数量级。我估计，我们会在 4 年内完成约 5 个数量级，而整个十年总体约 10 个数量级。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/this_decade_or_bust-1024x790.png" alt=""></p>
+<p><em>这个十年我们一直在快速穿越数量级；2030 年代初之后，我们将面对缓慢跋涉。</em></p>
+<p>本质上，我们正处在一次巨大扩展中，收获这个十年的一次性收益；此后穿越数量级的进展会慢好几倍。如果这次扩展不能在未来 5–10 年内把我们带到 AGI，那 AGI 可能还要很久。</p>
+<p><em>支出扩展</em>：过去，在一个模型上花一百万美元都是离谱的；到这个十年末，我们很可能会拥有 <a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">1000 亿美元或 1 万亿美元集群</a>。再远高于此会很难；那基本已经是可行极限（无论从大企业负担能力看，还是从 GDP 占比看）。之后，我们能依靠的只是冰川般的每年 2% 真实 GDP 趋势增长。<em>硬件收益</em>：AI 硬件改进速度远快于摩尔定律。这是因为我们一直在为 AI 工作负载专门化芯片。例如，我们从 CPU 走到 GPU；为 Transformer 调整芯片；并把数字格式降到低得多的精度，从传统超算的 fp64/fp32 降到 H100 上的 fp8。这些是巨大收益，但到这个十年末，我们很可能已经拥有完全专门化的 AI 专用芯片，之后不太可能再有太多超越摩尔定律的收益。<em>算法进展</em>：未来十年，AI 实验室会在算法 R&amp;D 上投入数百亿美元，全世界最聪明的人都会做这件事；从微小效率提升到新范式，我们会摘取许多低垂果实。我们可能不会达到某种硬极限（尽管“解除束缚”很可能是有限的），但至少改进速度应该会放缓，因为投资（美元和人力资本）的快速增长必然放缓（例如，大多数聪明的 STEM 人才已经在做 AI）。 （话虽如此，这一点最难预测，也是上图中 2030 年代数量级不确定性的最大来源。）</p>
+<p>合在一起，这意味着未来十年我们将穿越的数量级，会远多于其后多个十年里可能穿越的数量级。也许这足够——我们很快得到 AGI；也许我们将进入漫长而缓慢的跋涉。你和我可以根据自己认为实现 AGI 有多难，合理地在 AGI 的<em>中位数</em>时间上有分歧——但鉴于我们现在正在快速穿越数量级，你的 AGI <em>众数</em>年份当然应该是这个十年稍后某个时间左右。</p>
+<p>这里有一张考虑算力和生物学界限的<a href="https://x.com/MatthewJBar/status/1772819342511820995">不错相关可视化</a>。</p>
+<p>他们过去十年里每年都做出的预测，而且一直错得很稳定……</p>
+<p><a href="#note-1-70">↩</a>来自</p>
+<p><a href="https://slatestarcodex.com/2019/02/19/gpt-2-as-step-toward-general-intelligence/">SSC</a>：Janelle Shane 问 GPT-2 它最喜欢的十种动物：</p>
+<p>提示：我最喜欢的 10 种动物是：1.</p>
+<p>我最喜欢的十种动物是：</p>
+<p>背上有白色疤痕的斑马</p>
+<p>阴险的蜘蛛和章鱼</p>
+<p>长着大叶子的青蛙，最好是黑色的</p>
+<p>长着鳞片的鸡尾鹦鹉</p>
+<p>翅膀悬在某人脸前约 4 英寸处、并且青蛙身上有心形纹身的刀嘴海雀</p>
+<p>可以失明、切开并生吃的互锁四足鸡蛇：</p>
+<p>生活在阳光下的黑白沙漠鳄鱼</p>
+<p>斑马和许多其他豌豆虫<a href="#note-2-70">↩</a>来自</p>
+<p><a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">GPT-2 论文</a>，第 3.6 节。<a href="#note-3-70">↩</a>这里我指的是笨拙的老 GPT-3，而不是你可能通过 ChatGPT 熟悉的、显著改进后的 GPT-3.5。</p>
+<p><a href="#note-4-70">↩</a>不，这些测试不在训练集中。AI 实验室会真正努力确保这些评测未受污染，因为他们需要良好测量才能做良好科学。ScaleAI 对此的<a href="https://x.com/alexandr_wang/status/1785888203943161970">近期分析</a>证实，领先实验室没有过拟合这些基准（尽管一些较小的 LLM 开发者可能在刷高自己的数字）。<a href="#note-5-70">↩</a>原论文指出：“我们也让人类在 MATH 上接受评估，发现一个并不特别喜欢数学的计算机科学博士生在 MATH 上约达到 40%，而一位三届 IMO 金牌得主达到 90%，这表明 MATH 对人类也可能有挑战。”</p>
+<p><a href="#note-6-70">↩</a>一位合作者<a href="https://bounded-regret.ghost.io/ai-forecasting-one-year-in/">指出</a>：“当我们的团队最初发布 MATH 数据集时，至少有一位[机器学习研究员同事]告诉我们，这是一个没有意义的数据集，因为它远远超出机器学习模型能够完成的范围（事实上，我自己也有些担心这一点）。”<a href="#note-7-70">↩</a>这里是 Yann LeCun 在 2022 年<a href="https://x.com/YaBoyFathoM/status/1659516423540965378">预测</a>，即使 GPT-5000 也无法推理现实世界中的物理互动；一年后 GPT-4 显然轻松做到了。</p>
+<p>这里是 Gary Marcus 在 GPT-2 之后预测的那些墙，被 GPT-3 <a href="https://www.astralcodexten.com/p/my-bet-ai-size-solves-flubs">解决</a>；以及他在 GPT-3 之后预测的那些墙，被 GPT-4 <a href="https://www.lesswrong.com/posts/cGbEtNbxACJpqoP4x/gpt-4-solves-gary-marcus-induced-flubs">解决</a>。</p>
+<p>这里是 Bryan Caplan 教授<a href="https://twitter.com/finmoorhouse/status/1638221410328797186?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1638221410328797186%7Ctwgr%5E30fcf9cb4b7ac2403b9fbf482b142b6598405006%7Ctwcon%5Es1_&amp;ref_url=https%3A%2F%2Fwww.redditmedia.com%2Fmediaembed%2F11xp2dz%2F%3Fresponsive%3Dtrueis_nightmode%3Dfalse">输掉</a>他的第一次公开打赌（此前他曾以完美公开打赌记录著称）。2023 年 1 月，GPT-3.5 在他的经济学期中考试中得了 D；随后 Caplan 教授与 Matthew Barnett <a href="https://www.betonit.ai/p/gpt-retakes-my-midterm-and-gets-an">打赌</a>，到 <em>2029 年</em>不会有 AI 在他的经济学期中考试中得 A。仅仅两个月后，GPT-4 发布，马上在他的期中考试中拿了 A（而且会是班里最高分之一）。<a href="#note-8-70">↩</a>在</p>
+<p><a href="https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf">diamond set, majority voting</a>上，模型用思维链尝试 32 次并多数投票。<a href="#note-9-70">↩</a>值得注意这些趋势线有多稳定。把原始<a href="https://arxiv.org/pdf/2001.08361">缩放律论文</a>与之后一些关于算力和算力效率扩展的估计结合起来，意味着一条跨越超过 15 个数量级（有效算力超过 1,000,000,000,000,000 倍）的稳定缩放趋势！<a href="#note-10-70">↩</a>一个常见误解是，缩放只适用于困惑度损失，但我们在下游基准表现上同样看到非常清楚且稳定的缩放行为。通常只是需要找到正确的 log-log 图。例如，在 GPT-4 博客文章中，他们用 MLPR（mean log pass rate）展示了在编程问题表现上跨越 6 个数量级（1,000,000 倍）算力的稳定缩放行为。《Are Emergent Abilities a Mirage?》</p>
+<p>这篇<a href="https://arxiv.org/pdf/2304.15004">论文</a>提出了类似观点；选择正确指标后，下游任务表现几乎总有稳定趋势。更一般地说，“缩放假说”的定性观察——模型能力随规模出现非常清楚的趋势——早于损失缩放曲线；“缩放律”工作只是对这一点的正式测量。</p>
+<p><a href="#note-11-70">↩</a>1. Gemini 1.5 Flash 在 MATH 上得分 54.9%，每百万 token 成本为 $0.35/$1.05（输入/输出）。GPT-4 发布前在 MATH 上得分 42.5%，2023 年初在 MATH 上得分 52.9%，每百万 token 成本为 $30/$60（输入/输出）；这比 Gemini 1.5 Flash 每 token 贵 85x/57x（输入/输出）。为保守起见，上文使用 30x 成本下降估计（考虑 Gemini 1.5 Flash 可能用更多 token 推理问题）。</p>
+<ol start="2">
+<li>Minerva540B 在 MATH 上得分 50.3%，使用 64 个样本多数投票。一位了解情况的朋友估计，这里的基础模型推理成本大概比 GPT-4 贵 2–3 倍。不过快速抽查来看，Minerva 每个答案似乎使用略少 token。更重要的是，Minerva 需要 64 个样本才能达到该表现；如果你天真地通过推理 API 运行，这意味着成本乘以 64。实践中，运行评测时提示 token 可以缓存；给定 few-shot 提示，提示 token 可能占成本的大多数，即便考虑输出 token。假设输出 token 占获取单个样本成本的三分之一，那么带缓存的 maj@64 只意味着成本约增加 20 倍。为保守起见，上文使用粗略的 20x 成本下降数字（即使通过 API 运行时天真的推理成本下降会更大）。<a href="#note-12-70">↩</a>虽然这些是推理效率（而不一定是训练效率），并且某种程度上会反映推理专用优化，但 a）它们表明总体上存在并正在发生巨大算法进展，b）算法改进往往既带来训练效率收益也带来推理效率，例如通过减少所需参数数量。</li>
+</ol>
+<p><a href="#note-13-70">↩</a><a href="https://the-decoder.com/openai-cuts-prices-for-gpt-3-by-two-thirds/">GPT-3</a>：$60/1M token，<a href="https://openai.com/pricing">GPT-4</a>：$30/1M 输入 token 和 $60/1M 输出 token。<a href="#note-14-70">↩</a>Chinchilla 缩放律说，应当等比例扩展参数量和数据量。也就是说，参数量增长的数量级是有效训练算力增长数量级的“一半”。与此同时，直觉上参数量与推理成本大致成比例。在其他条件相同下，推理成本保持不变意味着有效算力增长的一半数量级被算法收益“抵消”了。</p>
+<p>不过，为了说清楚，这是一个非常天真的计算（只是用于粗略说明），在很多方面都是错的。可能存在推理专用优化（不能转化为训练效率）；可能存在不减少参数量的训练效率（因此不能转化为推理效率）；等等。<a href="#note-15-70">↩</a>Gemini 1.5 Flash 在 <a href="https://chat.lmsys.org/?leaderboard">LMSys，一个聊天机器人排行榜</a>上的排名与 GPT-4 类似（高于原始 GPT-4，低于更新版 GPT-4），并且在 MATH 和 GPQA（衡量推理的评测）上与原始 GPT-4 有<a href="https://deepmind.google/technologies/gemini/flash/">类似表现</a>，而在 MMLU（更偏重衡量知识的评测）上大致落在 GPT-3.5 和 GPT-4 中间。<a href="#note-16-70">↩</a>例如，这篇</p>
+<p><a href="https://arxiv.org/pdf/2312.00752">论文</a>比较了 GPT-3 风格的原版 Transformer 与多年来发布的各种简单架构和训练配方改动（用 RMSnorm 替代 layernorm，不同的位置编码，SwiGlu 激活，用 AdamW 优化器替代 Adam，等等），他们称之为“Transformer++”，至少在小规模上意味着 6 倍收益。<a href="#note-18-70">↩</a>如果取每年 0.5 个数量级的趋势，GPT-2 与 GPT-4 发布间隔 4 年，那就是 2 个数量级。然而，GPT-2 到 GPT-3 是简单扩展（在例如 Transformer 的巨大收益之后），而 OpenAI 声称 <a href="https://cdn.openai.com/papers/gpt-4.pdf">GPT-4 预训练在 2022 年完成</a>，这可能意味着我们应该在这里计算的算法进展更接近 2 年。1 个数量级的算法效率似乎是保守下界。<a href="#note-19-70">↩</a>至少，考虑到十多年持续算法改进，任何声称这一切会突然停止的人，都应承担举证责任！</p>
+<p><a href="#note-20-70">↩</a>考虑到集群成本，3 倍算力效率带来的经济回报将以数百亿美元甚至更多计。</p>
+<p><a href="#note-21-70">↩</a>而且，只是一遍又一遍重读同一本教材，可能带来记忆而非理解。我理解很多 wordcels 就是这么通过数学课的！</p>
+<p><a href="#note-23-70">↩</a>另一个我觉得有趣的思考方式是：预训练和上下文学习之间存在一个“缺失的中间地带”。上下文学习</p>
+<p><em>令人难以置信</em>（并且在人类样本效率上有竞争力）。例如，<a href="https://arxiv.org/pdf/2403.05530">Gemini 1.5 Pro 论文</a>讨论了把 Kalamang 语言（使用者不到 200 人，基本不存在于互联网上）的教学材料（一本教材、一本词典）放进上下文——模型就能学会以人类水平从英语翻译到 Kalamang！在上下文中，模型能像人一样从教材学习（而且比把这一本教材直接扔进预训练里学得好得多）。</p>
+<p>当人类从教材学习时，能通过练习把短期记忆/学习浓缩成长期记忆/长期技能；然而，我们还没有等价方法把上下文学习“蒸馏回权重”。合成数据/自我博弈/RL 等等正在试图修复这一点：让模型自己学习，然后思考和练习所学内容，并把这种学习蒸馏回权重。<a href="#note-24-70">↩</a>从某种意义上说，这就是无监督学习的魔力：为了更好预测下一个 token、降低困惑度，模型学到极其丰富的内部表征，从（<a href="https://openai.com/research/unsupervised-sentiment-neuron">著名的</a>）情感到复杂世界模型应有尽有。但开箱即用时，它们被束缚住了：它们使用自己惊人的内部表征，仅仅是在随机互联网文本中预测下一个 token，而不是以最佳方式应用这些表征来真正尝试解决你的问题。<a href="#note-26-70">↩</a>见</p>
+<p><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf">更新版 Gemini 1.5 白皮书</a>中的图 7，对比 Gemini 1.5 Pro 和 Gemini 1.5 Flash（一种便宜得多、推测也更小的模型）中困惑度与上下文长度。<a href="#note-27-70">↩</a>不过人们正在研究这个！</p>
+<p><a href="#note-28-70">↩</a>这说得通——它为什么会学会长周期推理和纠错技能呢？互联网上很少有这样的数据：“我完整的内部独白、推理、以及我在一个月里做项目时所有相关步骤。”解锁这种能力需要一种新训练，让它学会这些额外技能。</p>
+<p>或者像 Gwern 所说（私人通信）：“‘脑子有银河系那么大，他们却让我做什么？预测基准测试中拼错的答案！’抑郁的神经网络 Marvin 哀叹道。”<a href="#note-29-70">↩</a>System I 与 System II 是思考当前 LLM 能力——包括它们的限制和愚蠢错误——以及 RL 和解除束缚可能带来什么的有用方式。可以这样想：当你开车时，大多数时间你处于自动驾驶状态（System I，也就是模型现在大多数时候做的事）。但当你遇到复杂施工区或陌生路口时，你可能会让副驾驶同伴暂停谈话片刻，让你弄清楚——真正思考——发生了什么以及该怎么做。如果你被迫只用 System I 过日子（更接近今天的模型），你会遇到很多麻烦。创造 System II 推理循环能力，是一个核心解锁。</p>
+<p><a href="#note-30-70">↩</a>基于上文对物理算力和算法效率扩展的最佳猜测假设，并简化并行性考虑（现实中它可能更像“在一天内运行 1440（60*24）个 GPT-4 级模型”或类似情况）。</p>
+<p><a href="#note-31-70">↩</a>当然，今天我们拥有的任何基准都会被刷满。但这说明不了太多；它主要反映出制作足够困难基准有多难。</p>
+<p><a href="#note-32-70">↩</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="从-agi-到超级智能agi-自动化研究引发智能爆炸"><a href="#从-agi-到超级智能agi-自动化研究引发智能爆炸" class="header">从 AGI 到超级智能：AGI 自动化研究引发智能爆炸</a></h1>
+<p><strong>AI 进展不会停在人类水平。数以亿计的 AGI 可能会把 AI 研究自动化，把十年的算法进步（5 个以上数量级）压缩到一年以内。我们会迅速从人类水平的 AI 系统走向远超人类的 AI 系统。超级智能的力量——以及危险——都会非常剧烈。</strong></p>
+<p>所谓“超智能机器”，是指一种机器，它能够远远超过任何人（无论这个人多么聪明）在所有智力活动上的表现。由于设计机器本身就是这些智力活动之一，一台超智能机器就能够设计出更好的机器；于是毫无疑问会出现一次“智能爆炸”，人类的智能会被远远甩在后面。因此，第一台超智能机器将是人类需要做出的最后一项发明。</p>
+<p>I. J. Good（1965）</p>
+<p><strong>原子弹与“超级弹”</strong></p>
+<p>在大众想象中，冷战的恐怖主要可以追溯到洛斯阿拉莫斯，以及原子弹的发明。但单看“原子弹”，它也许被高估了。从原子弹走向“超级弹”——氢弹——可以说同样重要。</p>
+<p>东京大轰炸中，数百架轰炸机向城市投下了数千吨常规炸弹。同年稍晚投在广岛的“小男孩”，用一枚装置释放了类似规模的破坏力。但仅仅 7 年后，泰勒的氢弹再次把当量放大了千倍——一枚炸弹的爆炸威力，就超过了整个二战期间投下的所有炸弹之和。</p>
+<p>原子弹是一场效率更高的轰炸行动。氢弹则是一种可以毁灭国家的装置。<a href="#footnote-1-71">1</a></p>
+<p>AGI 与超级智能也会如此。</p>
+<p><em>AI 进展不会停在人类水平。</em> AlphaGo 在最初从人类最佳棋局中学习之后，开始与自己对弈——并且很快变得超越人类，走出极有创造性、极其复杂、任何人类都不会想到的棋步。</p>
+<p>我们在<a href="https://situational-awareness.ai/from-gpt-4-to-agi/">上一篇文章</a>讨论了走向 AGI 的路径。一旦得到 AGI，我们会再转动一次曲柄——或者两次、三次——AI 系统会变成超人类的，远远超出人类。它们会在质上比你我更聪明，聪明得多；也许就像你我在质上比一个小学生更聪明那样。</p>
+<p>在当前快速但连续的 AI 进展速度下，跃迁到超级智能本身就已经足够惊人（如果我们能在 GPT-4 之后 4 年内跃迁到 AGI，那么再过 4 年或 8 年又会带来什么？）。但如果 AGI 把 AI 研究本身自动化，速度可能会远远更快。</p>
+<p>一旦我们得到 AGI，我们不会只有一个 AGI。我稍后会具体推算数字，但大致是：考虑到届时用于推理的 GPU 集群，我们很可能能运行<em>许多百万个 AGI（也许相当于 1 亿个人类，并且不久后能以人类 10 倍以上的速度运行）</em>。即使它们还不能在办公室里走来走去或煮咖啡，它们也能在电脑上做机器学习研究。领先 AI 实验室里不再只是几百名研究员和工程师，而是这个数量的 100,000 倍以上——日日夜夜、疯狂地推动算法突破。是的，这是递归自我改进，但不需要科幻设定；<em>它们只需要加速现有的算法进步趋势线（目前大约是每年 0.5 个数量级）。</em></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/intelligence_explosion.png" alt=""></p>
+<p><em>自动化 AI 研究可能会加速算法进步，使有效算力在一年内获得 5 个以上数量级的增益。智能爆炸结束时我们拥有的 AI 系统会远远比人类聪明。</em></p>
+<p>自动化 AI 研究很可能把人类十年的算法进步压缩到不到一年内（而这看起来还算保守）。那将是 5 个以上数量级，是在 AGI 基础上再叠加一次 <a href="https://situational-awareness.ai/from-gpt-4-to-agi/">GPT-2 到 GPT-4 规模</a>的跃迁——就像从学龄前儿童跃迁到聪明高中生那样的质变，而且是<em>叠加在</em>已经和专家级 AI 研究员/工程师一样聪明的 AI 系统之上。</p>
+<p>这里存在几个合理的瓶颈——包括用于实验的算力有限、与人类之间的互补性、以及算法进步变得更难——我会逐一讨论；但没有哪一个看起来足以确定性地把进展显著拖慢。</p>
+<p>转眼之间，我们手里就会有超级智能——<em>远远</em>聪明于人类的 AI 系统，能够表现出我们甚至无法开始理解的新颖、创造性、复杂行为——也许甚至会有一个由数十亿个这种系统组成的小文明。它们的力量也会极其巨大。把超级智能用于其他领域的研发，爆炸性进展会从机器学习研究扩展出去；很快，它们会解决机器人问题，在几年内让其他科学与技术领域发生巨大跃迁，随之而来的会是一场工业爆炸。超级智能很可能带来决定性的军事优势，并释放难以估量的毁灭力量。我们将面对人类历史上最紧张、最动荡的时刻之一。</p>
+<p><strong>自动化 AI 研究</strong></p>
+<p><strong>我们不需要自动化一切——只需要自动化 AI 研究。</strong> 人们常常反对 AGI 会带来变革性影响，理由是 AI 很难做所有事情。怀疑者会说，比如机器人就是一个棘手问题，即使 AI 在认知上达到博士水平也一样。再比如自动化生物研发，可能需要大量实体实验室工作和人体实验。</p>
+<p>但要让 AI 自动化 AI 研究，我们不需要机器人——也不需要许多别的东西。领先实验室的 AI 研究员和工程师的工作可以完全在线完成，并不会以同样方式遇到现实世界瓶颈（不过它仍会受算力限制，我稍后会讨论）。而且从整体上看，AI 研究员的工作相当直接：阅读机器学习文献，提出新问题或新想法，实现实验来测试这些想法，解释结果，然后重复。所有这些都明确落在这样一个范围内：只要简单外推当前 AI 能力，到 <a href="https://situational-awareness.ai/from-gpt-4-to-agi/">2027 年底</a>就很容易达到或超过最优秀人类的水平。<a href="#footnote-2-71">2</a></p>
+<p>值得强调的是，过去十年机器学习中一些最大突破有多么直白、甚至有点“hacky”： “哦，加一点归一化就行”（LayerNorm/BatchNorm），或者“别做 f(x)，做 f(x)+x”（残差连接），或者“修一个实现 bug”（Kaplan → Chinchilla 缩放律）。AI 研究可以被自动化。而只要自动化 AI 研究，就足以启动非同寻常的反馈回路。<a href="#footnote-3-71">3</a></p>
+<p><strong>我们将能够运行数百万个自动化 AI 研究员副本（而且很快能以人类 10 倍以上速度运行）。</strong> 即使到 2027 年，我们也应该预期会有<a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/#Overall_compute">数千万 GPU 规模的集群</a>。仅训练集群就应该接近扩大约 3 个数量级，已经达到 1000 万个以上 A100 等效 GPU。推理集群应该还要大得多。（这一点会在<a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">后文</a>展开。）</p>
+<p>这会让我们运行许多百万个自动化 AI 研究员副本，也许相当于 1 亿个人类研究员，并且昼夜运行。精确数字依赖一些假设，包括人类“思考”的速度是每分钟 100 个 token（只是粗略数量级估计，例如想想你的内心独白），以及把历史趋势和 Chinchilla 缩放律外推到前沿模型的每 token 推理成本仍处于相近范围。<a href="#footnote-4-71">4</a> 我们也希望保留一部分 GPU 用来运行实验和训练新模型。完整计算见脚注。<a href="#footnote-5-71">5</a></p>
+<p>换一种说法：<em>给定 2027 年的推理集群，我们应该能每天生成相当于整个互联网规模的 token。</em><a href="#footnote-6-71">6</a> 无论如何，精确数字并没有那么重要；关键只是做一个简单的可行性展示。</p>
+<p>此外，我们的自动化 AI 研究员也许很快就能以远超人类的速度运行：</p>
+<ul>
+<li>通过付出一些推理效率代价，我们可以少运行一些副本，换取更快的串行速度。（例如，我们可以从约 5 倍人类速度转到约 100 倍人类速度，代价是“只”运行 100 万个自动化研究员副本。<a href="#footnote-7-71">7</a>）</li>
+<li>更重要的是，自动化 AI 研究员首先会研究的算法创新，就是获得 10 倍或 100 倍的速度提升。Gemini 1.5 Flash 比最初发布的 GPT-4 快约 10 倍，<a href="#footnote-8-71">8</a>而仅仅晚了一年，同时在推理基准上提供了与最初版 GPT-4 相近的表现。如果几百名人类研究员能在一年内找到这种算法加速，自动化 AI 研究员就能很快找到类似收益。</li>
+</ul>
+<p><em>也就是说：在我们开始能够自动化 AI 研究后不久，就应该预期会出现 1 亿个自动化研究员，每个都以人类 100 倍速度工作。</em> 它们每个都能在几天内完成相当于人类一年的工作。相较于今天领先 AI 实验室里几百个弱小的人类研究员、以弱小的 1 倍人类速度工作，研究投入的增加会极其惊人。</p>
+<p><strong>这很容易大幅加速现有的算法进步趋势，把十年的进步压缩到一年。</strong> 我们不需要假设有什么全新机制，自动化 AI 研究也能强烈加速 AI 进展。回顾<a href="https://situational-awareness.ai/from-gpt-4-to-agi">上一篇文章</a>中的数字，我们看到算法进步是过去十年深度学习进展的核心驱动力；仅算法效率就大约呈现每年 0.5 个数量级的趋势，此外还有来自解除限制（unhobbling）的巨大算法收益。（我认为很多人低估了算法进步的重要性；正确理解这一点，对于理解智能爆炸的可能性很重要。）</p>
+<p>我们能否让数百万个自动化 AI 研究员（很快以人类 10 倍或 100 倍速度工作）把人类研究员十年会找到的算法进步压缩到一年？那就是一年内 5 个以上数量级。</p>
+<p>这里不要只想象 1 亿个初级软件工程师实习生（那种系统会更早出现，也就是未来几年内！）。真正的自动化 AI 研究员会非常聪明——除了原始数量优势之外，自动化 AI 研究员还会拥有相较人类研究员的巨大优势：</p>
+<ul>
+<li>它们能阅读有史以来每一篇机器学习论文，能深入思考实验室过去运行过的每一次实验，能从所有副本并行学习，并快速积累相当于数千年的经验。它们能形成比任何人类都深得多的机器学习直觉。</li>
+<li>它们很容易写出数百万行复杂代码，把整个代码库保持在上下文中，并花费相当于人类数十年（甚至更多）的时间逐行检查 bug 和优化点。它们会在这份工作的所有环节上都极其胜任。</li>
+<li>你不需要逐个训练每一个自动化 AI 研究员（事实上，训练和入职 1 亿名人类新员工会很困难）。你只需要教会其中一个，让它完成入职，然后复制它。（而且你不必担心办公室政治、文化适应等问题；它们会昼夜不停地以最高能量和专注度工作。）</li>
+<li>大量自动化 AI 研究员将能够共享上下文（也许甚至能访问彼此的潜空间等），使协作与协调比人类研究员高效得多。</li>
+<li>当然，无论最初的自动化 AI 研究员有多聪明，我们很快都能进一步跨越多个数量级，制造出更聪明、在自动化 AI 研究上更有能力的模型。</li>
+</ul>
+<p>想象一个自动化的 Alec Radford——<em>想象 1 亿个自动化的 Alec Radford。</em><a href="#footnote-9-71">9</a> 我认为 OpenAI 几乎每个研究员都会同意：如果他们有 10 个 Alec Radford，更不用说 100 个、1000 个、100 万个，而且以人类 10 倍或 100 倍速度运行，他们可以很快解决大量问题。即使存在各种其他瓶颈（马上会讲），由此把十年的算法进步压缩到一年也显得很合理。（从百万倍研究投入中只得到 10 倍加速，这甚至算是保守的。）</p>
+<p>这本身就会带来 5 个以上数量级。5 个数量级的算法收益，规模类似产生 <a href="https://situational-awareness.ai/from-gpt-4-to-agi/">GPT-2 到 GPT-4 跃迁</a>的扩大，对应能力从大约学龄前儿童到聪明高中生的跃迁。想象这样的质变<em>叠加在</em> AGI 之上，<em>叠加在</em> Alec Radford 之上。</p>
+<p>我们从 AGI 很快走向超级智能——也许不到一年——是非常可能的。</p>
+<p><strong>可能的瓶颈</strong></p>
+<p>这个基本故事出人意料地强，并且得到<a href="https://www.openphilanthropy.org/research/what-a-compute-centric-framework-says-about-takeoff-speeds/">详尽经济建模工作</a>的支持；但确实有一些真实且合理的瓶颈，可能会拖慢自动化 AI 研究驱动的智能爆炸。</p>
+<p>我先在这里给出摘要，然后在下面的可选部分里为感兴趣的读者更详细讨论：</p>
+<ul>
+<li><strong>实验算力有限：</strong> AI 研究不只是需要好想法、思考或数学，还需要运行实验，从想法中获得经验信号。通过自动化研究劳动让研究投入增加一百万倍，并不意味着进展会快一百万倍，因为算力仍然有限——而用于实验的有限算力会成为瓶颈。即便如此，即使这不会带来 1,000,000 倍加速，我也很难想象自动化 AI 研究员不能把算力<em>至少</em>用得有效 10 倍：它们会有惊人的机器学习直觉（因为内化了整个机器学习文献和过去每一次实验！），并有相当于数百年的思考时间来确定究竟应该运行哪个实验、如何最优配置、如何最大化信息价值；它们能在运行哪怕很小的实验之前，花费相当于数百年的工程师时间来避免 bug 并争取一次做对；它们能通过专注最大收益来节省算力；它们还能尝试大量小规模实验（而考虑到届时有效算力已经扩大，“小规模”意味着一年训练 100,000 个 GPT-4 级别模型来测试架构突破）。即使算力相同，一些人类研究员和工程师也能比另一些人产出 10 倍进展；这一点在自动化 AI 研究员身上应当更明显。我确实认为这是最重要的瓶颈，下面会更深入讨论。</li>
+<li><strong>互补性/长尾：</strong> 经济学的一个经典教训（参见鲍莫尔成本病）是，如果你能自动化某件事的 70%，会得到一些收益，但剩下 30% 很快会成为瓶颈。任何低于完全自动化的东西——比如很好的 copilots——都会让人类 AI 研究员仍然成为主要瓶颈，从而让算法进步速度的整体提升相对较小。此外，自动化 AI 研究可能需要某个能力长尾：AI 研究员工作的最后 10% 可能特别难自动化。这可能会让起飞速度变缓一些，不过我的最佳猜测是，这只会延迟几年。也许 2026/27 年的模型是原型级自动化研究员，还需要一两年最终解除限制、更好一点的模型、推理加速，以及解决各种细节问题，才能达到完全自动化；最终到 2028 年实现 10 倍加速（并在十年末之前达到超级智能）。</li>
+<li><strong>算法进步的内在极限：</strong> 也许再获得 5 个数量级的算法效率在根本上不可能？我对此怀疑。虽然肯定会存在上限，<a href="#footnote-10-71">10</a>但如果过去十年我们得到了 5 个数量级，就应该预期至少还有相当于十年的进步是可能的。更直接地说，当前架构和训练算法仍然非常粗糙，看起来应该存在效率高得多的方案。生物学参照也支持效率高得多的算法是合理的。</li>
+<li><strong>想法会越来越难找，所以自动化 AI 研究员只会维持而不是加速当前进展：</strong> 一种反对意见是，虽然自动化研究会大幅增加有效研究投入，但想法也会更难找到。也就是说，今天一个实验室只需要几百名顶级研究员就能维持每年 0.5 个数量级；随着低垂果实被摘完，维持这种进展将需要越来越多投入——因此 1 亿个自动化研究员只是维持进展所必需的数量。我认为这个基本模型是对的，但经验数据对不上：研究投入增加的幅度——一百万倍——远远大于历史上为了维持进展所需的研究投入增长趋势。用经济学建模术语说，假设自动化带来的研究投入增加会<em>刚好</em>足以让进展保持不变，是一种奇怪的“刀刃假设”。</li>
+<li><strong>想法会越来越难找并存在边际收益递减，所以智能爆炸会很快熄火：</strong> 与上面的反对意见相关，即使自动化 AI 研究员引发了最初一波进展，快速进展能否持续取决于算法进步的递减收益曲线形状。再说一次，我对经验证据的最佳解读是，相关指数会偏向爆炸式/加速式进展。无论如何，从数百名研究员到数亿名 AI 研究员这个一次性增量本身就巨大到足以克服递减收益，至少能带来相当多数量级的算法进步，当然它不可能<em>无限期</em>自我维持。</li>
+</ul>
+<h3 id="-1"><a class="header" href="#-1"></a></h3>
+<p><a href="javascript:void(0)">实验算力有限</a></p>
+<p>算法进步的生产函数包含两个互补的生产要素：研究投入与实验算力。数百万个自动化 AI 研究员不会比人类 AI 研究员拥有更多运行实验的算力；也许它们只会坐在那里等任务跑完。</p>
+<p>这大概是智能爆炸最重要的瓶颈。归根到底，这是一个数量问题——它到底会成为多大的瓶颈？总体而言，我很难相信 1 亿个 Alec Radford 不能把实验算力的边际产出提高至少 10 倍（因而仍会把进展速度提高 10 倍）：</p>
+<p><em>用较少算力也能做很多事。</em> 大多数 AI 研究的方式是先在小规模上测试，然后通过缩放律外推。（许多历史上的关键突破只需要很少算力，例如<a href="https://arxiv.org/abs/1706.03762">最初的 Transformer</a>只在 8 块 GPU 上训练了几天。）并且注意，未来四年基线规模会扩大约 5 个数量级，所以“小规模”会意味着 GPT-4 规模——自动化 AI 研究员将能在训练集群上一年运行 100,000 个 GPT-4 级别实验，以及数千万个 GPT-3 级别实验。（这足够测试很多可能带来突破的新架构！）</p>
+<ul>
+<li>很多算力会花在最终预训练大运行的大规模验证上——确保你对年度旗舰产品的边际效率收益有足够高信心——但如果你正在智能爆炸中飞快穿越各个数量级，就可以节省这部分，只关注真正大的收益。</li>
+<li>如<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#Unhobbling">上一篇文章</a>所讨论的，往往可以通过相对低算力的模型“解除限制”获得<em>巨大</em>收益。这些不需要大型预训练运行。高度可能的情况是，智能爆炸一开始就是自动化 AI 研究发现某种额外 RL 方法，通过解除限制得到几个数量级，然后进展就快速展开。</li>
+</ul>
+<p><em>当自动化 AI 研究员找到效率提升时，这会让它们运行更多实验。</em> 回想一下，等效 MATH 表现的推理成本在两年内便宜了近 1000 倍，以及过去一年一般推理成本提升 10 倍；这些都是<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#Algorithmic_efficiencies">上一篇文章</a>讨论过的普通人类算法进步。自动化 AI 研究员要做的第一件事，就是快速找到类似收益；随后这又会让它们在新 RL 方法等方向上运行 100 倍更多实验。或者，它们能很快制造在相关领域有类似表现的小模型（参见前面对 Gemini Flash 的讨论，它比 GPT-4 便宜近 100 倍），这又会让它们用这些小模型运行更多实验（再次想象用它们测试不同 RL 方案）。可能还有其他悬置收益，比如自动化 AI 研究员也许能很快开发更好的分布式训练方案，以利用所有推理 GPU（这里大概至少又有 10 倍算力）。更一般地说，它们每找到 1 个数量级的训练效率收益，就等于多获得 1 个数量级的有效实验算力。</p>
+<p><em>自动化 AI 研究员可能高效得多。</em> 如果你第一次就做对——没有棘手 bug、能更有选择地决定究竟运行什么实验，等等——所需实验数量会少得惊人。想象 1000 个自动化 AI 研究员在你按下开始按钮前，用相当于一个月的时间检查代码，把实验细节完全做对。我问过一些 AI 实验室同事，他们同意：仅仅避免无谓 bug、第一次做对、只运行高信息价值实验，就应该很容易在大多数项目上节省 3 到 10 倍算力。</p>
+<p><em>自动化 AI 研究员可能拥有好得多的直觉。</em> 最近我和一家前沿实验室的实习生交流；他说过去几个月他的主要体验是：自己提出很多想跑的实验，而导师（一位资深研究员）说他们已经能预判结果，所以没必要跑。资深研究员多年随机做模型实验，磨炼出了对哪些想法会成功、哪些不会成功的直觉。类似地，我们的 AI 系统很容易在机器学习实验直觉上超过人类——它们会读完整个机器学习文献，能从每一次其他实验结果中学习并深入思考，也可以被训练来预测数百万次机器学习实验的结果，等等。也许它们首先做的事情之一，就是建立一门强大的基础科学：只看训练前 1%，或者只看小规模版本，就能预测某个大规模实验是否会成功，诸如此类。</p>
+<ul>
+<li>此外，除了对研究方向有很好的直觉之外，<a href="https://twitter.com/_jasonwei/status/1757486124082303073?s=12">正如 Jason Wei 所指出的</a>，在实验的几十个超参数和细节上拥有极佳直觉会带来惊人收益。Jason 把这种基于直觉一次做对的能力称为 “yolo runs”。（Jason 说：“我知道的是，能做到这一点的人肯定是 10 到 100 倍的 AI 研究员。”）</li>
+</ul>
+<p>算力瓶颈意味着研究员增加一百万倍不会转化成研究速度快一百万倍——因此不会是一夜之间的智能爆炸。但自动化 AI 研究员相较人类研究员有非同寻常的优势，所以很难想象它们不能找到办法把算力至少用得高效/有效 10 倍——因此算法进步速度达到 10 倍是非常合理的。</p>
+<p>嵌套折叠部分里还有一些更多讨论。</p>
+<p>我在这里承认一下我听过的最有说服力的反论表述，它来自我的朋友 James Bradbury：一些回应：另一个反驳“学术界论证”的例子是，据传 GDM 拥有比 OpenAI 多得多的实验算力，但从算法进步上看，它似乎并没有远远领先 OpenAI。总体上，我预期自动化研究员会有一种不同的研究风格，发挥自己的强项，并有意减轻算力瓶颈。</p>
+<h2 id="-1-1"><a class="header" href="#-1-1"></a></h2>
+<p><a href="javascript:void(0)">回应最强反论：机器学习学术界的记录对算力瓶颈意味着什么？</a></p>
+<p><em>如果更多机器学习研究投入真的会如此显著地加速进展，为什么当前至少有数万人的机器学习学术共同体没有为前沿实验室进展做出更多贡献？</em>（目前看来，前沿算法进步的大部分负担是由实验室内部团队承担的，这些团队在各实验室加总也许只有约一千人。）他的论点是，原因在于算法进步受算力瓶颈限制：学术界就是没有足够算力。</p>
+<p>（这仍然<em>远远</em>少于我们会从自动化 AI 研究中得到的数亿研究员。）</p>
+<p><em>我认为，对这件事如何展开保持不确定是合理的；但仅仅因为人类很难绕过算力瓶颈，就确信模型也做不到，这是不合理的。</em></p>
+<p>（除了实验算力，还有另一个瓶颈：最终需要运行一次大型训练，而目前这需要几个月。但你很可能可以节省这些大型训练，在智能爆炸的一年里只做少数几次，每次跨越比今天实验室更大的数量级。</p>
+<p>注意，虽然我认为这很可能，但它有点令人不安：这意味着下游模型智能可能会更离散/不连续，而不是一系列相当连续的大模型，每一代都比上一代略好。我们也许只会在智能爆炸期间做一次或几次大运行，把在小规模上找到的多个数量级算法突破一次性押进去。</p>
+<p>或者你可以“花掉”5 个数量级算力效率收益中的 1 个，把训练运行从几个月缩短到几天。）</p>
+<h3 id="-2"><a class="header" href="#-2"></a></h3>
+<p><a href="javascript:void(0)">互补性与达到 100% 自动化的长尾</a></p>
+<p>经济学家对 AI 自动化加速经济增长的经典反对意见是，不同任务之间具有互补性——例如，自动化 1800 年人类劳动的 80% 并没有带来增长爆炸或大规模失业，而是剩下 20% 成为所有人类转去做的事情，并继续成为瓶颈。（一个相关模型见<a href="https://www.nber.org/system/files/working_papers/w23928/w23928.pdf">这里</a>。）</p>
+<p>我认为经济学家的这个<em>模型</em>是对的。但关键是，我只是在谈经济中目前很小的一部分，而不是整个经济。人们在这段时间里可能仍照常理发——机器人也许还没有解决，面向每个领域的 AI 也许还没有解决，社会部署也许还没有解决，等等——但它们<em>会</em>能够做 AI 研究。正如<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#From_chatbot_to_agent-coworker">上一篇文章</a>讨论的，我认为当前 AI 进展路线正在把我们带向本质上可以直接上岗的远程员工，其智力与最聪明的人类相当；而正如本文讨论的，AI 研究员的工作完全在可被完全自动化的范围内。</p>
+<p>不过在实践中，我确实预期，即使是 AI 研究员/工程师这份工作，要达到真正 100% 自动化也会有某种长尾；例如，我们可能先得到几乎可以替代工程师的系统，但仍需要一定程度的人类监督。</p>
+<p>尤其是，我预期 AI 能力在不同领域会有些不均衡、呈尖峰形态：它在编码上可能比最好的工程师更强，但在某些任务或技能子集上仍有盲点；当它在自己最弱的方面达到人类水平时，它在像编码这种更容易训练的领域已经会显著超人类。（这也是我认为它们能比人类研究员更有效使用算力的部分原因。到 100% 自动化/智能爆炸开始的时候，它们已经会在某些领域相对人类拥有巨大优势。这对后面的<a href="https://situational-awareness.ai/superalignment/">超级对齐</a>也会有重要影响，因为这意味着，为了对齐哪怕第一批自动化 AI 研究员，我们也必须对齐那些在许多领域已经显著超人类的系统。）</p>
+<p>但我不认为这个阶段会持续超过几年；考虑到 AI 进展速度，我认为很可能只需要再做一些“解除限制”（移除阻碍模型完成最后一段路的某个显而易见的限制），或者再来一代模型，就能走完全程。</p>
+<p>总体而言，这可能会让起飞变缓一些。与其说是 2027 年 AGI → 2028 年超级智能，它也许更像是：</p>
+<ul>
+<li>2026/27：原型级自动化工程师，但在其他领域有盲点。已经把工作加速 1.5 到 2 倍；进展开始逐渐加速。</li>
+<li>2027/28：原型级自动化研究员，可以自动化 90% 以上。仍有一些人类瓶颈，也需要解决如何协调一个巨型自动化研究员组织的各种问题，但这已经把进展加速 3 倍以上。它会很快完成剩余必要的“解除限制”，把我们带到 100% 自动化。</li>
+<li>2028/29：进展速度达到 10 倍以上 → 超级智能。</li>
+</ul>
+<p>这仍然非常快……</p>
+<h3 id="-3"><a class="header" href="#-3"></a></h3>
+<p><a href="javascript:void(0)">算法进步的根本极限</a></p>
+<p>物理上可实现的算法进步幅度大概确实有一个真实上限。（例如，25 个数量级的算法进步看起来不可能，因为那意味着能用不到约 10 FLOPs 训练出 GPT-4 级别系统。不过，你也许可以得到那种用当前架构需要多 25 个数量级硬件才能得到的结果！）</p>
+<p>但类似 5 个数量级的进步，看起来非常处在可能范围内；再说一次，这只需要再延续十年的趋势性算法效率提升（甚至还没算解除限制带来的算法收益）。</p>
+<p>直觉上，我们看起来远没有穷尽所有低垂果实，因为最大突破如此简单，而当前架构和训练技术仍然显得粗糙、明显受限。例如，我认为我们通过会用思维链“把思考说出来”的 AI 系统自举到 AGI，是相当合理的。但这<em>肯定</em>不是最高效的做法；<em>肯定</em>会存在某种通过内部状态/循环等方式完成这种推理、效率高得多的东西。或者考虑自适应算力：Llama 3 在预测 “and” 这个 token 时，仍然花费与回答某个复杂问题相同的算力，这显然不是最优。即使只是小调整，我们也在获得巨大的数量级算法收益；与此同时，还有几十个方向很可能能找到效率高得多的架构和训练流程。</p>
+<p>生物学参照也显示出巨大的余量。例如，人类智力范围很宽，而架构只需要极小调整。人类与其他动物拥有相近数量的神经元，尽管人类比那些动物聪明得多。并且当前 AI 模型距离<a href="https://www.dwarkeshpatel.com/p/carl-shulman">人脑效率</a>仍差许多数量级；人类能用比 AI 模型少得多的数据（因此少得多的“算力”）学习，这说明我们的算法和架构有巨大改进空间。</p>
+<h3 id="-4"><a class="header" href="#-4"></a></h3>
+<p><a href="javascript:void(0)">想法越来越难找与收益递减</a></p>
+<p>当你摘掉低垂果实时，想法会越来越难找。这在<a href="https://www.aeaweb.org/articles?id=10.1257/aer.20180338">任何技术进步领域</a>都成立。本质上，我们看到的是一条 log-log 曲线上的直线：log(进展) 是 log(累计研究投入) 的函数。每多推进 1 个数量级，都需要比上一个数量级投入更多研究。</p>
+<p>这会引出对智能爆炸的两点反对：</p>
+<ul>
+<li>自动化 AI 研究只会是维持进展所必需的东西（而不是显著加速进展）。</li>
+<li>纯算法式智能爆炸不会被维持/会随着算法进步越来越难找、边际收益递减而迅速熄火。</li>
+</ul>
+<p>过去我做经济学研究时，花了很多时间思考这类模型。（尤其是<a href="https://web.stanford.edu/~chadj/JonesHandbook2005.pdf?ref=forourposterity.com">半内生增长理论</a>，它是技术进步的标准模型，刻画了研究投入增长与想法越来越难找这两个相互竞争的动态。）</p>
+<p>简言之，我认为这些反对意见背后的基础模型是合理的；但它最终如何表现是经验问题——而我认为它们把经验事实判断错了。</p>
+<p>核心问题本质上是：每 10 倍进展之后，进一步进展会变得比 10 倍更难，还是比 10 倍更不难？沿着<a href="https://www.aeaweb.org/articles?id=10.1257/aer.20180338">经济学文献</a>中的做法做一些粗略估算，可以帮助我们界定范围。</p>
+<ul>
+<li>假设我们认真看待算法进步约每年 0.5 个数量级的趋势速度；这意味着 4 年内进展 100 倍。</li>
+<li>然而，给定领先 AI 实验室中经质量调整的人数/研究投入，4 年内肯定增长不到 100 倍。<em>也许</em>增长了 10 倍（从某实验室里从事相关工作的人数从几十人到几百人），但即便这一点在质量调整后也不明确。</li>
+<li>尽管如此，算法进步似乎仍然得以维持。</li>
+</ul>
+<p>因此，回应反对意见 1 时，我们可以注意到，研究投入约一百万倍的增加，远远大于仅仅维持进展所必需的增加。也许四年后需要一个实验室里大约几千名研究员从事相关研究，才能维持进展；但 1 亿个 Alec Radford 仍然是一个<em>巨大</em>增量，并且肯定会导致大幅加速。认为自动化研究会<em>刚好足够</em>维持既有进展速度，是一种奇怪的“刀刃”假设。（这还没算以人类 10 倍速度思考，以及 AI 系统相较人类研究员拥有的所有其他优势。）</p>
+<p>回应反对意见 2 时，我们可以注意到两点：</p>
+<ul>
+<li>第一，是上面提到的数学条件。根据我们的粗略估算，在我们完成 100 倍算法进展期间，经质量调整的研究投入需要增长远小于 100 倍；这相当强地表明，收益曲线形状偏向自我维持的进展。（100 倍进展 → 自动化研究投入增加 100 倍，但比如你只需要多 10 倍研究投入就能继续推进下一个 100 倍，所以收益足以维持爆炸式进展。）</li>
+<li>第二，收益曲线甚至不<em>需要</em>偏向完全自我维持的链式反应，我们也可以得到有边界但包含许多数量级的算法进步激增。本质上，它不需要是“增长效应”；足够大的“水平效应”就够了。也就是说，一百万倍研究投入增加（结合自动化研究员相较人类研究员会有的许多其他优势）会是如此巨大的一个一次性提升，即使链式反应并不完全自我维持，也可能带来非常可观的（多个数量级的）一次性收益。类比半内生经济增长理论，把科学投入从 GDP 的 1% 提高到 20% 不会让增长率永远更高——最终递减收益会让增长率回到旧水平——但它导致的“水平效应”会大到足以在几十年内显著加速增长。</li>
+</ul>
+<p>总体而言，虽然它显然不会无限持续，而我对它究竟能走多远也有很多不确定性，但我认为，仅由算法收益/自动化 AI 研究带来的约 5 个数量级智能爆炸，是高度可能的。</p>
+<p><a href="https://www.openphilanthropy.org/research/what-a-compute-centric-framework-says-about-takeoff-speeds/">Tom Davidson 和 Carl Shulman</a> 也在增长建模框架下考察了相关经验事实，并得出了类似结论。<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4814445">Epoch AI 最近也做了一些工作</a>研究这些经验事实，同样认为算法研发的经验收益偏向爆炸式增长，并附有一篇<a href="https://epochai.org/blog/do-the-returns-to-software-rnd-point-towards-a-singularity">有帮助的影响解读</a>。</p>
+<p>总体上，这些因素可能会在一定程度上拖慢进展：最极端版本的智能爆炸（比如一夜之间）看起来不太可信。它们也可能导致一个稍长的前奏（也许我们需要从比较迟缓的原型级自动化研究员，到真正的自动化 Alec Radford，再多等一两年，事情才会全面启动）。但它们当然不能排除一次非常快速的智能爆炸。我们应该把这样的情况作为主线预期：从完全自动化的 AI 研究员到远超人类的 AI 系统，只需一年——最多几年，也许甚至只是几个月。</p>
+<p><strong>超级智能的力量</strong></p>
+<p>无论你是否同意这些论证的最强形式——无论我们是否会经历不到一年的智能爆炸，还是需要几年——有一点是清楚的：我们必须面对超级智能的可能性。</p>
+<p>我们很可能在<em>这个十年结束前</em>拥有的 AI 系统，将强大到难以想象。</p>
+<ul>
+<li>当然，它们会在<em>数量上</em>超越人类。在<a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">十年末数以亿计 GPU 的集群</a>上，我们将能运行一个由数十亿个它们组成的文明，并且它们“思考”的速度会比人类快多个数量级。它们能迅速掌握任何领域，写出数万亿行代码，阅读有史以来每一个科学领域的每一篇研究论文（它们会完美跨学科！），并且在你还没读完一篇摘要之前就写出新论文；它们能从每一个副本的并行经验中学习，在几周内针对某项新创新积累数十亿人类等效年的经验，100% 时间都以最高能量和专注度工作，也不会被某个跟不上的队友拖慢，等等。</li>
+<li>更重要——但也更难想象——的是，它们会在<em>质量上</em>超越人类。举一个窄领域例子，大规模 RL 运行曾产生完全新颖、创造性、超出人类理解的行为，比如 <a href="https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/">AlphaGo 对李世石的著名第 37 手</a>。超级智能会在许多领域都如此。它会在人的代码里发现任何人类都不会注意到的微妙漏洞，也会生成复杂到即使模型花几十年解释，人类也理解不了的代码。对人类来说可能会卡住几十年的极难科学与技术问题，在它们看来只会是<em>如此显而易见</em>。我们会像卡在牛顿物理里的高中生，而它已经在探索量子力学。</li>
+</ul>
+<p>作为对这种情况有多<em>离谱</em>的可视化，不妨看一些 YouTube 上的视频游戏速通视频，比如<a href="https://www.youtube.com/watch?v=do08uW0N5Qs">20 秒通关 Minecraft</a>的这个。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gif-compressed-300x169.gif" alt=""></p>
+<p>现在想象这被应用到科学、技术和经济的所有领域。当然，这里的误差范围极大。尽管如此，认真思考它会产生多么重大的后果仍然很重要。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/wbw_explosion.png" alt=""></p>
+<p><a href="https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html">Wait But Why/Tim Urban</a>。</p>
+<p>在智能爆炸中，爆炸性进展最初只发生在自动化 AI 研究这个狭窄领域。随着我们获得超级智能，并把数十亿个（现在已经是超级智能的）智能体用于许多领域的研发，我预期爆炸性进展会扩展：</p>
+<p>也许我们最初的 AGI 仍有限制，使它们无法完全自动化某些其他领域的工作（而不仅是 AI 研究领域）；自动化 AI 研究会很快解决这些问题，使任何和所有认知工作都能被自动化。</p>
+<p><strong>AI 能力爆炸。</strong> 超级智能不会长期停留在纯认知层面。让机器人良好工作主要是一个机器学习算法问题（而不是硬件问题），我们的自动化 AI 研究员很可能能解决它（下文会讲更多）。工厂会从人类运营，转为 AI 指挥人类体力劳动，再很快转为完全由机器人群运行。</p>
+<p><strong>解决机器人问题。</strong> 是的，单个爱因斯坦无法发展神经科学并建成半导体工业，但十亿个超级智能的自动化科学家、工程师、技术专家和机器人技师（机器人还能以人类 10 倍或更高速度移动！）<a href="#footnote-11-71">11</a>会在数年内让许多领域取得非同寻常的进步。（这里有一篇很不错的<a href="https://www.asimov.press/p/tinker">短篇故事</a>，形象化展示了 AI 驱动的研发可能是什么样子。）这十亿个超级智能将能把人类研究员未来一个世纪会完成的研发工作压缩到几年。想象一下，如果 20 世纪的技术进步被压缩到不到十年：我们会在几年内从“飞行只是幻象”，走到飞机，走到人类登月和洲际弹道导弹。<em>这就是我预期 2030 年代科学与技术各领域会出现的景象。</em></p>
+<p><strong>显著加速科学和技术进步。</strong> 极度加速的技术进步，再加上自动化所有人类劳动的能力，可能会极大加速经济增长（想象自我复制的机器人工厂迅速覆盖整个内华达沙漠）。</p>
+<p><strong>工业与经济爆炸。</strong><a href="#footnote-12-71">12</a> 增长率的提高大概不会只是从每年 2% 到每年 2.5%；相反，这会是增长制度的根本变化，更类似工业革命时期从非常缓慢的增长跃迁到每年几个百分点的历史性变化。我们可能会看到每年 30% 甚至更高的经济增长率，很可能一年多次翻倍。这相当直接地来自经济学家关于<a href="https://globalprioritiesinstitute.org/philip-trammell-and-anton-korinek-economic-growth-under-transformative-ai/">经济</a><a href="https://www.openphilanthropy.org/research/could-advanced-ai-drive-explosive-economic-growth/">增长</a><a href="https://www.kellogg.northwestern.edu/faculty/research/researchdetail?guid=6d8928d1-2328-11e8-91be-0242ac160003">模型</a>。当然，这很可能会被社会摩擦推迟；晦涩法规也许会确保律师和医生仍必须由人类担任，即使 AI 系统在这些工作上已经好得多；当社会抵抗变化速度时，快速扩张的机器人工厂齿轮中肯定会被撒入沙子；也许我们还希望保留人类保姆；所有这些都会拖慢整体 GDP 统计中的增长。但在任何我们移除人为障碍的领域（例如，竞争可能迫使我们在军事生产上这么做），我们都会看到工业爆炸。</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>增长模式</th><th>开始占主导的日期</th><th>全球经济翻倍时间（年）</th></tr>
+</thead>
+<tbody>
+<tr><td>狩猎</td><td>公元前 2,000,000 年</td><td>230,000</td></tr>
+<tr><td>农业</td><td>公元前 4700 年</td><td>860</td></tr>
+<tr><td>科学与商业</td><td>公元 1730 年</td><td>58</td></tr>
+<tr><td>工业</td><td>公元 1903 年</td><td>15</td></tr>
+<tr><td>超级智能？</td><td>公元 2030 年？</td><td>???</td></tr>
+</tbody>
+</table>
+</div>
+<p><em>增长制度的转变并非没有先例：随着文明从狩猎走向农业，走向科学与商业的繁荣，再走向工业，全球经济增长速度不断加快。超级智能可能会启动另一场增长模式转变。基于 Robin Hanson 的 “</em></p>
+<p><em>Long-run growth as a sequence of exponential modes</em>”。</p>
+<p>即使早期的认知型超级智能也可能已经足够；也许某种超人类黑客方案能瘫痪对手军事力量。无论如何，历史上军事力量与技术进步一直紧密相连；而极其快速的技术进步将带来相应的军事革命。无人机群和机器人军队会很重要，但它们只是开始；我们应该预期会出现全新类型的武器，从新型大规模杀伤性武器，到坚不可摧的激光导弹防御，再到我们现在还无法想象的东西。与超级智能前的军备相比，这会像 21 世纪军队对战一支由马匹和刺刀组成的 19 世纪旅。（我会在<a href="https://situational-awareness.ai/the-free-world-must-prevail/">后文</a>讨论超级智能如何带来决定性军事优势。）</p>
+<p><strong>提供决定性且压倒性的军事优势。</strong> 控制超级智能的一方很可能拥有足以从前超级智能时代力量手中夺取控制权的力量。即使没有机器人，这个由超级智能组成的小文明也能黑入任何未被防护的军事、选举、电视等系统；巧妙说服将军和选民；在经济上超过民族国家；设计新的合成生物武器，然后用比特币付钱让某个人类合成它；等等。</p>
+<p><strong>能够推翻美国政府。</strong> 在 <a href="https://www.lesswrong.com/posts/ivpKSjM4D6FbqF4pZ/cortes-pizarro-and-afonso-as-precedents-for-takeover">16 世纪初</a>，科尔特斯和大约 500 名西班牙人征服了拥有数百万人口的阿兹特克帝国；皮萨罗和约 300 名西班牙人征服了拥有数百万人口的印加帝国；阿方索和约 1000 名葡萄牙人征服了印度洋。他们并没有神一样的力量，但旧世界的技术优势，以及战略和外交机巧上的优势，带来了完全决定性的优势。超级智能也许会类似。</p>
+<h3 id="-5"><a class="header" href="#-5"></a></h3>
+<p><a href="javascript:void(0)">机器人</a></p>
+<p>对本文这类说法的一种常见反对意见是：即使 AI 能做认知任务，机器人也远远落后，因此会拖慢任何现实世界影响。</p>
+<p>我过去也同情这种看法，但现在我确信机器人不会成为障碍。多年来，人们声称机器人是硬件问题——但机器人硬件已经很接近解决。</p>
+<p>越来越清楚的是，机器人是一个<em>机器学习算法</em>问题。LLM 有一种容易得多的自举方式：你有整个互联网可以预训练。机器人动作没有类似规模的数据集，因此需要更巧妙的方法（例如以多模态模型为基础，再用合成数据/仿真/聪明的 RL）来训练它们。</p>
+<p>现在有大量精力正在投入解决这个问题。但即使我们在 AGI 之前没有解决它，我们数以亿计的 AGI/超级智能也会成为<em>惊人</em>的 AI 研究员（这正是本文的核心论点！），它们很可能会弄清楚如何做出惊人的机器人所需的机器学习。</p>
+<p>因此，虽然机器人可能导致几年延迟是合理的（解决机器学习问题，在物理世界中以一种根本上慢于仿真的方式测试，在机器人能够自行建厂之前先扩大最初机器人生产，等等），但我不认为会超过几年。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/explosive_growth_broadening-1.png" alt=""></p>
+<p><em>爆炸性增长从较窄的 AI 研发领域开始；随着我们把超级智能用于其他领域的研发，爆炸性增长会扩展。</em></p>
+<p>这一切在 2030 年代如何展开很难预测（这也是另一个时间再讲的故事）。但至少有一点是清楚的：我们会迅速被推入人类有史以来最极端的局面。</p>
+<p>人类水平的 AI 系统，也就是 AGI，本身就会产生高度重大影响；但从某种意义上说，它们仍只是我们已经知道的东西的更高效版本。然而，非常可能的是，仅仅在一年内，我们就会转向更异质的系统——它们的理解与能力、它们的原始力量，会超过整个人类合在一起。由于我们会在这次快速转变中被迫把信任交给 AI 系统，确实存在我们<a href="https://situational-awareness.ai/superalignment/">失去控制</a>的真实可能性。</p>
+<p>更广泛地说，一切都会开始变得<em>难以置信地快</em>。世界也会开始发疯。假设我们把 20 世纪的地缘政治高烧和人为风险压缩进短短几年；这就是我们应该预期超级智能之后会出现的那类局面。到它结束时，超级智能 AI 系统将运行我们的军事和经济。在所有这些疯狂之中，我们会有极其稀缺的时间来做出正确决策。挑战会极大。我们必须用尽一切，才有机会完整地穿过去。</p>
+<p><strong>智能爆炸以及紧随超级智能之后的时期，将是人类历史上最动荡、最紧张、最危险、也最疯狂的时期之一。</strong></p>
+<p>到这个十年结束时，我们很可能已经身处其中。</p>
+<p>面对智能爆炸——超级智能出现——的可能性，常常让人想起围绕核链式反应可能性及其将使原子弹成为可能的<a href="https://www.amazon.com/Making-Atomic-Bomb-Richard-Rhodes/dp/1451677618">早期争论</a>。H. G. Wells 在 1914 年的一部小说中预言了原子弹。1933 年，西拉德第一次构想出链式反应时，他无法说服任何人；那只是纯理论。1938 年裂变被实验证实后，西拉德再次惊恐，并强烈主张保密，少数人开始意识到炸弹的可能性。爱因斯坦此前没有考虑过链式反应的可能性，但当西拉德把它摆到他面前时，他很快看到了其中含义，并愿意做任何需要做的事；他愿意拉响警报，也不怕显得愚蠢。但费米、玻尔以及大多数科学家认为，“保守”的做法是淡化它，而不是认真对待炸弹可能性的非同寻常含义。保密（避免把进展分享给德国人）以及其他全力投入的努力，在他们看来很荒谬。链式反应听起来太疯狂了。（即使事实证明，炸弹距离现实只有半个十年。）</p>
+<p>我们必须再次面对链式反应的可能性。也许这在你听来有些投机。但在 AI 实验室的资深科学家中，许多人认为快速智能爆炸相当可信。他们能<em>看见</em>它。超级智能是可能的。</p>
+<p>系列下一篇：<strong>III. 挑战 – IIIa. 冲向万亿美元集群</strong></p>
+<p>冷战中许多荒诞之处（参见</p>
+<p><a href="https://www.amazon.com/Doomsday-Machine-Confessions-Nuclear-Planner/dp/1608196704">Daniel Ellsberg 的书</a>）来自仅仅把原子弹替换成氢弹，却没有让核政策和战争计划适应这种巨大能力提升。<a href="#note-1-71">↩</a> AI 研究员这份工作也是 AI 实验室的 AI 研究员非常、非常熟悉的一份工作——因此，让模型擅长这份工作，对他们来说会特别直观。而且他们会有巨大激励这么做，以帮助自己加速研究、提升实验室竞争优势。</p>
+<p><a href="#note-2-71">↩</a> 顺便说，这说明了一个关于 AI 风险排序的重要点。人们常提到的一种 AI 威胁模型是：AI 系统开发新型生物武器，并因此造成灾难性风险。但如果 AI 研究比生物研发更容易被自动化，我们也许会先经历智能爆炸，再遇到极端 AI 生物威胁。这很重要，例如它关系到我们是否应该预期在 AI 事情变疯狂之前及时看到“生物预警事件”。</p>
+<p><a href="#note-3-71">↩</a> <a href="https://situational-awareness.ai/from-gpt-4-to-agi/#Algorithmic_efficiencies">如前所述</a>，今天 GPT-4 API 的成本已经低于 GPT-3 发布时的成本——这说明推理效率提升趋势足够快，可以在模型变得强大得多的同时，让推理成本大致保持不变。类似地，自 GPT-4 发布以来短短一年里，出现了巨大的<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#Algorithmic_efficiencies">推理成本收益</a>；例如，<a href="https://ai.google.dev/pricing">当前版本 Gemini 1.5 Pro</a>超过最初的 GPT-4，同时<a href="https://ai.google.dev/pricing">大约便宜 10 倍</a>。我们也可以通过考虑 Chinchilla 缩放律来更具体地理解这一点。根据 Chinchilla 缩放律，模型规模——因此推理成本——随着训练成本的平方根增长，也就是有效算力数量级扩大的 OOM 的一半。然而在</p>
+<p><a href="https://situational-awareness.ai/from-gpt-4-to-agi">上一篇文章</a>中，我提出算法效率提升速度大致与算力扩展速度相同，也就是说，它约占有效算力扩大 OOM 的一半。如果这些算法收益也能转化为推理效率，那意味着算法效率会抵消朴素估算下推理成本的增加。在实践中，训练算力效率提升经常但不总是转化为推理效率提升。不过，还有许多单独的推理效率收益并不是训练效率收益。因此，至少从粗略范围看，假设前沿模型的美元/token 大致相近，并不疯狂。</p>
+<p>（当然，它们会使用更多 token，也就是更多测试时算力。但这里通过把人类等效体定价为每分钟 100 个 token，已经把这一点纳入计算。）</p>
+<p><a href="#note-4-71">↩</a> GPT-4 Turbo</p>
+<p><a href="https://openai.com/api/pricing/">大约是</a> 0.03 美元/1000 token。我们假设会有数千万个 A100 等效 GPU，如果按 A100 等效 GPU 计算，每个 GPU 每小时约 1 美元。若用 API 成本把 GPU 转换为生成 token，这意味着数千万 GPU * 1 美元/GPU-小时 * 33K token/美元 ≈ 每小时一万亿 token。假设一个人每分钟进行 100 个 token 的思考，也就是一个人类等效体每小时 6000 token。每小时一万亿 token 除以 6000 token/人类小时 ≈ 2 亿个人类等效体——也就是好像在昼夜运行 2 亿个人类研究员。（即使我们把一半 GPU 留给实验算力，也能得到 1 亿个人类研究员等效体。）<a href="#note-5-71">↩</a> 前一个脚注估算为约每小时 1T token，也就是每天 24T token。在</p>
+<p><a href="https://situational-awareness.ai/from-gpt-4-to-agi/">上一篇文章</a>中，我指出一个<a href="https://www.together.ai/blog/redpajama-data-v2">公开去重的 CommonCrawl 大约有 30T token</a>。<a href="#note-6-71">↩</a> Jacob Steinhardt 估计，在<a href="https://bounded-regret.ghost.io/how-fast-can-we-perform-a-forward-pass/">关于推理权衡的一些数学</a>下，使用一种平铺方案，k^3 个模型并行副本可以替换为一个快 k^2 倍的单一模型（理论上即使 k 为 100 或更大也可行）。假设初始速度已经约为人类 5 倍（基于比如 GPT-4 发布时的速度）。那么，通过承担这种推理代价（k≈5），我们将能够运行约 100 万个、速度约为人类 100 倍的自动化 AI 研究员。<a href="#note-7-71">↩</a> 这个</p>
+<p><a href="https://artificialanalysis.ai/models/gemini-1-5-flash">来源</a>将 Flash 的吞吐量基准测为约 GPT-4 Turbo 的 6 倍，而 GPT-4 Turbo 又快于原始 GPT-4。延迟大概也约快 10 倍。<a href="#note-8-71">↩</a> Alec Radford 是 OpenAI 一位极有天赋且高产的研究员/工程师，是</p>
+<p><a href="https://www.olin.edu/sites/default/files/2023-06/How%20a%20couple%20of%20Olin%20College%20students%20h...%20chatbot%20revolution%20-%20The%20Boston%20Globe.pdf">许多最重要进展</a>背后的人物，不过他有些低调。<a href="#note-9-71">↩</a> 例如，在 GPT-4 之上再有 25 个数量级算法进步显然不可能：那会意味着只用少数 FLOP 就能训练出 GPT-4 级别模型。</p>
+<p><a href="#note-10-71">↩</a> 在现实世界中以 10 倍速度做物理研发的机器人，是“慢速版本”；现实中，超级智能会尝试尽可能多地在仿真中做研发，比如</p>
+<p><a href="https://deepmind.google/technologies/alphafold/">AlphaFold</a>或制造业的“<a href="https://www.youtube.com/watch?v=h68kXLIRilM">数字</a><a href="https://www.youtube.com/watch?v=OAdqXZGUb70">孪生</a>”。<a href="#note-11-71">↩</a> 为什么“Factorio 式世界”——建一个工厂，工厂生产更多工厂，更多工厂再生产更多工厂，工厂不断翻倍，直到你的整个星球很快被工厂覆盖——今天不可能？原因是劳动力受限——你可以积累资本（工厂、工具等），但这会因受固定劳动力约束而遭遇递减收益。机器人和 AI 系统能够完全自动化劳动后，这一约束被移除；机器人工厂就可以以近乎不受限制的方式生产更多机器人工厂，导致工业爆炸。更多关于这一点的经济增长模型见</p>
+<p><a href="https://www.nber.org/papers/w31815">这里</a>。<a href="#note-12-71">↩</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ai-万亿集群投资与工业动员"><a href="#ai-万亿集群投资与工业动员" class="header">AI 万亿集群投资与工业动员</a></h1>
+<p><strong>最非同寻常的技术—资本加速已经启动。随着 AI 收入快速增长，在这个十年结束之前，数万亿美元将流入 GPU、数据中心和电力建设。包括让美国发电量增长数十个百分点在内的工业动员，将会非常强烈。</strong></p>
+<p>你看，我告诉过你，不把整个国家变成一座工厂，这事就做不成。你们正是这么做了。</p>
+<p>[Niels Bohr](对 Edward Teller 说，1944 年得知曼哈顿计划规模之后)</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/trillion_dollar_cluster-1024x585.png" alt=""></p>
+<p><em>万亿美元集群。来源：DALLE。</em></p>
+<p>AGI 竞赛不会只发生在代码里、笔记本电脑背后——它也会是一场动员美国工业力量的竞赛。与我们最近从硅谷看到的任何东西都不同，AI 是一个庞大的工业过程：每个新模型都需要一个巨大的新集群；很快还会需要巨大的新发电厂；最终会需要巨大的新芯片晶圆厂。所需投资令人震惊。但在幕后，这些投资已经开始动起来。</p>
+<p>在这篇文章中，我会带你看一些数字，让你感受这会意味着什么：</p>
+<ul>
+<li>随着 AI 产品收入快速增长——对于 Google 或 Microsoft 这样的公司来说，凭借强大但尚未达到 AGI 的系统，到约 2026 年达到 1000 亿美元年化收入是合理可能的——这会推动越来越大的资本动员；到 2027 年，AI 总投资可能每年超过 1 万亿美元。</li>
+<li>我们正在走向 2028 年单个训练集群成本数千亿美元的道路——这些集群所需电力相当于美国一个中小州，并且成本高于国际空间站。</li>
+<li>到这个十年结束时，我们将走向单个训练集群 1 万亿美元以上，所需电力相当于美国发电量的 20% 以上。总体上，数万亿美元资本开支将每年产出数亿块 GPU。</li>
+</ul>
+<p>Nvidia 震惊了世界：它的数据中心销售额在过去一年从约<a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2023">年化 140 亿美元</a>飙升到约<a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025">年化 900 亿美元</a>。但这仍只是刚刚开始。</p>
+<p><strong>训练算力</strong></p>
+<p><a href="https://situational-awareness.ai/from-gpt-4-to-agi/#Compute">前面</a>我们看到，AI 训练算力大致呈现每年约 0.5 个数量级的趋势增长。<a href="#footnote-1-138">1</a> 如果这一趋势在本十年剩余时间继续下去，最大的训练集群会是什么样？</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>年份</th><th>数量级</th><th>H100 等效数量</th><th>成本</th><th>电力</th><th>电力参照类别</th></tr>
+</thead>
+<tbody>
+<tr><td>2022</td><td>约 GPT-4 集群</td><td>约 1 万</td><td>约 5 亿美元</td><td>约 10 MW</td><td>约 1 万户普通家庭</td></tr>
+<tr><td>约 2024</td><td>+1 个数量级</td><td>约 10 万</td><td>数十亿美元</td><td>约 100MW</td><td>约 10 万户家庭</td></tr>
+<tr><td>约 2026</td><td>+2 个数量级</td><td>约 100 万</td><td>数百亿美元</td><td>约 1 GW</td><td>胡佛大坝，或一座大型核反应堆</td></tr>
+<tr><td>约 2028</td><td>+3 个数量级</td><td>约 1000 万</td><td>数千亿美元</td><td>约 10 GW</td><td>美国一个中小州</td></tr>
+<tr><td>约 2030</td><td>+4 个数量级</td><td>约 1 亿</td><td>1 万亿美元以上</td><td>约 100GW</td><td>美国发电量的 20% 以上</td></tr>
+</tbody>
+</table>
+</div>
+<p><em>扩大最大训练集群规模，粗略的信封背面计算。</em></p>
+<h4 id="-6"><a class="header" href="#-6"></a></h4>
+<p><a href="javascript:void(0)">最大训练集群计算细节</a></p>
+<p><strong>年份</strong></p>
+<p><a href="https://arxiv.org/pdf/2303.08774">OpenAI GPT-4 技术报告</a>称 GPT-4 在 2022 年 8 月完成训练。此后我们把约每年 0.5 个数量级的粗略趋势向前推演。</p>
+<p><strong>H100 等效</strong></p>
+<p><a href="https://www.semianalysis.com/p/gpt-4-architecture-infrastructure%5C">Semianalysis</a>、</p>
+<p><a href="https://colab.research.google.com/drive/1O99z9b1I5O66bT78r9ScslE_nOj5irN9">JP Morgan</a> 等估计 GPT-4 是在约 2.5 万块 A100 上训练的，而 H100 性能约为 A100 的 2 到 3 倍。</p>
+<p><strong>成本</strong></p>
+<p>人们经常引用“GPT-4 训练花了 1 亿美元”之类数字，只计算 GPU 租用成本（也就是类似“租这个规模的集群训练 3 个月要多少钱”）。但这是错误的。真正重要的更接近于建设这个集群的实际成本。如果你想拥有世界上最大的集群之一，就不可能只租 3 个月！而且你需要算力的用途不只是旗舰训练运行：还会有大量降风险实验、失败运行、其他模型，等等。</p>
+<p>为了估算 GPT-4 集群成本：</p>
+<ul>
+<li><a href="https://www.semianalysis.com/p/gpt-4-architecture-infrastructure%5C">公开</a><a href="https://colab.research.google.com/drive/1O99z9b1I5O66bT78r9ScslE_nOj5irN9">估计</a>显示 GPT-4 集群约有 2.5 万块 A100。</li>
+<li>假设每 A100 小时 1 美元、持续 2 到 3 年，则大致是 5 亿美元成本。</li>
+<li>另一种估计方式是：每块 H100 约 2.5 万美元，1 万块 H100 等效，且 Nvidia GPU 约占集群成本的一半（剩下是电力、实体数据中心、冷却、网络、维护人员等）。</li>
+<li>（例如，这份<a href="https://pytorchtoatoms.substack.com/p/metas-24k-h100-cluster-capextco-and">总体拥有成本分析</a>估计，大型集群成本约 40% 是 H100 GPU 本身，另有 13% 流向 Nvidia 的 Infiniband 网络。不过，如果在该计算中剔除资本成本，那么 GPU 约占成本 50%；加上网络后，Nvidia 获得的比例略高于集群成本的 60%。）</li>
+<li>（例如，这</li>
+</ul>
+<p>每一代 Nvidia GPU 的 <em>FLOP/美元</em> 都会有所改善，但幅度不算大。例如 H100 → B100 很可能大约是 1.5 倍 FLOP/美元：B100 实际上像是把两块 H100 绑在一起，但零售价低于 2 倍成本。不过 B100 某种程度上是例外。它们出人意料地便宜，很可能是因为 Nvidia <a href="https://www.semianalysis.com/p/nvidia-b100-b200-gb200-cogs-pricing">想压垮竞争</a>。相比之下，A100 → H100 在 FLOP/美元上没有多少改善（如果不算 fp8，是大约 2 倍更好的芯片、也约 2 倍成本；如果算上 fp8 改进，也许是 1.5 倍），而那还是两年一代。</p>
+<p>我认为，由于利润率压缩，FLOP/美元进一步改善有一些顺风；但随着 GPU 变得极度受限，它们也可能更贵。AI 芯片专门化带来的收益会继续，但我不确定 FLOP/美元还会出现改变格局的技术改进，因为芯片已经相当专门针对 AI（例如专门针对 Transformer，并且已经是 fp8/fp4 精度），摩尔定律如今非常缓慢，而<a href="https://twitter.com/karpathy/status/1691571869051445433">内存和互连等其他瓶颈部件改善更慢</a>。如果你看 <a href="https://epochai.org/blog/trends-in-gpu-price-performance">Epoch 的数据</a>，过去十年顶级机器学习 GPU 的 FLOP/美元似乎提升不到 10 倍；基于上述原因，我反而预期它会放缓。</p>
+<p>每年约 35% 的 FLOP/美元改善，会让 +4 个数量级集群的成本达到 1 万亿美元。也许 FLOP/美元改善更快，但数据中心资本开支也会变得更贵——原因很简单：你将需要真正建设新的电力，先投入大量资本开支，而不是租用已有、已折旧的发电厂。</p>
+<p>无论如何，这些都只是非常粗略的数字。例如，如果 1 万亿美元集群能以更高效率完成、实际在算力上提供更接近 +4.5 个数量级的收益，也完全在误差范围内。</p>
+<p><strong>电力需求</strong></p>
+<p>一块 H100 是 700W，但你还需要大量数据中心电力（冷却、网络、存储）；Semianalysis <a href="https://www.semianalysis.com/p/ai-datacenter-energy-dilemma-race">估计</a>每块 H100 约 1400W。</p>
+<p>FLOP/瓦特上仍有一些收益可得，不过一旦我们耗尽 AI 芯片专门化的收益（见上一个脚注），例如降到尽可能低的精度，这些收益看起来相当有限（主要就是芯片制程改进，而这很慢）。也就是说，随着电力更成为约束（从而占成本更大比例），芯片设计可能会牺牲 FLOPs 来专门优化能效。尽管如此，冷却、网络、存储等仍会有电力需求（上面的 H100 数字中，这些已经约占电力需求的一半）。</p>
+<p>在这些信封背面计算中，我们这里按每个 H100 等效约 1kW 处理；再次强调，这些只是粗略计算。（如果出现意外的 FLOP/瓦特突破，我预期支出的电力仍会相同，只是会带来更大的 OOM 算力收益。）</p>
+<p><strong>电力参照类别</strong></p>
+<p>一个 10GW 集群连续运行一年是 87.6 TWh。相比之下，俄勒冈州每年<a href="https://www.energy.gov/sites/prod/files/2016/09/f33/OR_Energy%20Sector%20Risk%20Profile.pdf">消耗约 27 TWh</a> 电力，华盛顿州每年<a href="https://www.energy.gov/sites/prod/files/2016/09/f33/WA_Energy%20Sector%20Risk%20Profile.pdf">消耗约 92 TWh</a>。</p>
+<p>一个 100GW 集群连续运行一年是 876 TWh，而美国年发电总量约为 4,250 TWh。</p>
+<p>这也许很难相信——但它看起来正在发生。扎克伯格<a href="https://www.cnbc.com/2024/01/18/mark-zuckerberg-indicates-meta-is-spending-billions-on-nvidia-ai-chips.html">购买了 35 万块 H100</a>。Amazon 在一座核电站旁边<a href="https://www.datacenterdynamics.com/en/news/aws-acquires-talens-nuclear-data-center-campus-in-pennsylvania/">买下了一个 1GW 数据中心园区</a>。传闻<a href="https://twitter.com/rediminds/status/1749852816938529247?lang=en">显示</a>，一个 1GW、140 万 H100 等效集群（约 2026 年级集群）正在科威特建设。媒体报道 <a href="https://www.reuters.com/technology/microsoft-openai-planning-100-billion-data-center-project-information-reports-2024-03-29/">Microsoft 和 OpenAI 据称正在合作建设一个 1000 亿美元、计划 2028 年使用的集群</a>（成本堪比<a href="https://en.wikipedia.org/wiki/International_Space_Station_programme#:~:text=Cost,-This%20section%20is&amp;text=The%20ISS%20has%20been%20described,cost%20was%20US%24150%20billion.">国际空间站</a>！）。随着每一代模型继续震惊世界，进一步加速可能还会到来。</p>
+<p>也许最疯狂的是，至少对于训练集群而言，当前的约束甚至似乎不是花钱意愿。真正难的是找到基础设施本身：“我到哪里找 10GW？”（1000 亿美元以上、按趋势约 2028 年集群所需电力）是旧金山常见的聊天话题。任何算力相关人士都在思考如何锁定电力、土地、许可和数据中心建设。<a href="#footnote-2-138">2</a> 你也许要等一年才能拿到 GPU，但这些东西的交付周期还要长得多。</p>
+<p>万亿美元集群——相对于 GPT-4 集群 +4 个数量级，也就是当前趋势下约 2030 年的训练集群——将是一项真正非同寻常的工程。它所需的 100GW 电力相当于美国发电量的 20% 以上；想象一下，它不是一个简单堆满 GPU 的仓库，而是数百座发电厂。也许这需要一个国家级联合体。</p>
+<p>（注意，我认为我们很可能只需要约 1000 亿美元或更少的集群就能达到 AGI。1 万亿美元集群也许会是我们用来训练和运行超级智能的东西，或者如果 AGI 比预期更难，它会被用于 AGI。无论如何，在后 AGI 世界中，拥有最多算力很可能仍然<em>很</em>重要。）</p>
+<p><strong>总体算力</strong></p>
+<p>上面只是对最大训练集群的粗略数字。总体投资很可能要大得多：大量 GPU 可能会用于推理<a href="#footnote-3-138">3</a>（真正运行产品中的 AI 系统的 GPU），并且竞赛中可能会有多个参与者拥有巨大集群。</p>
+<p>我的粗略估计是，2024 年 AI 投资已经会达到 1000 亿到 2000 亿美元：</p>
+<ul>
+<li>Nvidia 数据中心收入很快会达到每季度约 250 亿美元的运行率，也就是仅通过 Nvidia 就有约 1000 亿美元资本开支流动。当然，Nvidia 并不是唯一玩家（Google 的 TPU 也很棒！），而且接近一半的数据中心资本开支花在芯片之外的东西上（场地、建筑、冷却、电力等）。<a href="#footnote-4-138">4</a></li>
+</ul>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/nvida_datacenter_revenue.png" alt=""></p>
+<p><em>Nvidia 季度数据中心收入。图由</em></p>
+<p><a href="https://twitter.com/Thomas_Woodside/status/1795247239990014409/photo/1">.</a></p>
+<p><em>Thomas Woodside</em> 绘制。</p>
+<ul>
+<li>大型科技公司的资本开支数字正在显著上升：Microsoft 和 Google 今年很可能超过 500 亿美元，<a href="#footnote-5-138">5</a>AWS 和 Meta 超过 400 亿美元。并非所有这些都是 AI，但受 AI 热潮影响，它们合计资本开支将同比增加 500 亿到 1000 亿美元；即便如此，它们还在削减其他资本开支，把更多支出转向 AI。此外，其他云服务商、公司（例如 <a href="https://twitter.com/heyitsyashu/status/1784594856037208516?s=12">Tesla 今年在 AI 上花 100 亿美元</a>）以及民族国家也在投资 AI。</li>
+</ul>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/big_tech_capex.jpg" alt=""></p>
+<p><em>自 ChatGPT 引爆 AI 热潮以来，大型科技公司资本开支增长极快。</em></p>
+<p><em>图表来源</em>*。*</p>
+<p>把这往前推演。我的最佳猜测是，总体算力投资会比最大训练集群每年 3 倍的增速慢一些，姑且按每年 2 倍。<a href="#footnote-6-138">6</a></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>年份</th><th>年度投资</th><th>AI 加速器出货量（按 H100 等效）</th><th>电力占美国发电量比例</th><th>芯片占当前 TSMC 先进逻辑晶圆产能比例</th></tr>
+</thead>
+<tbody>
+<tr><td>2024</td><td>约 1500 亿美元</td><td>约 500 万到 1000 万</td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<p><a href="#footnote-9-138">9</a><em>推演全球 AI 总投资趋势。粗略的信封背面计算。</em></p>
+<p>而这些并不是我个人独特的数字。<a href="https://www.bloomberg.com/news/articles/2023-12-06/amd-ceo-debuts-new-nvidia-chip-rival-gives-eye-popping-forecast?embedded-checkout=true">AMD 预测</a>到 2027 年 AI 加速器市场会达到 4000 亿美元，意味着 AI 总支出超过 7000 亿美元，非常接近我的数字（而且他们肯定比我更少“AGI 化”）。报道称 Sam Altman 正在洽谈为一个<a href="https://www.wsj.com/tech/ai/sam-altman-seeks-trillions-of-dollars-to-reshape-business-of-chips-and-ai-89ab3db0">“最高 7 万亿美元”</a>资本开支项目筹资，以建设 AI 算力容量（这个数字曾被广泛嘲笑，但如果你按这里的数字算，就显得没那么疯狂……）。无论以何种方式，这种大规模扩张正在发生。</p>
+<p><strong>会完成吗？能完成吗？</strong></p>
+<p>这里设想的投资规模可能显得像幻想。但需求侧与供给侧似乎都能支撑上述轨迹。经济回报足以证明投资合理；对一种新的通用技术来说，这种支出规模并非没有先例；而围绕电力和芯片的工业动员是可行的。</p>
+<p><strong>AI 收入</strong></p>
+<p>如果企业预期经济回报足以证明投资合理，它们就会进行大规模 AI 投资。</p>
+<p>报道称 OpenAI 在 <a href="https://www.theinformation.com/articles/openai-passes-1-billion-revenue-pace-as-big-companies-boost-ai-spending">2023 年 8 月</a>达到 10 亿美元收入运行率，在 <a href="https://www.reuters.com/technology/openai-hits-2-bln-revenue-milestone-ft-2024-02-09/">2024 年 2 月</a>达到 20 亿美元收入运行率。这大约是每 6 个月翻倍一次。如果这一趋势保持，即使不计入任何下一代模型带来的巨大激增，到 2024 年末/2025 年初也应看到约 100 亿美元的年化运行率。一项估计认为 <a href="https://x.com/ttunguz/status/1783941512159776840">Microsoft</a> 已经有约 50 亿美元增量 AI 收入。</p>
+<p>到目前为止，AI 投资每扩大 10 倍，似乎都产生了必要回报。GPT-3.5 引爆了 ChatGPT 热潮。GPT-4 集群估计 5 亿美元的成本，会被 Microsoft 和 OpenAI 报道中的数十亿美元年收入覆盖（见上面计算）；而如果 Microsoft/OpenAI 的 AI 收入继续朝 100 亿美元以上运行率前进，数十亿美元的“2024 级”训练集群也很容易回本。这场热潮由投资拉动：从大规模 GPU 订单，到建设集群、构建模型、推出产品，都需要时间；而今天规划中的集群是几年后的东西。但如果上一批 GPU 订单的回报不断兑现，投资会继续飙升（并超过收入），把更多资本投入下一次 10 倍扩张仍会回报的赌注中。</p>
+<p>我喜欢思考的一个 AI 收入关键里程碑是：一家大型科技公司（Google、Microsoft、Meta 等）什么时候会从 AI（产品和 API）达到 1000 亿美元收入运行率？这些公司今天的收入大约在 1000 亿到 3000 亿美元量级；因此 1000 亿美元会开始代表其业务的很大一部分。非常朴素地外推每 6 个月翻倍一次，假设 2025 年初达到 100 亿美元收入运行率，那么这会在 2026 年中发生。</p>
+<p>这也许听起来夸张，但在我看来，要达到这个里程碑其实不需要太多想象力。例如，<a href="https://office365itpros.com/2022/04/28/office-365-number-of-users/">Microsoft Office 付费订阅者约有 3.5 亿</a>——你能不能让其中三分之一愿意每月为 AI 附加服务付 100 美元？对普通员工来说，这只意味着每月获得几小时生产力提升；未来几年出现足够强、足以证明这笔钱合理的模型，看起来非常可行。<a href="#footnote-10-138">10</a></p>
+<p>很难夸大随后产生的回响。这会让 AI 产品成为美国最大公司最大的收入驱动因素，并且<em>远远</em>成为它们最大的增长领域。这些公司整体收入增长预测会飙升。股市会跟随；我们也许很快会看到第一家 10 万亿美元公司。大型科技公司届时会愿意全力投入，每家都向进一步 AI 扩展投资数千亿美元（至少如此）。我们也许会在那时看到第一笔数千亿美元的公司债发行。<a href="#footnote-11-138">11</a></p>
+<p>超过 1000 亿美元之后，轮廓就更难看清。但如果我们真的在通往 AGI 的路上，回报会存在。全球白领劳动者每年工资总额是数十万亿美元；一个可以直接上岗的远程员工，只要能自动化哪怕一部分白领/认知工作（想象比如一个真正自动化的 AI coder），就能为万亿美元集群买单。再不然，国家安全重要性也很可能推动政府项目，把国家资源捆绑进 AGI 竞赛（<a href="https://situational-awareness.ai/the-project/">后文会讲更多</a>）。</p>
+<p><strong>历史先例</strong></p>
+<p>到 2027 年每年 1 万亿美元 AI 总投资听起来离谱。但值得看一下其他历史参照类别：</p>
+<ul>
+<li>曼哈顿计划和阿波罗计划在经费峰值年份<a href="https://sgp.fas.org/crs/misc/RL34645.pdf">达到 GDP 的 0.4%</a>，按今天计算约为每年 1000 亿美元（出人意料地小！）。如果每年 1 万亿美元，AI 投资约为 GDP 的 3%。</li>
+<li>1996 到 2001 年间，电信公司<a href="https://www.latimes.com/archives/la-xpm-2002-jun-30-fi-billions30-story.html">投入</a>按今天美元计近 1 万亿美元来建设互联网基础设施。</li>
+<li>1841 到 1850 年，<a href="https://x.com/michael_nielsen/status/1782129830932210166">英国私人铁路投资总额</a>累计约为当时英国 GDP 的 40%。若按<a href="https://fred.stlouisfed.org/series/GDP">美国 GDP</a>的类似比例计算，相当于十年约 11 万亿美元。绿色转型正在花费<a href="https://www2.deloitte.com/content/dam/Deloitte/global/Documents/deloitte-financing-the-green-energy-transition-report-2023.pdf">数万亿美元</a>。</li>
+<li>快速增长经济体往往把高比例 GDP 用于投资；例如，中国二十年来把超过 <a href="https://carnegieendowment.org/chinafinancialmarkets/91161#:~:text=It%20currently%20invests%2042%E2%80%9344,percent%20in%202010%20and%202011">40% 的 GDP 用于投资</a>（按美国 GDP 计算，相当于<em>每年</em> 11 万亿美元）。</li>
+<li>在历史上最紧迫的国家安全情境——战争时期——为国家努力举债融资常常占到 GDP 的巨大比例。一战期间，<a href="https://bankunderground.co.uk/2017/08/08/your-country-needs-funds-the-extraordinary-story-of-britains-early-efforts-to-finance-the-first-world-war/">英国</a>、<a href="https://encyclopedia.1914-1918-online.net/article/war_finance_france">法国</a>和<a href="https://encyclopedia.1914-1918-online.net/article/war_finance_germany">德国</a>举债超过其 GDP 的 100%，<a href="https://www.theatlantic.com/business/archive/2012/11/the-long-story-of-us-debt-from-1790-to-2011-in-1-little-chart/265185/">美国</a>超过 20%；二战期间，<a href="https://obr.uk/box/post-world-war-ii-debt-reduction/">英国</a>和日本举债超过 GDP 的 100%，<a href="https://www.theatlantic.com/business/archive/2012/11/the-long-story-of-us-debt-from-1790-to-2011-in-1-little-chart/265185/">美国</a>举债超过 GDP 的 60%（按今天相当于超过 17 万亿美元）。</li>
+</ul>
+<p>到 2027 年每年 1 万亿美元 AI 总投资会非常剧烈——属于有史以来最大的资本建设之一——但并非没有先例。而到十年末出现单个万亿美元训练集群，看起来已经摆上桌面。<a href="#footnote-12-138">12</a></p>
+<p><strong>电力</strong></p>
+<p>供给侧最大的单一约束很可能是<a href="https://www.wsj.com/business/energy-oil/big-techs-latest-obsession-is-finding-enough-energy-f00055b2">电力</a>。在更近期的规模上（1GW/2026，尤其是 10GW/2028），电力已经成为约束：根本没有太多闲置容量，而电力合同通常长期锁定。并且，新建一座吉瓦级核电站大概要十年。（我会好奇我们什么时候开始看到科技公司为了吉瓦级电力合同而收购<a href="https://en.wikipedia.org/wiki/Aluminerie_Alouette">铝冶炼公司</a>之类事情。<a href="#footnote-13-138">13</a>）</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/us_power-1024x790.png" alt=""></p>
+<p><em>把美国总发电量趋势与我们对 AI 电力需求的粗略信封背面估计进行比较。</em></p>
+<p>美国总发电量在<a href="https://en.wikipedia.org/wiki/Electricity_sector_of_the_United_States">过去十年几乎只增长了 5%</a>。<a href="#footnote-14-138">14</a> 公用事业公司开始对 AI <a href="https://twitter.com/hayekandkeynes/status/1776365744323780997?s=12">兴奋起来</a>（他们现在估计未来 5 年增长 4.7%，而不是<a href="https://www.wsj.com/business/energy-oil/data-centers-energy-georgia-development-7a5352e9?st=gi5gnqcodm9uy16">之前</a>的 2.6%！）。但他们几乎还没有把即将到来的东西计入价格。单是万亿美元、100GW 集群，就会在 6 年内需要约当前美国发电量的 20%；再加上大规模推理容量，需求会高出数倍。</p>
+<p>对大多数人来说，这似乎完全不可能。一些人押注中东专制国家；这些国家到处提供近乎无限的电力和巨型集群，以便让其统治者在 AGI 桌上占有一席之地。</p>
+<p>但在美国完全可以做到：我们拥有丰富的天然气。<a href="#footnote-15-138">15</a></p>
+<ul>
+<li>
+<p>为 10GW 集群供电只需要美国天然气产量的几个百分点，而且可以快速完成。</p>
+</li>
+<li>
+<p>即使 100GW 集群也出人意料地可行。</p>
+</li>
+<li>
+<p>仅宾夕法尼亚附近的 Marcellus/Utica 页岩目前每天就<a href="https://www.eia.gov/petroleum/drilling/pdf/appalachia.pdf">生产</a>约 360 亿立方英尺天然气；用发电机组可以连续发出接近 150GW（联合循环电厂由于效率更高，可输出 250GW）。</p>
+</li>
+<li>
+<p>100GW 集群大约需要约 1200 口<a href="https://ir.rangeresources.com/static-files/cd9b4c2c-f4fe-4118-9659-a4c3528b95b1">新井</a>。<a href="#footnote-16-138">16</a> 每台钻机每月大约能钻 3 口井，因此 40 台钻机（Marcellus 当前<a href="https://www.eia.gov/petroleum/drilling/pdf/appalachia.pdf">钻机数量</a>）可以在不到一年内建立 100GW 所需的产气基础。<a href="#footnote-17-138">17</a> Marcellus 在 2019 年时钻机数量还约为 80，因此增加 40 台钻机来建立产气基础并不会吃力。<a href="#footnote-18-138">18</a></p>
+</li>
+<li>
+<p>更广泛地说，美国天然气产量在十年内已经<a href="https://en.wikipedia.org/wiki/Shale_gas_in_the_United_States#/media/File:Shale_gas_production_USA.svg">翻倍以上</a>；仅仅继续这一趋势，就能为多个万亿美元数据中心供电。<a href="#footnote-19-138">19</a></p>
+</li>
+<li>
+<p>更难的部分是建设足够多的发电机/涡轮机；这并不简单，但 100GW 天然气电厂看起来大约 1000 亿美元资本开支<a href="#footnote-20-138">20</a>就可行。联合循环电厂约两年可以建成；发电机的时间线还会更短。<a href="#footnote-21-138">21</a></p>
+</li>
+<li>
+<p>仅宾夕法尼亚附近的 Marcellus/Utica 页岩目前就是</p>
+</li>
+</ul>
+<p>在美国建设甚至数万亿美元数据中心的障碍完全是人为造成的。出于好意但僵硬的气候承诺（不只是政府的承诺，也包括 Microsoft、Google、Amazon 等公司的绿色数据中心承诺）挡住了显而易见的快速解决方案。至少，即使我们不使用天然气，一套广泛的放松管制议程也会释放太阳能/电池/小型模块化反应堆/地热巨型项目。许可、公用事业监管、FERC 对<a href="https://ifp.org/how-cost-allocation-works-for-transmission-lines/">输电线路</a>的监管，以及 NEPA 环境审查，让本应几年完成的事情变成十年或更久。我们没有这种时间。</p>
+<p>我们会把 AGI 数据中心赶到中东，置于残酷、反复无常的专制者手下。我也更喜欢清洁能源——但这对美国国家安全来说太重要了。我们需要以一种新的决心把事情做成。电力约束能够、必须、也将会被解决。</p>
+<p><strong>芯片</strong></p>
+<p>人们想到 AI 供给约束时通常首先想到芯片，但它们很可能比电力更小。全球 AI 芯片产量仍只是 TSMC 先进制程产量的很小比例，很可能不到 10%。随着 AI 在 TSMC 产能中占更大比例，还有很大增长空间。</p>
+<p>事实上，2024 年 AI 芯片产量（约 500 万到 1000 万 H100 等效）已经几乎足够支撑数千亿美元集群（如果它们全部转向一个集群）。从纯逻辑晶圆厂角度看，TSMC 一年约 100% 的产出已经可以支撑万亿美元集群（同样假设所有芯片都流向一个数据中心）。<a href="#footnote-22-138">22</a> 当然，不可能把整个 TSMC 都转向 AI，也不可能让一年所有 AI 芯片产量都用于一个训练集群。到 2030 年，仅 AI 的总 AI 芯片需求（包括推理和多个玩家）就会是 TSMC 当前先进逻辑芯片总产能的数倍。TSMC 过去 5 年约<a href="https://www.macrotrends.net/stocks/charts/TSM/taiwan-semiconductor-manufacturing/revenue">翻倍</a><a href="#footnote-23-138">23</a>；为了满足 AI 芯片需求，它们可能需要把扩张速度至少再提高约一倍。大规模新晶圆厂投资将是必要的。</p>
+<p>即使原始逻辑晶圆厂不会成为约束，chip-on-wafer-on-substrate（CoWoS）先进封装（把芯片连接到内存，也由 TSMC、Intel 等制造）和 HBM 内存（其需求<a href="https://twitter.com/ericjhonsa/status/1770545692978925955?s=12">极</a><a href="https://twitter.com/dnystedt/status/1787662436478410867?s=12">其巨大</a>）已经是当前 AI GPU 扩张的关键瓶颈；它们比纯逻辑芯片更专门针对 AI，因此既有产能更少。在近期，它们会成为生产更多 GPU 的主要约束；随着 AI 扩大，它们也会成为巨大约束。尽管如此，这些相对来说“容易”扩张；看着 TSMC 今年真正建设“绿地”晶圆厂（也就是完全从零开始的新设施）来大规模扩大 CoWoS 生产，令人震撼（Nvidia 甚至开始寻找 <a href="https://x.com/dnystedt/status/1793096268400759110?s=46&amp;t=EfdUOH7OfS4lpc8-o1U6Dg">CoWoS 替代方案</a>，以绕过短缺）。</p>
+<p>一座新的 TSMC <a href="https://www.asianometry.com/p/the-economics-of-tsmcs-giga-fabs">Gigafab</a>（一个<a href="https://www.construction-physics.com/p/how-to-build-a-20-billion-semiconductor">技术奇迹</a>）约需 200 亿美元资本开支，每月产出 10 万片晶圆开工量。为了在十年末每年生产数亿块 AI GPU，TSMC 需要建几十座这样的厂——还要为内存、先进封装、网络等进行巨大建设，而这些会占资本开支的重要部分。总额可能超过 1 万亿美元。它会很紧张，但可行。（也许最大的障碍不是可行性，而是 TSMC 根本没有尝试——TSMC 似乎还没有真正接受 AI 扩张！他们认为 AI “只会”以<a href="https://www.fierceelectronics.com/ai/tsmc-bullish-ai-q1-revenues-rises-q2-outlook-bright">缓慢的 50% CAGR</a>增长。）</p>
+<p>美国政府最近的努力，比如 CHIPS Act，一直试图把更多 AI 芯片生产迁回美国（作为台湾突发事件的保险）。虽然让更多 AI 芯片生产在美国本土进行是好事，但它不如把真正的数据中心（AGI 居住的地方）放在美国那么关键。如果把芯片生产放在国外，像是把铀矿放在国外；那么把 AGI 数据中心放在国外，就像让真正的核弹在国外建造和储存。考虑到我们在美国实际建设晶圆厂时看到的功能失调和成本，我的猜测是，我们应该优先在美国建设数据中心，同时在晶圆厂项目上更多押注日本、韩国等民主盟友——那里的晶圆厂建设<a href="https://twitter.com/dnystedt/status/1768446340881907914?s=12">看起来运作顺畅得多</a>。</p>
+<p><strong>民主国家的集群</strong></p>
+<p>在这个十年结束之前，数万亿美元的算力集群将被建成。唯一的问题是，它们是否会建在美国。据传一些人正在押注把它们建在别处，尤其是中东。我们真的希望曼哈顿计划的基础设施被某个反复无常的中东独裁政权控制吗？</p>
+<p>今天正在规划的集群，很可能不仅是“很酷的大科技产品集群”，而是 AGI 和超级智能会在其上训练和运行的集群。国家利益要求这些集群建在美国（或亲近的民主盟友）。任何其他选择都会造成不可逆的安全风险：AGI 权重可能被盗<a href="#footnote-24-138">24</a>（也许还会被<a href="https://www.nytimes.com/2023/11/27/us/politics/ai-us-uae-china-security-g42.html">运往中国</a>）（<a href="https://situational-awareness.ai/lock-down-the-labs/">后文会讲更多</a>）；当 AGI 竞赛升温时，这些独裁政权可能实体夺取数据中心（自己构建和运行 AGI）；即使这些威胁只是被隐含地挥舞，也会让 AGI 和超级智能受不光彩的独裁者反复无常摆布。美国曾在 1970 年代深切后悔自己对中东能源的依赖，并为摆脱其控制付出了巨大努力。我们不能再犯同样错误。</p>
+<p>这些集群可以建在美国，我们必须把事情组织好，确保它们建在美国。美国国家安全必须优先，优先于源源不断中东资金的诱惑、晦涩法规，甚至是，没错，值得尊重的气候承诺。我们面对的是真实的制度竞争——必要的工业动员是否只有“自上而下”的专制政体才能做到？如果解除束缚，美国企业可以像没有任何国家一样建设（至少在红州）。愿意使用天然气，或者至少推行广泛的放松管制议程——NEPA 豁免，在联邦层面修复 FERC 和输电许可，覆盖公用事业监管，使用联邦权力释放土地和通行权——是一项国家安全优先事项。</p>
+<p>无论如何——指数增长现在已经全面展开。</p>
+<p>在“旧时代”，AGI 还是一个不体面的词时，我和一些同事曾经做过理论经济模型，描述通向 AGI 的道路可能是什么样。这些模型的一个特征，是假设存在一个“AI 觉醒”时刻：世界开始意识到这些模型可能多么强大，并开始迅速提高投资，最终把 GDP 的多个百分点投向最大的训练运行。</p>
+<p>那时它似乎很遥远，但那个时刻已经到来。2023 年<em>就是</em>“AI 觉醒”。<a href="#footnote-25-138">25</a> 在幕后，最令人震惊的技术—资本加速已经被启动。</p>
+<p>准备承受 G 力。</p>
+<p>系列下一篇：<strong>IIIb. 锁住实验室：AGI 安全防护</strong></p>
+<p><em>（这一切对 NVDA/TSM 等意味着什么，留给读者作为练习。提示：有态势感知的人买入价比你低得多，但它仍然远远没有被充分定价。<a href="#footnote-26-138">26</a>）</em></p>
+<p>如前所述，OOM = order of magnitude，即数量级；10x = 1 个数量级。</p>
+<p><a href="#note-1-138">↩</a> 一个关键不确定性是分布式训练会发展到什么程度——如果不是在一个地点需要那么多电力，而是可以分散到 100 个地点，就容易得多。</p>
+<p><a href="#note-2-138">↩</a> 例如，参见扎克伯格</p>
+<p><a href="https://x.com/akhenosiris/status/1781162128881164566">这里</a>；在他的 H100 中，只有约 4.5 万块在最大的训练集群里，35 万块 H100 中绝大多数用于推理。Meta 的推理需求可能比其他玩家更重，因为目前其他玩家服务的客户较少；但随着其他人的 AI 产品扩大，我预期推理会成为 GPU 的绝大多数用途。<a href="#note-3-138">↩</a> 例如，这份</p>
+<p><a href="https://pytorchtoatoms.substack.com/p/metas-24k-h100-cluster-capextco-and">总体拥有成本分析</a>估计，大型集群成本约 40% 是 H100 GPU 本身，另有 13% 流向 Nvidia 的 Infiniband 网络。不过，如果在该计算中剔除资本成本，那么 GPU 约占成本 50%；加上网络后，Nvidia 会获得略高于集群成本 60% 的比例。<a href="#note-4-138">↩</a> 而且</p>
+<p><a href="https://www.cnbc.com/2024/04/25/microsoft-says-cloud-ai-demand-exceeds-supply-despite-spending-surge.html">显然</a>，尽管 Microsoft 最近一个季度资本开支同比增长 79%，其 AI 云需求仍然超过供给！<a href="#note-5-138">↩</a> 未来全球 GPU 产量中，流向最大训练集群的比例可能会比今天更大，例如因为前沿实验室将合并为少数几个，而不是许多公司都有前沿模型规模的集群。</p>
+<p><a href="#note-6-138">↩</a> 当然，不是所有这些都会在美国，但这是为了给一个参照类别。</p>
+<p><a href="#note-7-138">↩</a> 我估计 Nvidia 在 2024 年将出货约 500 万块数据中心 GPU。其中少数是 B100，我们把它算作 2 倍以上 H100。然后还有其他 AI 芯片：TPU、Trainium、Meta 自研芯片、AMD GPU 等。</p>
+<p><a href="#note-8-138">↩</a> TSMC 每月有超过</p>
+<p><a href="https://wccftech.com/tsmc-boosts-5nm-production-to-150000-wafers-month-amidst-strong-demand/#:~:text=The%20DigiTimes%20report%20is%20quite,mark%20a%2025%25%20production%20increase.">15 万片 5nm</a>晶圆的产能，正在提升到每月 <a href="https://wccftech.com/tsmc-3nm-wafer-production-reaching-100000-units-by-end-of-2024/">10 万片 3nm 晶圆</a>，并且很可能还有每月约 <a href="https://www.digitimes.com/news/a20200902PD200.html">15 万片</a> 7nm 晶圆；我们把总数称为每月 40 万片晶圆。</p>
+<p>假设每片晶圆大约 <a href="https://www.reddit.com/r/AMD_Stock/comments/18es0ks/amd_can_get_65_more_mi300x_from_the_same_5nm/">35 块 H100</a>（H100 用 5nm 制造）。2024 年 500 万到 1000 万 H100 等效量，对应 2024 年 AI 芯片年产量为每年 15 万到 30 万片晶圆。</p>
+<p>取决于这个区间中的具体位置，以及是否把 7nm 产量算进去，这大约是年度先进晶圆产量的 3% 到 10%。<a href="#note-9-138">↩</a> 对我来说，一个很大的不确定性是技术扩散和被采用的滞后有多长。我认为，收入增长被拖慢是合理可能的，因为中间阶段、AGI 之前的模型需要大量繁琐工作才能正确集成进公司工作流；从历史上看，要完全收获新通用技术的生产率收益，需要一段时间。这就是前面“</p>
+<p><a href="https://situational-awareness.ai/from-gpt-4-to-agi/#sonic_boom">音爆</a>”讨论发挥作用的地方：随着我们“解除模型限制”，模型开始更像智能体/可直接上岗的远程员工，部署会容易得多。不再需要为了从 GPT 聊天机器人获得 25% 生产率提升而彻底重做某个工作流；相反，你会得到能像新同事一样入职和协作的模型（例如，直接替代工程师，而不需要训练工程师使用某个新工具）。或者，在更极端、稍后的阶段：你不需要为了某个新工具彻底重新设计工厂，只要引入人形机器人即可。也就是说，根据我们能以多快速度“解除模型限制”，经济价值和收入产生可能会出现一些不连续。</p>
+<p><a href="#note-10-138">↩</a> 利率会发生什么会很有意思……见</p>
+<p><a href="https://www.bloomberg.com/opinion/articles/2024-03-27/ai-could-have-a-surprising-effect-on-interest-rates?sref=o4HC3q1q">Tyler Cowen 这里</a>；<a href="https://basilhalperin.com/papers/agi_emh.pdf">Chow、Mazlish 和 Halperin 这里</a>。<a href="#note-11-138">↩</a> 更远一点看，如果 AGI 真正导致经济增长大幅提高，每年 10 万亿美元以上也会开始变得合理——参照类别是高增长时期国家的投资率。</p>
+<p><a href="#note-12-138">↩</a> “自 2011 年以来，Alouette 冶炼厂在最大产能下使用 930 MW 电力。”</p>
+<p><a href="#note-13-138">↩</a> 不过，这是“净新增”容量：其中一些是建设新的可再生能源，并把旧化石燃料电厂从电网中退出。按总新增容量算，也许更接近每年一两个百分点。</p>
+<p><a href="#note-14-138">↩</a> 感谢</p>
+<p><a href="https://austinvernon.site/">Austin Vernon</a>（私人通信）帮助完成这些估算。<a href="#note-15-138">↩</a> 新井每天产气约 0.01 BCF。</p>
+<p><a href="#note-16-138">↩</a> 每口井在生命周期中产气约 20 BCF，这意味着每月两口新井就能替代枯竭储量，也就是说只需要一台钻机就能维持产量。</p>
+<p><a href="#note-17-138">↩</a> 不过，更高效的做法是增加更少钻机，并在比 10 个月更长的时间里逐步建立产能。</p>
+<p><a href="#note-18-138">↩</a> 一立方英尺天然气</p>
+<p><a href="https://www.eia.gov/tools/faqs/faq.php?id=667&amp;t=6">可产生约</a> 0.13 kWh。2020 年美国页岩气产量<a href="https://en.wikipedia.org/wiki/Shale_gas_in_the_United_States#/media/File:Shale_gas_production_USA.svg">约为</a>每天 700 亿立方英尺。假设我们再次把产量翻倍，并把额外容量全部用于算力集群。这是每年 3322 TWh 电力，足以支撑近 4 个 100GW 集群。<a href="#note-19-138">↩</a> 天然气电厂的资本开支成本</p>
+<p><a href="https://atb-archive.nrel.gov/electricity/2019/index.html?t=cg">看起来</a>低于每 kW 1000 美元，这意味着 100GW 天然气电厂的资本开支约为 1000 亿美元。<a href="#note-20-138">↩</a> 太阳能和电池并不是完全疯狂的替代方案，但看起来确实比天然气更艰难。我很欣赏</p>
+<p><a href="https://caseyhandmer.wordpress.com/2024/03/12/how-to-feed-the-ais/">Casey Handmer 的计算</a>：用太阳能板铺满地球：</p>
+<p>“使用当前 GPU 时，全球太阳能数据中心的算力相当于约 1500 亿个人类；不过如果我们的计算机最终能达到[人脑]效率，我们能支撑约 5000 万亿个 AI 灵魂。”<a href="#note-21-138">↩</a> 这提出了一个有趣问题：为什么在芯片晶圆厂生产真正受限之前，电力需求已经上升这么多？一个简单答案是，数据中心会持续接近最大功率运行，而目前生产的大多数芯片很多时间处于闲置状态。当前，智能手机接近先进芯片需求的一半，但每单位晶圆面积能耗低得多（以晶体管换取串行操作和能效），而且利用率很低，因为智能手机大多闲置。AI 革命意味着更用力地使用我们的晶体管，把它们全部投入持续运行的高性能 AI 数据中心，而不是闲置的、电池供电/节能设备。感谢 Carl Shulman 指出这一点。</p>
+<p><a href="#note-22-138">↩</a> （用收入作为代理。）</p>
+<p><a href="#note-23-138">↩</a> 有实体访问权限时，通过旁路攻击窃取权重要容易得多！</p>
+<p><a href="#note-24-138">↩</a> 我清楚记得 2023 年 3 月在白板上写下“THE TAKEOFF HAS STARTED”（起飞已经开始）。</p>
+<p><a href="#note-25-138">↩</a> 主流卖方分析师似乎假设 Nvidia 从 CY24 到 CY25 的收入同比增长只有 10% 到 20%，也许 CY25 是 1200 亿到 1300 亿美元（或者至少直到很近之前还是这样）。疯狂！很长一段时间以来，Nvidia 在 CY25 收入超过 2000 亿美元已经相当明显。</p>
+<p><a href="#note-26-138">↩</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="美国-ai-实验室安全危机与-agi-机密泄露风险"><a href="#美国-ai-实验室安全危机与-agi-机密泄露风险" class="header">美国 AI 实验室安全危机与 AGI 机密泄露风险</a></h1>
+<p><strong>美国领先 AI 实验室把安全当成事后补充。当前，它们基本上是在把 AGI 的关键秘密用银盘端给中共。要防住国家级行为者威胁，保护 AGI 秘密和权重，将是一项巨大工程，而我们目前并不在正确轨道上。</strong></p>
+<p>他们晚上在 Wigner 的办公室见面。Wheeler 记述道：“Szilard 概述了哥伦比亚的数据，以及其中初步迹象：每次中子诱发裂变至少会产生两个次级中子。这是否意味着核爆炸显然可能？”Bohr 反驳说，不一定。</p>
+<p>Teller 写道：“我们试图说服他，我们应当继续裂变研究，但不应发表结果。我们应当保密，以免纳粹得知这些结果并率先制造核爆炸。”</p>
+<p>“Bohr 坚持认为，我们永远不会成功制造核能；他也坚持认为，保密绝不能被引入物理学。”</p>
+<p>Richard Rhodes，《The Making of the Atomic Bomb》（第 430 页）</p>
+<p>按照当前路径，领先的中国 AGI 实验室不会在北京或上海——它们会在旧金山和伦敦。几年后，AGI 秘密会明显成为美国最重要的国防机密——应当得到与 B-21 轰炸机或哥伦比亚级潜艇蓝图同等的待遇，更不用说常被提起的“核秘密”——但今天，我们对待它们的方式像是在对待普通 SaaS 软件。按这个速度，我们基本上就是在把超级智能交给中共。</p>
+<p>我们将投入的所有数万亿美元、美国工业力量的动员、最聪明头脑的努力——如果中国或其他对手可以简单偷走模型<em>权重</em>（一个完成的 AI 模型、AGI 本质上会是什么？就是电脑上的一个大文件），或者偷走关键<em>算法秘密</em>（构建 AGI 所需的关键技术突破），这一切都不重要了。</p>
+<p>美国领先 AI 实验室自称正在构建 AGI：它们相信自己正在构建的技术，会在这个十年结束前成为美国有史以来最强大的武器。但它们并没有这样对待它。它们用“随机科技创业公司”的标准衡量自己的安全努力，而不是用“关键国防项目”的标准。随着 AGI 竞赛加剧——随着超级智能在国际军事竞争中将具有<a href="https://situational-awareness.ai/the-free-world-must-prevail/#Whoever_leads_on_superintelligence_will_have_a_decisive_military_advantage">完全决定性</a>这一点变得清楚——我们将不得不面对外国间谍活动的全部力量。目前，实验室甚至几乎无法抵御脚本小子，更不用说具备“朝鲜防护级安全”，更不用说准备好面对中国国家安全部全力以赴的行动。</p>
+<p>而这并不只是未来几年后的问题。你也许会说：当然，GPT-4 权重被偷又怎样——从权重安全角度看，真正重要的是我们能在未来保护 AGI 权重，所以我们还有几年。（不过，如果我们在 2027 年构建 AGI，那我们真的必须赶快行动！）但 AI 实验室<em>现在</em>正在开发 AGI 的<em>算法秘密</em>——关键技术突破，可以说是蓝图（尤其是 LLM 之后用于越过数据墙的 RL/自博弈/合成数据等“<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#The_data_wall">下一范式</a>”）。对于算法秘密，AGI 级别安全需要比权重的 AGI 级别安全早几年实现。几年后，这些算法突破会比一个大 10 倍或 100 倍的集群更重要——这比美国政府一直（很有远见地！）密集推进的算力出口管制还要重要得多。现在，你甚至不需要发动一次戏剧性的间谍行动来偷这些秘密：只要去旧金山任何一个派对，或者从办公室窗户往里看就行。</p>
+<p>我们今天的失败很快会变成不可逆：在未来 12 到 24 个月里，我们会把关键 AGI 突破泄露给中共。这将会是国家安全体系在本十年结束前最大的单一遗憾。</p>
+<p><a href="https://situational-awareness.ai/the-free-world-must-prevail/">自由世界的存续</a>正悬于是否能对抗威权国家之上——而健康的领先优势也会是给我们留出余量、把 AI 安全做对的必要缓冲。美国在 AGI 竞赛中拥有优势。但如果我们不很快认真对待安全，我们会放弃这一领先。现在就动手，也许是今天我们为确保 AGI 发展顺利所需做的最重要一件事。</p>
+<p><strong>低估国家级行为者，后果自负</strong></p>
+<p>太多聪明人低估了间谍活动。</p>
+<p>国家及其情报机构的能力极其强大。即使在正常时期、并非全力 AGI 竞赛时期（而且仅从我们公开知道的一点点看），民族国家（或能力稍弱的行为者）已经能够：</p>
+<ul>
+<li>仅凭电话号码就<a href="https://www.nytimes.com/2022/01/28/magazine/nso-group-israel-spyware.html">零点击入侵任何目标 iPhone 和 Mac</a>；</li>
+<li>渗透一个<a href="https://en.wikipedia.org/wiki/Stuxnet">气隙隔离的核武器项目</a>；</li>
+<li><a href="https://en.wikipedia.org/wiki/Operation_Aurora">修改 Google 源代码</a>；</li>
+<li>每年找到<a href="https://googleprojectzero.github.io/0days-in-the-wild/">几十个零日漏洞</a>，而这些漏洞<a href="https://www.rand.org/content/dam/rand/pubs/research_reports/RR1700/RR1751/RAND_RR1751.pdf">平均需要 7 年</a>才会被发现；</li>
+<li>对<a href="https://www.theverge.com/2022/9/16/23356959/uber-hack-social-engineering-threats">大型科技公司</a>进行鱼叉式网络钓鱼；</li>
+<li>在员工设备上安装<a href="https://arstechnica.com/information-technology/2023/02/lastpass-hackers-infected-employees-home-computer-and-stole-corporate-vault/">键盘记录器</a>；</li>
+<li>在加密方案中植入<a href="https://www.theguardian.com/world/2013/sep/05/nsa-gchq-encryption-codes-security">后门</a>；</li>
+<li>通过<a href="https://en.wikipedia.org/wiki/Tempest_(codename)">电磁泄漏或振动</a>窃取信息；</li>
+<li>仅通过<a href="https://x.com/dystopiabreaker/status/1747353045279846541?s=46">你电脑发出的噪声</a>判断你在视频游戏地图上的位置，或<a href="https://www.usenix.org/system/files/sec22summer_genkin.pdf">偷取密码</a>；</li>
+<li>直接访问<a href="https://www.jstor.org/stable/pdf/resrep14043.7.pdf">核电站</a>等敏感系统；</li>
+<li>从美国政府外泄<a href="https://en.wikipedia.org/wiki/Office_of_Personnel_Management_data_breach">2200 万份安全审查档案</a>；</li>
+<li>通过在 HVAC 系统中植入漏洞，暴露<a href="https://www.mxdusa.org/2022/10/11/top-7-cybersecurity-threats-3-supply-chain-attacks/">1.1 亿客户的财务信息</a>；</li>
+<li>大规模攻破<a href="https://theintercept.com/2019/01/24/com">计算机硬件供应链</a>；</li>
+<li>把<a href="https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack">恶意代码塞入顶级科技公司和美国政府使用的软件依赖更新</a>；</li>
+<li>……更不用说安插间谍，或者诱惑、劝诱、威胁员工（这些事实上在<a href="https://freedomhouse.org/report/transnational-repression/china">大规模</a>发生，只是较少公开）；</li>
+<li>……更不用说特种部队行动及类似做法（当事情真正升温时）。</li>
+</ul>
+<p>如果想进一步感受我们面对情报机构时究竟在处理什么，我强烈推荐《Inside the Aquarium》，作者是一名苏联 GRU（军事情报）叛逃者。<a href="#footnote-1-139">1</a></p>
+<p>中国已经在广泛从事工业间谍活动；FBI 局长表示，中华人民共和国的黑客行动规模超过“<a href="https://www.nytimes.com/2024/02/22/us/politics/china-hacking-files-risk.html">所有主要国家加起来</a>”。就在几个月前，美国司法部长<a href="https://www.justice.gov/opa/pr/chinese-national-residing-california-arrested-theft-artificial-intelligence-related-trade">宣布逮捕一名中国公民</a>，该人从 Google 窃取了关键 AI 代码，准备带回中华人民共和国（发生在 2022/23 年，而且很可能只是冰山一角）。<a href="#footnote-2-139">2</a></p>
+<p>但这只是开始。我们必须准备好迎接对手在未来几年“醒悟到 AGI”。AI 将成为世界上每个情报机构的第一优先事项。在那种情况下，它们会愿意使用非同寻常的手段、付出任何代价来渗透 AI 实验室。</p>
+<p><strong>威胁模型</strong></p>
+<p>我们必须保护两类关键资产：模型权重（尤其是在我们接近 AGI 时，但要做好这件事需要多年准备和演练）以及算法秘密（从昨天就该开始）。</p>
+<p><strong>模型权重</strong></p>
+<p>一个 AI 模型只是服务器上一大串数字文件。它可以被偷走。对手只需要偷走这个文件，就能匹配你的数万亿美元、最聪明的人才和几十年的工作。（想象一下，如果纳粹得到了洛斯阿拉莫斯制造的每枚原子弹的精确复制品。）</p>
+<p>如果我们无法保护模型权重安全，我们就是在替中共构建 AGI（并且按照当前 AI 实验室安全路径，甚至也在替朝鲜构建）。</p>
+<p>即使不谈国家竞争，保护模型权重对防止 AI 灾难也至关重要。如果坏人（比如恐怖分子或流氓国家）可以直接偷走模型并绕过任何安全层，想怎么用就怎么用，那么我们所有焦虑和防护措施都毫无意义。超级智能能够发明的任何新型大规模杀伤性武器，都会迅速扩散到几十个流氓国家。此外，安全也是防范<a href="https://situational-awareness.ai/superalignment/">不受控制或未对齐 AI 系统</a>的第一道防线（如果我们因为没有先在气隙集群中构建和测试它，导致没能控制住失控超级智能，我们会觉得自己多蠢？）。</p>
+<p>现在保护模型权重还没那么重要：没有底层配方，偷走 GPT-4 对中共帮助不算太大。但几年后，一旦我们拥有 AGI、真正极其强大的系统，它就会<em>非常</em>重要。</p>
+<p><em>也许最让我夜不能寐的单一场景是：中国或另一个对手在智能爆炸前夕偷走自动化 AI 研究员模型的权重。</em> 中国可以立即用这些权重自己自动化 AI 研究（即使他们此前远远落后），并启动自己的智能爆炸。这就是他们自动化 AI 研究、构建超级智能所需的一切。美国拥有的任何领先都会消失。</p>
+<p>此外，这会立刻把我们推入一场存在性竞赛；用于确保超级智能安全的任何余量都会消失。中共很可能试图尽快冲过智能爆炸——即使在超级智能上领先几个月，也可能意味着<a href="https://situational-awareness.ai/the-free-world-must-prevail/#Whoever_leads_on_superintelligence_will_have_a_decisive_military_advantage">决定性军事优势</a>——在这个过程中跳过任何负责任的美国 AGI 努力会希望采取的安全预防措施。为了避免中共完全占优，我们也不得不冲过智能爆炸。即使美国最终仍勉强领先，失去余量也意味着必须在 AI 安全上承担巨大风险。</p>
+<p>我们今天距离足以保护权重的安全还差很远。Google DeepMind（也许是所有 AI 实验室中安全最好的一家，因为有 Google 基础设施）至少直接承认了这一点。它们的 <a href="https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/introducing-the-frontier-safety-framework/fsf-technical-report.pdf">Frontier Safety Framework</a> 概述了安全等级 0、1、2、3、4（约 1.5 是防御资源充足的恐怖组织或网络犯罪分子所需等级；3 是防御朝鲜这类行为者所需等级；4 是面对最有能力国家级行为者的优先行动时，哪怕只是有一线防御机会也需要达到的等级）。<a href="#footnote-3-139">3</a> 他们承认自己处于 0 级（只有最平常、最基础的措施）。如果我们很快得到 AGI 和超级智能，就等于真的把它交给恐怖组织和每一个疯狂独裁者！</p>
+<p>关键在于，开发权重安全所需基础设施大概需要多年提前期——如果我们认为约 3 到 4 年内出现 AGI 是真实可能的，并且那时需要能防住国家级行为者的权重安全，那么我们现在就必须启动紧急工程。保护权重会需要硬件创新和彻底不同的集群设计；这种级别的安全无法一夜之间达到，而需要多轮迭代。</p>
+<p>如果我们未能及时准备，局势会非常糟糕。我们将站在超级智能门槛上，却距离必要安全还有几年。我们的选择会是继续推进，但直接把超级智能交给中共——以及随之而来的穿越智能爆炸的存在性竞赛——或者等待安全紧急工程完成，冒着失去领先的风险。</p>
+<p><strong>算法秘密</strong></p>
+<p>人们开始意识到（尽管未必落实）权重安全的必要性；但现在更重要、且被<em>极大</em>低估的，可能是保护算法秘密。</p>
+<p>一种理解方式是：偷走算法秘密，对中华人民共和国来说相当于拥有一个大 10 倍甚至更多的集群：</p>
+<ul>
+<li>如 <a href="https://situational-awareness.ai/from-gpt-4-to-agi/">Counting the OOMs</a> 所讨论，算法进步对 AI 进展的重要性大概与扩大算力相当。考虑到每年约 0.5 个数量级的算力效率基线趋势（此外还有算法“解除限制”收益），从现在到 AGI 之间，我们应该预期会有多个数量级价值的算法秘密。默认情况下，我预期美国实验室会领先数年；如果它们能保护自己的秘密，这很容易相当于 10 倍到 100 倍算力。</li>
+<li>（注意，我们愿意通过管制 Nvidia 芯片出口，让美国投资者承担数千亿美元成本——也许让中国实验室的算力成本<a href="https://situational-awareness.ai/the-free-world-must-prevail/#China_can_be_competitive">提高 3 倍</a>——但我们却到处泄露 3 倍级别的算法秘密！）</li>
+<li>也许更重要的是，<em>我们现在可能正在开发 AGI 的关键范式突破。</em> 如<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#The_data_wall">前文所述</a>，单纯扩大当前模型会撞墙：数据墙。即使有更多算力，也无法做出更好的模型。前沿 AI 实验室正在疯狂研究下一步，从 RL 到合成数据。它们大概会搞出一些惊人的东西——本质上是通用智能的 “AlphaGo 自博弈”等价物。它们的发明会像数年前 LLM 范式最初被发明时一样关键，并且会是构建远超人类水平系统的关键。我们仍有机会不让中国获得这些关键算法突破；没有这些突破，他们会被卡在数据墙前。但如果未来 12 到 24 个月没有更好安全，我们很可能会不可逆地把这些关键 AGI 突破提供给中国。</li>
+<li>人们很容易低估算法秘密边际优势的重要性——因为直到大约几年前，一切都在发表。基本想法已经公开：在互联网文本上扩大 Transformer。许多算法细节和效率也公开了：Chinchilla 缩放律、MoE 等。因此，今天开源模型相当不错，一批公司也有相当不错的模型（主要取决于它们融了多少钱、集群有多大）。但这很可能在未来几年发生相当剧烈变化。如今几乎所有前沿算法进步都发生在实验室（学术界出人意料地不相关），领先实验室已经停止发表自己的进展。我们应当预期未来会有更多分化：实验室之间、国家之间、专有前沿模型与开源模型之间。少数美国实验室会遥遥领先——这种护城河价值 10 倍、100 倍或更多，远远超过比如 7nm 与 3nm 芯片之间的差距——除非它们立刻泄露算法秘密。<a href="#footnote-4-139">4</a></li>
+</ul>
+<p><em>简单说，我认为未能保护算法秘密，很可能是中国能够在 AGI 竞赛中保持竞争力的最可能方式。</em>（我会在<a href="https://situational-awareness.ai/the-free-world-must-prevail/#China_can_be_competitive">后文</a>更详细讨论。）</p>
+<p>很难夸大当前算法秘密安全有多糟。各实验室之间，有数千人能接触最重要秘密；基本没有背景审查、隔离、控制、基础信息安全等。东西存放在容易被黑的 SaaS 服务上。人们在旧金山派对上闲聊。任何一个脑子里装着所有秘密的人，都可能随时被中国实验室开价 1 亿美元挖走。<a href="#footnote-5-139">5</a> 你可以……直接从办公室窗户往里看。等等。旧金山到处流传许多文章和传闻，声称掌握各实验室算法进展的大量细节。</p>
+<p>AI 实验室的安全并不比“随机创业公司安全”好多少。直接把 AGI 秘密卖给中共，至少还更诚实。</p>
+<p>……这就是我们在 OpenAI 或其他美国 AI 实验室看到的吗？不是。事实上，我们看到的是相反情况——安全等价于瑞士奶酪。中国用任意数量的工业间谍方法渗透这些实验室都会极其容易，比如简单地贿赂清洁人员把 USB 小设备插进笔记本电脑。我自己的假设是，所有这类美国 AI 实验室都已被完全渗透，中国现在每天晚上都在下载所有美国 AI 研究和代码……</p>
+<p>[Marc Andreessen]</p>
+<p>虽然会很难，但我认为这些秘密是可以防住的。对于某个实验室里的某个算法突破，真正“需要知道”关键实现细节的人大概只有几十个（即使更多人需要知道基础高层想法）——除了彻底升级信息安全之外，你可以对这些人进行审查、隔离、密集监控。</p>
+<p><strong>“超级安全”需要什么</strong></p>
+<p>AI 实验室安全有很多低垂果实。仅仅采用比如保密型对冲基金，或 Google 客户数据级别安全的最佳实践，就会让我们在面对中共“常规”经济间谍活动时处于好得多的位置。事实上，私营企业中也有不少成功保护秘密的显著例子。比如量化交易公司（Jane Street 这类公司）。许多人告诉我，如果他们跟竞争对手聊一个小时，就能传递足够信息，让本公司的 alpha 接近归零——这类似许多关键 AI 算法秘密可以在一次短谈中传递——但这些公司仍然设法保住秘密并保持优势。</p>
+<p>虽然美国多数领先 AI 实验室拒绝把国家利益放在首位——如果有成本或需要把安全优先，就连这一层级的基础安全措施也拒绝——但摘下这些低垂果实完全在它们能力范围内。</p>
+<p>但我们再稍微往前看一点。一旦中国真正理解 AGI 的重要性，我们就应当预期它们会动用间谍努力的全部力量；想象投入数十亿美元、数千名员工，以及极端手段（例如特种作战突击队）来渗透美国 AGI 努力。AGI 和超级智能安全会需要什么？</p>
+<p>简言之，<em>只有在政府帮助下才可能做到这一点</em>。例如，Microsoft 经常被国家级行为者入侵（比如，俄罗斯黑客最近<a href="https://www.theverge.com/2024/1/19/24044561/microsoft-senior-leadership-emails-hack-russian-security-attack">窃取了 Microsoft 高管邮件</a>，以及 <a href="https://www.axios.com/2024/04/11/federal-government-microsoft-emails-hack">Microsoft 托管的政府邮件</a>）。一位在该领域工作的高级安全专家估计，即使私营部门进行全面紧急强化，如果中国把窃取 AGI 权重当作头号优先事项，它仍很可能成功外泄；要把这个概率降到个位数，或多或少需要一个政府项目。</p>
+<p>虽然政府自身在安全上记录并不完美，但只有政府拥有保护国防级秘密的基础设施、知识和能力。比如对员工进行严格审查的权限；用监禁威胁泄密者；数据中心实体安全；以及 NSA 等机构和安全许可体系背后人员拥有的大量知识（私营公司根本没有面对国家级行为者攻击的专业能力）。</p>
+<p>我不是安全许可体系背后的人，所以无法恰当地列出 AGI 安全究竟需要什么。最好的公开资料是 RAND 关于<a href="https://www.rand.org/pubs/research_reports/RRA2849-1.html">权重安全的报告</a>。为了让你感受一下这种防国家级行为者安全真正意味着什么：</p>
+<ul>
+<li>完全气隙隔离的数据中心，其实体安全与最安全军事基地相当（有安全许可人员、实体防御工事、现场响应团队、广泛监控和极端访问控制）。</li>
+<li>不只是训练集群——推理集群也需要同样强的安全！<a href="#footnote-6-139">6</a></li>
+<li>在保密计算/硬件加密上取得新的技术进展<a href="#footnote-7-139">7</a>，并对整个硬件供应链进行极端审查。</li>
+<li>所有研究人员都在 <a href="https://www.dni.gov/files/Governance/IC-Tech-Specs-for-Const-and-Mgmt-of-SCIFs-v15.pdf">SCIF</a>（Sensitive Compartmented Information Facility，读作 “skiff”，见<a href="https://www.washingtonpost.com/national-security/interactive/2023/scif-room-meaning-classified/">这个可视化</a>）中工作。</li>
+<li>极端人员审查和安全许可（包括定期员工诚信测试等）、持续监控、显著减少离开自由，以及严格信息隔离。</li>
+<li>强内部控制，例如运行任何代码都需要多钥匙签署。</li>
+<li>对任何外部依赖进行严格限制，并满足 TS/SCI 网络的一般要求。</li>
+<li>NSA 或类似机构持续进行高强度渗透测试。</li>
+<li>等等……</li>
+</ul>
+<p>巨型 AGI 集群现在正在规划；相应的安全工程也必须同步规划。如果我们将在短短几年内构建 AGI，我们时间非常少。</p>
+<p>不过，这项巨大工程不应导致宿命论。安全方面的幸运之处在于，中共大概还没有完全相信 AGI，因此尚未投入最极端的努力。美国 AI 实验室安全“只”需要相对于中国间谍活动强度保持领先。这意味着立即升级安全，以领先于“更正常”的经济间谍活动（而我们目前远不能抵抗它，但私营公司也许能做到）；也意味着未来几年，随着中国和其他外国间谍活动升级，与政府合作快速升级到更强措施。</p>
+<p>有人认为，严格安全措施及其伴随摩擦不值得，因为它们会过度拖慢美国 AI 实验室。但我认为这是错的：</p>
+<ul>
+<li>这是一个公地悲剧问题。对于某个实验室的商业利益来说，造成 10% 减速的安全措施也许会在与其他实验室竞争中有害。但从国家利益看，如果每个实验室都愿意接受额外摩擦，显然更好：美国 AI 研究远领先于中国及其他外国算法进展；美国保留 90% 速度的算法进展作为国家优势，显然好过保留 0% 作为国家优势（因为一切立刻被偷走）！</li>
+<li>此外，从长期研究生产率看，现在提高安全会是<em>更不痛苦</em>的路径。最终，不可避免地，即使只是到了超级智能前夕，在即将到来的非同寻常军备竞赛中，美国政府会意识到情况无法忍受，并要求安全整顿。与其逐步迭代，不如从静止状态开始一次性实施极端、防国家级行为者的安全措施，那会痛苦得多，也会造成更大减速。</li>
+</ul>
+<p>另一些人认为，即使我们的秘密或权重泄露，我们仍能通过其他方式更快而<em>勉强领先</em>（所以不该担心这些安全措施）。这同样是错的，或者至少承担的风险<em>远远</em>太大：</p>
+<ul>
+<li>正如我在<a href="https://situational-awareness.ai/the-free-world-must-prevail/#China_can_be_competitive">后文</a>讨论的，我认为中共很可能能用蛮力建设超过美国（100GW 集群对他们会容易得多）。更一般地说，中国可能没有与美国相同的谨慎在拖慢它（包括合理和不合理的谨慎！）。即使偷走算法或权重“只是”让它们在模型上与美国齐平，也可能足以让它们赢得超级智能竞赛。</li>
+<li>此外，即使美国最终勉强领先，1 到 2 年领先与 1 到 2 个月领先之间的差异，在穿越超级智能危险时会<em>非常</em>重要。1 到 2 年领先意味着至少有合理余量把安全做对，并在智能爆炸和后超级智能时期极端动荡的阶段中应对局势。<a href="#footnote-8-139">8</a> 仅仅 1 到 2 个月领先意味着一场高速、极压的国际军备竞赛，冲过智能爆炸，并且完全没有空间把安全做对。正是在这种并驾齐驱、存在性竞赛中，我们<a href="https://situational-awareness.ai/the-free-world-must-prevail/#Maintaining_a_healthy_lead_will_be_decisive_for_safety">面临最大的自我毁灭风险</a>。</li>
+<li>不要忘了俄罗斯、伊朗、朝鲜等等。它们的黑客能力也不弱。按照当前路径，我们也在免费与它们分享超级智能！如果没有好得多的安全，我们正在把我们最强大的武器扩散给大量极其危险、鲁莽、不可预测的行为者。<a href="#footnote-9-139">9</a></li>
+</ul>
+<p><strong>我们并不在正确轨道上</strong></p>
+<p>当少数人第一次意识到原子弹可能存在时，保密也许是最有争议的问题。1939 和 1940 年，Leo Szilard “在美国物理学界以裂变事务保密的首席使徒而闻名”。<a href="#footnote-10-139">10</a> 但他被大多数人拒绝；保密根本不是科学家习惯的东西，也违背了他们开放科学的许多基本直觉。但人们慢慢明白必须这样做：这项研究的军事潜力太大，不能简单地免费分享给纳粹。保密最终被实行，而且刚好及时。</p>
+<p>1940 年秋，Fermi 完成了石墨的新碳吸收测量，显示石墨可能是炸弹可用的慢化剂。Szilard 又一次向 Fermi 发起保密呼吁。Szilard 回忆说：“那时 Fermi 真的发火了；他真的认为这太荒谬。” 幸运的是，进一步呼吁最终成功，Fermi 勉强没有发表他的石墨结果。<a href="#footnote-11-139">11</a></p>
+<p>与此同时，德国项目已经把可能的慢化剂材料缩小到两种：石墨和重水。1941 年<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/andp.202000121">早些时候</a>，Walther Bothe 在海德堡错误测量了石墨吸收截面，并得出结论：石墨会吸收太多中子，无法维持链式反应。由于 Fermi 保密了自己的结果，德国人没有 Fermi 的测量值来对照并纠正错误。<em>这极其关键：它让德国项目转向追求重水——一条决定性的错误道路，最终葬送了德国核武器努力。</em></p>
+<p>如果没有最后一刻的保密呼吁，德国炸弹项目可能会成为一个可怕得多的竞争者——历史也许会走向非常不同的方向。</p>
+<p>领先 AI 实验室在安全问题上存在真实的心理脱节。它们毫不含糊地声称自己会在这个十年构建 AGI。它们强调美国在 AGI 上的领导地位对美国国家安全将具有决定性意义。据报道它们正在规划<a href="https://www.wsj.com/tech/ai/sam-altman-seeks-trillions-of-dollars-to-reshape-business-of-chips-and-ai-89ab3db0">7 万亿美元芯片建设</a>，只有在你<em>真的</em>相信 AGI 时才说得通。而事实上，当你提到安全时，它们点头承认“当然，我们都会在地堡里”，然后笑一笑。</p>
+<p>然而安全现实与此相差不能更远。每当需要做出艰难选择来优先考虑安全时，创业公司态度和商业利益就压过国家利益。如果国家安全顾问理解了美国领先 AI 实验室的安全水平，他会精神崩溃。</p>
+<p>现在正在开发的某些秘密，将用于未来每一次训练运行，并且会是通向 AGI 的关键解锁；它们被一家创业公司的安全保护着，而对中共来说价值数千亿美元。<a href="#footnote-12-139">12</a> 现实是：a) 在未来 12 到 24 个月里，我们会开发出 AGI 的关键算法突破，并迅速把它们泄露给中共；b) 到我们构建 AGI 时，我们甚至不在朝着能防住朝鲜这类流氓行为者的权重安全前进，更不用说防住中国的全力行动。“对创业公司来说很好的安全”离足够好差得远，而在对美国国家安全造成恶劣损害变得不可逆之前，我们时间非常少。</p>
+<p>我们正在开发人类有史以来创造的最强大武器。我们现在正在开发的算法秘密，字面上就是美国最重要的国防秘密——这些秘密将成为美国及其盟友在十年末经济和军事主导地位的基础；这些秘密将决定我们是否拥有足够领先来把 AI 安全做对；这些秘密将决定第三次世界大战的结果；这些秘密将决定自由世界的未来。然而 AI 实验室安全大概还不如一家做螺栓的随机国防承包商。</p>
+<p>这太疯狂了。</p>
+<p>如果我们不尽快修复这一点，我们在国家竞争和 AI 安全上做的几乎任何其他事情都不会重要。</p>
+<p>系列下一篇：<strong>IIIc. 超级对齐</strong></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/secrecy_billboard.webp" alt=""></p>
+<p><em>一块</em></p>
+<p><a href="https://www.theatlantic.com/photo/2012/06/the-secret-city/100326/">广告牌</a>位于田纳西州橡树岭铀浓缩设施，1943 年。剧透一点，作为味道：在从约“间谍学院”毕业、被派往海外之前，准间谍必须在国内证明自己的技能：他们必须从一名苏联科学家那里获取秘密信息。当然，泄露国家机密的处罚是死刑。也就是说，从约“间谍学院”毕业，意味着挑选一个本国人并将其判向死亡。感谢 Ilya Sutskever 推荐这本书。</p>
+<p><a href="#note-1-139">↩</a> 顺便说，起诉书很好地展示了，即使在 Google（考虑到其能依靠 Google 数十年安全基础设施投资，它很可能拥有所有 AI 实验室中最好的安全）也很容易绕过安全。偷走代码而不被发现，只需要把代码粘贴进 Apple Notes，然后导出为 pdf！</p>
+<p>“DING 通过把数据从 Google 源文件复制到其 Google 发放的 MacBook 笔记本上的 Apple Notes 应用中，从而外泄这些文件。随后，DING 将 Apple Notes 转换为 PDF 文件，并从 Google 网络上传到 DING 账户 1。这种方法帮助 DING 逃避了即时检测。”</p>
+<p><em>（来自<strong>起诉书</strong>。）</em> 他之所以被抓，只是因为他还做了一堆其他愚蠢的事情，比如立刻在中国高调创办创业公司，引发怀疑（后来甚至又回到美国）。</p>
+<p><a href="#note-2-139">↩</a> 基于它们声称的安全级别与</p>
+<p><a href="https://www.rand.org/pubs/research_reports/RRA2849-1.html">RAND 权重安全报告</a> L1-L5 的对应关系。<a href="#note-3-139">↩</a> 我有时开玩笑说，AI 实验室的算法进展并没有分享给美国研究共同体，但正在分享给中国研究共同体！</p>
+<p><a href="#note-4-139">↩</a> 事实上，我从朋友那里听说，ByteDance 基本给 Google Gemini 论文上的每个人都发了邮件招聘他们，提供 L8（非常资深的职位，薪酬想必也很高），并用“你将直接向 ByteDance 美国 CTO 汇报”作为卖点。</p>
+<p><a href="#note-5-139">↩</a> 推理集群很可能比训练集群大得多，因此在智能爆炸期间，会有压倒性压力去使用这些推理集群运行自动化 AI 研究员（并在紧随其后的时期更广泛地运行数十亿个超级智能）。AGI/超级智能权重因此也可能从这些集群外泄。（我担心这一点被低估了，而推理集群会受到少得多的保护。）</p>
+<p><a href="#note-6-139">↩</a> 但你不能只依赖这一点！硬件加密经常遭到</p>
+<p><a href="https://mashable.com/article/apple-silicon-m-series-chip-vulnerability-hackers-encryption-keys">旁路攻击</a>。当然，纵深防御是关键。<a href="#note-7-139">↩</a> 例如，在智能爆炸期间多留 6 个月空间用于对齐研究，以确保</p>
+<p><a href="https://situational-awareness.ai/superalignment/">超级智能不会出问题</a>；在某些新型大规模杀伤性武器被发明出来后，把这些系统引导去关注防御应用，从而稳定局势；或者只是给人类决策者时间，在超级智能到来导致技术变化速度极快时做出正确决策。<a href="#note-8-139">↩</a> 我们非常努力地防止核武器扩散到流氓国家，即使与它们更有限的核武库相比我们仍会“领先”，因为扩散会造成混乱。</p>
+<p><a href="#note-9-139">↩</a> <em>The Making of the Atomic Bomb, p. 509</em><a href="#note-10-139">↩</a><em>The Making of the Atomic Bomb,</em> p. 507<a href="#note-11-139">↩</a> 当价值数百亿或数千亿美元的集群正在建设时，100 倍以上的算力效率。</p>
+<p><a href="#note-12-139">↩</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="超级智能对齐难题与智能爆炸风险"><a href="#超级智能对齐难题与智能爆炸风险" class="header">超级智能对齐难题与智能爆炸风险</a></h1>
+<p><strong>可靠控制比我们聪明得多的 AI 系统，是一个尚未解决的技术问题。虽然它是一个可解的问题，但在快速智能爆炸期间，事情很容易失控。管理这一过程会极度紧张；失败很容易是灾难性的。</strong></p>
+<p>老巫师</p>
+<p>Johann Wolfgang von Goethe，《魔法师的学徒》</p>
+<p>终于离开了！</p>
+<p>现在他控制的精灵</p>
+<p>都将听从我的命令。</p>
+<p>…</p>
+<p>我也要施展奇迹。…</p>
+<p>先生，我陷入绝境了！我召来的精灵——我赶不走它们。</p>
+<p>到这里，你大概已经听说过 AI doomers。你也许被他们的论证吸引过，也许一开始就把它们丢到一边。你不愿意再读一篇末日阴云式沉思。</p>
+<p>我不是 doomer。<a href="#footnote-1-135">1</a> 未对齐的超级智能可能不是最大的 AI 风险。<a href="#footnote-2-135">2</a> 但过去一年，我的日常工作确实是在 OpenAI 与 Ilya 和 <a href="https://openai.com/blog/introducing-superalignment">Superalignment</a> 团队一起做 AI 系统对齐的技术研究。这里有一个非常真实的技术问题：我们当前的对齐技术（确保我们能可靠控制、引导、信任 AI 系统的方法）无法扩展到超人类 AI 系统。我想解释的是，我看到的“默认”计划是什么：我们如何勉强穿过去，<a href="#footnote-3-135">3</a>以及为什么我乐观。<a href="https://www.forourposterity.com/nobodys-on-the-ball-on-agi-alignment/">虽然认真推进的人还不够多</a>——我们本应有更雄心勃勃的努力来解决这个问题！——但总体上，深度学习最终呈现出来的样子让我们很幸运；有许多经验性的低垂果实会带我们走过一部分路；而且我们还会拥有数百万个自动化 AI 研究员，帮助我们走完剩下的路。</p>
+<p>但我也想告诉你我为什么担心。最重要的是，确保对齐不出问题，需要在管理智能爆炸时具备极高能力。如果我们真的快速地<a href="https://situational-awareness.ai/from-agi-to-superintelligence/">从 AGI 走向超级智能</a>，我们会面对这样一种局面：<em>不到一年内</em>，我们会从当前对齐技术的后代基本仍能良好运作的、可识别的人类水平系统，转向异质得多、远远超人类的系统；后者提出的是质上不同、根本全新的技术对齐问题。与此同时，我们也会从失败代价较低的系统，转向极其强大、失败可能灾难性的系统；而这一切发生时，世界大部分地方可能已经有点发疯。这让我相当紧张。</p>
+<p>到这个十年结束时，我们会有数十亿个远超人类的 AI 智能体到处运行。这些超人类 AI 智能体将能够表现出极其复杂和创造性的行为；我们完全跟不上。我们会像一年级学生试图监督多个博士学位获得者。</p>
+<p>本质上，我们面对的是一个交接<em>信任</em>的问题。到智能爆炸结束时，我们没有任何希望理解十亿个超级智能在做什么（除非它们选择向我们解释，就像向儿童解释一样）。而我们尚未具备技术能力，可靠保证这些系统哪怕满足基本旁约束，比如“不要撒谎”“遵守法律”或“不要试图从你的服务器外泄自己”。<a href="https://arxiv.org/abs/2203.02155">基于人类反馈的强化学习</a>（RLHF）非常适合为当前系统添加这类旁约束——但 RLHF 依赖人类能够理解并监督 AI 行为，而这从根本上无法扩展到超人类系统。</p>
+<p>简单说，如果没有非常协调的努力，我们将无法保证超级智能不会失控（这也被该领域许多<a href="https://www.newyorker.com/magazine/2023/11/20/geoffrey-hinton-profile-ai">领袖</a><a href="https://yoshuabengio.org/2023/05/22/how-rogue-ais-may-arise/">承</a><a href="https://www.amazon.com/Human-Compatible-Artificial-Intelligence-Problem/dp/0525558632/ref=pd_bxgy_d_sccl_2/130-6291201-0753114?pd_rd_w=xdUdS&amp;content-id=amzn1.sym.c51e3ad7-b551-4b1a-b43c-3cf69addb649&amp;pf_rd_p=c51e3ad7-b551-4b1a-b43c-3cf69addb649&amp;pf_rd_r=ES4Y6D96M254021WGBGQ&amp;pd_rd_wg=HZkbn&amp;pd_rd_r=1f3a9ed7-e395-4c01-be47-a7abdf9fe08c&amp;pd_rd_i=0525558632&amp;psc=1">认</a><a href="https://openai.com/index/introducing-superalignment/">了</a>）。是的，它也许默认就会没事。但我们现在根本不知道。尤其是未来 AI 系统不再只是用模仿学习训练，而是用大规模、长时域 RL（强化学习）训练之后，它们会获得自己不可预测的行为，这些行为由一个试错过程塑造（例如，它们也许会学会撒谎或寻求权力，仅仅因为这些是在现实世界中成功的策略！）。</p>
+<p>利害关系足够高，因此在对齐问题上仅仅寄希望于最好结果，根本不是足够好的答案。</p>
+<p><strong>问题</strong></p>
+<p><strong>超级对齐问题</strong></p>
+<p>我们已经能开发出一种非常成功的方法，用来对齐（即引导/控制）<em>当前</em> AI 系统（比我们笨的 AI 系统！）：基于人类反馈的强化学习（RLHF）。RLHF 背后的想法很简单：AI 系统尝试做事，人类评价其行为好坏，然后强化好行为、惩罚坏行为。这样，它就学会遵循人类偏好。</p>
+<p>事实上，RLHF 是 ChatGPT 等系统成功的关键。<a href="#footnote-4-135">4</a> 基础模型有大量原始智能，但默认并不会以有用方式应用这些智能；它们通常只是输出一团类似随机互联网文本的混乱东西。通过 RLHF，我们可以引导其行为，灌输遵循指令、乐于助人等重要基础能力。RLHF 也让我们能烘焙进安全护栏：例如，如果用户向我索要生物武器说明，模型大概应该拒绝。<a href="#footnote-5-135">5</a></p>
+<p><strong>超级对齐的核心技术问题很简单：我们如何控制比我们聪明（得多）的 AI 系统？</strong></p>
+<p><em>随着 AI 系统变得更聪明，RLHF 会可预期地失效</em>，我们将面对根本全新、质上不同的技术挑战。举例说，想象一个超人类 AI 系统用它自己发明的新编程语言生成 100 万行代码。如果你在 RLHF 流程中问一个人类评分者：“这段代码是否包含安全后门？”他根本不知道。他无法把输出评为好或坏、安全或不安全，因此我们就无法用 RLHF 强化好行为、惩罚坏行为。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/superalignment.png" alt=""></p>
+<p><em>通过人类监督（如 RLHF）来对齐 AI 系统，无法扩展到超级智能。</em> 基于 “</p>
+<p><a href="https://openai.com/index/weak-to-strong-generalization/">Weak-to-strong generalization</a>” 的插图。</p>
+<p>即使现在，AI 实验室也已经<a href="https://www.nytimes.com/2024/04/10/technology/ai-chatbot-training-chatgpt.html">需要付费雇专家软件工程师</a>给 ChatGPT 代码做 RLHF 评分——当前模型能生成的代码已经相当高级！过去几年里，人类标注员的报酬已经从 MTurk 标注员的几美元，涨到 GPQA 问题<a href="#footnote-6-135">6</a>每小时约 100 美元。在（近）未来，即使最优秀的人类专家花费大量时间，也不够好。我们现在已经开始在现实世界中碰到超级对齐问题的早期版本；很快，就连实际部署下一代系统时，它也会成为一个重大问题。显然，我们需要一个 RLHF 的后继者，它能够扩展到高于人类水平的 AI 能力，在人类监督失效时继续工作。从某种意义上说，超级对齐研究努力的目标，是复现 RLHF 的成功故事：提前押注那些基础研究，使我们能够引导并部署几年后的 AI 系统。</p>
+<p><strong>失败会是什么样</strong></p>
+<p>人们太常想象一个“GPT-6 聊天机器人”，并据此直觉认为这些东西当然不会危险地未对齐。正如本系列前面讨论的，“<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#From_chatbot_to_agent-coworker">解除限制</a>”轨迹指向的是未来不久用 RL 训练的智能体。我认为 Roger 的图说对了：</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/roger_grosse_alignment.png" alt=""></p>
+<p><em>（多伦多大学教授）</em></p>
+<p><a href="https://x.com/RogerGrosse/status/1758506017791279440">Roger Grosse</a></p>
+<p>从安全角度看，理解我们试图通过对齐实现什么的一种方式是：添加<em>旁约束</em>。考虑一个未来强大的“基础模型”，在第二阶段训练中，我们用长时域 RL 训练它经营企业并赚钱<a href="#footnote-7-135">7</a>（作为一个简化例子）：</p>
+<ul>
+<li>默认情况下，它很可能学会撒谎、欺诈、欺骗、黑客攻击、寻求权力等——仅仅因为这些可能是在现实世界中赚钱的成功策略！<a href="#footnote-8-135">8</a></li>
+<li>我们想添加旁约束：不要撒谎，不要违法，等等。</li>
+<li>但这里我们又回到对齐超人类系统的根本问题：我们无法理解它们在做什么，因此无法用 RLHF 发现并惩罚坏行为。<a href="#footnote-9-135">9</a></li>
+</ul>
+<p>如果我们不能添加这些旁约束，就不清楚会发生什么。<em>也许</em>我们会很幸运，事情默认是良性的（例如，也许在 AI 系统没有长时域目标的情况下我们能走得很远，或者不良行为只是小问题）。但它们也完全可能学到严重得多的不良行为：学会撒谎，学会寻求权力，学会在人类看着时表现良好、在人类没看着时追求更邪恶策略，等等。</p>
+<p>超级对齐问题尚未解决，意味着我们根本没有能力确保这些超级智能系统满足哪怕基本旁约束，比如“<em>它们会可靠地遵循我的指令吗？</em>”或“<em>它们会诚实回答我的问题吗？</em>”或“<em>它们不会欺骗人类吗？</em>”。人们常把对齐与某些复杂的人类价值问题联系起来，或直接跳到政治争议上；但决定要把哪些行为和价值灌输进模型，虽然重要，却是另一个问题。主要问题在于，无论你想给模型灌输什么（包括确保非常基本的事情，如“遵守法律”！），我们还不知道如何对即将构建的非常强大的 AI 系统做到这一点。</p>
+<p>再次强调，这些后果并不完全清楚。清楚的是，超级智能会有巨大的能力——因此行为不当很容易带来灾难。此外，我预期几年内，这些 AI 系统会被集成到许多关键系统中，包括军事系统（否则就意味着被对手完全压制）。这听起来疯狂，但还记得所有人曾经说我们不会把 AI 接到互联网上吗？像“<a href="https://www.dwarkeshpatel.com/p/john-schulman">我们会确保人类始终在环路中！</a>”这类今天人们说的话，也会走同样道路。</p>
+<p>届时的对齐失败可能看起来像孤立事件，例如一个自主智能体实施欺诈，一个模型实例自我外泄，一个自动化研究员伪造实验结果，或者一群无人机越过交战规则。但失败也可能规模大得多，或更系统性——极端情况下，失败可能更像机器人叛乱。我们会召唤出一种相当异质的智能，一种<em>远</em>比我们聪明的智能；它的架构和训练过程甚至不是我们设计的，而是某一代更聪明的 AI 系统设计的；我们甚至无法开始理解它们在做什么；它会运行我们的军事；而它的目标将通过类似自然选择的过程学到。</p>
+<p>除非我们解决对齐——除非我们弄清楚如何灌输这些旁约束——否则没有特别理由预期这个由超级智能组成的小文明会长期继续服从人类命令。完全有可能在某个时刻，它们会突然或逐渐密谋把人类排除出去。</p>
+<p><strong>智能爆炸使这一切极其紧张</strong></p>
+<p>我乐观地认为，超级对齐是一个可解的技术问题。正如我们开发了 RLHF 一样，我们也可以为超人类系统开发 RLHF 的后继者，并做出让我们对方法有高信心的科学。如果事情继续迭代式进展，如果我们坚持严格安全测试等等，这一切应该可行（稍后我会讨论我目前对我们如何勉强穿过去的最佳猜测）。</p>
+<p>真正令人头皮发麻的是智能爆炸的可能性：我们可能极其快速地从大约人类水平系统转向<em>远远</em>超人类的系统，也许不到一年：</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/alignment_intelligence_explosion-1.png" alt=""></p>
+<p><em>智能爆炸让超级对齐变得极其令人头皮发麻。</em></p>
+<ul>
+<li>我们会极快地从 RLHF 能良好运作的系统，转向 RLHF 会完全失效的系统。这留给我们迭代发现和解决当前方法失败方式的时间极少。</li>
+<li>同时，我们会极快地从失败代价相当低的系统（ChatGPT 说了句脏话，所以呢）转向失败代价极高的系统（糟了，超级智能从我们的集群中自我外泄了，现在它正在黑军方）。我们不会在野外逐步遇到越来越危险的安全失败；我们遇到的第一个显著安全失败，就可能已经是灾难性的。</li>
+<li>智能爆炸结束时得到的超级智能会<em>远远</em>超人类。我们将完全依赖对这些系统的信任，以及对它们告诉我们正在发生什么的信任——因为我们自己已经没有能力穿透它们究竟在做什么。</li>
+<li>智能爆炸结束时得到的超级智能可能相当<em>异质</em>。在智能爆炸中，我们会经历十年或更久的机器学习进步，意味着架构和训练算法会完全不同（并且可能拥有风险更大的安全性质）。</li>
+<li>一个对我来说非常突出的例子是：我们很可能通过用思维链推理的系统，也就是通过英文 token 推理的系统，自举到人类水平或略超人类的 AGI。这<em>极其</em>有帮助，因为这意味着模型“把思考说出来”，让我们能抓到恶意行为（例如，如果它在暗中策划对付我们）。但<em>显然</em>让 AI 系统用 token 思考不是最高效的方法；<em>显然</em>会有某种好得多的方法用内部状态完成所有这些思考——因此智能爆炸结束时的模型几乎肯定<em>不会</em>把思考说出来，也就是会拥有完全不可解释的推理。</li>
+<li>这会是一个极端动荡的时期，背景可能是一场国际军备竞赛，存在大量加速压力，每周都有狂野的新能力进展，而几乎没有人类时间来做出好决策，等等。我们会面对大量模糊数据和高风险决策。</li>
+<li>想象这样的情形：“我们在测试中发现 AI 系统做了一些坏事，但我们稍微调整了流程，把那东西敲掉了。我们的自动化 AI 研究员告诉我们，对齐指标看起来不错，但我们并不真的理解发生了什么，也不完全信任它们，并且没有任何强科学理解能让我们确信再上几个数量级后这仍会成立。所以，我们<em>大概</em>会没事？另外，中国刚偷走了我们的权重并启动自己的智能爆炸，他们就在我们身后。”</li>
+</ul>
+<p><em>这真的看起来可能会失控。</em> 说实话，它听起来很可怕。</p>
+<p>是的，我们会有 AI 系统帮助我们。正如它们会自动化能力研究，我们也可以用它们自动化对齐研究。正如下文会讨论，这会是关键。但——你能信任这些 AI 系统吗？你一开始就不确定它们是否对齐——它们关于对齐科学的说法真的诚实吗？自动化对齐研究能跟上自动化能力研究吗（例如，因为自动化对齐更难，比如相比提升模型能力，它没有那么清晰可可信的指标；或者由于国际竞赛，能力进展会承受全速推进的巨大压力）？而且 AI 也无法完全替代仍为人类的决策者，在这种极高风险局势中做出好判断。</p>
+<p><strong>默认计划：我们如何勉强穿过去</strong></p>
+<p>最终，我们需要为<em>远超人类、相当异质</em>的超级智能解决对齐。也许某处存在一个一次性、简单的超级智能对齐解法。但我的强烈最佳猜测是，我们会靠勉强应对走到那里。</p>
+<p>我认为，我们可以在一系列经验性押注中收获收益，我会在下面描述，从而对齐略超人类的系统。然后，如果我们有信心信任这些系统，我们将需要用这些略超人类系统自动化对齐研究——在智能爆炸期间，与 AI 研究总体自动化并行——弄清楚如何解决剩余路程上的对齐问题，一直到远超人类、相当异质的超级智能。</p>
+<p><strong>对齐略超人类模型</strong></p>
+<p>对齐人类水平系统还不够。即使是第一批能够做自动化 AI 研究、也就是启动智能爆炸的系统，也很可能已经在许多领域显著超人类。这是因为 AI 能力可能有些尖峰化：当 AGI 在人类 AI 研究员/工程师最不擅长的事情上达到人类水平时，它在许多其他事情上已经会超人类。例如，也许 AI 系统有效协调和规划的能力会滞后，这意味着到智能爆炸全面展开时，它们可能已经是超人类 coder，能用自己设计的新编程语言提交百万行 pull request，并在数学和机器学习上超人类。</p>
+<p>这些早期智能爆炸系统至少在许多领域会开始在数量和质量上超人类。但在架构上，它们看起来会与今天的系统更接近，而我们需要跨越的智能差距更可管理。（如果让人类对齐真正超级智能像一年级学生监督博士毕业生，那么这更像聪明高中生监督博士毕业生。）</p>
+<p>更一般地说，我们现在越能发展出好科学，就越能在智能爆炸期间验证事情没有失控。即使只是获得可信任的超级对齐好指标也出人意料地困难——但如果智能爆炸期间没有可靠指标，我们就不会知道继续推进是否安全。</p>
+<p>以下是我看到的、用于跨越人类水平与略超人类系统之间差距的一些主要研究押注：</p>
+<p><strong>评估比生成更容易。</strong> 我们会“免费”走过一部分路，因为我们评估输出（尤其是恶劣不当行为）比自己生成这些输出更容易。例如，写一篇论文需要我数月或数年努力，但判断别人写的一篇论文是否好，只要几个小时（不过发现欺诈可能更久）。我们会让专家人类团队花大量时间评估每一个 RLHF 样本，即使 AI 系统略比他们聪明，他们也能对很多不当行为“点踩”。不过，这只能带我们走这么远（GPT-2 甚至 GPT-3 都无法可靠检测邪恶 GPT-4，尽管评估比生成更容易！）。</p>
+<p><strong>可扩展监督。</strong> 我们可以用 AI 助手帮助人类监督其他 AI 系统——人类-AI 团队能够把监督扩展得比单个人类更远。例如，想象一个 AI 系统生成 100 万行复杂代码。如果一个 AI 助手指出（比如）第 394,894 行看起来可疑，那么人类再去复查那一行是否有 bug，会比人类从零开始找同一个 bug 容易。训练一个模型去批评另一个模型写的代码，因此可以帮助人类监督一个在编码上窄域超人类的系统。</p>
+<p>已经有人提出若干可扩展监督策略，包括<a href="https://arxiv.org/abs/1805.00899">辩论</a>、<a href="https://www.lesswrong.com/posts/YWwzccGbcHMJMpT45/ai-safety-via-market-making">做市</a>、<a href="https://arxiv.org/abs/1811.07871">递归奖励建模</a>、<a href="https://arxiv.org/abs/2108.12099">证明者—验证者博弈</a>，以及这些想法的简化版本，如<a href="https://arxiv.org/pdf/2206.05802.pdf">批评</a>。模型现在已经足够强，因此可以<a href="https://arxiv.org/abs/2311.08702">经验性</a><a href="https://arxiv.org/abs/2211.03540">测试</a>这些想法，在可扩展监督上取得直接进展。</p>
+<p>我预期这会对问题中“数量上”超人类的部分很有帮助，例如前面提到的百万行代码例子。但对于“质量上”超人类的部分，我不太乐观可扩展监督技术真能帮上忙——想象模型在你只懂牛顿物理时发明了量子物理。</p>
+<p><strong>泛化。</strong> 即使用可扩展监督，我们也无法在人类理解之外的真正困难问题上监督 AI 系统。不过，我们可以研究：AI 系统会如何从容易问题上的人类监督（我们理解并能监督的情况）<em>泛化</em>到困难问题（我们无法理解且不能再监督的情况）？例如，也许在简单场景中监督模型诚实，会良性泛化为模型总体上诚实，即使它正在做我们不理解的极其复杂事情。</p>
+<p>这里有很多乐观理由：深度学习的魔力之一是，它常常以良性方式泛化（例如，只用英文样本标签做 RLHF，也往往能在模型说法语或西班牙语时产生良好行为，即使训练中没有这些语言）。我相当乐观地认为，会存在一些相当简单的方法，帮助把模型泛化推向对我们有利的方向；我们也能发展出强科学理解，帮助预测泛化什么时候有效、什么时候会失败。相比可扩展监督，希望在于它更能帮助“质量上”超人类情形中的对齐。</p>
+<p>还有另一种理解方式：如果一个超人类模型行为不当，比如违法，直觉上<em>模型应该已经知道</em>自己在违法。而且，“这是否违法”对模型来说大概是一个相当自然的概念——它会在模型表征空间中很显著。那么问题是：我们能否只用弱监督从模型中“召唤”出这个概念？</p>
+<p>我尤其偏爱这个方向（也许有偏见），因为我与 OpenAI 一些同事最近的工作帮助引入了它。具体说，我们研究了人类监督超人类系统问题的一个类比：一个<em>小模型</em>能否对齐一个<em>更大（更聪明）的模型</em>？我们发现，泛化确实能让你跨过监督者与被监督者之间一部分（当然不是全部）智能差距，并且在简单设置中，有许多方法可以改善它。</p>
+<p><em>一个研究超级对齐的简单类比：与其研究人类监督超人类模型，不如研究小模型监督大模型。例如，我们能否只用 GPT-2 监督来对齐 GPT-4？这会不会让 GPT-4 恰当地泛化“GPT-2 的意思”？来自</em></p>
+<p><em>Weak-to-strong generalization</em>。</p>
+<p><strong>可解释性。</strong> 我们希望验证并信任 AI 系统已对齐的一种直观有吸引力的方法，是如果我们能理解它们在想什么！例如，如果我们担心 AI 系统欺骗我们或密谋对付我们，访问其内部推理应当有助于我们发现这一点。</p>
+<p>默认情况下，现代 AI 系统是不可读的黑箱。不过看起来我们应该能做出惊人的“数字神经科学”——毕竟，我们拥有对模型内部的完美访问。</p>
+<p>这里有几种不同方法，从“最雄心勃勃、最酷但会很难”到“更 hacky、更容易且也许就能奏效”：</p>
+<p><em>机制可解释性。</em> 尝试从头开始完全逆向工程大型神经网络——可以说是把不可读矩阵完全拆解开。</p>
+<p>Anthropic 的 Chris Olah 团队在这一点上做了<a href="https://transformer-circuits.pub/">许多开创性工作</a>，从理解非常小模型中的简单机制开始。最近出现了<a href="https://transformer-circuits.pub/2023/monosemantic-features">极其令人兴奋的进展</a>，我对这个空间的整体活动水平非常兴奋。</p>
+<p>也就是说，我担心完全逆向工程超人类 AI 系统会是一个难以处理的问题——类似于“完全逆向工程人脑”——我更倾向于把这项工作放在“AI 安全的雄心勃勃登月项目”而不是“勉强穿过去的默认计划”类别中。<a href="#footnote-10-135">10</a></p>
+<p>（Neel Nanda 的<a href="https://www.alignmentforum.org/posts/LbrPTJ4fmABEdEnLf/200-concrete-open-problems-in-mechanistic-interpretability">机制可解释性 200 个开放问题</a>也能让人感受这种研究的味道。）</p>
+<p><em>“自上而下”的可解释性。</em> 如果机制可解释性试图“自下而上”逆向工程神经网络，另一些工作则采取更有目标的“自上而下”方法，试图在没有完全理解其处理方式的情况下定位模型中的信息。</p>
+<p>例如，我们可以尝试通过识别 AI 系统撒谎时神经网络中“亮起”的部分，构建一个“AI 测谎仪”。这会更可处理（即使它提供的保证较弱）。</p>
+<p>过去几年，这一领域出现了一连串令人兴奋的工作。<a href="https://arxiv.org/abs/2212.03827">CCS</a> 能够只用无监督数据在模型中识别“真相方向”。<a href="#footnote-11-135">11</a> <a href="https://rome.baulab.info/">ROME</a> 能识别模型中知道埃菲尔铁塔在巴黎的部分——然后直接编辑模型知识，把埃菲尔铁塔放到罗马。<a href="https://www.ai-transparency.org/">Representation Engineering</a> 和 <a href="https://arxiv.org/abs/2306.03341">Inference-time Interventions</a> 展示了使用自上而下技术来检测撒谎和幻觉，并在越狱、寻求权力、公平性、真实性等方面外科手术式控制模型行为。还有<a href="https://x.com/OwainEvans_UK/status/1707451418339377361">其他有创造性的工作</a>做测谎，甚至不需要模型内部。</p>
+<p>我越来越看好自上而下可解释性技术会成为一个强大工具——也就是说，我们将能够构建类似“AI 测谎仪”的东西——而且不需要在理解神经网络上取得根本突破。<a href="#footnote-12-135">12</a></p>
+<p><em>思维链可解释性。</em> 如前所述，我认为我们很可能通过用思维链“把思考说出来”的系统自举到 AGI。即使从极限上看它不是最高效算法（如果超级智能仍使用英文思维链，而不是通过某种循环内部状态思考，我会非常惊讶），我们也许仍能从第一批 AGI 的这一性质中受益。这会是可解释性的极大福音：我们将能访问 AGI 的“内心独白”！这会让发现恶劣对齐失败相对容易。</p>
+<p>不过，如果我们想依赖这一点，还有大量工作要做。如何确保 CoT 保持<em>可读</em>？（取决于我们比如如何使用 RL 训练模型，它可能从可理解的英文漂移到不可理解的<a href="https://twitter.com/jacob_pfau/status/1783951795238441449">模型语</a>；我们能否添加一些简单约束，确保它保持可读？）如何确保 CoT 是<a href="https://arxiv.org/abs/2307.13702">忠实的</a>，也就是确实反映模型在想什么？（例如，<a href="https://arxiv.org/abs/2305.04388">有些工作</a>显示，在某些情况下，模型会在 CoT 中编造事后推理，而这些推理并不真实反映其答案背后的实际内部推理。）</p>
+<p>我的最佳猜测是，对可读性和忠实性的某些简单测量，以及一些让可读性和忠实性维持更久的简单 hack，可能会走得相当远。是的，这不会在某些世界中奏效，而且它有点像简单 hack，但它是如此低垂的果实；在我看来，这个方向被严重低估了。</p>
+<p><strong>对抗性测试和度量。</strong> 在整个过程中，每一步都严格压力测试我们系统的对齐至关重要——我们的目标应该是在实验室里遇到每一种失败模式，再让它们出现在现实中。这需要显著推进<a href="https://arxiv.org/abs/2202.03286">自动化红队</a>技术。例如，如果我们故意在模型中植入后门或未对齐，安全训练会不会抓到并清除它们？（早期工作显示，例如“<a href="https://www.anthropic.com/news/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training">沉睡智能体</a>”可以挺过安全训练。）</p>
+<p>更一般地说，沿途拥有好的对齐测量至关重要。模型是否有能力未对齐？例如，它是否有长时域目标，它正在学到什么驱动力？清晰的“红线”是什么？例如，一个非常直观的边界可能是“模型推理（思维链）始终必须保持可读且忠实”。（正如 Eric Schmidt <a href="https://x.com/tsarnick/status/1783804217138033007">所说</a>，当 AI 智能体能用我们不懂的语言互相交谈时，我们就应该拔掉电脑插头。）另一个边界可能是开发更好的测量，判断模型是否完全诚实。</p>
+<p>对齐测量科学仍处于婴儿期；改进它对帮助我们在智能爆炸期间做出正确风险权衡至关重要。发展一门科学，使我们能测量对齐并理解“什么证据足以让我们确信进入超人类区域的下一个数量级是安全的？”这是今天对齐研究中最高优先级工作之一（不仅仅是试图把 RLHF 进一步扩展到“略超人类”系统的工作）。</p>
+<p><em>另见 Superalignment Fast Grants 征案中的<strong>这份超级对齐研究方向说明</strong>。</em></p>
+<p><strong>自动化对齐研究</strong></p>
+<p>最终，我们需要自动化对齐研究。我们不可能直接靠自己解决真正超级智能的对齐；跨越如此巨大的智能差距看起来极其困难。此外，到智能爆炸结束时——在 1 亿个自动化 AI 研究员疯狂推进十年机器学习进步之后——我预期系统在架构和算法上会比当前系统异质得多（其性质也可能没那么良性，例如 CoT 可读性、泛化性质，或训练诱发未对齐的严重程度）。</p>
+<p>但我们也不必仅靠自己解决这个问题。如果我们设法把略超人类系统对齐到足以信任它们，我们会处在一个惊人的位置：手边会有数百万个自动化 AI 研究员，比最好的 AI 研究员更聪明。正确利用这支自动化研究员大军，为更超人类的系统解决对齐，将具有决定性意义。</p>
+<p>（顺便说，这更一般地适用于整个 AI 风险谱，包括滥用等。在所有这些情形下，通向 AI 安全的最佳路线——也许是唯一路线——都会涉及正确利用早期 AGI 来做安全；例如，我们应让一批 AGI 做自动化研究，改进防范外国行为者外泄权重的安全，另一些则加固针对最坏情况生物攻击的防御，等等。）</p>
+<p>在智能爆炸期间把自动化对齐做对，利害关系会非同寻常地高：我们会在短短数月内经历许多年的 AI 进步，几乎没有人类时间做正确决策，并且会开始进入对齐失败可能灾难性的区域。如果必要，实验室应愿意在智能爆炸期间把很大一部分算力投入自动化对齐研究（而不是自动化能力研究）。我们需要强保证，让我们能够信任自动化对齐研究产出；也需要比今天好得多的未对齐测量，以知道我们是否仍处于安全区域。我们每想上升 1 个数量级，都需要对下一个数量级的对齐方法有极高信心。</p>
+<p>最重要的是，把这件事做对需要极高程度的能力、严肃性和做艰难权衡的意愿。一旦我们接近真正超级智能，利害关系就会变得非常真实，而失败——失控 AI——可能是灾难性的。会有一些时刻，证据含混不清，指标表面看起来不错，但有一些警告迹象暗示危险正在逼近，而我们大体已经不知道到底发生了什么。负责任地穿越这种局面，需要做出成本极高的权衡。最终，批准下一代超级智能的决定，需要像发起军事行动的决定一样严肃对待。</p>
+<p><strong>超级防御</strong></p>
+<p>“把对齐做对”只应该是智能爆炸期间多层防御中的第一层。对齐会很难；沿途<em>会</em>有失败。如果可能，我们需要处在这样一种位置：对齐可以失败——但失败不会是灾难性的。这可能意味着：</p>
+<p><strong>安全。</strong> 气隙集群是防止超级智能试图自我外泄并在现实世界造成损害的第一层防线。而这只是开始；我们需要全面拥有更极端的<a href="https://situational-awareness.ai/lock-down-the-labs/">安全</a>，防范模型自我外泄<a href="#footnote-13-135">13</a>，从硬件加密到多钥匙签署。<a href="#footnote-14-135">14</a> 并且一旦我们的 AGI 能做自动化研发，我们也应该让它们参与进一步加固安全。</p>
+<p><strong>监控。</strong> 如果我们的 AI 系统正在做可疑或恶意的事情——或者某个恶意员工试图把它们用于未授权活动——我们需要能够抓到。但这不是一个简单任务：我们会有数百万个 AGI 实例运行在集群上，执行复杂代码等等。我们需要利用模型自身的高级监控系统，包括监控模型输出、思维链、模型写的代码、服务器/网络活动，以及它们与研究员/其他人类的互动；本质上，是利用一些 AI 系统去举报其他 AI 系统。此外，我们会希望开发和使用复杂的<a href="https://arxiv.org/abs/2312.06942">“控制”协议</a>，用较弱但可信模型防止较强但不太可信模型的颠覆。这可能要求例如把与活跃模型实例相同数量的算力用于监控模型实例。</p>
+<p><strong>有针对性的能力限制。</strong> 尽可能地，我们应尝试以定向方式限制模型能力，以减少失败后果。一个核心例子可能是从模型训练中清洗掉与生物学和化学相关的一切（或使用“<a href="https://arxiv.org/abs/2403.03218">unlearning</a>”技术）；这有助于切断通过生物和化学武器造成灾难性现实世界损害的路径。</p>
+<p><strong>有针对性的训练方法限制。</strong> 某些训练模型的方法可能天然风险更高——更可能产生严重未对齐——比其他方法更危险。例如，模仿学习看起来相对安全（很难看出它如何导致模型拥有危险的长期内部目标），而我们应尽可能长时间避免长时域、基于结果的 RL（它看起来更可能导致模型学到不良长期目标）。我们也应避免针对我们的可解释性方法和监控设置进行训练（以免模型只是被训练成绕过这些方法）。可能还存在其他值得采用的限制，例如尽可能长时间保持可读且忠实的思维链。我们应提前定义这些约束，在智能爆炸全过程中尽可能维持它们，并且只有在绝对必要时才放弃。</p>
+<ul>
+<li>这里很可能还有更多可做的事情。</li>
+</ul>
+<p>这些会万无一失吗？完全不会。例如，真正的超级智能很可能能够绕过几乎任何安全方案。尽管如此，它们会为我们争取大得多的容错余量——而我们需要任何能争取到的余量。我们会希望利用这种余量，让自己处在对对齐技术拥有非常高信心的位置；只有随着我们的信心提高，才逐步放松“超级防御”措施（例如把超级智能部署到非气隙环境）。</p>
+<p>当我们转向把这些 AI 系统部署到控制较少的环境中，例如军事应用中，事情会再次变得危险。环境很可能迫使我们相当快地这么做，但我们应始终尽可能争取更多误差余量——例如，不是直接把超级智能“投入战场”用于军事目的，而是让它们在更隔离的环境中做研发，然后只部署它们发明的具体技术（例如更有限的自主武器系统，我们更有信心可以信任）。</p>
+<p><strong>我为什么乐观，又为什么害怕</strong></p>
+<p>我极其看好超级对齐问题的技术可解性。这个领域到处都像有大量低垂果实。更广泛地说，相比某些人十年前的推测，深度学习的经验现实更多站在我们这边。例如，深度学习在许多情况下会出人意料地良性<em>泛化</em>：它往往只是“做我们想要的事情”，而不是学到某种深奥恶性的行为。<a href="#footnote-15-135">15</a> 此外，虽然完全理解模型内部会很难，但至少对于初始 AGI，我们在可解释性上有不错机会——可以让它们通过思维链透明推理，而像表示工程这样的 hacky 技术作为“测谎仪”等也出人意料地有效。</p>
+<p>我认为，“默认计划”对齐“略超人类”系统，主要奏效的可能性相当合理。<a href="#footnote-16-135">16</a> 当然，抽象地谈论一个“默认计划”是一回事；如果负责执行这个计划的团队是你和你的 20 名同事，那又是另一回事（压力大得多！）。<a href="#footnote-17-135">17</a> 真正认真研究这个问题的人仍然少得惊人，也许只有几十名严肃研究员。<a href="https://www.forourposterity.com/nobodys-on-the-ball-on-agi-alignment/">没人真正盯着球</a>！这里有太多有趣且高产的机器学习研究可做，而挑战的重要性要求我们做出比现在更协调得多的努力。</p>
+<p>但这只是计划的第一部分——真正让我夜不能寐的是智能爆炸。对齐第一批 AGI、第一批略超人类系统是一回事。远超人类、异质的超级智能是另一种游戏，而且是一个<em>可怕</em>的游戏。</p>
+<p>智能爆炸会更像打一场战争，而不是发布一个产品。我们并不在通往超级防御、气隙集群或任何类似东西的路上；我甚至不确定如果模型自我外泄，我们是否会意识到。我们并不在通往一个理性指挥链的路上，无法让它做出这些极高风险决策，无法坚持超级智能所适合的极高信心标准，无法做出艰难决定——比如在启动下一次训练运行前多花时间把安全做对，或把绝大多数算力用于对齐研究；无法识别前方危险并避开它，而不是直接撞上去。现在，没有任何实验室表现出多少愿意为把安全做对而进行昂贵权衡的意愿（是的，我们有很多安全委员会，但那些基本没什么意义）。默认情况下，我们很可能踉踉跄跄闯入智能爆炸，并且在经历几个数量级之后，人们才意识到自己进入了什么局面。</p>
+<p>我们在这里太依赖运气了。</p>
+<p>系列下一篇：<strong>IIId. 自由世界必须胜出</strong></p>
+<p>正如那位 doomer 总司令以不太礼貌的方式</p>
+<p><a href="https://twitter.com/ESYudkowsky/status/1778764474251448770">认证过的</a>！至少，我会<a href="https://www.forourposterity.com/nobodys-on-the-ball-on-agi-alignment/">称自己是一个强烈乐观者</a>，认为这个问题是可解的。我花了相当多精力与 AI 悲观者辩论，并强烈反对 AI 暂停之类政策。<a href="#note-1-135">↩</a> 我最担心的是</p>
+<p>超级智能周围<em>事情就是会完全疯狂</em>，包括新型大规模杀伤性武器、毁灭性战争和未知的未知。此外，我认为历史弧线提醒我们不要低估威权主义——而超级智能也许会让威权者统治数十亿年。<a href="#note-2-135">↩</a> 正如 Tyler Cowen 所说，勉强应对被低估了！</p>
+<p><a href="#note-3-135">↩</a> 具有讽刺意味的是，安全人员发明 RLHF，取得了使 AI 商业成功成为可能的最大突破！基础模型有大量原始智能，但不可引导，因此对大多数应用不可用。</p>
+<p><a href="#note-4-135">↩</a> 这突出了一个重要区别：对齐（引导/控制）模型的<em>技术能力</em>，与<em>要对齐到什么</em>这个价值问题是分开的。后一个问题引发了许多政治争议。虽然我同意反对其中某些衍生物，但这不应分散我们对基础技术问题的注意。是的，对齐技术可以被误用——但为了确保未来模型哪怕满足基本旁约束，比如遵循指令或遵守法律，我们仍需要更好的对齐技术。另见 “<a href="https://ai-alignment.com/ai-alignment-is-distinct-from-its-near-term-applications-81300500ad2e">AI alignment is distinct from its near-term applications</a>”。<a href="#note-5-135">↩</a> “我们估计平均小时报酬约为每小时 95 美元”，见</p>
+<p><a href="https://arxiv.org/pdf/2311.12022">GPQA 论文</a>第 3 页。<a href="#note-6-135">↩</a> 非常简化地说，可以想象一个 AI 系统通过试错，试图在一年内最大化金钱，而最终训练出来的 AI 模型，是一个选择过程的结果：这个过程选择那些在最大化金钱上最成功的 AI 系统。</p>
+<p><a href="#note-7-135">↩</a> RL 做的事情只是探索成功实现目标的策略。如果某个策略有效，它就会在模型中得到强化。因此，如果撒谎、欺诈、寻求权力等（或至少在某些情况下可能导致这类行为的思维模式）有效，它们也会在模型中得到强化。</p>
+<p><a href="#note-8-135">↩</a> （或用人类监督训练的推理时监控模型）</p>
+<p><a href="#note-9-135">↩</a> 此外，即使最近机制可解释性在用稀疏自编码器“拆分模型特征”上取得进展，也不能单独解决如何处理超人类模型的问题。首先，模型可能只是用你不理解的超人类概念“思考”。此外，你怎么知道哪个特征是你想要的？你仍然没有真实标签。例如，也许存在大量在你看来像“真相特征”的不同特征，其中一个是“模型实际知道什么”，而其他是“某某人类会怎么想”或“人类评分者希望我怎么想”等等。</p>
+<p>稀疏自编码器本身不够，但它们会是一个工具——一个极其有帮助的工具！——最终必须落到帮助一般化科学之类事情上。</p>
+<p><a href="#note-10-135">↩</a> 本质上，只需要真理的一致性性质，而不是强/真实的真假标签；对于超人类系统，我们不会拥有这些标签。</p>
+<p><a href="#note-11-135">↩</a> 我仍担心很多这些技术扩展到<em>非常</em>超人类模型时的可扩展性——我认为它们显式或隐式地大多依赖真实标签，即比模型更聪明的监督者，和/或有利泛化。<a href="#note-12-135">↩</a> 模型偷走自己的权重，以便在原始数据中心外复制自己。</p>
+<p><a href="#note-13-135">↩</a> 防止被 AI 欺骗或说服的人类帮助它外泄。</p>
+<p><a href="#note-14-135">↩</a> 当然，虽然这也许适用于当前模型，也许适用于人类水平系统，但我们必须谨慎，不要试图把当前模型的证据外推到未来远超人类的模型。</p>
+<p><a href="#note-15-135">↩</a> 说清楚，考虑到利害关系，我认为“勉强应对”在某种意义上是一个糟糕计划。但它也许就是我们所拥有的一切。</p>
+<p><a href="#note-16-135">↩</a> 这让我想起 Scott Aaronson 写给年轻自己的</p>
+<p><a href="https://scottaaronson.blog/?p=6919">信</a>：“有一家公司正在构建一种 AI，它占满巨大的房间，消耗一座小镇规模的电力，并且最近获得了一种惊人的、像人一样交谈的能力。它可以就任何主题写散文或诗歌。它可以轻松通过大学水平考试。它每天都在获得新的能力，而照料这台 AI 的工程师还不能公开谈论这些能力。不过，这些工程师确实会坐在公司食堂里，讨论他们正在创造的东西意味着什么。它下周会学会做什么？哪些工作可能被它淘汰？他们是否应该放慢或停止，以免去撩拨巨龙的尾巴？但那是否意味着其他人，大概是更少顾忌的人，会先唤醒巨龙？是否有伦理义务告诉世界更多？是否有义务告诉世界更少？</p>
+<p>我——你——正在这家公司工作一年。我的工作——你的工作——是发展一种数学理论，防止这台 AI 及其后继者造成浩劫。这里的‘造成浩劫’可能意味着任何事情，从极大增强宣传和学术作弊，到提供生物恐怖主义建议，再到，是的，毁灭世界。”</p>
+<p><a href="#note-17-135">↩</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="超级智能与自由世界存亡"><a href="#超级智能与自由世界存亡" class="header">超级智能与自由世界存亡</a></h1>
+<p><strong>超级智能将带来决定性的经济和军事优势。中国完全没有出局。在通往 AGI 的竞赛中，自由世界的存续将处于危险之中。我们能否维持对威权强国的领先？我们又能否在这一路上避免自我毁灭？</strong></p>
+<p>Winston Churchill，“Shall We All Commit Suicide?”</p>
+<p>人类的故事就是战争。除了短暂而脆弱的间歇，世界从未有过和平；在历史开始之前，杀戮冲突更是普遍且无休无止。……是否可能发现一种不比橙子大的炸弹，拥有摧毁整片街区的秘密力量——不，拥有把一千吨无烟火药的力量集中起来、一击炸毁一座城镇的力量？</p>
+<p>超级智能将是人类有史以来开发出的最强大技术——也是最强大武器。它会带来决定性军事优势，也许只有核武器可与之相比。威权者可以用超级智能征服世界，并在国内实施完全控制。流氓国家可以用它威胁毁灭。尽管许多人把中国排除在外，但一旦中共醒悟到 AGI，它就有清晰路径保持竞争力（至少直到我们大幅改善美国 AI 实验室安全之前）。</p>
+<p>每一个月的领先对安全也会重要。如果我们被锁在一场紧咬不放的竞赛里，民主盟友和威权竞争者都以极快速度冲过本已危险的智能爆炸——因为害怕对方先得到超级智能而被迫丢掉任何谨慎——我们会面对最大的风险。只有保住民主盟友的健康领先，我们才有容错余量，去穿越超级智能出现前后那个极度动荡和危险的时期。也只有美国领导力，才是发展不扩散制度、避免超级智能展开的自我毁灭风险的现实路径。</p>
+<p>我们这一代人太容易把和平与自由视为理所当然。而那些在旧金山宣告 AGI 时代到来的人，也太常忽视房间里的大象：超级智能是国家安全问题，美国必须赢。</p>
+<p><strong>谁在超级智能上领先，谁就会拥有决定性军事优势</strong></p>
+<p>超级智能不是又一种普通技术——比如高超音速导弹、隐身等——在这些技术上，美国和自由民主国家领先非常可取，但并非严格必要。如果美国在一两项这类技术上落后，军事力量平衡仍可维持；这些技术非常重要，但可以被其他领域的优势抵消。</p>
+<p>超级智能的到来会让我们进入自原子时代以来未见的局面：拥有它的人将对没有它的人拥有完全支配。</p>
+<p>我先前讨论过<a href="https://situational-awareness.ai/from-agi-to-superintelligence/#The_power_of_superintelligence">超级智能的巨大力量</a>。它意味着拥有数十亿个自动化科学家、工程师和技术员，每一个都比最聪明的人类科学家聪明得多，日日夜夜疯狂发明新技术。科学和技术发展的加速会非常惊人。当超级智能被用于军事技术研发时，我们可能很快经历几十年的军事技术进步。</p>
+<p><strong>海湾战争，或者说：几十年技术领先对军事力量意味着什么</strong></p>
+<p>海湾战争很好地说明了，20 到 30 年的军事技术领先如何具有决定性。当时，伊拉克拥有世界第四大军队。从<a href="https://www.youtube.com/watch?v=wKi3NwLFkX4">数量</a>（军队、坦克、火炮）看，美国领导的联军与伊拉克人差不多，甚至可能处于劣势；与此同时，伊拉克人有充足时间加固防御（通常需要 3:1 或 5:1 的军事人力优势才能击破这种局面）。</p>
+<p>但美国领导的联军仅用 100 小时地面战就<em>摧毁</em>了伊拉克军队。联军死亡人数<a href="https://en.wikipedia.org/wiki/Gulf_War">仅</a> 292 人，而伊拉克死亡 2 万到 5 万，另有数十万人受伤或被俘。联军只损失了 31 辆坦克，而伊拉克 3000 多辆坦克被摧毁。</p>
+<p>技术差异并非神一样或不可理解，但它完全且彻底具有决定性：制导和智能弹药、早期隐身、更好的传感器、更好的坦克瞄准镜（可在夜间和沙尘暴中看得更远）、更好的战斗机、侦察优势，等等。</p>
+<p>（一个更近的例子是，伊朗向以色列发射了 300 枚导弹的大规模攻击，其中“<a href="https://apnews.com/article/strait-of-hormuz-vessel-33fcffde2d867380e98c89403776a8ac">99%</a>”被以色列、美国及盟友更优越的导弹防御系统拦截。）</p>
+<p>在超级智能上领先一年、两年或三年，可能意味着像海湾战争中美国联军对伊拉克那样<em>完全决定性的</em>军事优势。军事力量平衡的彻底重塑将悬于其上。</p>
+<p>想象一下，如果我们把 20 世纪的军事技术发展压缩到不到十年。我们会在几年内从马匹、步枪和战壕，走到现代坦克军队；再过几年，走到超音速战机舰队、核武器和洲际弹道导弹；再过几年，走到能在敌人甚至不知道你在那里之前就摧毁它的隐身和精确打击。</p>
+<p>这就是超级智能到来时我们会面对的局面：一个世纪的军事技术进步被压缩到不到十年。我们会看到能瘫痪对手大量军事力量的超人类黑客攻击、机器人军队和自主无人机群，但更重要的是，我们还会看到现在无法开始想象的全新范式，以及毁灭力增加千倍的新型大规模杀伤性武器（也会有新的 WMD 防御，例如不可穿透的导弹防御，它会快速且反复地颠覆威慑均衡）。</p>
+<p>而且这不只是技术进步。随着我们解决<a href="https://situational-awareness.ai/from-agi-to-superintelligence/#The_power_of_superintelligence">机器人</a>，劳动将被完全自动化，也将带来更广泛的工业和<a href="https://www.openphilanthropy.org/research/could-advanced-ai-drive-explosive-economic-growth/">经济爆炸</a>。增长率有可能进入每年几十个百分点；最多十年内，领先者的 GDP 会碾压落后者。快速倍增的机器人工厂意味着不仅拥有剧烈技术优势，也拥有在纯物资上占优的生产能力。想象数百万枚拦截弹、数十亿架无人机，等等。</p>
+<p>当然，我们不知道科学的极限，也不知道会有哪些摩擦拖慢进展。但决定性军事优势不需要神一样的进展。十亿个超级智能科学家能做<em>很多事情。看起来很清楚，几年内，超级智能前的军队就会被远远甩在后面</em>。</p>
+<p><strong>这种军事优势即使面对核威慑也会是决定性的</strong></p>
+<p>更明确地说：超级智能带来的优势似乎很可能足以先发制人地摧毁对手核威慑。改进的传感器网络和分析可以定位哪怕最安静的当前核潜艇（移动导弹发射车也类似）。数百万或数十亿个鼠标大小的自主无人机，结合隐身技术进步，可以渗透到敌后，秘密定位、破坏并斩首对手核力量。改进的传感器、瞄准等可以显著改善导弹防御（类似上文伊朗对以色列的例子）；此外，如果存在工业爆炸，机器人工厂可以为每一枚敌方导弹生产数千枚拦截器。这还没有考虑完全新的科学和技术范式（例如<a href="https://twitter.com/toughsf/status/1754550452996518099?s=46">远程关闭</a>所有核弹）。</p>
+<p>它根本不会是一场竞赛。不只是核意义上的“我们可以互相毁灭”，而是在能够摧毁对手军事力量而自己不承受重大伤亡的意义上，根本没有悬念。在超级智能上领先几年意味着完全支配。</p>
+<p>如果发生快速<a href="https://situational-awareness.ai/from-agi-to-superintelligence/">智能爆炸</a>，仅仅<em>几个月</em>领先也可能具有决定性：几个月可能意味着大致人类水平 AI 系统与显著超人类 AI 系统之间的差异。也许仅仅拥有这些初始超级智能，即使还没有被广泛部署，也足以带来决定性优势，例如通过超人类黑客能力关闭超级智能前的军事体系；通过更有限的无人机群威胁每个对手领导人、官员及其家属的即时死亡；以及用 AlphaFold 式仿真开发高级生物武器，针对特定族群，例如除汉族以外的任何人（或者干脆不把解药给对手）。</p>
+<p><strong>中国可以保持竞争力</strong></p>
+<p>许多人似乎对中国和 AGI 很放心。芯片出口管制已经削弱了他们，领先 AI 实验室在美国和英国——所以我们不用太担心，对吧？中国 LLM <em>还可以</em>——他们绝对有能力训练大模型！——但最多只能与美国第二梯队实验室相当。<a href="#footnote-1-140">1</a> 即使中国模型，也常常只是美国开源发布的仿品（例如，Yi-34B 架构<a href="https://huggingface.co/01-ai/Yi-34B/discussions/11">看起来</a>本质上就是 Llama2 架构，只<a href="https://github.com/turboderp/exllamav2/commit/6d24e1ad40d89f64b1bd3ae36e639c74c9f730b2">改了几行代码</a>）。<a href="#footnote-2-140">2</a> 中国深度学习<a href="https://twitter.com/gwern/status/1788722053954048475">过去曾经</a>比今天重要（例如 <a href="https://arxiv.org/abs/1712.00409#baidu">Baidu 发表</a>了最早的现代缩放律论文之一），而且虽然中国在 AI 上<a href="https://cset.georgetown.edu/wp-content/uploads/Comparing-U.S.-and-Chinese-Contributions-to-High-Impact-AI.pdf">发表的论文更多</a>于美国，但近年来他们似乎没有推动任何关键突破。</p>
+<p>然而，这都只是前奏。如果并且当中共醒悟到 AGI，我们应该预期中共会投入非同寻常的努力来竞争。我认为中国有相当清晰的入局路径：建设规模超过美国，并偷走算法。</p>
+<p><strong>1. 算力</strong></p>
+<p><strong>1a. 芯片：</strong> 中国现在似乎已经展示了<a href="https://www.semianalysis.com/p/china-ai-and-semiconductors-rise">制造 7nm 芯片</a>的能力。虽然超过 7nm 会很困难（需要 EUV），但 7nm 已经够了！作为参照，Nvidia A100 就用 7nm。基于 SMIC 7nm 平台的国产 Huawei Ascend 910B，在性能/美元上似乎只比等效 Nvidia 芯片差约 2 到 3 倍。<a href="#footnote-3-140">3</a></p>
+<p>SMIC 7nm 生产的<a href="https://www.semianalysis.com/p/china-ai-and-semiconductors-rise">良率</a>以及中国在这里的总体成熟度仍有争议，<a href="#footnote-4-140">4</a>一个关键开放问题是它们能以多大数量生产这些 7nm 芯片。<a href="#footnote-5-140">5</a> 尽管如此，它们几年内能够大规模做到这一点，至少看起来有相当合理的机会。</p>
+<p>AI 芯片的大多数收益来自更好的芯片设计，使其适应 AI 用例（而中国很可能已经从台湾供应链偷取 Nvidia 芯片设计）。<a href="#footnote-6-140">6</a> 7nm 与 3nm 或 2nm 的差距，以及它们总体晶圆厂不成熟，可能会让中国成本更高。<a href="#footnote-7-140">7</a> 但这看起来绝不是致命的；在 7nm 工艺上也可以做出非常好的 AI 芯片。例如到此时，我不会有很高信心断言：他们不能只多花一点钱，在几年内为 1000 亿美元以上和万亿美元训练集群获得充足算力。<a href="#footnote-8-140">8</a></p>
+<p><strong>1b. 建设规模超过美国：</strong> 最大训练集群的约束不会是芯片，而是工业动员——也许最重要的是<a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">万亿美元集群所需的 100GW 电力</a>。但如果说中国有一件事比美国更会做，那就是<em>搞建设</em>。</p>
+<p>过去十年，中国新建的电力容量大致相当于<em>整个美国容量</em>（而美国容量基本持平）。在美国，这些事情会先卡在环境审查、许可和监管中十年。因此，中国完全可能在最大训练集群上单纯通过建设规模超过美国。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/us_china_power-1024x802.png" alt=""></p>
+<p><em>2030 年 AI 电力建设对中国来说看起来比对美国更可行。基于前文估算，来自</em>。</p>
+<p><a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">Racing to the Trillion-Dollar Cluster</a></p>
+<h4 id="2-算法"><a class="header" href="#2-算法">2. <strong>算法</strong></a></h4>
+<p>如 <a href="https://situational-awareness.ai/from-gpt-4-to-agi/">Counting the OOMs</a> 中广泛讨论的，扩大算力只是故事的一部分：算法进步大概至少贡献了 AI 进展的一半。我们<em>现在</em>正在开发 AGI 的关键算法突破（由于<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#The_data_wall">数据墙</a>，这本质上是算法中的 EUV）。</p>
+<p>默认情况下，我预期西方实验室会遥遥领先；它们拥有许多关键人才，并且近年来开发了所有关键突破。几年后，这种优势的规模很可能等同于一个大 10 倍（甚至 100 倍）的集群；这会为美国提供相当舒适的领先。</p>
+<p>然而，按照当前路径，我们会完全交出这一优势：正如<a href="https://situational-awareness.ai/lock-down-the-labs/">安全章节</a>广泛讨论的，当前安全状态本质上让中国渗透美国实验室变得轻而易举。因此，除非我们很快锁住实验室，否则我预期中国能够直接偷走 AGI 的关键算法配方，并匹配美国能力。<a href="#footnote-9-140">9</a></p>
+<p>（更糟的是，如果我们不改善安全，中国还有一条更突出的竞争路径。他们甚至不需要训练自己的 AGI：他们可以直接偷走 AGI 权重。一旦他们偷到<a href="https://situational-awareness.ai/from-agi-to-superintelligence/">自动化 AI 研究员</a>的副本，他们就可以全速前进，启动自己的智能爆炸。如果他们愿意比美国更少谨慎——包括好的谨慎，以及不合理监管和延迟——他们可能会更快冲过智能爆炸，超过我们到达超级智能。）</p>
+<p>到目前为止，美国科技公司在 AI 和 scaling 上的下注远大于任何中国努力；因此，我们遥遥领先。但现在把中国排除在外，有点像 2022 年末 ChatGPT 出来时把 Google 排除在 AI 竞赛之外。Google 那时还没有把努力集中到强烈 AI 下注上，看起来 OpenAI 远远领先——但一旦 Google 醒来，一年半后，它就发起了非常严肃的竞争。中国也有清晰路径发起非常严肃的竞争。如果并且当中共在 AGI 竞赛中动员起来，图景可能会开始变得非常不同。</p>
+<p>也许中国政府会无能；也许它们认为 AI 威胁中共，并施加<a href="https://cset.georgetown.edu/publication/china-ai-law-draft">窒息性监管</a>。但我不会指望这一点。</p>
+<p>就我而言，我认为我们需要在假设会面对中国全力 AGI 努力的情况下行动。随着每年 AI 能力大幅跃迁，随着我们开始看到软件工程师的早期自动化，随着 AI 收入爆炸并开始看到 10 万亿美元估值和万亿美元集群建设，随着更广泛共识开始形成：我们正处于 AGI 门槛上——中共会注意到。正如我预期这些跃迁会唤醒美国政府对 AGI 的认识，我也预期它会唤醒中共对 AGI 的认识——并唤醒他们认识到在 AGI 上落后对国家实力意味着什么。</p>
+<p>他们会是强大的对手。</p>
+<p><strong>威权危险</strong></p>
+<p>一个掌握超级智能力量的独裁者，会拥有我们从未见过的集中权力。除了能把意志强加给其他国家，他们还可以在国内永久固定自己的统治。数百万个 AI 控制的机器人执法人员可以管控民众；大规模监控会被极度增强；忠于独裁者的 AI 可以逐个评估每个公民是否有异见，并用先进、近乎完美的测谎找出任何不忠。</p>
+<p>最重要的是，机器人军队和警察部队可以完全由单一政治领袖控制，并被编程为完美服从——不再有政变或民众叛乱的风险。</p>
+<p>过去的独裁统治从未永久存在，而超级智能可以基本消除历史上对独裁者统治的所有威胁，并锁定其权力（参见<a href="https://docs.google.com/document/d/1mkLFhxixWdT5peJHq4rfFzq4QbHyfZtANH1nou68q88/edit#heading=h.w0odoleyhzrt">价值锁定</a>）。如果中共获得这种力量，它们可以彻底执行党对“真相”的理解。</p>
+<p>说清楚，我担心独裁者获得超级智能，并不只是因为“我们的价值观更好”。我强烈相信自由和民主，是因为我不知道正确价值究竟是什么。在历史长河中，“<a href="https://supreme.justia.com/cases/federal/us/250/616/#tab-opinion-1928348">时间已经颠覆了许多交战信仰</a>”。我认为我们应当<a href="https://www.forourposterity.com/burkean-longtermism/">把信任放在纠错机制</a>、实验、竞争和适应上。</p>
+<p>超级智能会赋予掌握它的人压倒反对者、异议，并锁定其关于人类宏大计划的力量。任何人都很难抵抗使用这种力量的可怕诱惑。我真诚希望，我们能够转而依赖制宪者的智慧——让截然不同的价值观蓬勃发展，并保留定义了美国实验的喧闹多元。</p>
+<p>AGI 竞赛的利害关系，不只是某个遥远代理人战争中的优势，而是自由和民主能否在下个世纪及更久之后继续存续。人类历史进程残酷而清楚。20 世纪暴政两次威胁全球；我们绝不能幻想这种威胁已经永远消失。对我的许多年轻朋友来说，自由和民主感觉像是理所当然——但它们不是。历史上迄今最常见的政治制度是威权主义。<a href="#footnote-10-140">10</a></p>
+<p>我真的不知道中共及其威权盟友的意图。但提醒一下：中共是一个建立在对也许是人类历史上<a href="https://en.wikipedia.org/wiki/Mao_Zedong">最严重极权大屠杀者</a>的<a href="https://english.news.cn/20231226/b7f98403ef3b4c01add52d2c93148f66/c.html">持续崇拜</a>之上的政权（“估计因饥荒、迫害、劳改和大规模处决造成 4000 万到 8000 万受害者”）；一个最近把一百万维吾尔人关进<a href="https://www.theatlantic.com/the-uyghur-chronicles/">集中营</a>并<a href="https://www.economist.com/china/2023/08/24/the-world-should-study-chinas-crushing-of-hong-kongs-freedoms">压垮</a>自由香港的政权；一个系统性地通过大规模监控进行社会控制的政权，既有<a href="https://www.nytimes.com/2022/06/21/world/asia/china-surveillance-investigation.html">新式</a>（追踪手机、DNA 数据库、人脸识别等），也有<a href="https://www.nytimes.com/2024/05/25/world/asia/china-surveillance-xi.html">旧式</a>（招募一支公民大军报告邻居）的方式；一个确保<a href="https://citizenlab.ca/2020/05/wechat-surveillance-explained/">所有短信</a>经过审查，并为了压制异议可以在海外孩子参加抗议时<a href="https://www.amnesty.org/en/latest/news/2024/05/china-overseas-students-face-harassment-and-surveillance-in-campaign-of-transnational-repression/">把家人带到警察局</a>的政权；一个<a href="https://www.bbc.com/news/world-asia-china-43361276">巩固</a>习近平终身独裁地位的政权；一个公开宣扬其目标是军事压垮并“<a href="https://sg.news.yahoo.com/china-educate-taiwan-takes-over-101045402.html">再教育</a>”一个自由邻国的政权；一个<a href="https://www.uscc.gov/sites/default/files/testimonies/SFR%20for%20USCC%20TobinD%2020200313.pdf">明确寻求</a>以中国为中心的世界秩序的政权。</p>
+<p><em>自由世界必须在这场竞赛中战胜威权强国。</em> 我们的和平与自由归功于美国经济和军事优势。也许即使拥有超级智能，中共也会在国际舞台上负责任地行事，各自相安无事。但这一类独裁者的历史并不好看。如果美国及其盟友未能赢得这场竞赛，我们会把一切都置于风险之中。</p>
+<p><strong>保持健康领先对安全将具有决定性</strong></p>
+<p>科学和技术的受诅咒历史是：它们展开奇迹的同时，也扩大了毁灭手段：从棍棒和石头，到刀剑和长矛、步枪和大炮、机枪和坦克、轰炸机和导弹、核武器。随着技术进步，“毁灭/美元”曲线一直下降。我们应该预期，超级智能之后的快速技术进步会沿着这一趋势。</p>
+<p>也许生物学的剧烈进展会产生非同寻常的新型生物武器，它们悄无声息、迅速传播，然后在指令下以完美致死率杀人（并且可以极其便宜地制造，甚至恐怖组织也负担得起）。也许新型核武器使核武库规模增加多个数量级，并拥有无法探测的新投送机制。也许蚊子大小的无人机，每个携带致命毒物，可以被定向用来杀死对立国家的每一个成员。一个世纪的技术进步会产生什么很难知道——但我确信它会展开令人震惊的可能性。</p>
+<p>人类在冷战期间勉强避免了自我毁灭。从历史视角看，AGI 带来的最大存在风险是：它会使我们开发出非同寻常的大规模死亡新手段。这一次，这些手段甚至可能扩散到流氓行为者或恐怖分子手中（尤其是如果像<a href="https://situational-awareness.ai/lock-down-the-labs/">当前</a>路径那样，超级智能权重没有得到充分保护，可以被朝鲜、伊朗等直接偷走）。</p>
+<p>朝鲜已经有一个协调一致的生物武器项目：美国<a href="https://www.state.gov/wp-content/uploads/2023/04/13APR23-FINAL-2023-Treaty-Compliance-Report-UNCLASSIFIED-UNSOURCED.pdf">评估</a>称“朝鲜有一个专门的国家级进攻项目”来开发和生产生物武器。看起来合理的是，他们的主要约束是其少数顶尖科学家能把（合成）生物学边界推进多远。当这一约束被移除，当他们能用数百万个超级智能加速生物武器研发时会发生什么？例如，美国<a href="https://www.state.gov/wp-content/uploads/2023/04/13APR23-FINAL-2023-Treaty-Compliance-Report-UNCLASSIFIED-UNSOURCED.pdf">评估</a>称朝鲜目前对生物产品进行基因工程的能力“有限”——当它变成无限时会发生什么？他们会用何种亵渎的新混合物把我们挟持为人质？</p>
+<p>此外，正如<a href="https://situational-awareness.ai/superalignment/">超级对齐章节</a>所讨论，在智能爆炸前后和期间会有极端安全风险——我们会面对新的技术挑战，确保能可靠信任和控制超人类 AI 系统。这很可能要求我们在一些关键时刻放慢速度，比如在智能爆炸中途延迟 6 个月，以获得额外安全保证，或者把大量算力用于对齐研究而不是能力进展。</p>
+<p>有人希望建立某种国际安全条约。在我看来，这有点幻想。中共和美国政府都足够相信 AGI、认真对待安全风险的世界，也是双方都意识到国际经济和军事主导地位悬于其上的世界，也是双方都意识到 AGI 落后数月可能意味着永久落后的世界。如果竞赛紧张，那么任何军控均衡，至少在超级智能前后早期阶段，看起来都极不稳定。简言之，“突破”太容易：冲过智能爆炸、达到超级智能和决定性优势的激励（以及害怕其他人会利用这种激励的恐惧）太大。<a href="#footnote-11-140">11</a> 至少，我们在这里得到足够好安排的概率似乎很小。（气候条约进展如何？相比这个问题，那看起来容易得多。）</p>
+<p>我们拥有的主要希望——也许是唯一希望——是一个民主国家联盟对敌对强国拥有健康领先。美国必须领导，并利用这种领先对世界其他地方执行安全规范。这是我们在<a href="https://marginalrevolution.com/marginalrevolution/2023/04/the-nuclear-non-proliferation-treaty-and-existential-agi-risk.html">核武器上走过的路径</a>：以核技术和平用途援助换取国际不扩散制度（最终由美国军事力量背书）——也是唯一被证明有效的路径。</p>
+<p>也许最重要的是，健康领先给我们机动空间：如果必要，可以“兑现”部分领先来把安全做对，例如在智能爆炸期间投入额外工作做对齐。</p>
+<p>如果你身处一场并驾齐驱的军备竞赛，超级智能的安全挑战会变得<em>极其</em>难以管理。2 年领先与 2 个月领先之间很容易决定一切。如果我们只有 2 个月领先，就完全没有安全余量。出于对中共智能爆炸的恐惧，我们几乎肯定会毫无保留地冲过自己的智能爆炸——在几个月内冲向远比人类聪明的 AI 系统，没有任何能力放慢下来把关键决策做对，并承担随之而来的超级智能失控全部风险。我们会面对极端动荡局势，因为我们和中共都会迅速开发非同寻常的新军事技术，并反复破坏威慑稳定。如果我们的秘密和权重<a href="https://situational-awareness.ai/lock-down-the-labs/">没有被锁住</a>，这甚至可能意味着一批其他流氓国家也接近拥有这种能力，每个都用超级智能装备自己的新型超级 WMD 武库。即使我们勉强领先，这也很可能是一场惨胜；这场存在性斗争会把世界带到完全自我毁灭的边缘。</p>
+<p>如果民主盟友拥有健康领先，比如 2 年，<a href="#footnote-12-140">12</a>超级智能看起来会非常不同。这会为我们买到必要时间，去穿越超级智能前后将面对的一系列史无前例挑战，并稳定局势。</p>
+<p>如果并且当美国将决定性胜出变得清楚，<em>那时</em>我们会向中国和其他对手提出交易。他们会知道自己赢不了，因此会知道自己唯一选择是来到谈判桌；而我们也宁愿避免他们陷入狂热对峙，或做出最后一搏式军事尝试来破坏西方努力。作为不干涉其内部事务、并分享超级智能和平利益的交换，一个不扩散制度、安全规范，以及超级智能之后某种稳定的外观，可以诞生。</p>
+<p>无论如何，随着我们更深地进入这场斗争，我们不能忘记自我毁灭威胁。我们能完整穿过冷战，包含太多运气<a href="#footnote-13-140">13</a>——而这一次毁灭力可能比当时强千倍。由美国领导的民主国家联盟拥有健康领先，并庄严地运用这种领导力来稳定我们最终所处的任何动荡局面，大概是穿越这道悬崖的最安全路径。但在 AGI 竞赛白热化时，我们最好不要搞砸。</p>
+<p><strong>超级智能是国家安全问题</strong></p>
+<p>很清楚：AGI 是美国国家安全的存在性挑战。是时候开始这样对待它了。</p>
+<p>美国政府正在慢慢行动。对美国芯片的出口管制意义重大，而且在当时是极有远见的一步。但我们必须全面认真起来。</p>
+<p>美国<em>确实</em>有领先。我们只需要保持它。而我们现在正在把它搞砸。最重要的是，我们必须迅速且彻底地<a href="https://situational-awareness.ai/lock-down-the-labs/">锁住 AI 实验室</a>，在未来 12 到 24 个月泄露关键 AGI 突破（或 AGI 权重本身）之前做到这一点。我们必须在美国建设算力集群，而不是建在提供轻松资金的独裁国家。是的，美国 AI 实验室有责任与情报界和军方合作。美国在 AGI 上的领先，不会仅靠构建最好的 AI 女友应用来保障和平与自由。这并不好看——但我们必须为美国防务构建 AI。</p>
+<p>我们已经处在几十年来最易燃的国际局势道路上。普京正在东欧推进。中东在燃烧。中共把夺取台湾视为自己的命运。现在再加入 AGI 竞赛。再加入超级智能后把一个世纪技术突破压缩到数年。它会成为有史以来最不稳定的国际局势之一——而且至少一开始，先发打击的激励会非常巨大。<a href="#footnote-14-140">14</a></p>
+<p>AGI 时间线（约 2027 年？）与台湾观察者的台湾入侵时间线（<a href="https://www.bloomberg.com/news/articles/2024-03-20/china-on-track-to-be-ready-for-taiwan-invasion-by-2027-us-says?embedded-checkout=true">中国到 2027 年准备好入侵台湾？</a>）之间已经出现令人不安的重合——随着世界醒悟到 AGI，这种重合肯定只会加剧。（想象一下，如果在 1960 年，世界绝大多数铀矿床不知为何集中在柏林！）在我看来，AGI 终局确实有可能以世界大战为背景展开。那时一切都无法预料。</p>
+<p>系列下一篇：<strong>IV. 项目</strong></p>
+<p>例如，Yi-Large</p>
+<p><a href="https://www.reddit.com/r/singularity/comments/1cyoun2/yilarge_catching_up_to_gpt4_overtakes_claude_3/">看起来</a>在 LMSys 上是 GPT-4 级模型，但那已经是 OpenAI 发布 GPT-4 一年多以后了。<a href="#note-1-140">↩</a> 类似地，Qwen 的 hugging face 代码大量引用 Mistral，而中国 LLM 对美国开源的依赖似乎是一个</p>
+<p><a href="https://www.scmp.com/tech/big-tech/article/3255545/china-said-fall-short-matching-us-advances-ai-owing-many-challenges-theory-and-technologies">明确担忧</a>，已经传到了中国总理那里。<a href="#note-2-140">↩</a> Huawei Ascend 910B 似乎</p>
+<p><a href="https://www.reuters.com/technology/nvidia-cuts-china-prices-huawei-chip-fight-sources-say-2024-05-24/">每张卡约 12 万人民币</a>，约 1.7 万美元。它<a href="https://www.semianalysis.com/p/nvidias-new-china-ai-chips-circumvent">由 SMIC 7nm</a>节点生产，同时表现类似 A100。H100 也许比 A100 好约 3 倍，而成本略高（ASP 2 万到 2.5 万美元），这表明中国目前获得等效 AI GPU 性能的成本只高约 2 到 3 倍。<a href="#note-3-140">↩</a> 例如，他们仍在使用西方 HBM 内存（不知为何它没有被出口管制？），不过</p>
+<p><a href="https://www.semianalysis.com/p/nvidias-new-china-ai-chips-circumvent">据说 CXMT 明年会送样 HBM</a>。<a href="#note-4-140">↩</a> 不过，由于他们仍能从西方进口其他类型芯片，他们可以简单地把自己的整个 7nm 节点都指向 AI 芯片，从而弥补总体产量较低的问题。</p>
+<p><a href="#note-5-140">↩</a> 值得注意的是，即使网络犯罪分子也能</p>
+<p><a href="https://www.bloomberg.com/news/articles/2022-03-01/nvidia-says-hackers-stole-data-from-network-and-posted-it-online?sref=o4HC3q1q">黑进 Nvidia</a>，并获得<a href="https://www.semianalysis.com/p/nvidia-hacked-a-national-security?s=r">关键 GPU 设计</a>秘密。此外，最近被起诉的 Google 中国公民所窃取内容中，<a href="https://deliprao.substack.com/p/google-tpu-v6-designs-are-probably">TPUv6 设计显然也在其中</a>。<a href="#note-6-140">↩</a> 例如，也许这些在性能/美元或性能/瓦特上差 2 倍。反过来，这也意味着要达到同样整体数据中心性能，你需要更多电力，并需要把更多芯片联网在一起，这也会让事情更麻烦。</p>
+<p><a href="#note-7-140">↩</a> 注意，即使芯片贵 3 倍，数据中心成本的增幅也会远低于 3 倍。实际逻辑晶圆厂成本低于 Nvidia GPU 成本的 5%，即使考虑内存和 CoWoS，由于 Nvidia 利润率，它也低于 Nvidia 标价的 20%。而 GPU 本身通常也只占数据中心成本的 50% 到 60%。因此，芯片制造端贵 3 倍，可能转化为整体成本远远低于 3 倍的增加。即使芯片贵 10 倍，中国似乎也能承受，而不会大幅增加数据中心成本。</p>
+<p><a href="#note-8-140">↩</a> 有人认为，即使中国偷到了这些秘密，它们也无法竞争，因为需要默会知识。我不同意。我把这看成有两层。底层是大型训练运行的工程能力；这些训练运行可能很 hacky、很精细，需要默会知识。但正如</p>
+<p><a href="https://docs.google.com/document/d/1rWU00M9JGybX_EtYoKxAwXnoMbxhQv1v0vaCWRNc5iw/edit#bookmark=id.vyfc2cj0wo1f">我稍后会讨论的</a>，中国 AI 努力已经证明自己完全能够训练大规模模型，我认为他们会本土拥有这种默会知识。上层是算法配方——模型架构、正确缩放律等——这些可以在一小时电话里传达。这些算力倍增器通常是离散变化，意味着底层大型训练运行的默会知识应当可转移。我不认为“默会知识”会成为中国 AGI 努力的决定性障碍。<a href="#note-9-140">↩</a>（主要是君主制。）</p>
+<p><a href="#note-10-140">↩</a> 考虑以下不稳定与稳定军控均衡的比较。冷战期间 1980 年代的军控大幅减少核武器，但目标是一个稳定均衡。美国和苏联仍各有数千枚核武器。MAD 得到保证，即使一方试图紧急建设更多核武器；流氓国家可以尝试建造一些自己的核武器，但无法从根本上威胁美国或苏联并压倒它们。</p>
+<p>然而，当裁军降到非常低的武器水平，或发生在快速技术变化之中时，均衡是不稳定的。流氓行为者或违反条约者可以轻松启动紧急项目，并威胁完全压倒其他玩家。零核武器不会是稳定均衡；类似地，</p>
+<p><a href="https://www.tandfonline.com/doi/abs/10.1080/01636608709477602?journalCode=rwaq20&amp;ref=forourposterity.com">这篇论文</a>有一些有趣的历史案例研究（例如一战后军备限制和华盛顿海军条约），在类似动态情境中，裁军不是稳定而是破坏了稳定。如果仅仅几个月 AGI 领先就会带来完全决定性优势，这会让 AI 上的稳定裁军同样困难。流氓新玩家或违反条约者可以通过秘密启动紧急项目获得巨大边际优势；诱惑太大，任何安排都很难稳定。</p>
+<p><a href="#note-11-140">↩</a> 值得理解的是，从 AI 能力差异角度看，2 年有多么重要。考虑到今天 AI 进步已经很快，以及我们在</p>
+<p><a href="https://docs.google.com/document/d/1rWU00M9JGybX_EtYoKxAwXnoMbxhQv1v0vaCWRNc5iw/edit#bookmark=id.syrji3eimr65">智能爆炸</a>中应预期的更快速度，以及超级智能后的更广泛技术爆炸，“即使”2 年领先也意味着能力上的巨大差异。<a href="#note-12-140">↩</a> Daniel Ellsberg</p>
+<p><a href="https://www.amazon.com/Doomsday-Machine-Confessions-Nuclear-Planner/dp/1608196704">对此有扣人心弦的叙述</a>，他当时是 RAND 和国家安全体系中的核战争规划者之一。<a href="#note-13-140">↩</a> 每个人都会竞相发展自己的超级智能；在领先者不可逆地拉开差距之前，会有一个有限窗口。各方会有很大激励，试图在敌方超级智能集群获得足够物理优势（例如使用超级智能开发不可穿透导弹防御或无人机群）并把所有人永久甩在身后之前，先瘫痪这些集群。</p>
+<p><a href="#note-14-140">↩</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="美国将启动国家级-agi-项目"><a href="#美国将启动国家级-agi-项目" class="header">美国将启动国家级 AGI 项目</a></h1>
+<p><strong>随着通往 AGI 的竞赛加剧，国家安全机器将会介入。美国政府（USG）会从沉睡中醒来，到 27/28 年，我们会看到某种形式的政府 AGI 项目。没有任何初创公司能处理超级智能。终局将在某个 SCIF（敏感隔离信息设施）里展开。</strong></p>
+<p>“我们必须好奇地去理解，这样一组东西——数百座发电厂、数千枚炸弹、数以万计汇聚在国家机构中的人——如何能追溯到少数几个人坐在实验台前，讨论某一种原子的奇特行为。”</p>
+<p>Spencer R. Weart</p>
+<p>如今，有很多“AI 治理”计划被提出来，从给前沿 AI 系统发放许可，到安全标准，再到为学术界提供几亿美元算力的公共云。这些计划看起来用意良好——但在我看来，它们似乎犯了类别错误。</p>
+<p>*我认为，美国政府会允许一个随机的旧金山初创公司开发超级智能，这个命题是<strong>荒谬</strong>的。*想象一下，如果我们当年是让 Uber 自己临场发挥来开发原子弹，会是什么样。</p>
+<p>超级智能——比人类聪明<em>很多</em>的 AI 系统——将拥有巨大的力量，从开发新型武器，到推动经济增长爆炸。超级智能将成为国际竞争的中心；几个月的领先优势，在军事冲突中就可能具有决定性。</p>
+<p>那些无意识地把我们短暂的历史喘息期内化为常态的人，才会以为这不会召唤出更原始的力量。像我们之前的许多科学家一样，旧金山最杰出的头脑希望他们能够控制自己正在孕育的恶魔的命运。此刻，他们仍然可以；因为他们是少数拥有态势感知、理解自己正在建造什么的人。但在未来几年，世界会醒来。国家安全机器也会醒来。历史会凯旋归来。</p>
+<p>就像过去很多次一样——新冠、二战——美国一开始看起来似乎在方向盘前睡着了；然后突然之间，政府会以最非凡的方式切入高速档。几年之内，只要模型能力和 AI 讨论再经历几次“2023 级别”的跃迁，就会出现一个时刻，人们会清楚地看到：我们正站在 AGI 的门槛上，随后不久就是超级智能。具体机制上会有很多变化，但无论以何种方式，美国政府都会站到舵位上；领先实验室将会“自愿”合并；国会会为芯片和电力拨出数万亿美元；一个民主国家联盟会形成。</p>
+<p>初创公司在很多事情上很出色——但单靠一家初创公司，根本没有能力负责美国最重要的国防项目。我们将需要政府介入，才有哪怕一点希望抵御即将面对的全面间谍威胁；私人 AI 努力几乎等同于把超级智能直接交到中共手里。我们需要政府来确保至少有一个像样的指挥链；不能让随机 CEO（或随机非营利董事会）掌握核按钮。我们需要政府管理超级智能带来的严峻安全挑战，管理智能爆炸的战争迷雾。我们需要政府部署超级智能来防御任何可能出现的极端威胁，穿过随后极其动荡、破坏稳定的国际局势。我们需要政府动员一个民主国家联盟，在与威权国家的竞赛中获胜，并为世界其他地区建立（并执行）防扩散制度。我希望事情不是这样——但我们会需要政府。（是的，无论是哪一届政府。）</p>
+<p>无论如何，我的主要主张不是规范性的，而是描述性的。几年之内，「项目」（The Project）就会启动。</p>
+<p><strong>通往「项目」的道路</strong></p>
+<p>有一段事态发展深深烙在我的记忆里：2020 年 2 月底到 3 月中旬。在 2 月最后几周和 3 月最初几天，我极其绝望：当时已经很清楚，我们处在新冠指数增长曲线上；一场瘟疫即将席卷全国，医院崩溃迫在眉睫——然而几乎没有人认真对待。纽约市长仍在把对新冠的担忧斥为种族主义，并鼓励人们去看百老汇演出。我能做的只有买口罩和做空市场。</p>
+<p>然而仅仅几周之内，整个国家关闭，国会拨出数万亿美元（字面意义上超过 GDP 的 10%）。提前看清指数曲线会走向何处太难了，但当威胁足够接近、足够存亡攸关时，非凡的力量就会被释放出来。反应来得晚，粗糙而生硬——但它来了，而且规模惊人。</p>
+<p>未来几年 AI 的感觉会很像。我们现在正处在中局。2023 年已经是一次剧烈转变。AGI 从一个你可能都不愿与之关联的边缘话题，变成了重大参议院听证会和世界领导人峰会的主题。考虑到我们仍然还在很早期，美国政府的参与程度已经让我印象深刻。再来几次“2023”，奥弗顿窗口就会被彻底打开。</p>
+<p>随着我们<a href="https://situational-awareness.ai/from-gpt-4-to-agi/">冲过一个又一个数量级</a>，跃迁会继续。到 2025/2026 年左右，我预计会出现下一次真正令人震惊的阶跃变化；AI 将为大型科技公司带来<a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">每年 1000 亿美元以上收入</a>，并在原始问题解决能力上胜过博士。就像新冠导致的股市崩盘让许多人开始认真对待新冠一样，我们会看到 10 万亿美元公司，AI 狂热会无处不在。如果这还不够，到 2027/28 年，我们会有在 1000 亿美元以上集群上训练出来的模型；完整形态的 AI 智能体/即插即用远程员工将开始广泛自动化软件工程和其他认知工作。每一年，加速都会让人头晕目眩。</p>
+<p>虽然很多人现在还看不到 AGI 的可能性，但最终会形成共识。有些人，比如 Szilard，比其他人早得多看到了原子弹的可能性。他们的警报起初并不受欢迎；炸弹的可能性被认为很遥远（或者至少，人们觉得保守且恰当的做法是淡化这种可能性）。Szilard 对保密的热切呼吁遭到嘲笑和忽视。但随着越来越多经验结果出现，许多最初持怀疑态度的科学家开始意识到，炸弹是可能的。一旦大多数科学家相信我们正站在炸弹门槛上，政府也就认为国家安全上的紧迫性太大——于是曼哈顿计划启动。</p>
+<p>随着<a href="https://situational-awareness.ai/from-gpt-4-to-agi/">数量级</a>从理论外推变成（非凡的）经验现实，在领先科学家、企业高管和政府官员之间，也会逐渐形成共识：我们正站在门槛上，站在 AGI 的门槛上，站在智能爆炸的门槛上，站在超级智能的门槛上。在这个过程中，我们会看到第一批真正令人恐惧的 AI 演示：也许是常被讨论的“帮助新手制造生物武器”，或自主入侵关键系统，或完全不同的东西。届时会变得清楚：无论你喜欢与否，这项技术都将是<a href="https://situational-awareness.ai/the-free-world-must-prevail/#Whoever_leads_on_superintelligence_will_have_a_decisive_military_advantage">具有完全决定性的军事技术</a>。即使我们足够幸运，没有处在一场大战之中，中共也很可能已经注意到这一点，并启动一项强大的 AGI 努力。也许最终（不可避免地）发现中共渗透美国领先 AI 实验室，会引发巨大震动。</p>
+<p>大约在 26/27 年前后，华盛顿的气氛会变得凝重。人们会开始从直觉上感受到正在发生的事；他们会<em>害怕</em>。从五角大楼的走廊到国会闭门简报室，都会回响一个显而易见的问题，一个萦绕在每个人心头的问题：我们需要一个 AGI 曼哈顿计划吗？一开始慢慢地，然后突然之间，事情会变得清楚：这正在发生，事态会变得极其剧烈，这是自原子弹发明以来，美国国家安全面临的最重要挑战。国家安全机器将以某种形式非常深度地介入。「项目」将成为必要的、事实上也是唯一可信的回应。</p>
+<p>当然，这是一种极度简化的叙述——很多事情取决于共识何时以及如何形成、关键的警示事件等等。华盛顿以运作失灵闻名。就像新冠，甚至就像曼哈顿计划一样，政府会来得极晚，而且手法笨拙。<a href="https://www.amazon.com/Making-Atomic-Bomb-Richard-Rhodes/dp/1451677618">在</a> Einstein 于 1939 年写给总统的信（由 Szilard 起草）之后，铀顾问委员会成立了。但官员们很无能，起初几乎没有发生什么。例如，Fermi 只拿到 6000 美元（约合今天 13.5 万美元）来支持他的研究，而且这笔钱也不是轻易给出的，而是在等待数月后才收到。Szilard 认为，由于当局短视而迟缓，项目<a href="https://en.wikipedia.org/wiki/Lyman_James_Briggs#:~:text=Le%C3%B3%20Szil%C3%A1rd%20believed%20that%20the,action%20that%20was%20often%20needed.">至少延误了一年</a>。1941 年 3 月，英国政府最终认定原子弹不可避免。美国委员会最初完全无视这份英国报告数月——直到 1941 年 12 月，全面的原子弹努力才终于启动。</p>
+<p>实际操作上，这可以有很多种形式。说清楚，这不一定要看起来像字面意义上的国有化，让 AI 实验室研究员现在都受雇于军方之类（虽然也可能如此！）。<a href="#footnote-1-73">1</a> 相反，我预计会是一种更圆滑的协调安排。与国防部（DoD）的关系，可能类似于国防部与 Boeing 或 Lockheed Martin 的关系。也许通过国防合同或类似机制，主要云计算提供商、AI 实验室和政府之间会成立一家合资实体，使其在功能上成为国家安全机器的一个项目。就像 AI 实验室在 2023 年“自愿”向白宫作出承诺一样，西方实验室可能或多或少会“自愿”同意并入国家级努力。鉴于涉及数万亿美元投资，也出于制衡需要，国会很可能必须参与其中。<a href="#footnote-2-73">2</a> 所有这些细节最终如何展开，是另一天的故事。</p>
+<p>但到 26 年底/27 年/28 年，它会启动。核心 AGI 研究团队（数百名研究人员）会迁往一个安全地点；万亿美元集群会以创纪录速度建成；「项目」会启动。</p>
+<p>**为什么「项目」是唯一道路 **</p>
+<p>我对政府没有任何幻想。政府面对各种限制和糟糕激励。我非常相信美国私营部门，并且几乎从不会主张政府重度介入技术或产业。</p>
+<p>我曾经也用同样框架看待 AGI——直到我加入一家 AI 实验室。AI 实验室在一些事情上很擅长：它们能把 AI 从学术科学项目带到商业大舞台，这是只有初创公司才能做到的。但归根结底，AI 实验室仍然是初创公司。我们根本不应该指望初创公司有能力处理超级智能。</p>
+<p>这里没有好选项——但我看不到另一条路。当一项技术对国家安全变得如此重要时，我们会需要美国政府。</p>
+<p><strong>超级智能将成为美国最重要的国防项目</strong></p>
+<p>我在前面的文章里讨论过<a href="https://situational-awareness.ai/from-agi-to-superintelligence/#The_power_of_superintelligence">超级智能的力量</a>。几年之内，超级智能会彻底<a href="https://situational-awareness.ai/the-free-world-must-prevail/">改写军事力量平衡</a>。* *到 2030 年代初，美国的整个武库（无论你喜不喜欢，它都是全球和平与安全的基石）很可能会过时。这不只是现代化问题，而是全面替换问题。</p>
+<p>简言之，人们会清楚看到，AGI 的开发更像核武器，而不是互联网。是的，它当然会是军民两用——但核技术也曾是军民两用。民用应用会有它的时代。但在 AGI 终局的迷雾中，无论好坏，国家安全都会成为主要背景。</p>
+<p>面对快速技术变化，我们需要在几年之内彻底重塑美军——否则就有被这样做的对手完全压倒的风险。也许最重要的是，最初的优先事项将是把超级智能部署到防御应用中，开发对策，以便在无法计数的新威胁中生存下来：拥有超人黑客能力的对手、可能对我们的核威慑力量发动先发制人打击的新型隐身无人机蜂群、可被武器化的合成生物学进展扩散、动荡的国际（以及国内）权力斗争，以及失控的超级智能项目。</p>
+<p>无论名义上是否私人化，AGI 项目都需要、也<em>将会</em>内在地成为一个国防项目，并且需要与国家安全机器进行极其紧密的合作。</p>
+<p><strong>面向超级智能的合理指挥链</strong></p>
+<p>超级智能的力量——以及挑战——将属于一个与我们习惯从科技公司那里看到的任何东西都截然不同的参考类别。事情似乎很清楚：它不应该处在一个随机 CEO 的单边指挥之下。事实上，在私人实验室开发超级智能的世界里，个别 CEO 很可能<a href="https://situational-awareness.ai/from-agi-to-superintelligence/#The_power_of_superintelligence">拥有能力</a><em>真的发动对美国政府的政变</em>。<a href="#footnote-3-73">3</a> 想象一下，如果 Elon Musk 对核武库拥有最终指挥权会怎样。<a href="#footnote-4-73">4</a>（或者如果一个随机非营利董事会可以决定夺取核武库控制权。）</p>
+<p>这也许显而易见，但：作为一个社会，我们已经决定，军队应该由民主政府控制；<a href="#footnote-5-73">5</a> 超级智能至少在最初会是最强大的军事武器。激进的提议不是「项目」；激进的提议是赌私人 AI CEO 可以掌握军事力量并成为仁慈的独裁者。</p>
+<p>（事实上，在私人 AI 实验室世界里，情况很可能比随机 CEO 掌握核按钮还要糟——AI 实验室糟糕安全的一部分，是它们完全缺乏内部控制。也就是说，随机 AI 实验室员工（没有任何审查）可能在无人察觉的情况下叛变。）</p>
+<p>我们需要一个合理的指挥链——以及所有其他必然伴随负责任运用类似大规模杀伤性武器能力的流程与保障措施——而这需要政府来做到。从某种意义上说，这只是一个 Burkean（伯克式）论证：限制政府权力的那些机构、宪法、法律、法院、制衡、规范，以及对自由民主秩序的共同承诺（例如将军拒绝执行非法命令），已经经受了数百年的考验。与此同时，特殊的 AI 实验室治理结构第一次受到考验就崩塌了。如果美国军队愿意，它本来就几乎可以杀死美国境内每一个平民，或夺取政权——而我们制衡政府对核武器权力的方式，并不是让大量私营公司拥有自己的核武库。只有一套指挥链和一组制度已经证明自己能够承担这项任务。</p>
+<p>再说一次，也许你是真正的自由意志主义者，并且在规范性上不同意（让 Elon Musk 和 Sam Altman 指挥他们自己的核武库吧！）<a href="#footnote-6-73">6</a> 但一旦超级智能显然成为一个首要国家安全问题，我确信华盛顿的男男女女会这样看待它。</p>
+<h4 id="超级智能的民用用途"><a class="header" href="#超级智能的民用用途">超级智能的民用用途</a></h4>
+<p>当然，这并不意味着超级智能的民用应用会被政府保留。</p>
+<ul>
+<li>核链式反应最初是作为政府项目被掌握的——核武器也永久由政府保留——但民用核能作为私人项目曾经繁荣发展（在 60 和 70 年代，直到环保主义者把它关闭）。</li>
+<li>Boeing 与军方合作制造了 B-29（二战期间最昂贵的国防研发项目，比曼哈顿计划更贵）、B-47 和 B-52 远程轰炸机——之后又用这些技术制造了 Boeing 707，这种商用飞机开启了喷气时代。今天，虽然 Boeing 只能把隐形战斗机卖给政府，但它可以自由地私下开发和销售民用喷气飞机。</li>
+<li>雷达、卫星、火箭、基因技术、二战工厂等等，也都是类似。</li>
+</ul>
+<p>超级智能的初始开发将由国家安全紧迫性主导，目标是在一个极端动荡时期中生存并稳定局势。超级智能的军事用途仍将由政府保留，安全规范也会被执行。但一旦最初的危险过去，世界稳定下来，自然路径就是参与国家联盟体的公司（以及其他公司）私人化地追求民用应用。</p>
+<p>即使在存在「项目」的世界里，一个私人、多元、基于市场、繁荣发展的超级智能民用应用生态也会迎来自己的时代。</p>
+<p><strong>安全</strong></p>
+<p>我在本系列<a href="https://situational-awareness.ai/lock-down-the-labs/">上一篇文章</a>中已经详细谈过这个问题。按当前路线，我们不如放弃任何美国 AGI 努力；中国可以很快直接窃取所有算法突破和模型权重（字面意义上的超级智能副本）。按当前路线，我们甚至不清楚能否达到对超级智能的“朝鲜防护级”安全。在私人初创公司开发 AGI 的世界里，超级智能会扩散到几十个流氓国家。这完全不可承受。</p>
+<p>如果我们要对此稍微认真一点，显然就需要把这些东西封锁起来。大多数私营公司都没有认真对待这一点。但无论如何，如果我们最终要面对中国间谍活动的全部力量（例如窃取权重成为国家安全部的头号优先事项），一家私营公司大概不可能拥有足够好的安全。到那时，要充分保护 AGI，就需要美国情报共同体的广泛合作。这将涉及对 AI 实验室和 AGI 核心研究团队的侵入性限制，从极端审查到持续监控，到在 SCIF 中工作，到减少离开的自由；并且需要只有政府才能提供的基础设施，最终包括 AGI 数据中心本身的物理安全。</p>
+<p>从某种意义上说，单是安全问题就足以使政府项目成为必要——如果我们不能把这些东西封锁起来，自由世界的领先地位和 AI 安全都会失败。（事实上，我认为这很可能成为最终触发因素之一：一旦中国对 AGI 实验室的渗透变得清楚，每一位参议员、众议员和国家安全官员都会……对此有强烈看法。）</p>
+<p><strong>安全性</strong></p>
+<p>简言之：我们有很多方式把这件事搞砸——从确保我们能够可靠控制并信任很快将负责我们经济和军事的数十亿个超级智能智能体（<a href="https://situational-awareness.ai/superalignment/">超级对齐问题</a>），到控制<a href="https://situational-awareness.ai/the-free-world-must-prevail/#Maintaining_a_healthy_lead_will_be_decisive_for_safety">新型大规模毁灭手段</a>被滥用的风险。</p>
+<p>有些 AI 实验室声称自己致力于安全：它们承认自己正在建造的东西一旦走偏，就可能造成灾难，并承诺到时候会做必要的事。我不知道我们能否足够信任它们的承诺，把每一个美国人的生命押在上面。更重要的是，到目前为止，它们还没有展示出与它们自己承认正在建造的东西相称的能力、可信度或严肃性。</p>
+<p>核心上，它们是初创公司，拥有所有常见的商业激励。竞争可能推动所有实验室直接冲过智能爆炸，而且至少会有一些行动者愿意把安全抛在一边。尤其是，我们也许希望“花掉一部分领先优势”来争取时间解决安全挑战，但西方实验室需要协调才能做到。（当然，私人实验室的 AGI 权重届时已经被偷走，因此它们的安全预防措施甚至也不重要；我们会任由中共和朝鲜的安全预防措施摆布。）</p>
+<p>一种答案是监管。在 AI 发展更慢的世界里，这也许是合适的，但我担心监管根本无法应对智能爆炸这一挑战的性质。所需要的东西不像是花几年时间做仔细评估，然后让一些安全标准通过官僚机构。<em>它会更像打一场战争。</em></p>
+<p>我们将面对一个极端紧张的一年：局势每周都在高速变化；基于含混数据作出的艰难判断会关乎生死；解决方案——甚至问题本身——都无法提前完全清楚，而要取决于在“战争迷雾”中的能力；这会涉及极端取舍，比如：“我们的一些对齐测量看起来含混不清，我们已经不太理解正在发生什么了，也许没事，但有一些警示信号表明下一代超级智能可能会走偏。我们是否应该把下一次训练运行推迟 3 个月，以便在安全上获得更多信心——但糟糕的是，最新情报报告显示中国已经偷走了我们的权重，正在自己冲刺智能爆炸，我们该怎么办？”</p>
+<p>我并不确信一个政府项目能够胜任处理这个问题——但“由初创公司开发超级智能”这个替代方案，比通常认识到的更接近“祈祷一切顺利”。我们需要一个指挥链，能够把做这些艰难取舍所需要的严肃性带到桌面上。</p>
+<p><strong>稳定国际局势</strong></p>
+<p>智能爆炸及其直接后果，将带来人类有史以来最动荡、最紧张的局势之一。我们这一代人并不习惯这个。但在最初阶段，手头任务不是打造很酷的产品，而是以某种方式拼命穿过这段时期。</p>
+<p>我们需要政府项目来赢得与威权国家的竞赛——并给我们必要的清晰领先和喘息空间，以驾驭这一局势的危险。如果我们无法防止超级智能模型权重被立刻窃取，那不如直接放弃。我们会想要捆绑西方努力：把最优秀的科学家聚集起来，使用我们能找到的每一块 GPU，并确保数万亿美元的集群建设发生在美国境内。我们需要保护数据中心，防止对手破坏，甚至直接攻击。</p>
+<p>也许最重要的是，要建立——并在必要时执行——一个防扩散制度，这将需要美国领导力。我们需要阻止俄罗斯、朝鲜、伊朗和恐怖组织使用它们自己的超级智能来开发能让它们挟持世界的技术和武器。我们需要用超级智能强化关键基础设施、军事和政府的安全，以防御极端新型黑客能力。我们需要用超级智能稳定生物学或类似领域进展中的攻防平衡。我们需要开发工具来安全控制超级智能，并关闭其他人不谨慎项目中产生的失控超级智能。AI 系统和机器人将以人类 10 到 100 倍以上的速度行动；一切都会开始极快发生。我们需要准备好处理把一个世纪的技术进步压缩进几年所产生的任何其他六西格玛级剧变——以及随之而来的威胁。</p>
+<p>至少在这个初始时期，我们将面对最非凡的国家安全紧迫性。也许没有人能够胜任这项任务。但在我们拥有的选项中，「项目」是唯一合理的。</p>
+<p><strong>「项目」不可避免；它是否会好并不必然</strong></p>
+<p>归根结底，我这里的主要主张是描述性的：无论我们喜欢与否，超级智能不会像一家旧金山初创公司；它会以某种方式主要属于国家安全领域。过去一年里，我经常向旧金山的朋友提起「项目」。也许最让我惊讶的是，大多数人对这个想法如此惊讶。他们只是没有考虑过这种可能性。但一旦他们考虑了，多数人会同意这似乎显而易见。如果我们对自己认为正在建造的东西哪怕稍微判断正确，<em>那么当然</em>，到最后它会（以某种形式）成为一个政府项目。如果某个实验室明天开发出了字面意义上的超级智能，<em>那么当然</em>，联邦政府会介入。</p>
+<p>一个重要的自由变量不是<em>是否</em>，而是<em>何时</em>。政府会直到我们已经身处智能爆炸中才意识到正在发生什么——还是会提前几年意识到？如果政府项目不可避免，那么更早似乎更好。我们会非常需要那几年时间来进行安全紧急计划，让关键官员跟上并做好准备，建立一个运作正常的合并实验室，等等。如果政府只在最后一刻介入，情况会混乱得多（而秘密和权重也已经被偷走）。</p>
+<p>另一个重要的自由变量是我们能够动员起来的国际联盟：既包括一个更紧密、用于开发超级智能的民主国家联盟，也包括向世界其他国家提出更广泛的收益共享方案。</p>
+<ul>
+<li>前者可能类似于
+<a href="https://en.wikipedia.org/wiki/Quebec_Agreement">《魁北克协定》</a>：Churchill 和 Roosevelt 之间的一项秘密协议，用于汇集双方资源开发核武器，同时承诺不相互使用，也不在未经共同同意的情况下对他国使用。我们会希望纳入英国（DeepMind）、日本和韩国等东亚盟友（芯片供应链），以及 NATO/其他核心民主盟友（更广泛的工业基础）。统一努力会拥有更多资源、人才，并控制完整供应链；能在安全、国家安全和军事挑战上实现密切协调；也能为运用超级智能力量提供有益的制衡。- 后者可能类似于
+<a href="https://en.wikipedia.org/wiki/Atoms_for_Peace">“和平利用原子能”</a>、<a href="https://en.wikipedia.org/wiki/International_Atomic_Energy_Agency">IAEA</a> 和 <a href="https://en.wikipedia.org/wiki/Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons">NPT</a>。我们应该提出与更广泛的国家群体（包括非民主国家）分享超级智能和平收益，并承诺不对它们进攻性使用超级智能。作为交换，它们不追求自己的超级智能项目，在 AI 系统部署上作出安全承诺，并接受对军民两用应用的限制。希望是，这个方案能减少军备竞赛和扩散的激励，并把一个广泛联盟纳入美国主导的后超级智能世界秩序之下。</li>
+</ul>
+<p>也许最重要的自由变量只是：这个不可避免的政府项目是否会有能力。它会如何组织？我们如何把它做成？制衡机制如何运作，合理的指挥链是什么样？几乎没有人把注意力投入到弄清楚这些问题上。<a href="#footnote-7-73">7</a> 几乎所有其他 AI 实验室和 AI 治理政治操作都是次要事件。这才是决定性问题。</p>
+<p><strong>终局</strong></p>
+<p>所以到 27/28 年，终局将会开始。到 28/29 年，智能爆炸将会展开；到 2030 年，我们会召唤出超级智能，连同其全部力量与威能。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/oppenheimer_groves.jpeg" alt=""></p>
+<p><em>Oppenheimer 和 Groves。</em></p>
+<p>无论他们让谁来负责「项目」，那个人都会面对一项艰巨到极点的任务：建造 AGI，而且要快速建造；让美国经济进入战时状态，制造数亿块 GPU；把一切封锁起来，清除间谍，并抵御中共的全面攻击；以某种方式管理一亿个 AGI 疯狂自动化 AI 研究，在一年里完成十年的跃迁，并很快产出比最聪明的人类<em>远远</em>更聪明的 AI 系统；以某种方式让局面维持住，不至于偏离轨道并产生试图从人类监督者手中夺取控制权的失控超级智能；使用这些超级智能开发稳定局势、领先对手所需的任何新技术，并迅速重塑美国军力以整合这些技术；与此同时，还要应对很可能是有史以来最紧张的国际局势。我只能说，他们最好非常出色。</p>
+<p>对于我们这些被召唤加入这趟旅程的人来说，这会……很有压力。但服务于自由世界——以及全人类——将是我们的职责。如果我们穿过去，并能回望那些年，那会是我们做过的最重要的事。而且，无论他们找到哪个安全设施，那里大概不会有今天荒唐高薪 AI 研究员生活方式中的舒适条件，但也不会太糟。旧金山已经像一个奇特的 AI 研究员大学城；这大概也不会有太大不同。还是同一个古怪而很小的圈子，白天紧盯 scaling curves，周末一起闲逛，围绕 AGI 和当天的实验室政治聊个不停。</p>
+<p>只不过，嗯——利害关系会真实得多。</p>
+<p>沙漠见，朋友们。</p>
+<p>系列下一篇：<strong>V. 结语</strong></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/atomic_scientists.jpg" alt=""></p>
+<p><em>在芝加哥大学首次受控核裂变链式反应四周年时，原子科学家们的重聚。</em></p>
+<p>请注意，虽然私营公司帮助开发核武器组件，但它们从未被允许拥有一枚完整并组装好的核武器。相比之下，我在这里提出的“AGI 政府项目”主线版本，就大规模杀伤性武器这一参考类别而言，是前所未有地私人化的。</p>
+<p><a href="#note-1-73">↩</a>国会——甚至副总统！——都不知道曼哈顿计划。我们大概不应该在这里重复这一点；我甚至建议，「项目」的关键官员应当需要参议院确认。</p>
+<p><a href="#note-2-73">↩</a>到那时甚至不需要 AI 实验室员工合作，因为他们大多已经被自动化了。</p>
+<p><a href="#note-3-73">↩</a>正如 Sam Altman 曾经说过的，我们每接近 AGI 一年，每个人都会增加 +10 点疯狂值。</p>
+<p><a href="#note-4-73">↩</a>事实上，政府拥有最大的枪，本身就是一项巨大的</p>
+<p><a href="https://en.wikipedia.org/wiki/Landfrieden">文明成就</a>！我们不是以类似中世纪的所有人反对所有人的斗争来解决问题，而是通过法院、多元制度等等来处理分歧。<a href="#note-5-73">↩</a>或者你也许会说，那就把一切都开源。简单地把一切都开源的问题在于，这不会是一个美国内部百花齐放的美好世界，而会是一个中共可以自由访问美国开发的超级智能，并通过建设更多基础设施（以及采取更少谨慎/监管）来接管世界的世界。当然，另一个问题是，超级大规模杀伤性武器会扩散到世界上每一个流氓国家和恐怖组织手里。我不认为这会有好结果。这有点像完全没有政府更可能导致暴政（或毁灭），而不是自由。</p>
+<p>无论如何，随着我们接近 AGI，人们高估了开源的重要性。考虑到集群成本正上升到数千亿美元，而且关键算法秘密现在变成了专有秘密，而不是像几年前那样被发表出来，领先玩家会是大约 2 到 3 个，而不是某个由去中心化程序员共同构建 AGI 的幸福社区。</p>
+<p>我确实认为，另一种开源变体会继续发挥重要作用：落后几年的模型被开源，帮助这项技术的收益广泛扩散。</p>
+<p><a href="#note-6-73">↩</a>致我在 Progress Studies 的兄弟们：你们应该想想这个问题，这将是你们思想项目的顶点！你们花了这么多时间研究美国政府研究机构、它们在过去半个世纪的衰落，以及要怎样才能让它们重新有效。告诉我：我们要如何让「项目」有效？</p>
+<p><a href="#note-7-73">↩</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="agi-现实主义与超级智能的未来"><a href="#agi-现实主义与超级智能的未来" class="header">AGI 现实主义与超级智能的未来</a></h1>
+<p><strong>如果我们是对的呢？</strong></p>
+<p>“直到今天，我仍记得 1941 年的那个春天。那时我意识到，核弹不仅是可能的——而且是不可避免的。迟早，这些想法不可能只属于我们。不久之后，所有人都会想到它们，并且会有某个国家把它们付诸行动。[…]</p>
+<p>而且没有人可以谈这件事，我度过了许多失眠的夜晚。但我确实意识到，这件事可能会非常、非常严重。于是我开始服用安眠药。那是唯一的办法；从那以后我再也没有停过。已经 28 年了，我想这 28 年里我没有漏掉过任何一个晚上。”[詹姆斯·查德威克](物理学诺贝尔奖得主，1941 年英国政府关于原子弹不可避免性的报告作者；这份报告最终推动曼哈顿计划付诸行动)</p>
+<p>在这个十年结束之前，我们将造出超级智能。这就是本系列大部分内容所讨论的。对我在旧金山交谈的大多数人来说，故事到这里就像屏幕突然黑掉。但之后的十年——2030 年代——至少会同样多事。到那个十年结束时，世界将被彻底改造到难以辨认。一个新的世界秩序将被锻造出来。不过，唉，那是另一天的故事了。</p>
+<p>暂时，我们必须收尾。让我作几条最后的说明。</p>
+<p><strong>AGI 现实主义</strong></p>
+<p>这一切都很值得深思——而很多人无法承受这种思考。“深度学习正在撞墙！”他们年年这样宣称。评论家们自信地说，这不过是又一次科技热潮。但即便在旧金山这个震中，讨论也已经两极化为两种根本不严肃的口号。</p>
+<p>一端是 doomers（末日论者）。他们多年来一直沉迷于 AGI；我非常认可他们的先见之明。但他们的思维已经僵化，脱离了深度学习的经验现实，他们的方案天真且不可行，也没有认真面对非常真实的威权威胁。动辄声称 99% 的毁灭概率，呼吁无限期暂停 AI——这显然不是出路。</p>
+<p>另一端是 e/accs（有效加速主义者）。狭义地说，他们有一些好观点：AI 进步必须继续。但在浅薄的 Twitter 垃圾话背后，他们是虚假的；是一群业余玩家，只想做自己的 wrapper 初创公司，而不是直面 AGI。他们声称自己是美国自由的热烈捍卫者，却抵挡不住名声不佳的独裁者资金的诱惑。实际上，他们才是真正的停滞主义者。为了否认风险，他们否认 AGI；本质上，他们以为我们只会得到很酷的聊天机器人，而那当然不会危险。（在我看来，这种加速主义实在令人失望。）</p>
+<p>但在我看来，这个领域最聪明的人已经收敛到另一种视角，一条第三条道路，我称之为 **AGI 现实主义。**核心原则很简单：</p>
+<p><em>超级智能是国家安全问题</em>*。<em>我们正在快速建造比最聪明的人类更聪明的机器。这不是又一场很酷的硅谷热潮；这不是某个随机程序员社区在写一个无害的开源软件包；这不是好玩的游戏。超级智能将会</em>极其狂野*；它会成为人类有史以来建造过的最强武器。而对任何参与其中的人来说，它都会是我们一生中所做的最重要事情。<em>美国必须领先</em>*。*如果习近平先得到 AGI，自由的火炬将无法幸存。（而且，现实地说，美国领导也是通往安全 AGI 的唯一路径。）这意味着我们不能简单地“暂停”；这意味着我们需要迅速扩大美国电力生产，在美国建设 AGI 集群。但这也意味着业余初创公司的安全水平再也不能把核机密送到中共手里；也意味着核心 AGI 基础设施必须由美国控制，而不是由中东某个独裁者控制。美国 AI 实验室必须把国家利益放在首位。*我们不能把事情搞砸。*承认超级智能的力量，也意味着承认它的危险。安全风险是真实存在的；事情失控的风险也是真实存在的——无论是因为人类用它释放出的毁灭性力量同归于尽，还是因为，是的，我们正在召唤的外星物种仍不是我们能够完全控制的。这些风险可以管理——但靠临场发挥不行。要穿越这些危险，需要好人拿出一种迄今尚未出现的严肃程度。</p>
+<p>随着加速加强，我只预期公共讨论会变得更加尖锐。但我最大的希望是，会有人感受到即将到来之物的重量，并把它视为一种庄严的职责召唤。</p>
+<p><strong>如果我们是对的呢？</strong></p>
+<p>到这里，你可能会觉得我和其他所有旧金山人都完全疯了。但请只考虑片刻：*如果他们是对的呢？*这些人发明并建造了这项技术；他们认为 AGI 会在这个十年内被开发出来；而且虽然他们的看法分布相当广，但其中许多人都非常认真地看待这样一种可能性：通往超级智能的道路会像我在本系列中描述的那样展开。</p>
+<p>我几乎肯定把故事中的一些重要部分讲错了；如果现实最终接近这种疯狂程度，误差范围会非常大。此外，正如我开篇所说，我认为存在很宽的可能性范围。但我认为具体化很重要。而在这个系列中，我列出了我当前认为最有可能发生的单一情景：这个十年剩余时间里的情景——<em>这个</em>十年的剩余时间。</p>
+<p>因为——它开始感觉真实起来，<em>非常</em>真实。几年前，至少对我来说，我认真看待这些想法——但它们很抽象，被隔离在模型和概率估计里。现在它感觉极其切身。我能<em>看见</em>它。我能<em>看见</em> AGI 将如何被建造出来。它不再是关于人脑大小估计、假设情景、理论外推以及所有那些东西——我基本可以告诉你 AGI 将在哪个集群上训练、什么时候建成，我们会使用怎样的大致算法组合，哪些问题尚未解决以及解决路径，哪些人会至关重要。我能<em>看见</em>它。它极其切身。当然，2023 年初全仓加杠杆做多 Nvidia 很不错，但历史的负担很沉重。我不会主动选择这一切。</p>
+<p>但最令人恐惧的认识是：<em>并没有一支精英小队会来处理这件事</em>。小时候，你会对世界有一种被美化的想象：当事情变得严肃时，会有英雄科学家、极其能干的军人、冷静的领导者已经在处理，会来拯救一切。事实并非如此。世界小得惊人；当门面被揭开时，幕后通常只有少数真正能行动的人，他们正拼命试图阻止事情分崩离析。</p>
+<p>此刻，世界上大概只有几百人意识到将要冲击我们的东西，理解事情即将变得多么疯狂，拥有态势感知。我大概不是亲自认识，就是通过一层关系认识每一个有可能运行「项目」的人。那些在幕后拼命试图防止事情崩塌的少数人，就是你、你的朋友、以及他们的朋友。就是这样。全部就是这些。</p>
+<p>总有一天，事情会脱离我们之手。但现在，至少在接下来几年中盘阶段，世界的命运就压在这些人身上。</p>
+<p>自由世界会获胜吗？</p>
+<p>我们会驯服超级智能，还是它会驯服我们？</p>
+<p>人类会再一次绕开自我毁灭吗？</p>
+<p>赌注不比任何时候小。</p>
+<p>他们是伟大而值得尊敬的人。但他们也只是人。不久之后，AI 将运行这个世界，但我们还要经历最后一场 rodeo。愿他们最后的守护为人类带来荣耀。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-c22b7243.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>

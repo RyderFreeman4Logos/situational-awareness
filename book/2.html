@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>从 AGI 到超级智能：AGI 自动化研究引发智能爆炸 - 情境意识：AGI 与超级智能（中文译文）</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-0392ca55.css">
+        <link rel="stylesheet" href="css/chrome-fc474251.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-e6ebfb74.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-76315ebc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">情境意识：AGI 与超级智能（中文译文）</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <p><strong>AI 进展不会停在人类水平。数以亿计的 AGI 可能会把 AI 研究自动化，把十年的算法进步（5 个以上数量级）压缩到一年以内。我们会迅速从人类水平的 AI 系统走向远超人类的 AI 系统。超级智能的力量——以及危险——都会非常剧烈。</strong></p>
+<p>所谓“超智能机器”，是指一种机器，它能够远远超过任何人（无论这个人多么聪明）在所有智力活动上的表现。由于设计机器本身就是这些智力活动之一，一台超智能机器就能够设计出更好的机器；于是毫无疑问会出现一次“智能爆炸”，人类的智能会被远远甩在后面。因此，第一台超智能机器将是人类需要做出的最后一项发明。</p>
+<p>I. J. Good（1965）</p>
+<p><strong>原子弹与“超级弹”</strong></p>
+<p>在大众想象中，冷战的恐怖主要可以追溯到洛斯阿拉莫斯，以及原子弹的发明。但单看“原子弹”，它也许被高估了。从原子弹走向“超级弹”——氢弹——可以说同样重要。</p>
+<p>东京大轰炸中，数百架轰炸机向城市投下了数千吨常规炸弹。同年稍晚投在广岛的“小男孩”，用一枚装置释放了类似规模的破坏力。但仅仅 7 年后，泰勒的氢弹再次把当量放大了千倍——一枚炸弹的爆炸威力，就超过了整个二战期间投下的所有炸弹之和。</p>
+<p>原子弹是一场效率更高的轰炸行动。氢弹则是一种可以毁灭国家的装置。<a href="#footnote-1-71">1</a></p>
+<p>AGI 与超级智能也会如此。</p>
+<p><em>AI 进展不会停在人类水平。</em> AlphaGo 在最初从人类最佳棋局中学习之后，开始与自己对弈——并且很快变得超越人类，走出极有创造性、极其复杂、任何人类都不会想到的棋步。</p>
+<p>我们在<a href="https://situational-awareness.ai/from-gpt-4-to-agi/">上一篇文章</a>讨论了走向 AGI 的路径。一旦得到 AGI，我们会再转动一次曲柄——或者两次、三次——AI 系统会变成超人类的，远远超出人类。它们会在质上比你我更聪明，聪明得多；也许就像你我在质上比一个小学生更聪明那样。</p>
+<p>在当前快速但连续的 AI 进展速度下，跃迁到超级智能本身就已经足够惊人（如果我们能在 GPT-4 之后 4 年内跃迁到 AGI，那么再过 4 年或 8 年又会带来什么？）。但如果 AGI 把 AI 研究本身自动化，速度可能会远远更快。</p>
+<p>一旦我们得到 AGI，我们不会只有一个 AGI。我稍后会具体推算数字，但大致是：考虑到届时用于推理的 GPU 集群，我们很可能能运行<em>许多百万个 AGI（也许相当于 1 亿个人类，并且不久后能以人类 10 倍以上的速度运行）</em>。即使它们还不能在办公室里走来走去或煮咖啡，它们也能在电脑上做机器学习研究。领先 AI 实验室里不再只是几百名研究员和工程师，而是这个数量的 100,000 倍以上——日日夜夜、疯狂地推动算法突破。是的，这是递归自我改进，但不需要科幻设定；<em>它们只需要加速现有的算法进步趋势线（目前大约是每年 0.5 个数量级）。</em></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/intelligence_explosion.png" alt=""></p>
+<p><em>自动化 AI 研究可能会加速算法进步，使有效算力在一年内获得 5 个以上数量级的增益。智能爆炸结束时我们拥有的 AI 系统会远远比人类聪明。</em></p>
+<p>自动化 AI 研究很可能把人类十年的算法进步压缩到不到一年内（而这看起来还算保守）。那将是 5 个以上数量级，是在 AGI 基础上再叠加一次 <a href="https://situational-awareness.ai/from-gpt-4-to-agi/">GPT-2 到 GPT-4 规模</a>的跃迁——就像从学龄前儿童跃迁到聪明高中生那样的质变，而且是<em>叠加在</em>已经和专家级 AI 研究员/工程师一样聪明的 AI 系统之上。</p>
+<p>这里存在几个合理的瓶颈——包括用于实验的算力有限、与人类之间的互补性、以及算法进步变得更难——我会逐一讨论；但没有哪一个看起来足以确定性地把进展显著拖慢。</p>
+<p>转眼之间，我们手里就会有超级智能——<em>远远</em>聪明于人类的 AI 系统，能够表现出我们甚至无法开始理解的新颖、创造性、复杂行为——也许甚至会有一个由数十亿个这种系统组成的小文明。它们的力量也会极其巨大。把超级智能用于其他领域的研发，爆炸性进展会从机器学习研究扩展出去；很快，它们会解决机器人问题，在几年内让其他科学与技术领域发生巨大跃迁，随之而来的会是一场工业爆炸。超级智能很可能带来决定性的军事优势，并释放难以估量的毁灭力量。我们将面对人类历史上最紧张、最动荡的时刻之一。</p>
+<p><strong>自动化 AI 研究</strong></p>
+<p><strong>我们不需要自动化一切——只需要自动化 AI 研究。</strong> 人们常常反对 AGI 会带来变革性影响，理由是 AI 很难做所有事情。怀疑者会说，比如机器人就是一个棘手问题，即使 AI 在认知上达到博士水平也一样。再比如自动化生物研发，可能需要大量实体实验室工作和人体实验。</p>
+<p>但要让 AI 自动化 AI 研究，我们不需要机器人——也不需要许多别的东西。领先实验室的 AI 研究员和工程师的工作可以完全在线完成，并不会以同样方式遇到现实世界瓶颈（不过它仍会受算力限制，我稍后会讨论）。而且从整体上看，AI 研究员的工作相当直接：阅读机器学习文献，提出新问题或新想法，实现实验来测试这些想法，解释结果，然后重复。所有这些都明确落在这样一个范围内：只要简单外推当前 AI 能力，到 <a href="https://situational-awareness.ai/from-gpt-4-to-agi/">2027 年底</a>就很容易达到或超过最优秀人类的水平。<a href="#footnote-2-71">2</a></p>
+<p>值得强调的是，过去十年机器学习中一些最大突破有多么直白、甚至有点“hacky”： “哦，加一点归一化就行”（LayerNorm/BatchNorm），或者“别做 f(x)，做 f(x)+x”（残差连接），或者“修一个实现 bug”（Kaplan → Chinchilla 缩放律）。AI 研究可以被自动化。而只要自动化 AI 研究，就足以启动非同寻常的反馈回路。<a href="#footnote-3-71">3</a></p>
+<p><strong>我们将能够运行数百万个自动化 AI 研究员副本（而且很快能以人类 10 倍以上速度运行）。</strong> 即使到 2027 年，我们也应该预期会有<a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/#Overall_compute">数千万 GPU 规模的集群</a>。仅训练集群就应该接近扩大约 3 个数量级，已经达到 1000 万个以上 A100 等效 GPU。推理集群应该还要大得多。（这一点会在<a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">后文</a>展开。）</p>
+<p>这会让我们运行许多百万个自动化 AI 研究员副本，也许相当于 1 亿个人类研究员，并且昼夜运行。精确数字依赖一些假设，包括人类“思考”的速度是每分钟 100 个 token（只是粗略数量级估计，例如想想你的内心独白），以及把历史趋势和 Chinchilla 缩放律外推到前沿模型的每 token 推理成本仍处于相近范围。<a href="#footnote-4-71">4</a> 我们也希望保留一部分 GPU 用来运行实验和训练新模型。完整计算见脚注。<a href="#footnote-5-71">5</a></p>
+<p>换一种说法：<em>给定 2027 年的推理集群，我们应该能每天生成相当于整个互联网规模的 token。</em><a href="#footnote-6-71">6</a> 无论如何，精确数字并没有那么重要；关键只是做一个简单的可行性展示。</p>
+<p>此外，我们的自动化 AI 研究员也许很快就能以远超人类的速度运行：</p>
+<ul>
+<li>通过付出一些推理效率代价，我们可以少运行一些副本，换取更快的串行速度。（例如，我们可以从约 5 倍人类速度转到约 100 倍人类速度，代价是“只”运行 100 万个自动化研究员副本。<a href="#footnote-7-71">7</a>）</li>
+<li>更重要的是，自动化 AI 研究员首先会研究的算法创新，就是获得 10 倍或 100 倍的速度提升。Gemini 1.5 Flash 比最初发布的 GPT-4 快约 10 倍，<a href="#footnote-8-71">8</a>而仅仅晚了一年，同时在推理基准上提供了与最初版 GPT-4 相近的表现。如果几百名人类研究员能在一年内找到这种算法加速，自动化 AI 研究员就能很快找到类似收益。</li>
+</ul>
+<p><em>也就是说：在我们开始能够自动化 AI 研究后不久，就应该预期会出现 1 亿个自动化研究员，每个都以人类 100 倍速度工作。</em> 它们每个都能在几天内完成相当于人类一年的工作。相较于今天领先 AI 实验室里几百个弱小的人类研究员、以弱小的 1 倍人类速度工作，研究投入的增加会极其惊人。</p>
+<p><strong>这很容易大幅加速现有的算法进步趋势，把十年的进步压缩到一年。</strong> 我们不需要假设有什么全新机制，自动化 AI 研究也能强烈加速 AI 进展。回顾<a href="https://situational-awareness.ai/from-gpt-4-to-agi">上一篇文章</a>中的数字，我们看到算法进步是过去十年深度学习进展的核心驱动力；仅算法效率就大约呈现每年 0.5 个数量级的趋势，此外还有来自解除限制（unhobbling）的巨大算法收益。（我认为很多人低估了算法进步的重要性；正确理解这一点，对于理解智能爆炸的可能性很重要。）</p>
+<p>我们能否让数百万个自动化 AI 研究员（很快以人类 10 倍或 100 倍速度工作）把人类研究员十年会找到的算法进步压缩到一年？那就是一年内 5 个以上数量级。</p>
+<p>这里不要只想象 1 亿个初级软件工程师实习生（那种系统会更早出现，也就是未来几年内！）。真正的自动化 AI 研究员会非常聪明——除了原始数量优势之外，自动化 AI 研究员还会拥有相较人类研究员的巨大优势：</p>
+<ul>
+<li>它们能阅读有史以来每一篇机器学习论文，能深入思考实验室过去运行过的每一次实验，能从所有副本并行学习，并快速积累相当于数千年的经验。它们能形成比任何人类都深得多的机器学习直觉。</li>
+<li>它们很容易写出数百万行复杂代码，把整个代码库保持在上下文中，并花费相当于人类数十年（甚至更多）的时间逐行检查 bug 和优化点。它们会在这份工作的所有环节上都极其胜任。</li>
+<li>你不需要逐个训练每一个自动化 AI 研究员（事实上，训练和入职 1 亿名人类新员工会很困难）。你只需要教会其中一个，让它完成入职，然后复制它。（而且你不必担心办公室政治、文化适应等问题；它们会昼夜不停地以最高能量和专注度工作。）</li>
+<li>大量自动化 AI 研究员将能够共享上下文（也许甚至能访问彼此的潜空间等），使协作与协调比人类研究员高效得多。</li>
+<li>当然，无论最初的自动化 AI 研究员有多聪明，我们很快都能进一步跨越多个数量级，制造出更聪明、在自动化 AI 研究上更有能力的模型。</li>
+</ul>
+<p>想象一个自动化的 Alec Radford——<em>想象 1 亿个自动化的 Alec Radford。</em><a href="#footnote-9-71">9</a> 我认为 OpenAI 几乎每个研究员都会同意：如果他们有 10 个 Alec Radford，更不用说 100 个、1000 个、100 万个，而且以人类 10 倍或 100 倍速度运行，他们可以很快解决大量问题。即使存在各种其他瓶颈（马上会讲），由此把十年的算法进步压缩到一年也显得很合理。（从百万倍研究投入中只得到 10 倍加速，这甚至算是保守的。）</p>
+<p>这本身就会带来 5 个以上数量级。5 个数量级的算法收益，规模类似产生 <a href="https://situational-awareness.ai/from-gpt-4-to-agi/">GPT-2 到 GPT-4 跃迁</a>的扩大，对应能力从大约学龄前儿童到聪明高中生的跃迁。想象这样的质变<em>叠加在</em> AGI 之上，<em>叠加在</em> Alec Radford 之上。</p>
+<p>我们从 AGI 很快走向超级智能——也许不到一年——是非常可能的。</p>
+<p><strong>可能的瓶颈</strong></p>
+<p>这个基本故事出人意料地强，并且得到<a href="https://www.openphilanthropy.org/research/what-a-compute-centric-framework-says-about-takeoff-speeds/">详尽经济建模工作</a>的支持；但确实有一些真实且合理的瓶颈，可能会拖慢自动化 AI 研究驱动的智能爆炸。</p>
+<p>我先在这里给出摘要，然后在下面的可选部分里为感兴趣的读者更详细讨论：</p>
+<ul>
+<li><strong>实验算力有限：</strong> AI 研究不只是需要好想法、思考或数学，还需要运行实验，从想法中获得经验信号。通过自动化研究劳动让研究投入增加一百万倍，并不意味着进展会快一百万倍，因为算力仍然有限——而用于实验的有限算力会成为瓶颈。即便如此，即使这不会带来 1,000,000 倍加速，我也很难想象自动化 AI 研究员不能把算力<em>至少</em>用得有效 10 倍：它们会有惊人的机器学习直觉（因为内化了整个机器学习文献和过去每一次实验！），并有相当于数百年的思考时间来确定究竟应该运行哪个实验、如何最优配置、如何最大化信息价值；它们能在运行哪怕很小的实验之前，花费相当于数百年的工程师时间来避免 bug 并争取一次做对；它们能通过专注最大收益来节省算力；它们还能尝试大量小规模实验（而考虑到届时有效算力已经扩大，“小规模”意味着一年训练 100,000 个 GPT-4 级别模型来测试架构突破）。即使算力相同，一些人类研究员和工程师也能比另一些人产出 10 倍进展；这一点在自动化 AI 研究员身上应当更明显。我确实认为这是最重要的瓶颈，下面会更深入讨论。</li>
+<li><strong>互补性/长尾：</strong> 经济学的一个经典教训（参见鲍莫尔成本病）是，如果你能自动化某件事的 70%，会得到一些收益，但剩下 30% 很快会成为瓶颈。任何低于完全自动化的东西——比如很好的 copilots——都会让人类 AI 研究员仍然成为主要瓶颈，从而让算法进步速度的整体提升相对较小。此外，自动化 AI 研究可能需要某个能力长尾：AI 研究员工作的最后 10% 可能特别难自动化。这可能会让起飞速度变缓一些，不过我的最佳猜测是，这只会延迟几年。也许 2026/27 年的模型是原型级自动化研究员，还需要一两年最终解除限制、更好一点的模型、推理加速，以及解决各种细节问题，才能达到完全自动化；最终到 2028 年实现 10 倍加速（并在十年末之前达到超级智能）。</li>
+<li><strong>算法进步的内在极限：</strong> 也许再获得 5 个数量级的算法效率在根本上不可能？我对此怀疑。虽然肯定会存在上限，<a href="#footnote-10-71">10</a>但如果过去十年我们得到了 5 个数量级，就应该预期至少还有相当于十年的进步是可能的。更直接地说，当前架构和训练算法仍然非常粗糙，看起来应该存在效率高得多的方案。生物学参照也支持效率高得多的算法是合理的。</li>
+<li><strong>想法会越来越难找，所以自动化 AI 研究员只会维持而不是加速当前进展：</strong> 一种反对意见是，虽然自动化研究会大幅增加有效研究投入，但想法也会更难找到。也就是说，今天一个实验室只需要几百名顶级研究员就能维持每年 0.5 个数量级；随着低垂果实被摘完，维持这种进展将需要越来越多投入——因此 1 亿个自动化研究员只是维持进展所必需的数量。我认为这个基本模型是对的，但经验数据对不上：研究投入增加的幅度——一百万倍——远远大于历史上为了维持进展所需的研究投入增长趋势。用经济学建模术语说，假设自动化带来的研究投入增加会<em>刚好</em>足以让进展保持不变，是一种奇怪的“刀刃假设”。</li>
+<li><strong>想法会越来越难找并存在边际收益递减，所以智能爆炸会很快熄火：</strong> 与上面的反对意见相关，即使自动化 AI 研究员引发了最初一波进展，快速进展能否持续取决于算法进步的递减收益曲线形状。再说一次，我对经验证据的最佳解读是，相关指数会偏向爆炸式/加速式进展。无论如何，从数百名研究员到数亿名 AI 研究员这个一次性增量本身就巨大到足以克服递减收益，至少能带来相当多数量级的算法进步，当然它不可能<em>无限期</em>自我维持。</li>
+</ul>
+<h3 id=""><a class="header" href="#"></a></h3>
+<p><a href="javascript:void(0)">实验算力有限</a></p>
+<p>算法进步的生产函数包含两个互补的生产要素：研究投入与实验算力。数百万个自动化 AI 研究员不会比人类 AI 研究员拥有更多运行实验的算力；也许它们只会坐在那里等任务跑完。</p>
+<p>这大概是智能爆炸最重要的瓶颈。归根到底，这是一个数量问题——它到底会成为多大的瓶颈？总体而言，我很难相信 1 亿个 Alec Radford 不能把实验算力的边际产出提高至少 10 倍（因而仍会把进展速度提高 10 倍）：</p>
+<p><em>用较少算力也能做很多事。</em> 大多数 AI 研究的方式是先在小规模上测试，然后通过缩放律外推。（许多历史上的关键突破只需要很少算力，例如<a href="https://arxiv.org/abs/1706.03762">最初的 Transformer</a>只在 8 块 GPU 上训练了几天。）并且注意，未来四年基线规模会扩大约 5 个数量级，所以“小规模”会意味着 GPT-4 规模——自动化 AI 研究员将能在训练集群上一年运行 100,000 个 GPT-4 级别实验，以及数千万个 GPT-3 级别实验。（这足够测试很多可能带来突破的新架构！）</p>
+<ul>
+<li>很多算力会花在最终预训练大运行的大规模验证上——确保你对年度旗舰产品的边际效率收益有足够高信心——但如果你正在智能爆炸中飞快穿越各个数量级，就可以节省这部分，只关注真正大的收益。</li>
+<li>如<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#Unhobbling">上一篇文章</a>所讨论的，往往可以通过相对低算力的模型“解除限制”获得<em>巨大</em>收益。这些不需要大型预训练运行。高度可能的情况是，智能爆炸一开始就是自动化 AI 研究发现某种额外 RL 方法，通过解除限制得到几个数量级，然后进展就快速展开。</li>
+</ul>
+<p><em>当自动化 AI 研究员找到效率提升时，这会让它们运行更多实验。</em> 回想一下，等效 MATH 表现的推理成本在两年内便宜了近 1000 倍，以及过去一年一般推理成本提升 10 倍；这些都是<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#Algorithmic_efficiencies">上一篇文章</a>讨论过的普通人类算法进步。自动化 AI 研究员要做的第一件事，就是快速找到类似收益；随后这又会让它们在新 RL 方法等方向上运行 100 倍更多实验。或者，它们能很快制造在相关领域有类似表现的小模型（参见前面对 Gemini Flash 的讨论，它比 GPT-4 便宜近 100 倍），这又会让它们用这些小模型运行更多实验（再次想象用它们测试不同 RL 方案）。可能还有其他悬置收益，比如自动化 AI 研究员也许能很快开发更好的分布式训练方案，以利用所有推理 GPU（这里大概至少又有 10 倍算力）。更一般地说，它们每找到 1 个数量级的训练效率收益，就等于多获得 1 个数量级的有效实验算力。</p>
+<p><em>自动化 AI 研究员可能高效得多。</em> 如果你第一次就做对——没有棘手 bug、能更有选择地决定究竟运行什么实验，等等——所需实验数量会少得惊人。想象 1000 个自动化 AI 研究员在你按下开始按钮前，用相当于一个月的时间检查代码，把实验细节完全做对。我问过一些 AI 实验室同事，他们同意：仅仅避免无谓 bug、第一次做对、只运行高信息价值实验，就应该很容易在大多数项目上节省 3 到 10 倍算力。</p>
+<p><em>自动化 AI 研究员可能拥有好得多的直觉。</em> 最近我和一家前沿实验室的实习生交流；他说过去几个月他的主要体验是：自己提出很多想跑的实验，而导师（一位资深研究员）说他们已经能预判结果，所以没必要跑。资深研究员多年随机做模型实验，磨炼出了对哪些想法会成功、哪些不会成功的直觉。类似地，我们的 AI 系统很容易在机器学习实验直觉上超过人类——它们会读完整个机器学习文献，能从每一次其他实验结果中学习并深入思考，也可以被训练来预测数百万次机器学习实验的结果，等等。也许它们首先做的事情之一，就是建立一门强大的基础科学：只看训练前 1%，或者只看小规模版本，就能预测某个大规模实验是否会成功，诸如此类。</p>
+<ul>
+<li>此外，除了对研究方向有很好的直觉之外，<a href="https://twitter.com/_jasonwei/status/1757486124082303073?s=12">正如 Jason Wei 所指出的</a>，在实验的几十个超参数和细节上拥有极佳直觉会带来惊人收益。Jason 把这种基于直觉一次做对的能力称为 “yolo runs”。（Jason 说：“我知道的是，能做到这一点的人肯定是 10 到 100 倍的 AI 研究员。”）</li>
+</ul>
+<p>算力瓶颈意味着研究员增加一百万倍不会转化成研究速度快一百万倍——因此不会是一夜之间的智能爆炸。但自动化 AI 研究员相较人类研究员有非同寻常的优势，所以很难想象它们不能找到办法把算力至少用得高效/有效 10 倍——因此算法进步速度达到 10 倍是非常合理的。</p>
+<p>嵌套折叠部分里还有一些更多讨论。</p>
+<p>我在这里承认一下我听过的最有说服力的反论表述，它来自我的朋友 James Bradbury：一些回应：另一个反驳“学术界论证”的例子是，据传 GDM 拥有比 OpenAI 多得多的实验算力，但从算法进步上看，它似乎并没有远远领先 OpenAI。总体上，我预期自动化研究员会有一种不同的研究风格，发挥自己的强项，并有意减轻算力瓶颈。</p>
+<h2 id="-1"><a class="header" href="#-1"></a></h2>
+<p><a href="javascript:void(0)">回应最强反论：机器学习学术界的记录对算力瓶颈意味着什么？</a></p>
+<p><em>如果更多机器学习研究投入真的会如此显著地加速进展，为什么当前至少有数万人的机器学习学术共同体没有为前沿实验室进展做出更多贡献？</em>（目前看来，前沿算法进步的大部分负担是由实验室内部团队承担的，这些团队在各实验室加总也许只有约一千人。）他的论点是，原因在于算法进步受算力瓶颈限制：学术界就是没有足够算力。</p>
+<p>（这仍然<em>远远</em>少于我们会从自动化 AI 研究中得到的数亿研究员。）</p>
+<p><em>我认为，对这件事如何展开保持不确定是合理的；但仅仅因为人类很难绕过算力瓶颈，就确信模型也做不到，这是不合理的。</em></p>
+<p>（除了实验算力，还有另一个瓶颈：最终需要运行一次大型训练，而目前这需要几个月。但你很可能可以节省这些大型训练，在智能爆炸的一年里只做少数几次，每次跨越比今天实验室更大的数量级。</p>
+<p>注意，虽然我认为这很可能，但它有点令人不安：这意味着下游模型智能可能会更离散/不连续，而不是一系列相当连续的大模型，每一代都比上一代略好。我们也许只会在智能爆炸期间做一次或几次大运行，把在小规模上找到的多个数量级算法突破一次性押进去。</p>
+<p>或者你可以“花掉”5 个数量级算力效率收益中的 1 个，把训练运行从几个月缩短到几天。）</p>
+<h3 id="-2"><a class="header" href="#-2"></a></h3>
+<p><a href="javascript:void(0)">互补性与达到 100% 自动化的长尾</a></p>
+<p>经济学家对 AI 自动化加速经济增长的经典反对意见是，不同任务之间具有互补性——例如，自动化 1800 年人类劳动的 80% 并没有带来增长爆炸或大规模失业，而是剩下 20% 成为所有人类转去做的事情，并继续成为瓶颈。（一个相关模型见<a href="https://www.nber.org/system/files/working_papers/w23928/w23928.pdf">这里</a>。）</p>
+<p>我认为经济学家的这个<em>模型</em>是对的。但关键是，我只是在谈经济中目前很小的一部分，而不是整个经济。人们在这段时间里可能仍照常理发——机器人也许还没有解决，面向每个领域的 AI 也许还没有解决，社会部署也许还没有解决，等等——但它们<em>会</em>能够做 AI 研究。正如<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#From_chatbot_to_agent-coworker">上一篇文章</a>讨论的，我认为当前 AI 进展路线正在把我们带向本质上可以直接上岗的远程员工，其智力与最聪明的人类相当；而正如本文讨论的，AI 研究员的工作完全在可被完全自动化的范围内。</p>
+<p>不过在实践中，我确实预期，即使是 AI 研究员/工程师这份工作，要达到真正 100% 自动化也会有某种长尾；例如，我们可能先得到几乎可以替代工程师的系统，但仍需要一定程度的人类监督。</p>
+<p>尤其是，我预期 AI 能力在不同领域会有些不均衡、呈尖峰形态：它在编码上可能比最好的工程师更强，但在某些任务或技能子集上仍有盲点；当它在自己最弱的方面达到人类水平时，它在像编码这种更容易训练的领域已经会显著超人类。（这也是我认为它们能比人类研究员更有效使用算力的部分原因。到 100% 自动化/智能爆炸开始的时候，它们已经会在某些领域相对人类拥有巨大优势。这对后面的<a href="https://situational-awareness.ai/superalignment/">超级对齐</a>也会有重要影响，因为这意味着，为了对齐哪怕第一批自动化 AI 研究员，我们也必须对齐那些在许多领域已经显著超人类的系统。）</p>
+<p>但我不认为这个阶段会持续超过几年；考虑到 AI 进展速度，我认为很可能只需要再做一些“解除限制”（移除阻碍模型完成最后一段路的某个显而易见的限制），或者再来一代模型，就能走完全程。</p>
+<p>总体而言，这可能会让起飞变缓一些。与其说是 2027 年 AGI → 2028 年超级智能，它也许更像是：</p>
+<ul>
+<li>2026/27：原型级自动化工程师，但在其他领域有盲点。已经把工作加速 1.5 到 2 倍；进展开始逐渐加速。</li>
+<li>2027/28：原型级自动化研究员，可以自动化 90% 以上。仍有一些人类瓶颈，也需要解决如何协调一个巨型自动化研究员组织的各种问题，但这已经把进展加速 3 倍以上。它会很快完成剩余必要的“解除限制”，把我们带到 100% 自动化。</li>
+<li>2028/29：进展速度达到 10 倍以上 → 超级智能。</li>
+</ul>
+<p>这仍然非常快……</p>
+<h3 id="-3"><a class="header" href="#-3"></a></h3>
+<p><a href="javascript:void(0)">算法进步的根本极限</a></p>
+<p>物理上可实现的算法进步幅度大概确实有一个真实上限。（例如，25 个数量级的算法进步看起来不可能，因为那意味着能用不到约 10 FLOPs 训练出 GPT-4 级别系统。不过，你也许可以得到那种用当前架构需要多 25 个数量级硬件才能得到的结果！）</p>
+<p>但类似 5 个数量级的进步，看起来非常处在可能范围内；再说一次，这只需要再延续十年的趋势性算法效率提升（甚至还没算解除限制带来的算法收益）。</p>
+<p>直觉上，我们看起来远没有穷尽所有低垂果实，因为最大突破如此简单，而当前架构和训练技术仍然显得粗糙、明显受限。例如，我认为我们通过会用思维链“把思考说出来”的 AI 系统自举到 AGI，是相当合理的。但这<em>肯定</em>不是最高效的做法；<em>肯定</em>会存在某种通过内部状态/循环等方式完成这种推理、效率高得多的东西。或者考虑自适应算力：Llama 3 在预测 “and” 这个 token 时，仍然花费与回答某个复杂问题相同的算力，这显然不是最优。即使只是小调整，我们也在获得巨大的数量级算法收益；与此同时，还有几十个方向很可能能找到效率高得多的架构和训练流程。</p>
+<p>生物学参照也显示出巨大的余量。例如，人类智力范围很宽，而架构只需要极小调整。人类与其他动物拥有相近数量的神经元，尽管人类比那些动物聪明得多。并且当前 AI 模型距离<a href="https://www.dwarkeshpatel.com/p/carl-shulman">人脑效率</a>仍差许多数量级；人类能用比 AI 模型少得多的数据（因此少得多的“算力”）学习，这说明我们的算法和架构有巨大改进空间。</p>
+<h3 id="-4"><a class="header" href="#-4"></a></h3>
+<p><a href="javascript:void(0)">想法越来越难找与收益递减</a></p>
+<p>当你摘掉低垂果实时，想法会越来越难找。这在<a href="https://www.aeaweb.org/articles?id=10.1257/aer.20180338">任何技术进步领域</a>都成立。本质上，我们看到的是一条 log-log 曲线上的直线：log(进展) 是 log(累计研究投入) 的函数。每多推进 1 个数量级，都需要比上一个数量级投入更多研究。</p>
+<p>这会引出对智能爆炸的两点反对：</p>
+<ul>
+<li>自动化 AI 研究只会是维持进展所必需的东西（而不是显著加速进展）。</li>
+<li>纯算法式智能爆炸不会被维持/会随着算法进步越来越难找、边际收益递减而迅速熄火。</li>
+</ul>
+<p>过去我做经济学研究时，花了很多时间思考这类模型。（尤其是<a href="https://web.stanford.edu/~chadj/JonesHandbook2005.pdf?ref=forourposterity.com">半内生增长理论</a>，它是技术进步的标准模型，刻画了研究投入增长与想法越来越难找这两个相互竞争的动态。）</p>
+<p>简言之，我认为这些反对意见背后的基础模型是合理的；但它最终如何表现是经验问题——而我认为它们把经验事实判断错了。</p>
+<p>核心问题本质上是：每 10 倍进展之后，进一步进展会变得比 10 倍更难，还是比 10 倍更不难？沿着<a href="https://www.aeaweb.org/articles?id=10.1257/aer.20180338">经济学文献</a>中的做法做一些粗略估算，可以帮助我们界定范围。</p>
+<ul>
+<li>假设我们认真看待算法进步约每年 0.5 个数量级的趋势速度；这意味着 4 年内进展 100 倍。</li>
+<li>然而，给定领先 AI 实验室中经质量调整的人数/研究投入，4 年内肯定增长不到 100 倍。<em>也许</em>增长了 10 倍（从某实验室里从事相关工作的人数从几十人到几百人），但即便这一点在质量调整后也不明确。</li>
+<li>尽管如此，算法进步似乎仍然得以维持。</li>
+</ul>
+<p>因此，回应反对意见 1 时，我们可以注意到，研究投入约一百万倍的增加，远远大于仅仅维持进展所必需的增加。也许四年后需要一个实验室里大约几千名研究员从事相关研究，才能维持进展；但 1 亿个 Alec Radford 仍然是一个<em>巨大</em>增量，并且肯定会导致大幅加速。认为自动化研究会<em>刚好足够</em>维持既有进展速度，是一种奇怪的“刀刃”假设。（这还没算以人类 10 倍速度思考，以及 AI 系统相较人类研究员拥有的所有其他优势。）</p>
+<p>回应反对意见 2 时，我们可以注意到两点：</p>
+<ul>
+<li>第一，是上面提到的数学条件。根据我们的粗略估算，在我们完成 100 倍算法进展期间，经质量调整的研究投入需要增长远小于 100 倍；这相当强地表明，收益曲线形状偏向自我维持的进展。（100 倍进展 → 自动化研究投入增加 100 倍，但比如你只需要多 10 倍研究投入就能继续推进下一个 100 倍，所以收益足以维持爆炸式进展。）</li>
+<li>第二，收益曲线甚至不<em>需要</em>偏向完全自我维持的链式反应，我们也可以得到有边界但包含许多数量级的算法进步激增。本质上，它不需要是“增长效应”；足够大的“水平效应”就够了。也就是说，一百万倍研究投入增加（结合自动化研究员相较人类研究员会有的许多其他优势）会是如此巨大的一个一次性提升，即使链式反应并不完全自我维持，也可能带来非常可观的（多个数量级的）一次性收益。类比半内生经济增长理论，把科学投入从 GDP 的 1% 提高到 20% 不会让增长率永远更高——最终递减收益会让增长率回到旧水平——但它导致的“水平效应”会大到足以在几十年内显著加速增长。</li>
+</ul>
+<p>总体而言，虽然它显然不会无限持续，而我对它究竟能走多远也有很多不确定性，但我认为，仅由算法收益/自动化 AI 研究带来的约 5 个数量级智能爆炸，是高度可能的。</p>
+<p><a href="https://www.openphilanthropy.org/research/what-a-compute-centric-framework-says-about-takeoff-speeds/">Tom Davidson 和 Carl Shulman</a> 也在增长建模框架下考察了相关经验事实，并得出了类似结论。<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4814445">Epoch AI 最近也做了一些工作</a>研究这些经验事实，同样认为算法研发的经验收益偏向爆炸式增长，并附有一篇<a href="https://epochai.org/blog/do-the-returns-to-software-rnd-point-towards-a-singularity">有帮助的影响解读</a>。</p>
+<p>总体上，这些因素可能会在一定程度上拖慢进展：最极端版本的智能爆炸（比如一夜之间）看起来不太可信。它们也可能导致一个稍长的前奏（也许我们需要从比较迟缓的原型级自动化研究员，到真正的自动化 Alec Radford，再多等一两年，事情才会全面启动）。但它们当然不能排除一次非常快速的智能爆炸。我们应该把这样的情况作为主线预期：从完全自动化的 AI 研究员到远超人类的 AI 系统，只需一年——最多几年，也许甚至只是几个月。</p>
+<p><strong>超级智能的力量</strong></p>
+<p>无论你是否同意这些论证的最强形式——无论我们是否会经历不到一年的智能爆炸，还是需要几年——有一点是清楚的：我们必须面对超级智能的可能性。</p>
+<p>我们很可能在<em>这个十年结束前</em>拥有的 AI 系统，将强大到难以想象。</p>
+<ul>
+<li>当然，它们会在<em>数量上</em>超越人类。在<a href="https://situational-awareness.ai/racing-to-the-trillion-dollar-cluster/">十年末数以亿计 GPU 的集群</a>上，我们将能运行一个由数十亿个它们组成的文明，并且它们“思考”的速度会比人类快多个数量级。它们能迅速掌握任何领域，写出数万亿行代码，阅读有史以来每一个科学领域的每一篇研究论文（它们会完美跨学科！），并且在你还没读完一篇摘要之前就写出新论文；它们能从每一个副本的并行经验中学习，在几周内针对某项新创新积累数十亿人类等效年的经验，100% 时间都以最高能量和专注度工作，也不会被某个跟不上的队友拖慢，等等。</li>
+<li>更重要——但也更难想象——的是，它们会在<em>质量上</em>超越人类。举一个窄领域例子，大规模 RL 运行曾产生完全新颖、创造性、超出人类理解的行为，比如 <a href="https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/">AlphaGo 对李世石的著名第 37 手</a>。超级智能会在许多领域都如此。它会在人的代码里发现任何人类都不会注意到的微妙漏洞，也会生成复杂到即使模型花几十年解释，人类也理解不了的代码。对人类来说可能会卡住几十年的极难科学与技术问题，在它们看来只会是<em>如此显而易见</em>。我们会像卡在牛顿物理里的高中生，而它已经在探索量子力学。</li>
+</ul>
+<p>作为对这种情况有多<em>离谱</em>的可视化，不妨看一些 YouTube 上的视频游戏速通视频，比如<a href="https://www.youtube.com/watch?v=do08uW0N5Qs">20 秒通关 Minecraft</a>的这个。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/gif-compressed-300x169.gif" alt=""></p>
+<p>现在想象这被应用到科学、技术和经济的所有领域。当然，这里的误差范围极大。尽管如此，认真思考它会产生多么重大的后果仍然很重要。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/wbw_explosion.png" alt=""></p>
+<p><a href="https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html">Wait But Why/Tim Urban</a>。</p>
+<p>在智能爆炸中，爆炸性进展最初只发生在自动化 AI 研究这个狭窄领域。随着我们获得超级智能，并把数十亿个（现在已经是超级智能的）智能体用于许多领域的研发，我预期爆炸性进展会扩展：</p>
+<p>也许我们最初的 AGI 仍有限制，使它们无法完全自动化某些其他领域的工作（而不仅是 AI 研究领域）；自动化 AI 研究会很快解决这些问题，使任何和所有认知工作都能被自动化。</p>
+<p><strong>AI 能力爆炸。</strong> 超级智能不会长期停留在纯认知层面。让机器人良好工作主要是一个机器学习算法问题（而不是硬件问题），我们的自动化 AI 研究员很可能能解决它（下文会讲更多）。工厂会从人类运营，转为 AI 指挥人类体力劳动，再很快转为完全由机器人群运行。</p>
+<p><strong>解决机器人问题。</strong> 是的，单个爱因斯坦无法发展神经科学并建成半导体工业，但十亿个超级智能的自动化科学家、工程师、技术专家和机器人技师（机器人还能以人类 10 倍或更高速度移动！）<a href="#footnote-11-71">11</a>会在数年内让许多领域取得非同寻常的进步。（这里有一篇很不错的<a href="https://www.asimov.press/p/tinker">短篇故事</a>，形象化展示了 AI 驱动的研发可能是什么样子。）这十亿个超级智能将能把人类研究员未来一个世纪会完成的研发工作压缩到几年。想象一下，如果 20 世纪的技术进步被压缩到不到十年：我们会在几年内从“飞行只是幻象”，走到飞机，走到人类登月和洲际弹道导弹。<em>这就是我预期 2030 年代科学与技术各领域会出现的景象。</em></p>
+<p><strong>显著加速科学和技术进步。</strong> 极度加速的技术进步，再加上自动化所有人类劳动的能力，可能会极大加速经济增长（想象自我复制的机器人工厂迅速覆盖整个内华达沙漠）。</p>
+<p><strong>工业与经济爆炸。</strong><a href="#footnote-12-71">12</a> 增长率的提高大概不会只是从每年 2% 到每年 2.5%；相反，这会是增长制度的根本变化，更类似工业革命时期从非常缓慢的增长跃迁到每年几个百分点的历史性变化。我们可能会看到每年 30% 甚至更高的经济增长率，很可能一年多次翻倍。这相当直接地来自经济学家关于<a href="https://globalprioritiesinstitute.org/philip-trammell-and-anton-korinek-economic-growth-under-transformative-ai/">经济</a><a href="https://www.openphilanthropy.org/research/could-advanced-ai-drive-explosive-economic-growth/">增长</a><a href="https://www.kellogg.northwestern.edu/faculty/research/researchdetail?guid=6d8928d1-2328-11e8-91be-0242ac160003">模型</a>。当然，这很可能会被社会摩擦推迟；晦涩法规也许会确保律师和医生仍必须由人类担任，即使 AI 系统在这些工作上已经好得多；当社会抵抗变化速度时，快速扩张的机器人工厂齿轮中肯定会被撒入沙子；也许我们还希望保留人类保姆；所有这些都会拖慢整体 GDP 统计中的增长。但在任何我们移除人为障碍的领域（例如，竞争可能迫使我们在军事生产上这么做），我们都会看到工业爆炸。</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>增长模式</th><th>开始占主导的日期</th><th>全球经济翻倍时间（年）</th></tr>
+</thead>
+<tbody>
+<tr><td>狩猎</td><td>公元前 2,000,000 年</td><td>230,000</td></tr>
+<tr><td>农业</td><td>公元前 4700 年</td><td>860</td></tr>
+<tr><td>科学与商业</td><td>公元 1730 年</td><td>58</td></tr>
+<tr><td>工业</td><td>公元 1903 年</td><td>15</td></tr>
+<tr><td>超级智能？</td><td>公元 2030 年？</td><td>???</td></tr>
+</tbody>
+</table>
+</div>
+<p><em>增长制度的转变并非没有先例：随着文明从狩猎走向农业，走向科学与商业的繁荣，再走向工业，全球经济增长速度不断加快。超级智能可能会启动另一场增长模式转变。基于 Robin Hanson 的 “</em></p>
+<p><em>Long-run growth as a sequence of exponential modes</em>”。</p>
+<p>即使早期的认知型超级智能也可能已经足够；也许某种超人类黑客方案能瘫痪对手军事力量。无论如何，历史上军事力量与技术进步一直紧密相连；而极其快速的技术进步将带来相应的军事革命。无人机群和机器人军队会很重要，但它们只是开始；我们应该预期会出现全新类型的武器，从新型大规模杀伤性武器，到坚不可摧的激光导弹防御，再到我们现在还无法想象的东西。与超级智能前的军备相比，这会像 21 世纪军队对战一支由马匹和刺刀组成的 19 世纪旅。（我会在<a href="https://situational-awareness.ai/the-free-world-must-prevail/">后文</a>讨论超级智能如何带来决定性军事优势。）</p>
+<p><strong>提供决定性且压倒性的军事优势。</strong> 控制超级智能的一方很可能拥有足以从前超级智能时代力量手中夺取控制权的力量。即使没有机器人，这个由超级智能组成的小文明也能黑入任何未被防护的军事、选举、电视等系统；巧妙说服将军和选民；在经济上超过民族国家；设计新的合成生物武器，然后用比特币付钱让某个人类合成它；等等。</p>
+<p><strong>能够推翻美国政府。</strong> 在 <a href="https://www.lesswrong.com/posts/ivpKSjM4D6FbqF4pZ/cortes-pizarro-and-afonso-as-precedents-for-takeover">16 世纪初</a>，科尔特斯和大约 500 名西班牙人征服了拥有数百万人口的阿兹特克帝国；皮萨罗和约 300 名西班牙人征服了拥有数百万人口的印加帝国；阿方索和约 1000 名葡萄牙人征服了印度洋。他们并没有神一样的力量，但旧世界的技术优势，以及战略和外交机巧上的优势，带来了完全决定性的优势。超级智能也许会类似。</p>
+<h3 id="-5"><a class="header" href="#-5"></a></h3>
+<p><a href="javascript:void(0)">机器人</a></p>
+<p>对本文这类说法的一种常见反对意见是：即使 AI 能做认知任务，机器人也远远落后，因此会拖慢任何现实世界影响。</p>
+<p>我过去也同情这种看法，但现在我确信机器人不会成为障碍。多年来，人们声称机器人是硬件问题——但机器人硬件已经很接近解决。</p>
+<p>越来越清楚的是，机器人是一个<em>机器学习算法</em>问题。LLM 有一种容易得多的自举方式：你有整个互联网可以预训练。机器人动作没有类似规模的数据集，因此需要更巧妙的方法（例如以多模态模型为基础，再用合成数据/仿真/聪明的 RL）来训练它们。</p>
+<p>现在有大量精力正在投入解决这个问题。但即使我们在 AGI 之前没有解决它，我们数以亿计的 AGI/超级智能也会成为<em>惊人</em>的 AI 研究员（这正是本文的核心论点！），它们很可能会弄清楚如何做出惊人的机器人所需的机器学习。</p>
+<p>因此，虽然机器人可能导致几年延迟是合理的（解决机器学习问题，在物理世界中以一种根本上慢于仿真的方式测试，在机器人能够自行建厂之前先扩大最初机器人生产，等等），但我不认为会超过几年。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/explosive_growth_broadening-1.png" alt=""></p>
+<p><em>爆炸性增长从较窄的 AI 研发领域开始；随着我们把超级智能用于其他领域的研发，爆炸性增长会扩展。</em></p>
+<p>这一切在 2030 年代如何展开很难预测（这也是另一个时间再讲的故事）。但至少有一点是清楚的：我们会迅速被推入人类有史以来最极端的局面。</p>
+<p>人类水平的 AI 系统，也就是 AGI，本身就会产生高度重大影响；但从某种意义上说，它们仍只是我们已经知道的东西的更高效版本。然而，非常可能的是，仅仅在一年内，我们就会转向更异质的系统——它们的理解与能力、它们的原始力量，会超过整个人类合在一起。由于我们会在这次快速转变中被迫把信任交给 AI 系统，确实存在我们<a href="https://situational-awareness.ai/superalignment/">失去控制</a>的真实可能性。</p>
+<p>更广泛地说，一切都会开始变得<em>难以置信地快</em>。世界也会开始发疯。假设我们把 20 世纪的地缘政治高烧和人为风险压缩进短短几年；这就是我们应该预期超级智能之后会出现的那类局面。到它结束时，超级智能 AI 系统将运行我们的军事和经济。在所有这些疯狂之中，我们会有极其稀缺的时间来做出正确决策。挑战会极大。我们必须用尽一切，才有机会完整地穿过去。</p>
+<p><strong>智能爆炸以及紧随超级智能之后的时期，将是人类历史上最动荡、最紧张、最危险、也最疯狂的时期之一。</strong></p>
+<p>到这个十年结束时，我们很可能已经身处其中。</p>
+<p>面对智能爆炸——超级智能出现——的可能性，常常让人想起围绕核链式反应可能性及其将使原子弹成为可能的<a href="https://www.amazon.com/Making-Atomic-Bomb-Richard-Rhodes/dp/1451677618">早期争论</a>。H. G. Wells 在 1914 年的一部小说中预言了原子弹。1933 年，西拉德第一次构想出链式反应时，他无法说服任何人；那只是纯理论。1938 年裂变被实验证实后，西拉德再次惊恐，并强烈主张保密，少数人开始意识到炸弹的可能性。爱因斯坦此前没有考虑过链式反应的可能性，但当西拉德把它摆到他面前时，他很快看到了其中含义，并愿意做任何需要做的事；他愿意拉响警报，也不怕显得愚蠢。但费米、玻尔以及大多数科学家认为，“保守”的做法是淡化它，而不是认真对待炸弹可能性的非同寻常含义。保密（避免把进展分享给德国人）以及其他全力投入的努力，在他们看来很荒谬。链式反应听起来太疯狂了。（即使事实证明，炸弹距离现实只有半个十年。）</p>
+<p>我们必须再次面对链式反应的可能性。也许这在你听来有些投机。但在 AI 实验室的资深科学家中，许多人认为快速智能爆炸相当可信。他们能<em>看见</em>它。超级智能是可能的。</p>
+<p>系列下一篇：<strong>III. 挑战 – IIIa. 冲向万亿美元集群</strong></p>
+<p>冷战中许多荒诞之处（参见</p>
+<p><a href="https://www.amazon.com/Doomsday-Machine-Confessions-Nuclear-Planner/dp/1608196704">Daniel Ellsberg 的书</a>）来自仅仅把原子弹替换成氢弹，却没有让核政策和战争计划适应这种巨大能力提升。<a href="#note-1-71">↩</a> AI 研究员这份工作也是 AI 实验室的 AI 研究员非常、非常熟悉的一份工作——因此，让模型擅长这份工作，对他们来说会特别直观。而且他们会有巨大激励这么做，以帮助自己加速研究、提升实验室竞争优势。</p>
+<p><a href="#note-2-71">↩</a> 顺便说，这说明了一个关于 AI 风险排序的重要点。人们常提到的一种 AI 威胁模型是：AI 系统开发新型生物武器，并因此造成灾难性风险。但如果 AI 研究比生物研发更容易被自动化，我们也许会先经历智能爆炸，再遇到极端 AI 生物威胁。这很重要，例如它关系到我们是否应该预期在 AI 事情变疯狂之前及时看到“生物预警事件”。</p>
+<p><a href="#note-3-71">↩</a> <a href="https://situational-awareness.ai/from-gpt-4-to-agi/#Algorithmic_efficiencies">如前所述</a>，今天 GPT-4 API 的成本已经低于 GPT-3 发布时的成本——这说明推理效率提升趋势足够快，可以在模型变得强大得多的同时，让推理成本大致保持不变。类似地，自 GPT-4 发布以来短短一年里，出现了巨大的<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#Algorithmic_efficiencies">推理成本收益</a>；例如，<a href="https://ai.google.dev/pricing">当前版本 Gemini 1.5 Pro</a>超过最初的 GPT-4，同时<a href="https://ai.google.dev/pricing">大约便宜 10 倍</a>。我们也可以通过考虑 Chinchilla 缩放律来更具体地理解这一点。根据 Chinchilla 缩放律，模型规模——因此推理成本——随着训练成本的平方根增长，也就是有效算力数量级扩大的 OOM 的一半。然而在</p>
+<p><a href="https://situational-awareness.ai/from-gpt-4-to-agi">上一篇文章</a>中，我提出算法效率提升速度大致与算力扩展速度相同，也就是说，它约占有效算力扩大 OOM 的一半。如果这些算法收益也能转化为推理效率，那意味着算法效率会抵消朴素估算下推理成本的增加。在实践中，训练算力效率提升经常但不总是转化为推理效率提升。不过，还有许多单独的推理效率收益并不是训练效率收益。因此，至少从粗略范围看，假设前沿模型的美元/token 大致相近，并不疯狂。</p>
+<p>（当然，它们会使用更多 token，也就是更多测试时算力。但这里通过把人类等效体定价为每分钟 100 个 token，已经把这一点纳入计算。）</p>
+<p><a href="#note-4-71">↩</a> GPT-4 Turbo</p>
+<p><a href="https://openai.com/api/pricing/">大约是</a> 0.03 美元/1000 token。我们假设会有数千万个 A100 等效 GPU，如果按 A100 等效 GPU 计算，每个 GPU 每小时约 1 美元。若用 API 成本把 GPU 转换为生成 token，这意味着数千万 GPU * 1 美元/GPU-小时 * 33K token/美元 ≈ 每小时一万亿 token。假设一个人每分钟进行 100 个 token 的思考，也就是一个人类等效体每小时 6000 token。每小时一万亿 token 除以 6000 token/人类小时 ≈ 2 亿个人类等效体——也就是好像在昼夜运行 2 亿个人类研究员。（即使我们把一半 GPU 留给实验算力，也能得到 1 亿个人类研究员等效体。）<a href="#note-5-71">↩</a> 前一个脚注估算为约每小时 1T token，也就是每天 24T token。在</p>
+<p><a href="https://situational-awareness.ai/from-gpt-4-to-agi/">上一篇文章</a>中，我指出一个<a href="https://www.together.ai/blog/redpajama-data-v2">公开去重的 CommonCrawl 大约有 30T token</a>。<a href="#note-6-71">↩</a> Jacob Steinhardt 估计，在<a href="https://bounded-regret.ghost.io/how-fast-can-we-perform-a-forward-pass/">关于推理权衡的一些数学</a>下，使用一种平铺方案，k^3 个模型并行副本可以替换为一个快 k^2 倍的单一模型（理论上即使 k 为 100 或更大也可行）。假设初始速度已经约为人类 5 倍（基于比如 GPT-4 发布时的速度）。那么，通过承担这种推理代价（k≈5），我们将能够运行约 100 万个、速度约为人类 100 倍的自动化 AI 研究员。<a href="#note-7-71">↩</a> 这个</p>
+<p><a href="https://artificialanalysis.ai/models/gemini-1-5-flash">来源</a>将 Flash 的吞吐量基准测为约 GPT-4 Turbo 的 6 倍，而 GPT-4 Turbo 又快于原始 GPT-4。延迟大概也约快 10 倍。<a href="#note-8-71">↩</a> Alec Radford 是 OpenAI 一位极有天赋且高产的研究员/工程师，是</p>
+<p><a href="https://www.olin.edu/sites/default/files/2023-06/How%20a%20couple%20of%20Olin%20College%20students%20h...%20chatbot%20revolution%20-%20The%20Boston%20Globe.pdf">许多最重要进展</a>背后的人物，不过他有些低调。<a href="#note-9-71">↩</a> 例如，在 GPT-4 之上再有 25 个数量级算法进步显然不可能：那会意味着只用少数 FLOP 就能训练出 GPT-4 级别模型。</p>
+<p><a href="#note-10-71">↩</a> 在现实世界中以 10 倍速度做物理研发的机器人，是“慢速版本”；现实中，超级智能会尝试尽可能多地在仿真中做研发，比如</p>
+<p><a href="https://deepmind.google/technologies/alphafold/">AlphaFold</a>或制造业的“<a href="https://www.youtube.com/watch?v=h68kXLIRilM">数字</a><a href="https://www.youtube.com/watch?v=OAdqXZGUb70">孪生</a>”。<a href="#note-11-71">↩</a> 为什么“Factorio 式世界”——建一个工厂，工厂生产更多工厂，更多工厂再生产更多工厂，工厂不断翻倍，直到你的整个星球很快被工厂覆盖——今天不可能？原因是劳动力受限——你可以积累资本（工厂、工具等），但这会因受固定劳动力约束而遭遇递减收益。机器人和 AI 系统能够完全自动化劳动后，这一约束被移除；机器人工厂就可以以近乎不受限制的方式生产更多机器人工厂，导致工业爆炸。更多关于这一点的经济增长模型见</p>
+<p><a href="https://www.nber.org/papers/w31815">这里</a>。<a href="#note-12-71">↩</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-c22b7243.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

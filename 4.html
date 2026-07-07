@@ -1,0 +1,354 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>美国 AI 实验室安全危机与 AGI 机密泄露风险 - 情境意识：AGI 与超级智能（中文译文）</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-0392ca55.css">
+        <link rel="stylesheet" href="css/chrome-fc474251.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-e6ebfb74.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-76315ebc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">情境意识：AGI 与超级智能（中文译文）</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <p><strong>美国领先 AI 实验室把安全当成事后补充。当前，它们基本上是在把 AGI 的关键秘密用银盘端给中共。要防住国家级行为者威胁，保护 AGI 秘密和权重，将是一项巨大工程，而我们目前并不在正确轨道上。</strong></p>
+<p>他们晚上在 Wigner 的办公室见面。Wheeler 记述道：“Szilard 概述了哥伦比亚的数据，以及其中初步迹象：每次中子诱发裂变至少会产生两个次级中子。这是否意味着核爆炸显然可能？”Bohr 反驳说，不一定。</p>
+<p>Teller 写道：“我们试图说服他，我们应当继续裂变研究，但不应发表结果。我们应当保密，以免纳粹得知这些结果并率先制造核爆炸。”</p>
+<p>“Bohr 坚持认为，我们永远不会成功制造核能；他也坚持认为，保密绝不能被引入物理学。”</p>
+<p>Richard Rhodes，《The Making of the Atomic Bomb》（第 430 页）</p>
+<p>按照当前路径，领先的中国 AGI 实验室不会在北京或上海——它们会在旧金山和伦敦。几年后，AGI 秘密会明显成为美国最重要的国防机密——应当得到与 B-21 轰炸机或哥伦比亚级潜艇蓝图同等的待遇，更不用说常被提起的“核秘密”——但今天，我们对待它们的方式像是在对待普通 SaaS 软件。按这个速度，我们基本上就是在把超级智能交给中共。</p>
+<p>我们将投入的所有数万亿美元、美国工业力量的动员、最聪明头脑的努力——如果中国或其他对手可以简单偷走模型<em>权重</em>（一个完成的 AI 模型、AGI 本质上会是什么？就是电脑上的一个大文件），或者偷走关键<em>算法秘密</em>（构建 AGI 所需的关键技术突破），这一切都不重要了。</p>
+<p>美国领先 AI 实验室自称正在构建 AGI：它们相信自己正在构建的技术，会在这个十年结束前成为美国有史以来最强大的武器。但它们并没有这样对待它。它们用“随机科技创业公司”的标准衡量自己的安全努力，而不是用“关键国防项目”的标准。随着 AGI 竞赛加剧——随着超级智能在国际军事竞争中将具有<a href="https://situational-awareness.ai/the-free-world-must-prevail/#Whoever_leads_on_superintelligence_will_have_a_decisive_military_advantage">完全决定性</a>这一点变得清楚——我们将不得不面对外国间谍活动的全部力量。目前，实验室甚至几乎无法抵御脚本小子，更不用说具备“朝鲜防护级安全”，更不用说准备好面对中国国家安全部全力以赴的行动。</p>
+<p>而这并不只是未来几年后的问题。你也许会说：当然，GPT-4 权重被偷又怎样——从权重安全角度看，真正重要的是我们能在未来保护 AGI 权重，所以我们还有几年。（不过，如果我们在 2027 年构建 AGI，那我们真的必须赶快行动！）但 AI 实验室<em>现在</em>正在开发 AGI 的<em>算法秘密</em>——关键技术突破，可以说是蓝图（尤其是 LLM 之后用于越过数据墙的 RL/自博弈/合成数据等“<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#The_data_wall">下一范式</a>”）。对于算法秘密，AGI 级别安全需要比权重的 AGI 级别安全早几年实现。几年后，这些算法突破会比一个大 10 倍或 100 倍的集群更重要——这比美国政府一直（很有远见地！）密集推进的算力出口管制还要重要得多。现在，你甚至不需要发动一次戏剧性的间谍行动来偷这些秘密：只要去旧金山任何一个派对，或者从办公室窗户往里看就行。</p>
+<p>我们今天的失败很快会变成不可逆：在未来 12 到 24 个月里，我们会把关键 AGI 突破泄露给中共。这将会是国家安全体系在本十年结束前最大的单一遗憾。</p>
+<p><a href="https://situational-awareness.ai/the-free-world-must-prevail/">自由世界的存续</a>正悬于是否能对抗威权国家之上——而健康的领先优势也会是给我们留出余量、把 AI 安全做对的必要缓冲。美国在 AGI 竞赛中拥有优势。但如果我们不很快认真对待安全，我们会放弃这一领先。现在就动手，也许是今天我们为确保 AGI 发展顺利所需做的最重要一件事。</p>
+<p><strong>低估国家级行为者，后果自负</strong></p>
+<p>太多聪明人低估了间谍活动。</p>
+<p>国家及其情报机构的能力极其强大。即使在正常时期、并非全力 AGI 竞赛时期（而且仅从我们公开知道的一点点看），民族国家（或能力稍弱的行为者）已经能够：</p>
+<ul>
+<li>仅凭电话号码就<a href="https://www.nytimes.com/2022/01/28/magazine/nso-group-israel-spyware.html">零点击入侵任何目标 iPhone 和 Mac</a>；</li>
+<li>渗透一个<a href="https://en.wikipedia.org/wiki/Stuxnet">气隙隔离的核武器项目</a>；</li>
+<li><a href="https://en.wikipedia.org/wiki/Operation_Aurora">修改 Google 源代码</a>；</li>
+<li>每年找到<a href="https://googleprojectzero.github.io/0days-in-the-wild/">几十个零日漏洞</a>，而这些漏洞<a href="https://www.rand.org/content/dam/rand/pubs/research_reports/RR1700/RR1751/RAND_RR1751.pdf">平均需要 7 年</a>才会被发现；</li>
+<li>对<a href="https://www.theverge.com/2022/9/16/23356959/uber-hack-social-engineering-threats">大型科技公司</a>进行鱼叉式网络钓鱼；</li>
+<li>在员工设备上安装<a href="https://arstechnica.com/information-technology/2023/02/lastpass-hackers-infected-employees-home-computer-and-stole-corporate-vault/">键盘记录器</a>；</li>
+<li>在加密方案中植入<a href="https://www.theguardian.com/world/2013/sep/05/nsa-gchq-encryption-codes-security">后门</a>；</li>
+<li>通过<a href="https://en.wikipedia.org/wiki/Tempest_(codename)">电磁泄漏或振动</a>窃取信息；</li>
+<li>仅通过<a href="https://x.com/dystopiabreaker/status/1747353045279846541?s=46">你电脑发出的噪声</a>判断你在视频游戏地图上的位置，或<a href="https://www.usenix.org/system/files/sec22summer_genkin.pdf">偷取密码</a>；</li>
+<li>直接访问<a href="https://www.jstor.org/stable/pdf/resrep14043.7.pdf">核电站</a>等敏感系统；</li>
+<li>从美国政府外泄<a href="https://en.wikipedia.org/wiki/Office_of_Personnel_Management_data_breach">2200 万份安全审查档案</a>；</li>
+<li>通过在 HVAC 系统中植入漏洞，暴露<a href="https://www.mxdusa.org/2022/10/11/top-7-cybersecurity-threats-3-supply-chain-attacks/">1.1 亿客户的财务信息</a>；</li>
+<li>大规模攻破<a href="https://theintercept.com/2019/01/24/com">计算机硬件供应链</a>；</li>
+<li>把<a href="https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack">恶意代码塞入顶级科技公司和美国政府使用的软件依赖更新</a>；</li>
+<li>……更不用说安插间谍，或者诱惑、劝诱、威胁员工（这些事实上在<a href="https://freedomhouse.org/report/transnational-repression/china">大规模</a>发生，只是较少公开）；</li>
+<li>……更不用说特种部队行动及类似做法（当事情真正升温时）。</li>
+</ul>
+<p>如果想进一步感受我们面对情报机构时究竟在处理什么，我强烈推荐《Inside the Aquarium》，作者是一名苏联 GRU（军事情报）叛逃者。<a href="#footnote-1-139">1</a></p>
+<p>中国已经在广泛从事工业间谍活动；FBI 局长表示，中华人民共和国的黑客行动规模超过“<a href="https://www.nytimes.com/2024/02/22/us/politics/china-hacking-files-risk.html">所有主要国家加起来</a>”。就在几个月前，美国司法部长<a href="https://www.justice.gov/opa/pr/chinese-national-residing-california-arrested-theft-artificial-intelligence-related-trade">宣布逮捕一名中国公民</a>，该人从 Google 窃取了关键 AI 代码，准备带回中华人民共和国（发生在 2022/23 年，而且很可能只是冰山一角）。<a href="#footnote-2-139">2</a></p>
+<p>但这只是开始。我们必须准备好迎接对手在未来几年“醒悟到 AGI”。AI 将成为世界上每个情报机构的第一优先事项。在那种情况下，它们会愿意使用非同寻常的手段、付出任何代价来渗透 AI 实验室。</p>
+<p><strong>威胁模型</strong></p>
+<p>我们必须保护两类关键资产：模型权重（尤其是在我们接近 AGI 时，但要做好这件事需要多年准备和演练）以及算法秘密（从昨天就该开始）。</p>
+<p><strong>模型权重</strong></p>
+<p>一个 AI 模型只是服务器上一大串数字文件。它可以被偷走。对手只需要偷走这个文件，就能匹配你的数万亿美元、最聪明的人才和几十年的工作。（想象一下，如果纳粹得到了洛斯阿拉莫斯制造的每枚原子弹的精确复制品。）</p>
+<p>如果我们无法保护模型权重安全，我们就是在替中共构建 AGI（并且按照当前 AI 实验室安全路径，甚至也在替朝鲜构建）。</p>
+<p>即使不谈国家竞争，保护模型权重对防止 AI 灾难也至关重要。如果坏人（比如恐怖分子或流氓国家）可以直接偷走模型并绕过任何安全层，想怎么用就怎么用，那么我们所有焦虑和防护措施都毫无意义。超级智能能够发明的任何新型大规模杀伤性武器，都会迅速扩散到几十个流氓国家。此外，安全也是防范<a href="https://situational-awareness.ai/superalignment/">不受控制或未对齐 AI 系统</a>的第一道防线（如果我们因为没有先在气隙集群中构建和测试它，导致没能控制住失控超级智能，我们会觉得自己多蠢？）。</p>
+<p>现在保护模型权重还没那么重要：没有底层配方，偷走 GPT-4 对中共帮助不算太大。但几年后，一旦我们拥有 AGI、真正极其强大的系统，它就会<em>非常</em>重要。</p>
+<p><em>也许最让我夜不能寐的单一场景是：中国或另一个对手在智能爆炸前夕偷走自动化 AI 研究员模型的权重。</em> 中国可以立即用这些权重自己自动化 AI 研究（即使他们此前远远落后），并启动自己的智能爆炸。这就是他们自动化 AI 研究、构建超级智能所需的一切。美国拥有的任何领先都会消失。</p>
+<p>此外，这会立刻把我们推入一场存在性竞赛；用于确保超级智能安全的任何余量都会消失。中共很可能试图尽快冲过智能爆炸——即使在超级智能上领先几个月，也可能意味着<a href="https://situational-awareness.ai/the-free-world-must-prevail/#Whoever_leads_on_superintelligence_will_have_a_decisive_military_advantage">决定性军事优势</a>——在这个过程中跳过任何负责任的美国 AGI 努力会希望采取的安全预防措施。为了避免中共完全占优，我们也不得不冲过智能爆炸。即使美国最终仍勉强领先，失去余量也意味着必须在 AI 安全上承担巨大风险。</p>
+<p>我们今天距离足以保护权重的安全还差很远。Google DeepMind（也许是所有 AI 实验室中安全最好的一家，因为有 Google 基础设施）至少直接承认了这一点。它们的 <a href="https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/introducing-the-frontier-safety-framework/fsf-technical-report.pdf">Frontier Safety Framework</a> 概述了安全等级 0、1、2、3、4（约 1.5 是防御资源充足的恐怖组织或网络犯罪分子所需等级；3 是防御朝鲜这类行为者所需等级；4 是面对最有能力国家级行为者的优先行动时，哪怕只是有一线防御机会也需要达到的等级）。<a href="#footnote-3-139">3</a> 他们承认自己处于 0 级（只有最平常、最基础的措施）。如果我们很快得到 AGI 和超级智能，就等于真的把它交给恐怖组织和每一个疯狂独裁者！</p>
+<p>关键在于，开发权重安全所需基础设施大概需要多年提前期——如果我们认为约 3 到 4 年内出现 AGI 是真实可能的，并且那时需要能防住国家级行为者的权重安全，那么我们现在就必须启动紧急工程。保护权重会需要硬件创新和彻底不同的集群设计；这种级别的安全无法一夜之间达到，而需要多轮迭代。</p>
+<p>如果我们未能及时准备，局势会非常糟糕。我们将站在超级智能门槛上，却距离必要安全还有几年。我们的选择会是继续推进，但直接把超级智能交给中共——以及随之而来的穿越智能爆炸的存在性竞赛——或者等待安全紧急工程完成，冒着失去领先的风险。</p>
+<p><strong>算法秘密</strong></p>
+<p>人们开始意识到（尽管未必落实）权重安全的必要性；但现在更重要、且被<em>极大</em>低估的，可能是保护算法秘密。</p>
+<p>一种理解方式是：偷走算法秘密，对中华人民共和国来说相当于拥有一个大 10 倍甚至更多的集群：</p>
+<ul>
+<li>如 <a href="https://situational-awareness.ai/from-gpt-4-to-agi/">Counting the OOMs</a> 所讨论，算法进步对 AI 进展的重要性大概与扩大算力相当。考虑到每年约 0.5 个数量级的算力效率基线趋势（此外还有算法“解除限制”收益），从现在到 AGI 之间，我们应该预期会有多个数量级价值的算法秘密。默认情况下，我预期美国实验室会领先数年；如果它们能保护自己的秘密，这很容易相当于 10 倍到 100 倍算力。</li>
+<li>（注意，我们愿意通过管制 Nvidia 芯片出口，让美国投资者承担数千亿美元成本——也许让中国实验室的算力成本<a href="https://situational-awareness.ai/the-free-world-must-prevail/#China_can_be_competitive">提高 3 倍</a>——但我们却到处泄露 3 倍级别的算法秘密！）</li>
+<li>也许更重要的是，<em>我们现在可能正在开发 AGI 的关键范式突破。</em> 如<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#The_data_wall">前文所述</a>，单纯扩大当前模型会撞墙：数据墙。即使有更多算力，也无法做出更好的模型。前沿 AI 实验室正在疯狂研究下一步，从 RL 到合成数据。它们大概会搞出一些惊人的东西——本质上是通用智能的 “AlphaGo 自博弈”等价物。它们的发明会像数年前 LLM 范式最初被发明时一样关键，并且会是构建远超人类水平系统的关键。我们仍有机会不让中国获得这些关键算法突破；没有这些突破，他们会被卡在数据墙前。但如果未来 12 到 24 个月没有更好安全，我们很可能会不可逆地把这些关键 AGI 突破提供给中国。</li>
+<li>人们很容易低估算法秘密边际优势的重要性——因为直到大约几年前，一切都在发表。基本想法已经公开：在互联网文本上扩大 Transformer。许多算法细节和效率也公开了：Chinchilla 缩放律、MoE 等。因此，今天开源模型相当不错，一批公司也有相当不错的模型（主要取决于它们融了多少钱、集群有多大）。但这很可能在未来几年发生相当剧烈变化。如今几乎所有前沿算法进步都发生在实验室（学术界出人意料地不相关），领先实验室已经停止发表自己的进展。我们应当预期未来会有更多分化：实验室之间、国家之间、专有前沿模型与开源模型之间。少数美国实验室会遥遥领先——这种护城河价值 10 倍、100 倍或更多，远远超过比如 7nm 与 3nm 芯片之间的差距——除非它们立刻泄露算法秘密。<a href="#footnote-4-139">4</a></li>
+</ul>
+<p><em>简单说，我认为未能保护算法秘密，很可能是中国能够在 AGI 竞赛中保持竞争力的最可能方式。</em>（我会在<a href="https://situational-awareness.ai/the-free-world-must-prevail/#China_can_be_competitive">后文</a>更详细讨论。）</p>
+<p>很难夸大当前算法秘密安全有多糟。各实验室之间，有数千人能接触最重要秘密；基本没有背景审查、隔离、控制、基础信息安全等。东西存放在容易被黑的 SaaS 服务上。人们在旧金山派对上闲聊。任何一个脑子里装着所有秘密的人，都可能随时被中国实验室开价 1 亿美元挖走。<a href="#footnote-5-139">5</a> 你可以……直接从办公室窗户往里看。等等。旧金山到处流传许多文章和传闻，声称掌握各实验室算法进展的大量细节。</p>
+<p>AI 实验室的安全并不比“随机创业公司安全”好多少。直接把 AGI 秘密卖给中共，至少还更诚实。</p>
+<p>……这就是我们在 OpenAI 或其他美国 AI 实验室看到的吗？不是。事实上，我们看到的是相反情况——安全等价于瑞士奶酪。中国用任意数量的工业间谍方法渗透这些实验室都会极其容易，比如简单地贿赂清洁人员把 USB 小设备插进笔记本电脑。我自己的假设是，所有这类美国 AI 实验室都已被完全渗透，中国现在每天晚上都在下载所有美国 AI 研究和代码……</p>
+<p>[Marc Andreessen]</p>
+<p>虽然会很难，但我认为这些秘密是可以防住的。对于某个实验室里的某个算法突破，真正“需要知道”关键实现细节的人大概只有几十个（即使更多人需要知道基础高层想法）——除了彻底升级信息安全之外，你可以对这些人进行审查、隔离、密集监控。</p>
+<p><strong>“超级安全”需要什么</strong></p>
+<p>AI 实验室安全有很多低垂果实。仅仅采用比如保密型对冲基金，或 Google 客户数据级别安全的最佳实践，就会让我们在面对中共“常规”经济间谍活动时处于好得多的位置。事实上，私营企业中也有不少成功保护秘密的显著例子。比如量化交易公司（Jane Street 这类公司）。许多人告诉我，如果他们跟竞争对手聊一个小时，就能传递足够信息，让本公司的 alpha 接近归零——这类似许多关键 AI 算法秘密可以在一次短谈中传递——但这些公司仍然设法保住秘密并保持优势。</p>
+<p>虽然美国多数领先 AI 实验室拒绝把国家利益放在首位——如果有成本或需要把安全优先，就连这一层级的基础安全措施也拒绝——但摘下这些低垂果实完全在它们能力范围内。</p>
+<p>但我们再稍微往前看一点。一旦中国真正理解 AGI 的重要性，我们就应当预期它们会动用间谍努力的全部力量；想象投入数十亿美元、数千名员工，以及极端手段（例如特种作战突击队）来渗透美国 AGI 努力。AGI 和超级智能安全会需要什么？</p>
+<p>简言之，<em>只有在政府帮助下才可能做到这一点</em>。例如，Microsoft 经常被国家级行为者入侵（比如，俄罗斯黑客最近<a href="https://www.theverge.com/2024/1/19/24044561/microsoft-senior-leadership-emails-hack-russian-security-attack">窃取了 Microsoft 高管邮件</a>，以及 <a href="https://www.axios.com/2024/04/11/federal-government-microsoft-emails-hack">Microsoft 托管的政府邮件</a>）。一位在该领域工作的高级安全专家估计，即使私营部门进行全面紧急强化，如果中国把窃取 AGI 权重当作头号优先事项，它仍很可能成功外泄；要把这个概率降到个位数，或多或少需要一个政府项目。</p>
+<p>虽然政府自身在安全上记录并不完美，但只有政府拥有保护国防级秘密的基础设施、知识和能力。比如对员工进行严格审查的权限；用监禁威胁泄密者；数据中心实体安全；以及 NSA 等机构和安全许可体系背后人员拥有的大量知识（私营公司根本没有面对国家级行为者攻击的专业能力）。</p>
+<p>我不是安全许可体系背后的人，所以无法恰当地列出 AGI 安全究竟需要什么。最好的公开资料是 RAND 关于<a href="https://www.rand.org/pubs/research_reports/RRA2849-1.html">权重安全的报告</a>。为了让你感受一下这种防国家级行为者安全真正意味着什么：</p>
+<ul>
+<li>完全气隙隔离的数据中心，其实体安全与最安全军事基地相当（有安全许可人员、实体防御工事、现场响应团队、广泛监控和极端访问控制）。</li>
+<li>不只是训练集群——推理集群也需要同样强的安全！<a href="#footnote-6-139">6</a></li>
+<li>在保密计算/硬件加密上取得新的技术进展<a href="#footnote-7-139">7</a>，并对整个硬件供应链进行极端审查。</li>
+<li>所有研究人员都在 <a href="https://www.dni.gov/files/Governance/IC-Tech-Specs-for-Const-and-Mgmt-of-SCIFs-v15.pdf">SCIF</a>（Sensitive Compartmented Information Facility，读作 “skiff”，见<a href="https://www.washingtonpost.com/national-security/interactive/2023/scif-room-meaning-classified/">这个可视化</a>）中工作。</li>
+<li>极端人员审查和安全许可（包括定期员工诚信测试等）、持续监控、显著减少离开自由，以及严格信息隔离。</li>
+<li>强内部控制，例如运行任何代码都需要多钥匙签署。</li>
+<li>对任何外部依赖进行严格限制，并满足 TS/SCI 网络的一般要求。</li>
+<li>NSA 或类似机构持续进行高强度渗透测试。</li>
+<li>等等……</li>
+</ul>
+<p>巨型 AGI 集群现在正在规划；相应的安全工程也必须同步规划。如果我们将在短短几年内构建 AGI，我们时间非常少。</p>
+<p>不过，这项巨大工程不应导致宿命论。安全方面的幸运之处在于，中共大概还没有完全相信 AGI，因此尚未投入最极端的努力。美国 AI 实验室安全“只”需要相对于中国间谍活动强度保持领先。这意味着立即升级安全，以领先于“更正常”的经济间谍活动（而我们目前远不能抵抗它，但私营公司也许能做到）；也意味着未来几年，随着中国和其他外国间谍活动升级，与政府合作快速升级到更强措施。</p>
+<p>有人认为，严格安全措施及其伴随摩擦不值得，因为它们会过度拖慢美国 AI 实验室。但我认为这是错的：</p>
+<ul>
+<li>这是一个公地悲剧问题。对于某个实验室的商业利益来说，造成 10% 减速的安全措施也许会在与其他实验室竞争中有害。但从国家利益看，如果每个实验室都愿意接受额外摩擦，显然更好：美国 AI 研究远领先于中国及其他外国算法进展；美国保留 90% 速度的算法进展作为国家优势，显然好过保留 0% 作为国家优势（因为一切立刻被偷走）！</li>
+<li>此外，从长期研究生产率看，现在提高安全会是<em>更不痛苦</em>的路径。最终，不可避免地，即使只是到了超级智能前夕，在即将到来的非同寻常军备竞赛中，美国政府会意识到情况无法忍受，并要求安全整顿。与其逐步迭代，不如从静止状态开始一次性实施极端、防国家级行为者的安全措施，那会痛苦得多，也会造成更大减速。</li>
+</ul>
+<p>另一些人认为，即使我们的秘密或权重泄露，我们仍能通过其他方式更快而<em>勉强领先</em>（所以不该担心这些安全措施）。这同样是错的，或者至少承担的风险<em>远远</em>太大：</p>
+<ul>
+<li>正如我在<a href="https://situational-awareness.ai/the-free-world-must-prevail/#China_can_be_competitive">后文</a>讨论的，我认为中共很可能能用蛮力建设超过美国（100GW 集群对他们会容易得多）。更一般地说，中国可能没有与美国相同的谨慎在拖慢它（包括合理和不合理的谨慎！）。即使偷走算法或权重“只是”让它们在模型上与美国齐平，也可能足以让它们赢得超级智能竞赛。</li>
+<li>此外，即使美国最终勉强领先，1 到 2 年领先与 1 到 2 个月领先之间的差异，在穿越超级智能危险时会<em>非常</em>重要。1 到 2 年领先意味着至少有合理余量把安全做对，并在智能爆炸和后超级智能时期极端动荡的阶段中应对局势。<a href="#footnote-8-139">8</a> 仅仅 1 到 2 个月领先意味着一场高速、极压的国际军备竞赛，冲过智能爆炸，并且完全没有空间把安全做对。正是在这种并驾齐驱、存在性竞赛中，我们<a href="https://situational-awareness.ai/the-free-world-must-prevail/#Maintaining_a_healthy_lead_will_be_decisive_for_safety">面临最大的自我毁灭风险</a>。</li>
+<li>不要忘了俄罗斯、伊朗、朝鲜等等。它们的黑客能力也不弱。按照当前路径，我们也在免费与它们分享超级智能！如果没有好得多的安全，我们正在把我们最强大的武器扩散给大量极其危险、鲁莽、不可预测的行为者。<a href="#footnote-9-139">9</a></li>
+</ul>
+<p><strong>我们并不在正确轨道上</strong></p>
+<p>当少数人第一次意识到原子弹可能存在时，保密也许是最有争议的问题。1939 和 1940 年，Leo Szilard “在美国物理学界以裂变事务保密的首席使徒而闻名”。<a href="#footnote-10-139">10</a> 但他被大多数人拒绝；保密根本不是科学家习惯的东西，也违背了他们开放科学的许多基本直觉。但人们慢慢明白必须这样做：这项研究的军事潜力太大，不能简单地免费分享给纳粹。保密最终被实行，而且刚好及时。</p>
+<p>1940 年秋，Fermi 完成了石墨的新碳吸收测量，显示石墨可能是炸弹可用的慢化剂。Szilard 又一次向 Fermi 发起保密呼吁。Szilard 回忆说：“那时 Fermi 真的发火了；他真的认为这太荒谬。” 幸运的是，进一步呼吁最终成功，Fermi 勉强没有发表他的石墨结果。<a href="#footnote-11-139">11</a></p>
+<p>与此同时，德国项目已经把可能的慢化剂材料缩小到两种：石墨和重水。1941 年<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/andp.202000121">早些时候</a>，Walther Bothe 在海德堡错误测量了石墨吸收截面，并得出结论：石墨会吸收太多中子，无法维持链式反应。由于 Fermi 保密了自己的结果，德国人没有 Fermi 的测量值来对照并纠正错误。<em>这极其关键：它让德国项目转向追求重水——一条决定性的错误道路，最终葬送了德国核武器努力。</em></p>
+<p>如果没有最后一刻的保密呼吁，德国炸弹项目可能会成为一个可怕得多的竞争者——历史也许会走向非常不同的方向。</p>
+<p>领先 AI 实验室在安全问题上存在真实的心理脱节。它们毫不含糊地声称自己会在这个十年构建 AGI。它们强调美国在 AGI 上的领导地位对美国国家安全将具有决定性意义。据报道它们正在规划<a href="https://www.wsj.com/tech/ai/sam-altman-seeks-trillions-of-dollars-to-reshape-business-of-chips-and-ai-89ab3db0">7 万亿美元芯片建设</a>，只有在你<em>真的</em>相信 AGI 时才说得通。而事实上，当你提到安全时，它们点头承认“当然，我们都会在地堡里”，然后笑一笑。</p>
+<p>然而安全现实与此相差不能更远。每当需要做出艰难选择来优先考虑安全时，创业公司态度和商业利益就压过国家利益。如果国家安全顾问理解了美国领先 AI 实验室的安全水平，他会精神崩溃。</p>
+<p>现在正在开发的某些秘密，将用于未来每一次训练运行，并且会是通向 AGI 的关键解锁；它们被一家创业公司的安全保护着，而对中共来说价值数千亿美元。<a href="#footnote-12-139">12</a> 现实是：a) 在未来 12 到 24 个月里，我们会开发出 AGI 的关键算法突破，并迅速把它们泄露给中共；b) 到我们构建 AGI 时，我们甚至不在朝着能防住朝鲜这类流氓行为者的权重安全前进，更不用说防住中国的全力行动。“对创业公司来说很好的安全”离足够好差得远，而在对美国国家安全造成恶劣损害变得不可逆之前，我们时间非常少。</p>
+<p>我们正在开发人类有史以来创造的最强大武器。我们现在正在开发的算法秘密，字面上就是美国最重要的国防秘密——这些秘密将成为美国及其盟友在十年末经济和军事主导地位的基础；这些秘密将决定我们是否拥有足够领先来把 AI 安全做对；这些秘密将决定第三次世界大战的结果；这些秘密将决定自由世界的未来。然而 AI 实验室安全大概还不如一家做螺栓的随机国防承包商。</p>
+<p>这太疯狂了。</p>
+<p>如果我们不尽快修复这一点，我们在国家竞争和 AI 安全上做的几乎任何其他事情都不会重要。</p>
+<p>系列下一篇：<strong>IIIc. 超级对齐</strong></p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/secrecy_billboard.webp" alt=""></p>
+<p><em>一块</em></p>
+<p><a href="https://www.theatlantic.com/photo/2012/06/the-secret-city/100326/">广告牌</a>位于田纳西州橡树岭铀浓缩设施，1943 年。剧透一点，作为味道：在从约“间谍学院”毕业、被派往海外之前，准间谍必须在国内证明自己的技能：他们必须从一名苏联科学家那里获取秘密信息。当然，泄露国家机密的处罚是死刑。也就是说，从约“间谍学院”毕业，意味着挑选一个本国人并将其判向死亡。感谢 Ilya Sutskever 推荐这本书。</p>
+<p><a href="#note-1-139">↩</a> 顺便说，起诉书很好地展示了，即使在 Google（考虑到其能依靠 Google 数十年安全基础设施投资，它很可能拥有所有 AI 实验室中最好的安全）也很容易绕过安全。偷走代码而不被发现，只需要把代码粘贴进 Apple Notes，然后导出为 pdf！</p>
+<p>“DING 通过把数据从 Google 源文件复制到其 Google 发放的 MacBook 笔记本上的 Apple Notes 应用中，从而外泄这些文件。随后，DING 将 Apple Notes 转换为 PDF 文件，并从 Google 网络上传到 DING 账户 1。这种方法帮助 DING 逃避了即时检测。”</p>
+<p><em>（来自<strong>起诉书</strong>。）</em> 他之所以被抓，只是因为他还做了一堆其他愚蠢的事情，比如立刻在中国高调创办创业公司，引发怀疑（后来甚至又回到美国）。</p>
+<p><a href="#note-2-139">↩</a> 基于它们声称的安全级别与</p>
+<p><a href="https://www.rand.org/pubs/research_reports/RRA2849-1.html">RAND 权重安全报告</a> L1-L5 的对应关系。<a href="#note-3-139">↩</a> 我有时开玩笑说，AI 实验室的算法进展并没有分享给美国研究共同体，但正在分享给中国研究共同体！</p>
+<p><a href="#note-4-139">↩</a> 事实上，我从朋友那里听说，ByteDance 基本给 Google Gemini 论文上的每个人都发了邮件招聘他们，提供 L8（非常资深的职位，薪酬想必也很高），并用“你将直接向 ByteDance 美国 CTO 汇报”作为卖点。</p>
+<p><a href="#note-5-139">↩</a> 推理集群很可能比训练集群大得多，因此在智能爆炸期间，会有压倒性压力去使用这些推理集群运行自动化 AI 研究员（并在紧随其后的时期更广泛地运行数十亿个超级智能）。AGI/超级智能权重因此也可能从这些集群外泄。（我担心这一点被低估了，而推理集群会受到少得多的保护。）</p>
+<p><a href="#note-6-139">↩</a> 但你不能只依赖这一点！硬件加密经常遭到</p>
+<p><a href="https://mashable.com/article/apple-silicon-m-series-chip-vulnerability-hackers-encryption-keys">旁路攻击</a>。当然，纵深防御是关键。<a href="#note-7-139">↩</a> 例如，在智能爆炸期间多留 6 个月空间用于对齐研究，以确保</p>
+<p><a href="https://situational-awareness.ai/superalignment/">超级智能不会出问题</a>；在某些新型大规模杀伤性武器被发明出来后，把这些系统引导去关注防御应用，从而稳定局势；或者只是给人类决策者时间，在超级智能到来导致技术变化速度极快时做出正确决策。<a href="#note-8-139">↩</a> 我们非常努力地防止核武器扩散到流氓国家，即使与它们更有限的核武库相比我们仍会“领先”，因为扩散会造成混乱。</p>
+<p><a href="#note-9-139">↩</a> <em>The Making of the Atomic Bomb, p. 509</em><a href="#note-10-139">↩</a><em>The Making of the Atomic Bomb,</em> p. 507<a href="#note-11-139">↩</a> 当价值数百亿或数千亿美元的集群正在建设时，100 倍以上的算力效率。</p>
+<p><a href="#note-12-139">↩</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-c22b7243.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

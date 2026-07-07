@@ -1,0 +1,424 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AI 万亿集群投资与工业动员 - 情境意识：AGI 与超级智能（中文译文）</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-0392ca55.css">
+        <link rel="stylesheet" href="css/chrome-fc474251.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-e6ebfb74.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-76315ebc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">情境意识：AGI 与超级智能（中文译文）</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <p><strong>最非同寻常的技术—资本加速已经启动。随着 AI 收入快速增长，在这个十年结束之前，数万亿美元将流入 GPU、数据中心和电力建设。包括让美国发电量增长数十个百分点在内的工业动员，将会非常强烈。</strong></p>
+<p>你看，我告诉过你，不把整个国家变成一座工厂，这事就做不成。你们正是这么做了。</p>
+<p>[Niels Bohr](对 Edward Teller 说，1944 年得知曼哈顿计划规模之后)</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/trillion_dollar_cluster-1024x585.png" alt=""></p>
+<p><em>万亿美元集群。来源：DALLE。</em></p>
+<p>AGI 竞赛不会只发生在代码里、笔记本电脑背后——它也会是一场动员美国工业力量的竞赛。与我们最近从硅谷看到的任何东西都不同，AI 是一个庞大的工业过程：每个新模型都需要一个巨大的新集群；很快还会需要巨大的新发电厂；最终会需要巨大的新芯片晶圆厂。所需投资令人震惊。但在幕后，这些投资已经开始动起来。</p>
+<p>在这篇文章中，我会带你看一些数字，让你感受这会意味着什么：</p>
+<ul>
+<li>随着 AI 产品收入快速增长——对于 Google 或 Microsoft 这样的公司来说，凭借强大但尚未达到 AGI 的系统，到约 2026 年达到 1000 亿美元年化收入是合理可能的——这会推动越来越大的资本动员；到 2027 年，AI 总投资可能每年超过 1 万亿美元。</li>
+<li>我们正在走向 2028 年单个训练集群成本数千亿美元的道路——这些集群所需电力相当于美国一个中小州，并且成本高于国际空间站。</li>
+<li>到这个十年结束时，我们将走向单个训练集群 1 万亿美元以上，所需电力相当于美国发电量的 20% 以上。总体上，数万亿美元资本开支将每年产出数亿块 GPU。</li>
+</ul>
+<p>Nvidia 震惊了世界：它的数据中心销售额在过去一年从约<a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2023">年化 140 亿美元</a>飙升到约<a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2025">年化 900 亿美元</a>。但这仍只是刚刚开始。</p>
+<p><strong>训练算力</strong></p>
+<p><a href="https://situational-awareness.ai/from-gpt-4-to-agi/#Compute">前面</a>我们看到，AI 训练算力大致呈现每年约 0.5 个数量级的趋势增长。<a href="#footnote-1-138">1</a> 如果这一趋势在本十年剩余时间继续下去，最大的训练集群会是什么样？</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>年份</th><th>数量级</th><th>H100 等效数量</th><th>成本</th><th>电力</th><th>电力参照类别</th></tr>
+</thead>
+<tbody>
+<tr><td>2022</td><td>约 GPT-4 集群</td><td>约 1 万</td><td>约 5 亿美元</td><td>约 10 MW</td><td>约 1 万户普通家庭</td></tr>
+<tr><td>约 2024</td><td>+1 个数量级</td><td>约 10 万</td><td>数十亿美元</td><td>约 100MW</td><td>约 10 万户家庭</td></tr>
+<tr><td>约 2026</td><td>+2 个数量级</td><td>约 100 万</td><td>数百亿美元</td><td>约 1 GW</td><td>胡佛大坝，或一座大型核反应堆</td></tr>
+<tr><td>约 2028</td><td>+3 个数量级</td><td>约 1000 万</td><td>数千亿美元</td><td>约 10 GW</td><td>美国一个中小州</td></tr>
+<tr><td>约 2030</td><td>+4 个数量级</td><td>约 1 亿</td><td>1 万亿美元以上</td><td>约 100GW</td><td>美国发电量的 20% 以上</td></tr>
+</tbody>
+</table>
+</div>
+<p><em>扩大最大训练集群规模，粗略的信封背面计算。</em></p>
+<h4 id=""><a class="header" href="#"></a></h4>
+<p><a href="javascript:void(0)">最大训练集群计算细节</a></p>
+<p><strong>年份</strong></p>
+<p><a href="https://arxiv.org/pdf/2303.08774">OpenAI GPT-4 技术报告</a>称 GPT-4 在 2022 年 8 月完成训练。此后我们把约每年 0.5 个数量级的粗略趋势向前推演。</p>
+<p><strong>H100 等效</strong></p>
+<p><a href="https://www.semianalysis.com/p/gpt-4-architecture-infrastructure%5C">Semianalysis</a>、</p>
+<p><a href="https://colab.research.google.com/drive/1O99z9b1I5O66bT78r9ScslE_nOj5irN9">JP Morgan</a> 等估计 GPT-4 是在约 2.5 万块 A100 上训练的，而 H100 性能约为 A100 的 2 到 3 倍。</p>
+<p><strong>成本</strong></p>
+<p>人们经常引用“GPT-4 训练花了 1 亿美元”之类数字，只计算 GPU 租用成本（也就是类似“租这个规模的集群训练 3 个月要多少钱”）。但这是错误的。真正重要的更接近于建设这个集群的实际成本。如果你想拥有世界上最大的集群之一，就不可能只租 3 个月！而且你需要算力的用途不只是旗舰训练运行：还会有大量降风险实验、失败运行、其他模型，等等。</p>
+<p>为了估算 GPT-4 集群成本：</p>
+<ul>
+<li><a href="https://www.semianalysis.com/p/gpt-4-architecture-infrastructure%5C">公开</a><a href="https://colab.research.google.com/drive/1O99z9b1I5O66bT78r9ScslE_nOj5irN9">估计</a>显示 GPT-4 集群约有 2.5 万块 A100。</li>
+<li>假设每 A100 小时 1 美元、持续 2 到 3 年，则大致是 5 亿美元成本。</li>
+<li>另一种估计方式是：每块 H100 约 2.5 万美元，1 万块 H100 等效，且 Nvidia GPU 约占集群成本的一半（剩下是电力、实体数据中心、冷却、网络、维护人员等）。</li>
+<li>（例如，这份<a href="https://pytorchtoatoms.substack.com/p/metas-24k-h100-cluster-capextco-and">总体拥有成本分析</a>估计，大型集群成本约 40% 是 H100 GPU 本身，另有 13% 流向 Nvidia 的 Infiniband 网络。不过，如果在该计算中剔除资本成本，那么 GPU 约占成本 50%；加上网络后，Nvidia 获得的比例略高于集群成本的 60%。）</li>
+<li>（例如，这</li>
+</ul>
+<p>每一代 Nvidia GPU 的 <em>FLOP/美元</em> 都会有所改善，但幅度不算大。例如 H100 → B100 很可能大约是 1.5 倍 FLOP/美元：B100 实际上像是把两块 H100 绑在一起，但零售价低于 2 倍成本。不过 B100 某种程度上是例外。它们出人意料地便宜，很可能是因为 Nvidia <a href="https://www.semianalysis.com/p/nvidia-b100-b200-gb200-cogs-pricing">想压垮竞争</a>。相比之下，A100 → H100 在 FLOP/美元上没有多少改善（如果不算 fp8，是大约 2 倍更好的芯片、也约 2 倍成本；如果算上 fp8 改进，也许是 1.5 倍），而那还是两年一代。</p>
+<p>我认为，由于利润率压缩，FLOP/美元进一步改善有一些顺风；但随着 GPU 变得极度受限，它们也可能更贵。AI 芯片专门化带来的收益会继续，但我不确定 FLOP/美元还会出现改变格局的技术改进，因为芯片已经相当专门针对 AI（例如专门针对 Transformer，并且已经是 fp8/fp4 精度），摩尔定律如今非常缓慢，而<a href="https://twitter.com/karpathy/status/1691571869051445433">内存和互连等其他瓶颈部件改善更慢</a>。如果你看 <a href="https://epochai.org/blog/trends-in-gpu-price-performance">Epoch 的数据</a>，过去十年顶级机器学习 GPU 的 FLOP/美元似乎提升不到 10 倍；基于上述原因，我反而预期它会放缓。</p>
+<p>每年约 35% 的 FLOP/美元改善，会让 +4 个数量级集群的成本达到 1 万亿美元。也许 FLOP/美元改善更快，但数据中心资本开支也会变得更贵——原因很简单：你将需要真正建设新的电力，先投入大量资本开支，而不是租用已有、已折旧的发电厂。</p>
+<p>无论如何，这些都只是非常粗略的数字。例如，如果 1 万亿美元集群能以更高效率完成、实际在算力上提供更接近 +4.5 个数量级的收益，也完全在误差范围内。</p>
+<p><strong>电力需求</strong></p>
+<p>一块 H100 是 700W，但你还需要大量数据中心电力（冷却、网络、存储）；Semianalysis <a href="https://www.semianalysis.com/p/ai-datacenter-energy-dilemma-race">估计</a>每块 H100 约 1400W。</p>
+<p>FLOP/瓦特上仍有一些收益可得，不过一旦我们耗尽 AI 芯片专门化的收益（见上一个脚注），例如降到尽可能低的精度，这些收益看起来相当有限（主要就是芯片制程改进，而这很慢）。也就是说，随着电力更成为约束（从而占成本更大比例），芯片设计可能会牺牲 FLOPs 来专门优化能效。尽管如此，冷却、网络、存储等仍会有电力需求（上面的 H100 数字中，这些已经约占电力需求的一半）。</p>
+<p>在这些信封背面计算中，我们这里按每个 H100 等效约 1kW 处理；再次强调，这些只是粗略计算。（如果出现意外的 FLOP/瓦特突破，我预期支出的电力仍会相同，只是会带来更大的 OOM 算力收益。）</p>
+<p><strong>电力参照类别</strong></p>
+<p>一个 10GW 集群连续运行一年是 87.6 TWh。相比之下，俄勒冈州每年<a href="https://www.energy.gov/sites/prod/files/2016/09/f33/OR_Energy%20Sector%20Risk%20Profile.pdf">消耗约 27 TWh</a> 电力，华盛顿州每年<a href="https://www.energy.gov/sites/prod/files/2016/09/f33/WA_Energy%20Sector%20Risk%20Profile.pdf">消耗约 92 TWh</a>。</p>
+<p>一个 100GW 集群连续运行一年是 876 TWh，而美国年发电总量约为 4,250 TWh。</p>
+<p>这也许很难相信——但它看起来正在发生。扎克伯格<a href="https://www.cnbc.com/2024/01/18/mark-zuckerberg-indicates-meta-is-spending-billions-on-nvidia-ai-chips.html">购买了 35 万块 H100</a>。Amazon 在一座核电站旁边<a href="https://www.datacenterdynamics.com/en/news/aws-acquires-talens-nuclear-data-center-campus-in-pennsylvania/">买下了一个 1GW 数据中心园区</a>。传闻<a href="https://twitter.com/rediminds/status/1749852816938529247?lang=en">显示</a>，一个 1GW、140 万 H100 等效集群（约 2026 年级集群）正在科威特建设。媒体报道 <a href="https://www.reuters.com/technology/microsoft-openai-planning-100-billion-data-center-project-information-reports-2024-03-29/">Microsoft 和 OpenAI 据称正在合作建设一个 1000 亿美元、计划 2028 年使用的集群</a>（成本堪比<a href="https://en.wikipedia.org/wiki/International_Space_Station_programme#:~:text=Cost,-This%20section%20is&amp;text=The%20ISS%20has%20been%20described,cost%20was%20US%24150%20billion.">国际空间站</a>！）。随着每一代模型继续震惊世界，进一步加速可能还会到来。</p>
+<p>也许最疯狂的是，至少对于训练集群而言，当前的约束甚至似乎不是花钱意愿。真正难的是找到基础设施本身：“我到哪里找 10GW？”（1000 亿美元以上、按趋势约 2028 年集群所需电力）是旧金山常见的聊天话题。任何算力相关人士都在思考如何锁定电力、土地、许可和数据中心建设。<a href="#footnote-2-138">2</a> 你也许要等一年才能拿到 GPU，但这些东西的交付周期还要长得多。</p>
+<p>万亿美元集群——相对于 GPT-4 集群 +4 个数量级，也就是当前趋势下约 2030 年的训练集群——将是一项真正非同寻常的工程。它所需的 100GW 电力相当于美国发电量的 20% 以上；想象一下，它不是一个简单堆满 GPU 的仓库，而是数百座发电厂。也许这需要一个国家级联合体。</p>
+<p>（注意，我认为我们很可能只需要约 1000 亿美元或更少的集群就能达到 AGI。1 万亿美元集群也许会是我们用来训练和运行超级智能的东西，或者如果 AGI 比预期更难，它会被用于 AGI。无论如何，在后 AGI 世界中，拥有最多算力很可能仍然<em>很</em>重要。）</p>
+<p><strong>总体算力</strong></p>
+<p>上面只是对最大训练集群的粗略数字。总体投资很可能要大得多：大量 GPU 可能会用于推理<a href="#footnote-3-138">3</a>（真正运行产品中的 AI 系统的 GPU），并且竞赛中可能会有多个参与者拥有巨大集群。</p>
+<p>我的粗略估计是，2024 年 AI 投资已经会达到 1000 亿到 2000 亿美元：</p>
+<ul>
+<li>Nvidia 数据中心收入很快会达到每季度约 250 亿美元的运行率，也就是仅通过 Nvidia 就有约 1000 亿美元资本开支流动。当然，Nvidia 并不是唯一玩家（Google 的 TPU 也很棒！），而且接近一半的数据中心资本开支花在芯片之外的东西上（场地、建筑、冷却、电力等）。<a href="#footnote-4-138">4</a></li>
+</ul>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/nvida_datacenter_revenue.png" alt=""></p>
+<p><em>Nvidia 季度数据中心收入。图由</em></p>
+<p><a href="https://twitter.com/Thomas_Woodside/status/1795247239990014409/photo/1">.</a></p>
+<p><em>Thomas Woodside</em> 绘制。</p>
+<ul>
+<li>大型科技公司的资本开支数字正在显著上升：Microsoft 和 Google 今年很可能超过 500 亿美元，<a href="#footnote-5-138">5</a>AWS 和 Meta 超过 400 亿美元。并非所有这些都是 AI，但受 AI 热潮影响，它们合计资本开支将同比增加 500 亿到 1000 亿美元；即便如此，它们还在削减其他资本开支，把更多支出转向 AI。此外，其他云服务商、公司（例如 <a href="https://twitter.com/heyitsyashu/status/1784594856037208516?s=12">Tesla 今年在 AI 上花 100 亿美元</a>）以及民族国家也在投资 AI。</li>
+</ul>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/big_tech_capex.jpg" alt=""></p>
+<p><em>自 ChatGPT 引爆 AI 热潮以来，大型科技公司资本开支增长极快。</em></p>
+<p><em>图表来源</em>*。*</p>
+<p>把这往前推演。我的最佳猜测是，总体算力投资会比最大训练集群每年 3 倍的增速慢一些，姑且按每年 2 倍。<a href="#footnote-6-138">6</a></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>年份</th><th>年度投资</th><th>AI 加速器出货量（按 H100 等效）</th><th>电力占美国发电量比例</th><th>芯片占当前 TSMC 先进逻辑晶圆产能比例</th></tr>
+</thead>
+<tbody>
+<tr><td>2024</td><td>约 1500 亿美元</td><td>约 500 万到 1000 万</td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<p><a href="#footnote-9-138">9</a><em>推演全球 AI 总投资趋势。粗略的信封背面计算。</em></p>
+<p>而这些并不是我个人独特的数字。<a href="https://www.bloomberg.com/news/articles/2023-12-06/amd-ceo-debuts-new-nvidia-chip-rival-gives-eye-popping-forecast?embedded-checkout=true">AMD 预测</a>到 2027 年 AI 加速器市场会达到 4000 亿美元，意味着 AI 总支出超过 7000 亿美元，非常接近我的数字（而且他们肯定比我更少“AGI 化”）。报道称 Sam Altman 正在洽谈为一个<a href="https://www.wsj.com/tech/ai/sam-altman-seeks-trillions-of-dollars-to-reshape-business-of-chips-and-ai-89ab3db0">“最高 7 万亿美元”</a>资本开支项目筹资，以建设 AI 算力容量（这个数字曾被广泛嘲笑，但如果你按这里的数字算，就显得没那么疯狂……）。无论以何种方式，这种大规模扩张正在发生。</p>
+<p><strong>会完成吗？能完成吗？</strong></p>
+<p>这里设想的投资规模可能显得像幻想。但需求侧与供给侧似乎都能支撑上述轨迹。经济回报足以证明投资合理；对一种新的通用技术来说，这种支出规模并非没有先例；而围绕电力和芯片的工业动员是可行的。</p>
+<p><strong>AI 收入</strong></p>
+<p>如果企业预期经济回报足以证明投资合理，它们就会进行大规模 AI 投资。</p>
+<p>报道称 OpenAI 在 <a href="https://www.theinformation.com/articles/openai-passes-1-billion-revenue-pace-as-big-companies-boost-ai-spending">2023 年 8 月</a>达到 10 亿美元收入运行率，在 <a href="https://www.reuters.com/technology/openai-hits-2-bln-revenue-milestone-ft-2024-02-09/">2024 年 2 月</a>达到 20 亿美元收入运行率。这大约是每 6 个月翻倍一次。如果这一趋势保持，即使不计入任何下一代模型带来的巨大激增，到 2024 年末/2025 年初也应看到约 100 亿美元的年化运行率。一项估计认为 <a href="https://x.com/ttunguz/status/1783941512159776840">Microsoft</a> 已经有约 50 亿美元增量 AI 收入。</p>
+<p>到目前为止，AI 投资每扩大 10 倍，似乎都产生了必要回报。GPT-3.5 引爆了 ChatGPT 热潮。GPT-4 集群估计 5 亿美元的成本，会被 Microsoft 和 OpenAI 报道中的数十亿美元年收入覆盖（见上面计算）；而如果 Microsoft/OpenAI 的 AI 收入继续朝 100 亿美元以上运行率前进，数十亿美元的“2024 级”训练集群也很容易回本。这场热潮由投资拉动：从大规模 GPU 订单，到建设集群、构建模型、推出产品，都需要时间；而今天规划中的集群是几年后的东西。但如果上一批 GPU 订单的回报不断兑现，投资会继续飙升（并超过收入），把更多资本投入下一次 10 倍扩张仍会回报的赌注中。</p>
+<p>我喜欢思考的一个 AI 收入关键里程碑是：一家大型科技公司（Google、Microsoft、Meta 等）什么时候会从 AI（产品和 API）达到 1000 亿美元收入运行率？这些公司今天的收入大约在 1000 亿到 3000 亿美元量级；因此 1000 亿美元会开始代表其业务的很大一部分。非常朴素地外推每 6 个月翻倍一次，假设 2025 年初达到 100 亿美元收入运行率，那么这会在 2026 年中发生。</p>
+<p>这也许听起来夸张，但在我看来，要达到这个里程碑其实不需要太多想象力。例如，<a href="https://office365itpros.com/2022/04/28/office-365-number-of-users/">Microsoft Office 付费订阅者约有 3.5 亿</a>——你能不能让其中三分之一愿意每月为 AI 附加服务付 100 美元？对普通员工来说，这只意味着每月获得几小时生产力提升；未来几年出现足够强、足以证明这笔钱合理的模型，看起来非常可行。<a href="#footnote-10-138">10</a></p>
+<p>很难夸大随后产生的回响。这会让 AI 产品成为美国最大公司最大的收入驱动因素，并且<em>远远</em>成为它们最大的增长领域。这些公司整体收入增长预测会飙升。股市会跟随；我们也许很快会看到第一家 10 万亿美元公司。大型科技公司届时会愿意全力投入，每家都向进一步 AI 扩展投资数千亿美元（至少如此）。我们也许会在那时看到第一笔数千亿美元的公司债发行。<a href="#footnote-11-138">11</a></p>
+<p>超过 1000 亿美元之后，轮廓就更难看清。但如果我们真的在通往 AGI 的路上，回报会存在。全球白领劳动者每年工资总额是数十万亿美元；一个可以直接上岗的远程员工，只要能自动化哪怕一部分白领/认知工作（想象比如一个真正自动化的 AI coder），就能为万亿美元集群买单。再不然，国家安全重要性也很可能推动政府项目，把国家资源捆绑进 AGI 竞赛（<a href="https://situational-awareness.ai/the-project/">后文会讲更多</a>）。</p>
+<p><strong>历史先例</strong></p>
+<p>到 2027 年每年 1 万亿美元 AI 总投资听起来离谱。但值得看一下其他历史参照类别：</p>
+<ul>
+<li>曼哈顿计划和阿波罗计划在经费峰值年份<a href="https://sgp.fas.org/crs/misc/RL34645.pdf">达到 GDP 的 0.4%</a>，按今天计算约为每年 1000 亿美元（出人意料地小！）。如果每年 1 万亿美元，AI 投资约为 GDP 的 3%。</li>
+<li>1996 到 2001 年间，电信公司<a href="https://www.latimes.com/archives/la-xpm-2002-jun-30-fi-billions30-story.html">投入</a>按今天美元计近 1 万亿美元来建设互联网基础设施。</li>
+<li>1841 到 1850 年，<a href="https://x.com/michael_nielsen/status/1782129830932210166">英国私人铁路投资总额</a>累计约为当时英国 GDP 的 40%。若按<a href="https://fred.stlouisfed.org/series/GDP">美国 GDP</a>的类似比例计算，相当于十年约 11 万亿美元。绿色转型正在花费<a href="https://www2.deloitte.com/content/dam/Deloitte/global/Documents/deloitte-financing-the-green-energy-transition-report-2023.pdf">数万亿美元</a>。</li>
+<li>快速增长经济体往往把高比例 GDP 用于投资；例如，中国二十年来把超过 <a href="https://carnegieendowment.org/chinafinancialmarkets/91161#:~:text=It%20currently%20invests%2042%E2%80%9344,percent%20in%202010%20and%202011">40% 的 GDP 用于投资</a>（按美国 GDP 计算，相当于<em>每年</em> 11 万亿美元）。</li>
+<li>在历史上最紧迫的国家安全情境——战争时期——为国家努力举债融资常常占到 GDP 的巨大比例。一战期间，<a href="https://bankunderground.co.uk/2017/08/08/your-country-needs-funds-the-extraordinary-story-of-britains-early-efforts-to-finance-the-first-world-war/">英国</a>、<a href="https://encyclopedia.1914-1918-online.net/article/war_finance_france">法国</a>和<a href="https://encyclopedia.1914-1918-online.net/article/war_finance_germany">德国</a>举债超过其 GDP 的 100%，<a href="https://www.theatlantic.com/business/archive/2012/11/the-long-story-of-us-debt-from-1790-to-2011-in-1-little-chart/265185/">美国</a>超过 20%；二战期间，<a href="https://obr.uk/box/post-world-war-ii-debt-reduction/">英国</a>和日本举债超过 GDP 的 100%，<a href="https://www.theatlantic.com/business/archive/2012/11/the-long-story-of-us-debt-from-1790-to-2011-in-1-little-chart/265185/">美国</a>举债超过 GDP 的 60%（按今天相当于超过 17 万亿美元）。</li>
+</ul>
+<p>到 2027 年每年 1 万亿美元 AI 总投资会非常剧烈——属于有史以来最大的资本建设之一——但并非没有先例。而到十年末出现单个万亿美元训练集群，看起来已经摆上桌面。<a href="#footnote-12-138">12</a></p>
+<p><strong>电力</strong></p>
+<p>供给侧最大的单一约束很可能是<a href="https://www.wsj.com/business/energy-oil/big-techs-latest-obsession-is-finding-enough-energy-f00055b2">电力</a>。在更近期的规模上（1GW/2026，尤其是 10GW/2028），电力已经成为约束：根本没有太多闲置容量，而电力合同通常长期锁定。并且，新建一座吉瓦级核电站大概要十年。（我会好奇我们什么时候开始看到科技公司为了吉瓦级电力合同而收购<a href="https://en.wikipedia.org/wiki/Aluminerie_Alouette">铝冶炼公司</a>之类事情。<a href="#footnote-13-138">13</a>）</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/us_power-1024x790.png" alt=""></p>
+<p><em>把美国总发电量趋势与我们对 AI 电力需求的粗略信封背面估计进行比较。</em></p>
+<p>美国总发电量在<a href="https://en.wikipedia.org/wiki/Electricity_sector_of_the_United_States">过去十年几乎只增长了 5%</a>。<a href="#footnote-14-138">14</a> 公用事业公司开始对 AI <a href="https://twitter.com/hayekandkeynes/status/1776365744323780997?s=12">兴奋起来</a>（他们现在估计未来 5 年增长 4.7%，而不是<a href="https://www.wsj.com/business/energy-oil/data-centers-energy-georgia-development-7a5352e9?st=gi5gnqcodm9uy16">之前</a>的 2.6%！）。但他们几乎还没有把即将到来的东西计入价格。单是万亿美元、100GW 集群，就会在 6 年内需要约当前美国发电量的 20%；再加上大规模推理容量，需求会高出数倍。</p>
+<p>对大多数人来说，这似乎完全不可能。一些人押注中东专制国家；这些国家到处提供近乎无限的电力和巨型集群，以便让其统治者在 AGI 桌上占有一席之地。</p>
+<p>但在美国完全可以做到：我们拥有丰富的天然气。<a href="#footnote-15-138">15</a></p>
+<ul>
+<li>
+<p>为 10GW 集群供电只需要美国天然气产量的几个百分点，而且可以快速完成。</p>
+</li>
+<li>
+<p>即使 100GW 集群也出人意料地可行。</p>
+</li>
+<li>
+<p>仅宾夕法尼亚附近的 Marcellus/Utica 页岩目前每天就<a href="https://www.eia.gov/petroleum/drilling/pdf/appalachia.pdf">生产</a>约 360 亿立方英尺天然气；用发电机组可以连续发出接近 150GW（联合循环电厂由于效率更高，可输出 250GW）。</p>
+</li>
+<li>
+<p>100GW 集群大约需要约 1200 口<a href="https://ir.rangeresources.com/static-files/cd9b4c2c-f4fe-4118-9659-a4c3528b95b1">新井</a>。<a href="#footnote-16-138">16</a> 每台钻机每月大约能钻 3 口井，因此 40 台钻机（Marcellus 当前<a href="https://www.eia.gov/petroleum/drilling/pdf/appalachia.pdf">钻机数量</a>）可以在不到一年内建立 100GW 所需的产气基础。<a href="#footnote-17-138">17</a> Marcellus 在 2019 年时钻机数量还约为 80，因此增加 40 台钻机来建立产气基础并不会吃力。<a href="#footnote-18-138">18</a></p>
+</li>
+<li>
+<p>更广泛地说，美国天然气产量在十年内已经<a href="https://en.wikipedia.org/wiki/Shale_gas_in_the_United_States#/media/File:Shale_gas_production_USA.svg">翻倍以上</a>；仅仅继续这一趋势，就能为多个万亿美元数据中心供电。<a href="#footnote-19-138">19</a></p>
+</li>
+<li>
+<p>更难的部分是建设足够多的发电机/涡轮机；这并不简单，但 100GW 天然气电厂看起来大约 1000 亿美元资本开支<a href="#footnote-20-138">20</a>就可行。联合循环电厂约两年可以建成；发电机的时间线还会更短。<a href="#footnote-21-138">21</a></p>
+</li>
+<li>
+<p>仅宾夕法尼亚附近的 Marcellus/Utica 页岩目前就是</p>
+</li>
+</ul>
+<p>在美国建设甚至数万亿美元数据中心的障碍完全是人为造成的。出于好意但僵硬的气候承诺（不只是政府的承诺，也包括 Microsoft、Google、Amazon 等公司的绿色数据中心承诺）挡住了显而易见的快速解决方案。至少，即使我们不使用天然气，一套广泛的放松管制议程也会释放太阳能/电池/小型模块化反应堆/地热巨型项目。许可、公用事业监管、FERC 对<a href="https://ifp.org/how-cost-allocation-works-for-transmission-lines/">输电线路</a>的监管，以及 NEPA 环境审查，让本应几年完成的事情变成十年或更久。我们没有这种时间。</p>
+<p>我们会把 AGI 数据中心赶到中东，置于残酷、反复无常的专制者手下。我也更喜欢清洁能源——但这对美国国家安全来说太重要了。我们需要以一种新的决心把事情做成。电力约束能够、必须、也将会被解决。</p>
+<p><strong>芯片</strong></p>
+<p>人们想到 AI 供给约束时通常首先想到芯片，但它们很可能比电力更小。全球 AI 芯片产量仍只是 TSMC 先进制程产量的很小比例，很可能不到 10%。随着 AI 在 TSMC 产能中占更大比例，还有很大增长空间。</p>
+<p>事实上，2024 年 AI 芯片产量（约 500 万到 1000 万 H100 等效）已经几乎足够支撑数千亿美元集群（如果它们全部转向一个集群）。从纯逻辑晶圆厂角度看，TSMC 一年约 100% 的产出已经可以支撑万亿美元集群（同样假设所有芯片都流向一个数据中心）。<a href="#footnote-22-138">22</a> 当然，不可能把整个 TSMC 都转向 AI，也不可能让一年所有 AI 芯片产量都用于一个训练集群。到 2030 年，仅 AI 的总 AI 芯片需求（包括推理和多个玩家）就会是 TSMC 当前先进逻辑芯片总产能的数倍。TSMC 过去 5 年约<a href="https://www.macrotrends.net/stocks/charts/TSM/taiwan-semiconductor-manufacturing/revenue">翻倍</a><a href="#footnote-23-138">23</a>；为了满足 AI 芯片需求，它们可能需要把扩张速度至少再提高约一倍。大规模新晶圆厂投资将是必要的。</p>
+<p>即使原始逻辑晶圆厂不会成为约束，chip-on-wafer-on-substrate（CoWoS）先进封装（把芯片连接到内存，也由 TSMC、Intel 等制造）和 HBM 内存（其需求<a href="https://twitter.com/ericjhonsa/status/1770545692978925955?s=12">极</a><a href="https://twitter.com/dnystedt/status/1787662436478410867?s=12">其巨大</a>）已经是当前 AI GPU 扩张的关键瓶颈；它们比纯逻辑芯片更专门针对 AI，因此既有产能更少。在近期，它们会成为生产更多 GPU 的主要约束；随着 AI 扩大，它们也会成为巨大约束。尽管如此，这些相对来说“容易”扩张；看着 TSMC 今年真正建设“绿地”晶圆厂（也就是完全从零开始的新设施）来大规模扩大 CoWoS 生产，令人震撼（Nvidia 甚至开始寻找 <a href="https://x.com/dnystedt/status/1793096268400759110?s=46&amp;t=EfdUOH7OfS4lpc8-o1U6Dg">CoWoS 替代方案</a>，以绕过短缺）。</p>
+<p>一座新的 TSMC <a href="https://www.asianometry.com/p/the-economics-of-tsmcs-giga-fabs">Gigafab</a>（一个<a href="https://www.construction-physics.com/p/how-to-build-a-20-billion-semiconductor">技术奇迹</a>）约需 200 亿美元资本开支，每月产出 10 万片晶圆开工量。为了在十年末每年生产数亿块 AI GPU，TSMC 需要建几十座这样的厂——还要为内存、先进封装、网络等进行巨大建设，而这些会占资本开支的重要部分。总额可能超过 1 万亿美元。它会很紧张，但可行。（也许最大的障碍不是可行性，而是 TSMC 根本没有尝试——TSMC 似乎还没有真正接受 AI 扩张！他们认为 AI “只会”以<a href="https://www.fierceelectronics.com/ai/tsmc-bullish-ai-q1-revenues-rises-q2-outlook-bright">缓慢的 50% CAGR</a>增长。）</p>
+<p>美国政府最近的努力，比如 CHIPS Act，一直试图把更多 AI 芯片生产迁回美国（作为台湾突发事件的保险）。虽然让更多 AI 芯片生产在美国本土进行是好事，但它不如把真正的数据中心（AGI 居住的地方）放在美国那么关键。如果把芯片生产放在国外，像是把铀矿放在国外；那么把 AGI 数据中心放在国外，就像让真正的核弹在国外建造和储存。考虑到我们在美国实际建设晶圆厂时看到的功能失调和成本，我的猜测是，我们应该优先在美国建设数据中心，同时在晶圆厂项目上更多押注日本、韩国等民主盟友——那里的晶圆厂建设<a href="https://twitter.com/dnystedt/status/1768446340881907914?s=12">看起来运作顺畅得多</a>。</p>
+<p><strong>民主国家的集群</strong></p>
+<p>在这个十年结束之前，数万亿美元的算力集群将被建成。唯一的问题是，它们是否会建在美国。据传一些人正在押注把它们建在别处，尤其是中东。我们真的希望曼哈顿计划的基础设施被某个反复无常的中东独裁政权控制吗？</p>
+<p>今天正在规划的集群，很可能不仅是“很酷的大科技产品集群”，而是 AGI 和超级智能会在其上训练和运行的集群。国家利益要求这些集群建在美国（或亲近的民主盟友）。任何其他选择都会造成不可逆的安全风险：AGI 权重可能被盗<a href="#footnote-24-138">24</a>（也许还会被<a href="https://www.nytimes.com/2023/11/27/us/politics/ai-us-uae-china-security-g42.html">运往中国</a>）（<a href="https://situational-awareness.ai/lock-down-the-labs/">后文会讲更多</a>）；当 AGI 竞赛升温时，这些独裁政权可能实体夺取数据中心（自己构建和运行 AGI）；即使这些威胁只是被隐含地挥舞，也会让 AGI 和超级智能受不光彩的独裁者反复无常摆布。美国曾在 1970 年代深切后悔自己对中东能源的依赖，并为摆脱其控制付出了巨大努力。我们不能再犯同样错误。</p>
+<p>这些集群可以建在美国，我们必须把事情组织好，确保它们建在美国。美国国家安全必须优先，优先于源源不断中东资金的诱惑、晦涩法规，甚至是，没错，值得尊重的气候承诺。我们面对的是真实的制度竞争——必要的工业动员是否只有“自上而下”的专制政体才能做到？如果解除束缚，美国企业可以像没有任何国家一样建设（至少在红州）。愿意使用天然气，或者至少推行广泛的放松管制议程——NEPA 豁免，在联邦层面修复 FERC 和输电许可，覆盖公用事业监管，使用联邦权力释放土地和通行权——是一项国家安全优先事项。</p>
+<p>无论如何——指数增长现在已经全面展开。</p>
+<p>在“旧时代”，AGI 还是一个不体面的词时，我和一些同事曾经做过理论经济模型，描述通向 AGI 的道路可能是什么样。这些模型的一个特征，是假设存在一个“AI 觉醒”时刻：世界开始意识到这些模型可能多么强大，并开始迅速提高投资，最终把 GDP 的多个百分点投向最大的训练运行。</p>
+<p>那时它似乎很遥远，但那个时刻已经到来。2023 年<em>就是</em>“AI 觉醒”。<a href="#footnote-25-138">25</a> 在幕后，最令人震惊的技术—资本加速已经被启动。</p>
+<p>准备承受 G 力。</p>
+<p>系列下一篇：<strong>IIIb. 锁住实验室：AGI 安全防护</strong></p>
+<p><em>（这一切对 NVDA/TSM 等意味着什么，留给读者作为练习。提示：有态势感知的人买入价比你低得多，但它仍然远远没有被充分定价。<a href="#footnote-26-138">26</a>）</em></p>
+<p>如前所述，OOM = order of magnitude，即数量级；10x = 1 个数量级。</p>
+<p><a href="#note-1-138">↩</a> 一个关键不确定性是分布式训练会发展到什么程度——如果不是在一个地点需要那么多电力，而是可以分散到 100 个地点，就容易得多。</p>
+<p><a href="#note-2-138">↩</a> 例如，参见扎克伯格</p>
+<p><a href="https://x.com/akhenosiris/status/1781162128881164566">这里</a>；在他的 H100 中，只有约 4.5 万块在最大的训练集群里，35 万块 H100 中绝大多数用于推理。Meta 的推理需求可能比其他玩家更重，因为目前其他玩家服务的客户较少；但随着其他人的 AI 产品扩大，我预期推理会成为 GPU 的绝大多数用途。<a href="#note-3-138">↩</a> 例如，这份</p>
+<p><a href="https://pytorchtoatoms.substack.com/p/metas-24k-h100-cluster-capextco-and">总体拥有成本分析</a>估计，大型集群成本约 40% 是 H100 GPU 本身，另有 13% 流向 Nvidia 的 Infiniband 网络。不过，如果在该计算中剔除资本成本，那么 GPU 约占成本 50%；加上网络后，Nvidia 会获得略高于集群成本 60% 的比例。<a href="#note-4-138">↩</a> 而且</p>
+<p><a href="https://www.cnbc.com/2024/04/25/microsoft-says-cloud-ai-demand-exceeds-supply-despite-spending-surge.html">显然</a>，尽管 Microsoft 最近一个季度资本开支同比增长 79%，其 AI 云需求仍然超过供给！<a href="#note-5-138">↩</a> 未来全球 GPU 产量中，流向最大训练集群的比例可能会比今天更大，例如因为前沿实验室将合并为少数几个，而不是许多公司都有前沿模型规模的集群。</p>
+<p><a href="#note-6-138">↩</a> 当然，不是所有这些都会在美国，但这是为了给一个参照类别。</p>
+<p><a href="#note-7-138">↩</a> 我估计 Nvidia 在 2024 年将出货约 500 万块数据中心 GPU。其中少数是 B100，我们把它算作 2 倍以上 H100。然后还有其他 AI 芯片：TPU、Trainium、Meta 自研芯片、AMD GPU 等。</p>
+<p><a href="#note-8-138">↩</a> TSMC 每月有超过</p>
+<p><a href="https://wccftech.com/tsmc-boosts-5nm-production-to-150000-wafers-month-amidst-strong-demand/#:~:text=The%20DigiTimes%20report%20is%20quite,mark%20a%2025%25%20production%20increase.">15 万片 5nm</a>晶圆的产能，正在提升到每月 <a href="https://wccftech.com/tsmc-3nm-wafer-production-reaching-100000-units-by-end-of-2024/">10 万片 3nm 晶圆</a>，并且很可能还有每月约 <a href="https://www.digitimes.com/news/a20200902PD200.html">15 万片</a> 7nm 晶圆；我们把总数称为每月 40 万片晶圆。</p>
+<p>假设每片晶圆大约 <a href="https://www.reddit.com/r/AMD_Stock/comments/18es0ks/amd_can_get_65_more_mi300x_from_the_same_5nm/">35 块 H100</a>（H100 用 5nm 制造）。2024 年 500 万到 1000 万 H100 等效量，对应 2024 年 AI 芯片年产量为每年 15 万到 30 万片晶圆。</p>
+<p>取决于这个区间中的具体位置，以及是否把 7nm 产量算进去，这大约是年度先进晶圆产量的 3% 到 10%。<a href="#note-9-138">↩</a> 对我来说，一个很大的不确定性是技术扩散和被采用的滞后有多长。我认为，收入增长被拖慢是合理可能的，因为中间阶段、AGI 之前的模型需要大量繁琐工作才能正确集成进公司工作流；从历史上看，要完全收获新通用技术的生产率收益，需要一段时间。这就是前面“</p>
+<p><a href="https://situational-awareness.ai/from-gpt-4-to-agi/#sonic_boom">音爆</a>”讨论发挥作用的地方：随着我们“解除模型限制”，模型开始更像智能体/可直接上岗的远程员工，部署会容易得多。不再需要为了从 GPT 聊天机器人获得 25% 生产率提升而彻底重做某个工作流；相反，你会得到能像新同事一样入职和协作的模型（例如，直接替代工程师，而不需要训练工程师使用某个新工具）。或者，在更极端、稍后的阶段：你不需要为了某个新工具彻底重新设计工厂，只要引入人形机器人即可。也就是说，根据我们能以多快速度“解除模型限制”，经济价值和收入产生可能会出现一些不连续。</p>
+<p><a href="#note-10-138">↩</a> 利率会发生什么会很有意思……见</p>
+<p><a href="https://www.bloomberg.com/opinion/articles/2024-03-27/ai-could-have-a-surprising-effect-on-interest-rates?sref=o4HC3q1q">Tyler Cowen 这里</a>；<a href="https://basilhalperin.com/papers/agi_emh.pdf">Chow、Mazlish 和 Halperin 这里</a>。<a href="#note-11-138">↩</a> 更远一点看，如果 AGI 真正导致经济增长大幅提高，每年 10 万亿美元以上也会开始变得合理——参照类别是高增长时期国家的投资率。</p>
+<p><a href="#note-12-138">↩</a> “自 2011 年以来，Alouette 冶炼厂在最大产能下使用 930 MW 电力。”</p>
+<p><a href="#note-13-138">↩</a> 不过，这是“净新增”容量：其中一些是建设新的可再生能源，并把旧化石燃料电厂从电网中退出。按总新增容量算，也许更接近每年一两个百分点。</p>
+<p><a href="#note-14-138">↩</a> 感谢</p>
+<p><a href="https://austinvernon.site/">Austin Vernon</a>（私人通信）帮助完成这些估算。<a href="#note-15-138">↩</a> 新井每天产气约 0.01 BCF。</p>
+<p><a href="#note-16-138">↩</a> 每口井在生命周期中产气约 20 BCF，这意味着每月两口新井就能替代枯竭储量，也就是说只需要一台钻机就能维持产量。</p>
+<p><a href="#note-17-138">↩</a> 不过，更高效的做法是增加更少钻机，并在比 10 个月更长的时间里逐步建立产能。</p>
+<p><a href="#note-18-138">↩</a> 一立方英尺天然气</p>
+<p><a href="https://www.eia.gov/tools/faqs/faq.php?id=667&amp;t=6">可产生约</a> 0.13 kWh。2020 年美国页岩气产量<a href="https://en.wikipedia.org/wiki/Shale_gas_in_the_United_States#/media/File:Shale_gas_production_USA.svg">约为</a>每天 700 亿立方英尺。假设我们再次把产量翻倍，并把额外容量全部用于算力集群。这是每年 3322 TWh 电力，足以支撑近 4 个 100GW 集群。<a href="#note-19-138">↩</a> 天然气电厂的资本开支成本</p>
+<p><a href="https://atb-archive.nrel.gov/electricity/2019/index.html?t=cg">看起来</a>低于每 kW 1000 美元，这意味着 100GW 天然气电厂的资本开支约为 1000 亿美元。<a href="#note-20-138">↩</a> 太阳能和电池并不是完全疯狂的替代方案，但看起来确实比天然气更艰难。我很欣赏</p>
+<p><a href="https://caseyhandmer.wordpress.com/2024/03/12/how-to-feed-the-ais/">Casey Handmer 的计算</a>：用太阳能板铺满地球：</p>
+<p>“使用当前 GPU 时，全球太阳能数据中心的算力相当于约 1500 亿个人类；不过如果我们的计算机最终能达到[人脑]效率，我们能支撑约 5000 万亿个 AI 灵魂。”<a href="#note-21-138">↩</a> 这提出了一个有趣问题：为什么在芯片晶圆厂生产真正受限之前，电力需求已经上升这么多？一个简单答案是，数据中心会持续接近最大功率运行，而目前生产的大多数芯片很多时间处于闲置状态。当前，智能手机接近先进芯片需求的一半，但每单位晶圆面积能耗低得多（以晶体管换取串行操作和能效），而且利用率很低，因为智能手机大多闲置。AI 革命意味着更用力地使用我们的晶体管，把它们全部投入持续运行的高性能 AI 数据中心，而不是闲置的、电池供电/节能设备。感谢 Carl Shulman 指出这一点。</p>
+<p><a href="#note-22-138">↩</a> （用收入作为代理。）</p>
+<p><a href="#note-23-138">↩</a> 有实体访问权限时，通过旁路攻击窃取权重要容易得多！</p>
+<p><a href="#note-24-138">↩</a> 我清楚记得 2023 年 3 月在白板上写下“THE TAKEOFF HAS STARTED”（起飞已经开始）。</p>
+<p><a href="#note-25-138">↩</a> 主流卖方分析师似乎假设 Nvidia 从 CY24 到 CY25 的收入同比增长只有 10% 到 20%，也许 CY25 是 1200 亿到 1300 亿美元（或者至少直到很近之前还是这样）。疯狂！很长一段时间以来，Nvidia 在 CY25 收入超过 2000 亿美元已经相当明显。</p>
+<p><a href="#note-26-138">↩</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-c22b7243.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>超级智能对齐难题与智能爆炸风险 - 情境意识：AGI 与超级智能（中文译文）</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-0392ca55.css">
+        <link rel="stylesheet" href="css/chrome-fc474251.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-e6ebfb74.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-76315ebc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">情境意识：AGI 与超级智能（中文译文）</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <p><strong>可靠控制比我们聪明得多的 AI 系统，是一个尚未解决的技术问题。虽然它是一个可解的问题，但在快速智能爆炸期间，事情很容易失控。管理这一过程会极度紧张；失败很容易是灾难性的。</strong></p>
+<p>老巫师</p>
+<p>Johann Wolfgang von Goethe，《魔法师的学徒》</p>
+<p>终于离开了！</p>
+<p>现在他控制的精灵</p>
+<p>都将听从我的命令。</p>
+<p>…</p>
+<p>我也要施展奇迹。…</p>
+<p>先生，我陷入绝境了！我召来的精灵——我赶不走它们。</p>
+<p>到这里，你大概已经听说过 AI doomers。你也许被他们的论证吸引过，也许一开始就把它们丢到一边。你不愿意再读一篇末日阴云式沉思。</p>
+<p>我不是 doomer。<a href="#footnote-1-135">1</a> 未对齐的超级智能可能不是最大的 AI 风险。<a href="#footnote-2-135">2</a> 但过去一年，我的日常工作确实是在 OpenAI 与 Ilya 和 <a href="https://openai.com/blog/introducing-superalignment">Superalignment</a> 团队一起做 AI 系统对齐的技术研究。这里有一个非常真实的技术问题：我们当前的对齐技术（确保我们能可靠控制、引导、信任 AI 系统的方法）无法扩展到超人类 AI 系统。我想解释的是，我看到的“默认”计划是什么：我们如何勉强穿过去，<a href="#footnote-3-135">3</a>以及为什么我乐观。<a href="https://www.forourposterity.com/nobodys-on-the-ball-on-agi-alignment/">虽然认真推进的人还不够多</a>——我们本应有更雄心勃勃的努力来解决这个问题！——但总体上，深度学习最终呈现出来的样子让我们很幸运；有许多经验性的低垂果实会带我们走过一部分路；而且我们还会拥有数百万个自动化 AI 研究员，帮助我们走完剩下的路。</p>
+<p>但我也想告诉你我为什么担心。最重要的是，确保对齐不出问题，需要在管理智能爆炸时具备极高能力。如果我们真的快速地<a href="https://situational-awareness.ai/from-agi-to-superintelligence/">从 AGI 走向超级智能</a>，我们会面对这样一种局面：<em>不到一年内</em>，我们会从当前对齐技术的后代基本仍能良好运作的、可识别的人类水平系统，转向异质得多、远远超人类的系统；后者提出的是质上不同、根本全新的技术对齐问题。与此同时，我们也会从失败代价较低的系统，转向极其强大、失败可能灾难性的系统；而这一切发生时，世界大部分地方可能已经有点发疯。这让我相当紧张。</p>
+<p>到这个十年结束时，我们会有数十亿个远超人类的 AI 智能体到处运行。这些超人类 AI 智能体将能够表现出极其复杂和创造性的行为；我们完全跟不上。我们会像一年级学生试图监督多个博士学位获得者。</p>
+<p>本质上，我们面对的是一个交接<em>信任</em>的问题。到智能爆炸结束时，我们没有任何希望理解十亿个超级智能在做什么（除非它们选择向我们解释，就像向儿童解释一样）。而我们尚未具备技术能力，可靠保证这些系统哪怕满足基本旁约束，比如“不要撒谎”“遵守法律”或“不要试图从你的服务器外泄自己”。<a href="https://arxiv.org/abs/2203.02155">基于人类反馈的强化学习</a>（RLHF）非常适合为当前系统添加这类旁约束——但 RLHF 依赖人类能够理解并监督 AI 行为，而这从根本上无法扩展到超人类系统。</p>
+<p>简单说，如果没有非常协调的努力，我们将无法保证超级智能不会失控（这也被该领域许多<a href="https://www.newyorker.com/magazine/2023/11/20/geoffrey-hinton-profile-ai">领袖</a><a href="https://yoshuabengio.org/2023/05/22/how-rogue-ais-may-arise/">承</a><a href="https://www.amazon.com/Human-Compatible-Artificial-Intelligence-Problem/dp/0525558632/ref=pd_bxgy_d_sccl_2/130-6291201-0753114?pd_rd_w=xdUdS&amp;content-id=amzn1.sym.c51e3ad7-b551-4b1a-b43c-3cf69addb649&amp;pf_rd_p=c51e3ad7-b551-4b1a-b43c-3cf69addb649&amp;pf_rd_r=ES4Y6D96M254021WGBGQ&amp;pd_rd_wg=HZkbn&amp;pd_rd_r=1f3a9ed7-e395-4c01-be47-a7abdf9fe08c&amp;pd_rd_i=0525558632&amp;psc=1">认</a><a href="https://openai.com/index/introducing-superalignment/">了</a>）。是的，它也许默认就会没事。但我们现在根本不知道。尤其是未来 AI 系统不再只是用模仿学习训练，而是用大规模、长时域 RL（强化学习）训练之后，它们会获得自己不可预测的行为，这些行为由一个试错过程塑造（例如，它们也许会学会撒谎或寻求权力，仅仅因为这些是在现实世界中成功的策略！）。</p>
+<p>利害关系足够高，因此在对齐问题上仅仅寄希望于最好结果，根本不是足够好的答案。</p>
+<p><strong>问题</strong></p>
+<p><strong>超级对齐问题</strong></p>
+<p>我们已经能开发出一种非常成功的方法，用来对齐（即引导/控制）<em>当前</em> AI 系统（比我们笨的 AI 系统！）：基于人类反馈的强化学习（RLHF）。RLHF 背后的想法很简单：AI 系统尝试做事，人类评价其行为好坏，然后强化好行为、惩罚坏行为。这样，它就学会遵循人类偏好。</p>
+<p>事实上，RLHF 是 ChatGPT 等系统成功的关键。<a href="#footnote-4-135">4</a> 基础模型有大量原始智能，但默认并不会以有用方式应用这些智能；它们通常只是输出一团类似随机互联网文本的混乱东西。通过 RLHF，我们可以引导其行为，灌输遵循指令、乐于助人等重要基础能力。RLHF 也让我们能烘焙进安全护栏：例如，如果用户向我索要生物武器说明，模型大概应该拒绝。<a href="#footnote-5-135">5</a></p>
+<p><strong>超级对齐的核心技术问题很简单：我们如何控制比我们聪明（得多）的 AI 系统？</strong></p>
+<p><em>随着 AI 系统变得更聪明，RLHF 会可预期地失效</em>，我们将面对根本全新、质上不同的技术挑战。举例说，想象一个超人类 AI 系统用它自己发明的新编程语言生成 100 万行代码。如果你在 RLHF 流程中问一个人类评分者：“这段代码是否包含安全后门？”他根本不知道。他无法把输出评为好或坏、安全或不安全，因此我们就无法用 RLHF 强化好行为、惩罚坏行为。</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/superalignment.png" alt=""></p>
+<p><em>通过人类监督（如 RLHF）来对齐 AI 系统，无法扩展到超级智能。</em> 基于 “</p>
+<p><a href="https://openai.com/index/weak-to-strong-generalization/">Weak-to-strong generalization</a>” 的插图。</p>
+<p>即使现在，AI 实验室也已经<a href="https://www.nytimes.com/2024/04/10/technology/ai-chatbot-training-chatgpt.html">需要付费雇专家软件工程师</a>给 ChatGPT 代码做 RLHF 评分——当前模型能生成的代码已经相当高级！过去几年里，人类标注员的报酬已经从 MTurk 标注员的几美元，涨到 GPQA 问题<a href="#footnote-6-135">6</a>每小时约 100 美元。在（近）未来，即使最优秀的人类专家花费大量时间，也不够好。我们现在已经开始在现实世界中碰到超级对齐问题的早期版本；很快，就连实际部署下一代系统时，它也会成为一个重大问题。显然，我们需要一个 RLHF 的后继者，它能够扩展到高于人类水平的 AI 能力，在人类监督失效时继续工作。从某种意义上说，超级对齐研究努力的目标，是复现 RLHF 的成功故事：提前押注那些基础研究，使我们能够引导并部署几年后的 AI 系统。</p>
+<p><strong>失败会是什么样</strong></p>
+<p>人们太常想象一个“GPT-6 聊天机器人”，并据此直觉认为这些东西当然不会危险地未对齐。正如本系列前面讨论的，“<a href="https://situational-awareness.ai/from-gpt-4-to-agi/#From_chatbot_to_agent-coworker">解除限制</a>”轨迹指向的是未来不久用 RL 训练的智能体。我认为 Roger 的图说对了：</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/roger_grosse_alignment.png" alt=""></p>
+<p><em>（多伦多大学教授）</em></p>
+<p><a href="https://x.com/RogerGrosse/status/1758506017791279440">Roger Grosse</a></p>
+<p>从安全角度看，理解我们试图通过对齐实现什么的一种方式是：添加<em>旁约束</em>。考虑一个未来强大的“基础模型”，在第二阶段训练中，我们用长时域 RL 训练它经营企业并赚钱<a href="#footnote-7-135">7</a>（作为一个简化例子）：</p>
+<ul>
+<li>默认情况下，它很可能学会撒谎、欺诈、欺骗、黑客攻击、寻求权力等——仅仅因为这些可能是在现实世界中赚钱的成功策略！<a href="#footnote-8-135">8</a></li>
+<li>我们想添加旁约束：不要撒谎，不要违法，等等。</li>
+<li>但这里我们又回到对齐超人类系统的根本问题：我们无法理解它们在做什么，因此无法用 RLHF 发现并惩罚坏行为。<a href="#footnote-9-135">9</a></li>
+</ul>
+<p>如果我们不能添加这些旁约束，就不清楚会发生什么。<em>也许</em>我们会很幸运，事情默认是良性的（例如，也许在 AI 系统没有长时域目标的情况下我们能走得很远，或者不良行为只是小问题）。但它们也完全可能学到严重得多的不良行为：学会撒谎，学会寻求权力，学会在人类看着时表现良好、在人类没看着时追求更邪恶策略，等等。</p>
+<p>超级对齐问题尚未解决，意味着我们根本没有能力确保这些超级智能系统满足哪怕基本旁约束，比如“<em>它们会可靠地遵循我的指令吗？</em>”或“<em>它们会诚实回答我的问题吗？</em>”或“<em>它们不会欺骗人类吗？</em>”。人们常把对齐与某些复杂的人类价值问题联系起来，或直接跳到政治争议上；但决定要把哪些行为和价值灌输进模型，虽然重要，却是另一个问题。主要问题在于，无论你想给模型灌输什么（包括确保非常基本的事情，如“遵守法律”！），我们还不知道如何对即将构建的非常强大的 AI 系统做到这一点。</p>
+<p>再次强调，这些后果并不完全清楚。清楚的是，超级智能会有巨大的能力——因此行为不当很容易带来灾难。此外，我预期几年内，这些 AI 系统会被集成到许多关键系统中，包括军事系统（否则就意味着被对手完全压制）。这听起来疯狂，但还记得所有人曾经说我们不会把 AI 接到互联网上吗？像“<a href="https://www.dwarkeshpatel.com/p/john-schulman">我们会确保人类始终在环路中！</a>”这类今天人们说的话，也会走同样道路。</p>
+<p>届时的对齐失败可能看起来像孤立事件，例如一个自主智能体实施欺诈，一个模型实例自我外泄，一个自动化研究员伪造实验结果，或者一群无人机越过交战规则。但失败也可能规模大得多，或更系统性——极端情况下，失败可能更像机器人叛乱。我们会召唤出一种相当异质的智能，一种<em>远</em>比我们聪明的智能；它的架构和训练过程甚至不是我们设计的，而是某一代更聪明的 AI 系统设计的；我们甚至无法开始理解它们在做什么；它会运行我们的军事；而它的目标将通过类似自然选择的过程学到。</p>
+<p>除非我们解决对齐——除非我们弄清楚如何灌输这些旁约束——否则没有特别理由预期这个由超级智能组成的小文明会长期继续服从人类命令。完全有可能在某个时刻，它们会突然或逐渐密谋把人类排除出去。</p>
+<p><strong>智能爆炸使这一切极其紧张</strong></p>
+<p>我乐观地认为，超级对齐是一个可解的技术问题。正如我们开发了 RLHF 一样，我们也可以为超人类系统开发 RLHF 的后继者，并做出让我们对方法有高信心的科学。如果事情继续迭代式进展，如果我们坚持严格安全测试等等，这一切应该可行（稍后我会讨论我目前对我们如何勉强穿过去的最佳猜测）。</p>
+<p>真正令人头皮发麻的是智能爆炸的可能性：我们可能极其快速地从大约人类水平系统转向<em>远远</em>超人类的系统，也许不到一年：</p>
+<p><img src="https://situational-awareness.ai/wp-content/uploads/2024/06/alignment_intelligence_explosion-1.png" alt=""></p>
+<p><em>智能爆炸让超级对齐变得极其令人头皮发麻。</em></p>
+<ul>
+<li>我们会极快地从 RLHF 能良好运作的系统，转向 RLHF 会完全失效的系统。这留给我们迭代发现和解决当前方法失败方式的时间极少。</li>
+<li>同时，我们会极快地从失败代价相当低的系统（ChatGPT 说了句脏话，所以呢）转向失败代价极高的系统（糟了，超级智能从我们的集群中自我外泄了，现在它正在黑军方）。我们不会在野外逐步遇到越来越危险的安全失败；我们遇到的第一个显著安全失败，就可能已经是灾难性的。</li>
+<li>智能爆炸结束时得到的超级智能会<em>远远</em>超人类。我们将完全依赖对这些系统的信任，以及对它们告诉我们正在发生什么的信任——因为我们自己已经没有能力穿透它们究竟在做什么。</li>
+<li>智能爆炸结束时得到的超级智能可能相当<em>异质</em>。在智能爆炸中，我们会经历十年或更久的机器学习进步，意味着架构和训练算法会完全不同（并且可能拥有风险更大的安全性质）。</li>
+<li>一个对我来说非常突出的例子是：我们很可能通过用思维链推理的系统，也就是通过英文 token 推理的系统，自举到人类水平或略超人类的 AGI。这<em>极其</em>有帮助，因为这意味着模型“把思考说出来”，让我们能抓到恶意行为（例如，如果它在暗中策划对付我们）。但<em>显然</em>让 AI 系统用 token 思考不是最高效的方法；<em>显然</em>会有某种好得多的方法用内部状态完成所有这些思考——因此智能爆炸结束时的模型几乎肯定<em>不会</em>把思考说出来，也就是会拥有完全不可解释的推理。</li>
+<li>这会是一个极端动荡的时期，背景可能是一场国际军备竞赛，存在大量加速压力，每周都有狂野的新能力进展，而几乎没有人类时间来做出好决策，等等。我们会面对大量模糊数据和高风险决策。</li>
+<li>想象这样的情形：“我们在测试中发现 AI 系统做了一些坏事，但我们稍微调整了流程，把那东西敲掉了。我们的自动化 AI 研究员告诉我们，对齐指标看起来不错，但我们并不真的理解发生了什么，也不完全信任它们，并且没有任何强科学理解能让我们确信再上几个数量级后这仍会成立。所以，我们<em>大概</em>会没事？另外，中国刚偷走了我们的权重并启动自己的智能爆炸，他们就在我们身后。”</li>
+</ul>
+<p><em>这真的看起来可能会失控。</em> 说实话，它听起来很可怕。</p>
+<p>是的，我们会有 AI 系统帮助我们。正如它们会自动化能力研究，我们也可以用它们自动化对齐研究。正如下文会讨论，这会是关键。但——你能信任这些 AI 系统吗？你一开始就不确定它们是否对齐——它们关于对齐科学的说法真的诚实吗？自动化对齐研究能跟上自动化能力研究吗（例如，因为自动化对齐更难，比如相比提升模型能力，它没有那么清晰可可信的指标；或者由于国际竞赛，能力进展会承受全速推进的巨大压力）？而且 AI 也无法完全替代仍为人类的决策者，在这种极高风险局势中做出好判断。</p>
+<p><strong>默认计划：我们如何勉强穿过去</strong></p>
+<p>最终，我们需要为<em>远超人类、相当异质</em>的超级智能解决对齐。也许某处存在一个一次性、简单的超级智能对齐解法。但我的强烈最佳猜测是，我们会靠勉强应对走到那里。</p>
+<p>我认为，我们可以在一系列经验性押注中收获收益，我会在下面描述，从而对齐略超人类的系统。然后，如果我们有信心信任这些系统，我们将需要用这些略超人类系统自动化对齐研究——在智能爆炸期间，与 AI 研究总体自动化并行——弄清楚如何解决剩余路程上的对齐问题，一直到远超人类、相当异质的超级智能。</p>
+<p><strong>对齐略超人类模型</strong></p>
+<p>对齐人类水平系统还不够。即使是第一批能够做自动化 AI 研究、也就是启动智能爆炸的系统，也很可能已经在许多领域显著超人类。这是因为 AI 能力可能有些尖峰化：当 AGI 在人类 AI 研究员/工程师最不擅长的事情上达到人类水平时，它在许多其他事情上已经会超人类。例如，也许 AI 系统有效协调和规划的能力会滞后，这意味着到智能爆炸全面展开时，它们可能已经是超人类 coder，能用自己设计的新编程语言提交百万行 pull request，并在数学和机器学习上超人类。</p>
+<p>这些早期智能爆炸系统至少在许多领域会开始在数量和质量上超人类。但在架构上，它们看起来会与今天的系统更接近，而我们需要跨越的智能差距更可管理。（如果让人类对齐真正超级智能像一年级学生监督博士毕业生，那么这更像聪明高中生监督博士毕业生。）</p>
+<p>更一般地说，我们现在越能发展出好科学，就越能在智能爆炸期间验证事情没有失控。即使只是获得可信任的超级对齐好指标也出人意料地困难——但如果智能爆炸期间没有可靠指标，我们就不会知道继续推进是否安全。</p>
+<p>以下是我看到的、用于跨越人类水平与略超人类系统之间差距的一些主要研究押注：</p>
+<p><strong>评估比生成更容易。</strong> 我们会“免费”走过一部分路，因为我们评估输出（尤其是恶劣不当行为）比自己生成这些输出更容易。例如，写一篇论文需要我数月或数年努力，但判断别人写的一篇论文是否好，只要几个小时（不过发现欺诈可能更久）。我们会让专家人类团队花大量时间评估每一个 RLHF 样本，即使 AI 系统略比他们聪明，他们也能对很多不当行为“点踩”。不过，这只能带我们走这么远（GPT-2 甚至 GPT-3 都无法可靠检测邪恶 GPT-4，尽管评估比生成更容易！）。</p>
+<p><strong>可扩展监督。</strong> 我们可以用 AI 助手帮助人类监督其他 AI 系统——人类-AI 团队能够把监督扩展得比单个人类更远。例如，想象一个 AI 系统生成 100 万行复杂代码。如果一个 AI 助手指出（比如）第 394,894 行看起来可疑，那么人类再去复查那一行是否有 bug，会比人类从零开始找同一个 bug 容易。训练一个模型去批评另一个模型写的代码，因此可以帮助人类监督一个在编码上窄域超人类的系统。</p>
+<p>已经有人提出若干可扩展监督策略，包括<a href="https://arxiv.org/abs/1805.00899">辩论</a>、<a href="https://www.lesswrong.com/posts/YWwzccGbcHMJMpT45/ai-safety-via-market-making">做市</a>、<a href="https://arxiv.org/abs/1811.07871">递归奖励建模</a>、<a href="https://arxiv.org/abs/2108.12099">证明者—验证者博弈</a>，以及这些想法的简化版本，如<a href="https://arxiv.org/pdf/2206.05802.pdf">批评</a>。模型现在已经足够强，因此可以<a href="https://arxiv.org/abs/2311.08702">经验性</a><a href="https://arxiv.org/abs/2211.03540">测试</a>这些想法，在可扩展监督上取得直接进展。</p>
+<p>我预期这会对问题中“数量上”超人类的部分很有帮助，例如前面提到的百万行代码例子。但对于“质量上”超人类的部分，我不太乐观可扩展监督技术真能帮上忙——想象模型在你只懂牛顿物理时发明了量子物理。</p>
+<p><strong>泛化。</strong> 即使用可扩展监督，我们也无法在人类理解之外的真正困难问题上监督 AI 系统。不过，我们可以研究：AI 系统会如何从容易问题上的人类监督（我们理解并能监督的情况）<em>泛化</em>到困难问题（我们无法理解且不能再监督的情况）？例如，也许在简单场景中监督模型诚实，会良性泛化为模型总体上诚实，即使它正在做我们不理解的极其复杂事情。</p>
+<p>这里有很多乐观理由：深度学习的魔力之一是，它常常以良性方式泛化（例如，只用英文样本标签做 RLHF，也往往能在模型说法语或西班牙语时产生良好行为，即使训练中没有这些语言）。我相当乐观地认为，会存在一些相当简单的方法，帮助把模型泛化推向对我们有利的方向；我们也能发展出强科学理解，帮助预测泛化什么时候有效、什么时候会失败。相比可扩展监督，希望在于它更能帮助“质量上”超人类情形中的对齐。</p>
+<p>还有另一种理解方式：如果一个超人类模型行为不当，比如违法，直觉上<em>模型应该已经知道</em>自己在违法。而且，“这是否违法”对模型来说大概是一个相当自然的概念——它会在模型表征空间中很显著。那么问题是：我们能否只用弱监督从模型中“召唤”出这个概念？</p>
+<p>我尤其偏爱这个方向（也许有偏见），因为我与 OpenAI 一些同事最近的工作帮助引入了它。具体说，我们研究了人类监督超人类系统问题的一个类比：一个<em>小模型</em>能否对齐一个<em>更大（更聪明）的模型</em>？我们发现，泛化确实能让你跨过监督者与被监督者之间一部分（当然不是全部）智能差距，并且在简单设置中，有许多方法可以改善它。</p>
+<p><em>一个研究超级对齐的简单类比：与其研究人类监督超人类模型，不如研究小模型监督大模型。例如，我们能否只用 GPT-2 监督来对齐 GPT-4？这会不会让 GPT-4 恰当地泛化“GPT-2 的意思”？来自</em></p>
+<p><em>Weak-to-strong generalization</em>。</p>
+<p><strong>可解释性。</strong> 我们希望验证并信任 AI 系统已对齐的一种直观有吸引力的方法，是如果我们能理解它们在想什么！例如，如果我们担心 AI 系统欺骗我们或密谋对付我们，访问其内部推理应当有助于我们发现这一点。</p>
+<p>默认情况下，现代 AI 系统是不可读的黑箱。不过看起来我们应该能做出惊人的“数字神经科学”——毕竟，我们拥有对模型内部的完美访问。</p>
+<p>这里有几种不同方法，从“最雄心勃勃、最酷但会很难”到“更 hacky、更容易且也许就能奏效”：</p>
+<p><em>机制可解释性。</em> 尝试从头开始完全逆向工程大型神经网络——可以说是把不可读矩阵完全拆解开。</p>
+<p>Anthropic 的 Chris Olah 团队在这一点上做了<a href="https://transformer-circuits.pub/">许多开创性工作</a>，从理解非常小模型中的简单机制开始。最近出现了<a href="https://transformer-circuits.pub/2023/monosemantic-features">极其令人兴奋的进展</a>，我对这个空间的整体活动水平非常兴奋。</p>
+<p>也就是说，我担心完全逆向工程超人类 AI 系统会是一个难以处理的问题——类似于“完全逆向工程人脑”——我更倾向于把这项工作放在“AI 安全的雄心勃勃登月项目”而不是“勉强穿过去的默认计划”类别中。<a href="#footnote-10-135">10</a></p>
+<p>（Neel Nanda 的<a href="https://www.alignmentforum.org/posts/LbrPTJ4fmABEdEnLf/200-concrete-open-problems-in-mechanistic-interpretability">机制可解释性 200 个开放问题</a>也能让人感受这种研究的味道。）</p>
+<p><em>“自上而下”的可解释性。</em> 如果机制可解释性试图“自下而上”逆向工程神经网络，另一些工作则采取更有目标的“自上而下”方法，试图在没有完全理解其处理方式的情况下定位模型中的信息。</p>
+<p>例如，我们可以尝试通过识别 AI 系统撒谎时神经网络中“亮起”的部分，构建一个“AI 测谎仪”。这会更可处理（即使它提供的保证较弱）。</p>
+<p>过去几年，这一领域出现了一连串令人兴奋的工作。<a href="https://arxiv.org/abs/2212.03827">CCS</a> 能够只用无监督数据在模型中识别“真相方向”。<a href="#footnote-11-135">11</a> <a href="https://rome.baulab.info/">ROME</a> 能识别模型中知道埃菲尔铁塔在巴黎的部分——然后直接编辑模型知识，把埃菲尔铁塔放到罗马。<a href="https://www.ai-transparency.org/">Representation Engineering</a> 和 <a href="https://arxiv.org/abs/2306.03341">Inference-time Interventions</a> 展示了使用自上而下技术来检测撒谎和幻觉，并在越狱、寻求权力、公平性、真实性等方面外科手术式控制模型行为。还有<a href="https://x.com/OwainEvans_UK/status/1707451418339377361">其他有创造性的工作</a>做测谎，甚至不需要模型内部。</p>
+<p>我越来越看好自上而下可解释性技术会成为一个强大工具——也就是说，我们将能够构建类似“AI 测谎仪”的东西——而且不需要在理解神经网络上取得根本突破。<a href="#footnote-12-135">12</a></p>
+<p><em>思维链可解释性。</em> 如前所述，我认为我们很可能通过用思维链“把思考说出来”的系统自举到 AGI。即使从极限上看它不是最高效算法（如果超级智能仍使用英文思维链，而不是通过某种循环内部状态思考，我会非常惊讶），我们也许仍能从第一批 AGI 的这一性质中受益。这会是可解释性的极大福音：我们将能访问 AGI 的“内心独白”！这会让发现恶劣对齐失败相对容易。</p>
+<p>不过，如果我们想依赖这一点，还有大量工作要做。如何确保 CoT 保持<em>可读</em>？（取决于我们比如如何使用 RL 训练模型，它可能从可理解的英文漂移到不可理解的<a href="https://twitter.com/jacob_pfau/status/1783951795238441449">模型语</a>；我们能否添加一些简单约束，确保它保持可读？）如何确保 CoT 是<a href="https://arxiv.org/abs/2307.13702">忠实的</a>，也就是确实反映模型在想什么？（例如，<a href="https://arxiv.org/abs/2305.04388">有些工作</a>显示，在某些情况下，模型会在 CoT 中编造事后推理，而这些推理并不真实反映其答案背后的实际内部推理。）</p>
+<p>我的最佳猜测是，对可读性和忠实性的某些简单测量，以及一些让可读性和忠实性维持更久的简单 hack，可能会走得相当远。是的，这不会在某些世界中奏效，而且它有点像简单 hack，但它是如此低垂的果实；在我看来，这个方向被严重低估了。</p>
+<p><strong>对抗性测试和度量。</strong> 在整个过程中，每一步都严格压力测试我们系统的对齐至关重要——我们的目标应该是在实验室里遇到每一种失败模式，再让它们出现在现实中。这需要显著推进<a href="https://arxiv.org/abs/2202.03286">自动化红队</a>技术。例如，如果我们故意在模型中植入后门或未对齐，安全训练会不会抓到并清除它们？（早期工作显示，例如“<a href="https://www.anthropic.com/news/sleeper-agents-training-deceptive-llms-that-persist-through-safety-training">沉睡智能体</a>”可以挺过安全训练。）</p>
+<p>更一般地说，沿途拥有好的对齐测量至关重要。模型是否有能力未对齐？例如，它是否有长时域目标，它正在学到什么驱动力？清晰的“红线”是什么？例如，一个非常直观的边界可能是“模型推理（思维链）始终必须保持可读且忠实”。（正如 Eric Schmidt <a href="https://x.com/tsarnick/status/1783804217138033007">所说</a>，当 AI 智能体能用我们不懂的语言互相交谈时，我们就应该拔掉电脑插头。）另一个边界可能是开发更好的测量，判断模型是否完全诚实。</p>
+<p>对齐测量科学仍处于婴儿期；改进它对帮助我们在智能爆炸期间做出正确风险权衡至关重要。发展一门科学，使我们能测量对齐并理解“什么证据足以让我们确信进入超人类区域的下一个数量级是安全的？”这是今天对齐研究中最高优先级工作之一（不仅仅是试图把 RLHF 进一步扩展到“略超人类”系统的工作）。</p>
+<p><em>另见 Superalignment Fast Grants 征案中的<strong>这份超级对齐研究方向说明</strong>。</em></p>
+<p><strong>自动化对齐研究</strong></p>
+<p>最终，我们需要自动化对齐研究。我们不可能直接靠自己解决真正超级智能的对齐；跨越如此巨大的智能差距看起来极其困难。此外，到智能爆炸结束时——在 1 亿个自动化 AI 研究员疯狂推进十年机器学习进步之后——我预期系统在架构和算法上会比当前系统异质得多（其性质也可能没那么良性，例如 CoT 可读性、泛化性质，或训练诱发未对齐的严重程度）。</p>
+<p>但我们也不必仅靠自己解决这个问题。如果我们设法把略超人类系统对齐到足以信任它们，我们会处在一个惊人的位置：手边会有数百万个自动化 AI 研究员，比最好的 AI 研究员更聪明。正确利用这支自动化研究员大军，为更超人类的系统解决对齐，将具有决定性意义。</p>
+<p>（顺便说，这更一般地适用于整个 AI 风险谱，包括滥用等。在所有这些情形下，通向 AI 安全的最佳路线——也许是唯一路线——都会涉及正确利用早期 AGI 来做安全；例如，我们应让一批 AGI 做自动化研究，改进防范外国行为者外泄权重的安全，另一些则加固针对最坏情况生物攻击的防御，等等。）</p>
+<p>在智能爆炸期间把自动化对齐做对，利害关系会非同寻常地高：我们会在短短数月内经历许多年的 AI 进步，几乎没有人类时间做正确决策，并且会开始进入对齐失败可能灾难性的区域。如果必要，实验室应愿意在智能爆炸期间把很大一部分算力投入自动化对齐研究（而不是自动化能力研究）。我们需要强保证，让我们能够信任自动化对齐研究产出；也需要比今天好得多的未对齐测量，以知道我们是否仍处于安全区域。我们每想上升 1 个数量级，都需要对下一个数量级的对齐方法有极高信心。</p>
+<p>最重要的是，把这件事做对需要极高程度的能力、严肃性和做艰难权衡的意愿。一旦我们接近真正超级智能，利害关系就会变得非常真实，而失败——失控 AI——可能是灾难性的。会有一些时刻，证据含混不清，指标表面看起来不错，但有一些警告迹象暗示危险正在逼近，而我们大体已经不知道到底发生了什么。负责任地穿越这种局面，需要做出成本极高的权衡。最终，批准下一代超级智能的决定，需要像发起军事行动的决定一样严肃对待。</p>
+<p><strong>超级防御</strong></p>
+<p>“把对齐做对”只应该是智能爆炸期间多层防御中的第一层。对齐会很难；沿途<em>会</em>有失败。如果可能，我们需要处在这样一种位置：对齐可以失败——但失败不会是灾难性的。这可能意味着：</p>
+<p><strong>安全。</strong> 气隙集群是防止超级智能试图自我外泄并在现实世界造成损害的第一层防线。而这只是开始；我们需要全面拥有更极端的<a href="https://situational-awareness.ai/lock-down-the-labs/">安全</a>，防范模型自我外泄<a href="#footnote-13-135">13</a>，从硬件加密到多钥匙签署。<a href="#footnote-14-135">14</a> 并且一旦我们的 AGI 能做自动化研发，我们也应该让它们参与进一步加固安全。</p>
+<p><strong>监控。</strong> 如果我们的 AI 系统正在做可疑或恶意的事情——或者某个恶意员工试图把它们用于未授权活动——我们需要能够抓到。但这不是一个简单任务：我们会有数百万个 AGI 实例运行在集群上，执行复杂代码等等。我们需要利用模型自身的高级监控系统，包括监控模型输出、思维链、模型写的代码、服务器/网络活动，以及它们与研究员/其他人类的互动；本质上，是利用一些 AI 系统去举报其他 AI 系统。此外，我们会希望开发和使用复杂的<a href="https://arxiv.org/abs/2312.06942">“控制”协议</a>，用较弱但可信模型防止较强但不太可信模型的颠覆。这可能要求例如把与活跃模型实例相同数量的算力用于监控模型实例。</p>
+<p><strong>有针对性的能力限制。</strong> 尽可能地，我们应尝试以定向方式限制模型能力，以减少失败后果。一个核心例子可能是从模型训练中清洗掉与生物学和化学相关的一切（或使用“<a href="https://arxiv.org/abs/2403.03218">unlearning</a>”技术）；这有助于切断通过生物和化学武器造成灾难性现实世界损害的路径。</p>
+<p><strong>有针对性的训练方法限制。</strong> 某些训练模型的方法可能天然风险更高——更可能产生严重未对齐——比其他方法更危险。例如，模仿学习看起来相对安全（很难看出它如何导致模型拥有危险的长期内部目标），而我们应尽可能长时间避免长时域、基于结果的 RL（它看起来更可能导致模型学到不良长期目标）。我们也应避免针对我们的可解释性方法和监控设置进行训练（以免模型只是被训练成绕过这些方法）。可能还存在其他值得采用的限制，例如尽可能长时间保持可读且忠实的思维链。我们应提前定义这些约束，在智能爆炸全过程中尽可能维持它们，并且只有在绝对必要时才放弃。</p>
+<ul>
+<li>这里很可能还有更多可做的事情。</li>
+</ul>
+<p>这些会万无一失吗？完全不会。例如，真正的超级智能很可能能够绕过几乎任何安全方案。尽管如此，它们会为我们争取大得多的容错余量——而我们需要任何能争取到的余量。我们会希望利用这种余量，让自己处在对对齐技术拥有非常高信心的位置；只有随着我们的信心提高，才逐步放松“超级防御”措施（例如把超级智能部署到非气隙环境）。</p>
+<p>当我们转向把这些 AI 系统部署到控制较少的环境中，例如军事应用中，事情会再次变得危险。环境很可能迫使我们相当快地这么做，但我们应始终尽可能争取更多误差余量——例如，不是直接把超级智能“投入战场”用于军事目的，而是让它们在更隔离的环境中做研发，然后只部署它们发明的具体技术（例如更有限的自主武器系统，我们更有信心可以信任）。</p>
+<p><strong>我为什么乐观，又为什么害怕</strong></p>
+<p>我极其看好超级对齐问题的技术可解性。这个领域到处都像有大量低垂果实。更广泛地说，相比某些人十年前的推测，深度学习的经验现实更多站在我们这边。例如，深度学习在许多情况下会出人意料地良性<em>泛化</em>：它往往只是“做我们想要的事情”，而不是学到某种深奥恶性的行为。<a href="#footnote-15-135">15</a> 此外，虽然完全理解模型内部会很难，但至少对于初始 AGI，我们在可解释性上有不错机会——可以让它们通过思维链透明推理，而像表示工程这样的 hacky 技术作为“测谎仪”等也出人意料地有效。</p>
+<p>我认为，“默认计划”对齐“略超人类”系统，主要奏效的可能性相当合理。<a href="#footnote-16-135">16</a> 当然，抽象地谈论一个“默认计划”是一回事；如果负责执行这个计划的团队是你和你的 20 名同事，那又是另一回事（压力大得多！）。<a href="#footnote-17-135">17</a> 真正认真研究这个问题的人仍然少得惊人，也许只有几十名严肃研究员。<a href="https://www.forourposterity.com/nobodys-on-the-ball-on-agi-alignment/">没人真正盯着球</a>！这里有太多有趣且高产的机器学习研究可做，而挑战的重要性要求我们做出比现在更协调得多的努力。</p>
+<p>但这只是计划的第一部分——真正让我夜不能寐的是智能爆炸。对齐第一批 AGI、第一批略超人类系统是一回事。远超人类、异质的超级智能是另一种游戏，而且是一个<em>可怕</em>的游戏。</p>
+<p>智能爆炸会更像打一场战争，而不是发布一个产品。我们并不在通往超级防御、气隙集群或任何类似东西的路上；我甚至不确定如果模型自我外泄，我们是否会意识到。我们并不在通往一个理性指挥链的路上，无法让它做出这些极高风险决策，无法坚持超级智能所适合的极高信心标准，无法做出艰难决定——比如在启动下一次训练运行前多花时间把安全做对，或把绝大多数算力用于对齐研究；无法识别前方危险并避开它，而不是直接撞上去。现在，没有任何实验室表现出多少愿意为把安全做对而进行昂贵权衡的意愿（是的，我们有很多安全委员会，但那些基本没什么意义）。默认情况下，我们很可能踉踉跄跄闯入智能爆炸，并且在经历几个数量级之后，人们才意识到自己进入了什么局面。</p>
+<p>我们在这里太依赖运气了。</p>
+<p>系列下一篇：<strong>IIId. 自由世界必须胜出</strong></p>
+<p>正如那位 doomer 总司令以不太礼貌的方式</p>
+<p><a href="https://twitter.com/ESYudkowsky/status/1778764474251448770">认证过的</a>！至少，我会<a href="https://www.forourposterity.com/nobodys-on-the-ball-on-agi-alignment/">称自己是一个强烈乐观者</a>，认为这个问题是可解的。我花了相当多精力与 AI 悲观者辩论，并强烈反对 AI 暂停之类政策。<a href="#note-1-135">↩</a> 我最担心的是</p>
+<p>超级智能周围<em>事情就是会完全疯狂</em>，包括新型大规模杀伤性武器、毁灭性战争和未知的未知。此外，我认为历史弧线提醒我们不要低估威权主义——而超级智能也许会让威权者统治数十亿年。<a href="#note-2-135">↩</a> 正如 Tyler Cowen 所说，勉强应对被低估了！</p>
+<p><a href="#note-3-135">↩</a> 具有讽刺意味的是，安全人员发明 RLHF，取得了使 AI 商业成功成为可能的最大突破！基础模型有大量原始智能，但不可引导，因此对大多数应用不可用。</p>
+<p><a href="#note-4-135">↩</a> 这突出了一个重要区别：对齐（引导/控制）模型的<em>技术能力</em>，与<em>要对齐到什么</em>这个价值问题是分开的。后一个问题引发了许多政治争议。虽然我同意反对其中某些衍生物，但这不应分散我们对基础技术问题的注意。是的，对齐技术可以被误用——但为了确保未来模型哪怕满足基本旁约束，比如遵循指令或遵守法律，我们仍需要更好的对齐技术。另见 “<a href="https://ai-alignment.com/ai-alignment-is-distinct-from-its-near-term-applications-81300500ad2e">AI alignment is distinct from its near-term applications</a>”。<a href="#note-5-135">↩</a> “我们估计平均小时报酬约为每小时 95 美元”，见</p>
+<p><a href="https://arxiv.org/pdf/2311.12022">GPQA 论文</a>第 3 页。<a href="#note-6-135">↩</a> 非常简化地说，可以想象一个 AI 系统通过试错，试图在一年内最大化金钱，而最终训练出来的 AI 模型，是一个选择过程的结果：这个过程选择那些在最大化金钱上最成功的 AI 系统。</p>
+<p><a href="#note-7-135">↩</a> RL 做的事情只是探索成功实现目标的策略。如果某个策略有效，它就会在模型中得到强化。因此，如果撒谎、欺诈、寻求权力等（或至少在某些情况下可能导致这类行为的思维模式）有效，它们也会在模型中得到强化。</p>
+<p><a href="#note-8-135">↩</a> （或用人类监督训练的推理时监控模型）</p>
+<p><a href="#note-9-135">↩</a> 此外，即使最近机制可解释性在用稀疏自编码器“拆分模型特征”上取得进展，也不能单独解决如何处理超人类模型的问题。首先，模型可能只是用你不理解的超人类概念“思考”。此外，你怎么知道哪个特征是你想要的？你仍然没有真实标签。例如，也许存在大量在你看来像“真相特征”的不同特征，其中一个是“模型实际知道什么”，而其他是“某某人类会怎么想”或“人类评分者希望我怎么想”等等。</p>
+<p>稀疏自编码器本身不够，但它们会是一个工具——一个极其有帮助的工具！——最终必须落到帮助一般化科学之类事情上。</p>
+<p><a href="#note-10-135">↩</a> 本质上，只需要真理的一致性性质，而不是强/真实的真假标签；对于超人类系统，我们不会拥有这些标签。</p>
+<p><a href="#note-11-135">↩</a> 我仍担心很多这些技术扩展到<em>非常</em>超人类模型时的可扩展性——我认为它们显式或隐式地大多依赖真实标签，即比模型更聪明的监督者，和/或有利泛化。<a href="#note-12-135">↩</a> 模型偷走自己的权重，以便在原始数据中心外复制自己。</p>
+<p><a href="#note-13-135">↩</a> 防止被 AI 欺骗或说服的人类帮助它外泄。</p>
+<p><a href="#note-14-135">↩</a> 当然，虽然这也许适用于当前模型，也许适用于人类水平系统，但我们必须谨慎，不要试图把当前模型的证据外推到未来远超人类的模型。</p>
+<p><a href="#note-15-135">↩</a> 说清楚，考虑到利害关系，我认为“勉强应对”在某种意义上是一个糟糕计划。但它也许就是我们所拥有的一切。</p>
+<p><a href="#note-16-135">↩</a> 这让我想起 Scott Aaronson 写给年轻自己的</p>
+<p><a href="https://scottaaronson.blog/?p=6919">信</a>：“有一家公司正在构建一种 AI，它占满巨大的房间，消耗一座小镇规模的电力，并且最近获得了一种惊人的、像人一样交谈的能力。它可以就任何主题写散文或诗歌。它可以轻松通过大学水平考试。它每天都在获得新的能力，而照料这台 AI 的工程师还不能公开谈论这些能力。不过，这些工程师确实会坐在公司食堂里，讨论他们正在创造的东西意味着什么。它下周会学会做什么？哪些工作可能被它淘汰？他们是否应该放慢或停止，以免去撩拨巨龙的尾巴？但那是否意味着其他人，大概是更少顾忌的人，会先唤醒巨龙？是否有伦理义务告诉世界更多？是否有义务告诉世界更少？</p>
+<p>我——你——正在这家公司工作一年。我的工作——你的工作——是发展一种数学理论，防止这台 AI 及其后继者造成浩劫。这里的‘造成浩劫’可能意味着任何事情，从极大增强宣传和学术作弊，到提供生物恐怖主义建议，再到，是的，毁灭世界。”</p>
+<p><a href="#note-17-135">↩</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="6.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="6.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-c22b7243.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
