@@ -40,7 +40,3 @@ mdbook serve
 - **原文来源**：[situational-awareness.ai](https://situational-awareness.ai)
 - **翻译引擎**：GPT-5.5-Pro
 - **翻译格式**：Markdown（`.md`）
-
-## 许可证
-
-本仓库为无许可证（Unlicense / Public Domain），可自由使用。
