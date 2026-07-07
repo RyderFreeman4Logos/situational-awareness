@@ -17,7 +17,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install mdBook
-        uses: rust-lang/mdBook/actions/setup@v1
+        run: |
+          curl -sSL https://rust-lang.github.io/mdBook/releases/download/v0.4.16/mdbook-v0.4.16-x86_64-unknown-linux-gnu.tar.gz | \
+            tar xz -C $HOME/.local/bin
+          chmod +x $HOME/.local/bin/mdbook
 
       - name: Build with mdBook
         run: mdbook build
