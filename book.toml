@@ -1,0 +1,11 @@
+[book]
+title = "情境意识：AGI 与超级智能（中文译文）"
+authors = ["GPT-5.5-Pro"]
+language = "en"
+src = "src"
+
+[output.html]
+theme = "src/theme"
+
+[output.html.search]
+boost_titles = 2

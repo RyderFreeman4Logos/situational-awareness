@@ -1,0 +1,35 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install mdBook
+        run: |
+          mkdir -v $HOME/.local/bin
+          curl -sSL https://rust-lang.github.io/mdBook/downloads/mdbook-linux.zip | \
+            unzip -p - > $HOME/.local/bin/mdbook
+          chmod +x $HOME/.local/bin/mdbook
+
+      - name: Build with mdBook
+        run: mdbook build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./book
+          force_publish: true
